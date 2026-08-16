@@ -1,8 +1,8 @@
-# 考研择校资料库 · Kaoyan Schools
+# 考研择校资料库 · Kaoyan Hub
 
 > 一个开源、零依赖、数据可校验的考研择校工具。所有数据来自教育部与研招网等公开渠道，欢迎 PR 补充。
 
-**在线访问：** https://OWNER.github.io/kaoyan-schools/
+**在线访问：** https://OWNER.github.io/kaoyan-hub/
 
 ---
 
@@ -47,8 +47,8 @@
 ## 本地运行
 
 ```bash
-git clone https://github.com/OWNER/kaoyan-schools.git
-cd kaoyan-schools
+git clone https://github.com/OWNER/kaoyan-hub.git
+cd kaoyan-hub
 node build.mjs        # 把 data/*.json 注入模板，生成 index.html
 ```
 

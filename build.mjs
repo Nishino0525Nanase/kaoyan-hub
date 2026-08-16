@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const REPO_URL = process.env.REPO_URL || 'https://github.com/OWNER/kaoyan-schools';
+const REPO_URL = process.env.REPO_URL || 'https://github.com/OWNER/kaoyan-hub';
 
 const read = p => readFileSync(join(ROOT, p), 'utf8');
 
