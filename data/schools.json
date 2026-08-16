@@ -1,0 +1,1456 @@
+{
+ "updated": "2026-08",
+ "count": 79,
+ "note": "学科评估数据为教育部第四轮（2017 年）公开结果；第五轮结果未向社会公布。研招网址已逐一验证。分数线、报录比等逐校数据欢迎通过 Pull Request 补充。",
+ "schools": [
+  {
+   "name": "清华大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.tsinghua.edu.cn/",
+   "aPlus": [
+    "马克思主义理论",
+    "设计学",
+    "化学",
+    "生物学",
+    "力学",
+    "机械工程",
+    "仪器科学与技术",
+    "材料科学与工程",
+    "动力工程及工程热物理",
+    "电气工程",
+    "控制科学与工程",
+    "计算机科学与技术",
+    "建筑学",
+    "水利工程",
+    "核科学与技术",
+    "环境科学与工程",
+    "城乡规划学",
+    "风景园林学",
+    "管理科学与工程",
+    "工商管理",
+    "公共管理"
+   ],
+   "aCount": 37,
+   "strength": "顶尖"
+  },
+  {
+   "name": "北京大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://admission.pku.edu.cn/",
+   "aPlus": [
+    "哲学",
+    "应用经济学",
+    "政治学",
+    "社会学",
+    "心理学",
+    "中国语言文学",
+    "外国语言文学",
+    "艺术学理论",
+    "考古学",
+    "世界史",
+    "数学",
+    "物理学",
+    "化学",
+    "地理学",
+    "大气科学",
+    "生物学",
+    "统计学",
+    "力学",
+    "计算机科学与技术",
+    "基础医学",
+    "口腔医学"
+   ],
+   "aCount": 35,
+   "strength": "顶尖"
+  },
+  {
+   "name": "浙江大学",
+   "city": "杭州",
+   "province": "浙江",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "http://www.grs.zju.edu.cn/yjszs/",
+   "aPlus": [
+    "生态学",
+    "光学工程",
+    "控制科学与工程",
+    "计算机科学与技术",
+    "农业工程",
+    "软件工程",
+    "园艺学",
+    "农业资源与环境",
+    "植物保护",
+    "临床医学",
+    "农林经济管理"
+   ],
+   "aCount": 39,
+   "strength": "顶尖"
+  },
+  {
+   "name": "中国人民大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://pgs.ruc.edu.cn/",
+   "aPlus": [
+    "理论经济学",
+    "应用经济学",
+    "法学",
+    "社会学",
+    "马克思主义理论",
+    "新闻传播学",
+    "统计学",
+    "工商管理",
+    "公共管理"
+   ],
+   "aCount": 14,
+   "strength": "很强"
+  },
+  {
+   "name": "上海交通大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.sjtu.edu.cn/",
+   "aPlus": [
+    "生物学",
+    "机械工程",
+    "船舶与海洋工程",
+    "临床医学",
+    "工商管理"
+   ],
+   "aCount": 25,
+   "strength": "很强"
+  },
+  {
+   "name": "复旦大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://gsao.fudan.edu.cn/",
+   "aPlus": [
+    "哲学",
+    "理论经济学",
+    "政治学",
+    "中国史",
+    "数学"
+   ],
+   "aCount": 23,
+   "strength": "很强"
+  },
+  {
+   "name": "中国科学技术大学",
+   "city": "合肥",
+   "province": "安徽",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "http://yz.ustc.edu.cn/",
+   "aPlus": [
+    "物理学",
+    "化学",
+    "天文学",
+    "地球物理学",
+    "科学技术史",
+    "核科学与技术",
+    "安全科学与工程"
+   ],
+   "aCount": 15,
+   "strength": "很强"
+  },
+  {
+   "name": "北京师范大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.bnu.edu.cn/",
+   "aPlus": [
+    "教育学",
+    "心理学",
+    "中国语言文学",
+    "戏剧与影视学",
+    "中国史",
+    "地理学"
+   ],
+   "aCount": 15,
+   "strength": "很强"
+  },
+  {
+   "name": "武汉大学",
+   "city": "武汉",
+   "province": "湖北",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://wdyz.whu.edu.cn/",
+   "aPlus": [
+    "马克思主义理论",
+    "地球物理学",
+    "测绘科学与技术",
+    "图书情报与档案管理"
+   ],
+   "aCount": 19,
+   "strength": "很强"
+  },
+  {
+   "name": "南京大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://grawww.nju.edu.cn/",
+   "aPlus": [
+    "天文学",
+    "地质学",
+    "图书情报与档案管理"
+   ],
+   "aCount": 21,
+   "strength": "很强"
+  },
+  {
+   "name": "东南大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.seu.edu.cn/",
+   "aPlus": [
+    "艺术学理论",
+    "建筑学",
+    "土木工程",
+    "交通运输工程",
+    "生物医学工程"
+   ],
+   "aCount": 12,
+   "strength": "很强"
+  },
+  {
+   "name": "中国农业大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.cau.edu.cn/",
+   "aPlus": [
+    "农业工程",
+    "食品科学与工程",
+    "作物学",
+    "畜牧学",
+    "兽医学",
+    "草学"
+   ],
+   "aCount": 9,
+   "strength": "很强"
+  },
+  {
+   "name": "北京航空航天大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.buaa.edu.cn/",
+   "aPlus": [
+    "仪器科学与技术",
+    "材料科学与工程",
+    "航空宇航科学与技术",
+    "软件工程"
+   ],
+   "aCount": 14,
+   "strength": "很强"
+  },
+  {
+   "name": "华中科技大学",
+   "city": "武汉",
+   "province": "湖北",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "http://gszs.hust.edu.cn/",
+   "aPlus": [
+    "机械工程",
+    "光学工程",
+    "生物医学工程",
+    "公共卫生与预防医学"
+   ],
+   "aCount": 14,
+   "strength": "很强"
+  },
+  {
+   "name": "哈尔滨工业大学",
+   "city": "哈尔滨",
+   "province": "黑龙江",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.hit.edu.cn/",
+   "aPlus": [
+    "机械工程",
+    "控制科学与工程",
+    "环境科学与工程"
+   ],
+   "aCount": 17,
+   "strength": "很强"
+  },
+  {
+   "name": "同济大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.tongji.edu.cn/",
+   "aPlus": [
+    "土木工程",
+    "环境科学与工程",
+    "城乡规划学",
+    "管理科学与工程"
+   ],
+   "aCount": 12,
+   "strength": "较强"
+  },
+  {
+   "name": "中南大学",
+   "city": "长沙",
+   "province": "湖南",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.csu.edu.cn/",
+   "aPlus": [
+    "冶金工程",
+    "矿业工程",
+    "护理学"
+   ],
+   "aCount": 12,
+   "strength": "较强"
+  },
+  {
+   "name": "中山大学",
+   "city": "广州",
+   "province": "广东",
+   "region": "华南",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://graduate.sysu.edu.cn/zsw/",
+   "aPlus": [
+    "生态学",
+    "工商管理"
+   ],
+   "aCount": 14,
+   "strength": "较强"
+  },
+  {
+   "name": "西安交通大学",
+   "city": "西安",
+   "province": "陕西",
+   "region": "西北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.xjtu.edu.cn/",
+   "aPlus": [
+    "动力工程及工程热物理",
+    "电气工程"
+   ],
+   "aCount": 14,
+   "strength": "较强"
+  },
+  {
+   "name": "四川大学",
+   "city": "成都",
+   "province": "四川",
+   "region": "西南",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.scu.edu.cn/",
+   "aPlus": [
+    "口腔医学"
+   ],
+   "aCount": 16,
+   "strength": "较强"
+  },
+  {
+   "name": "华东师范大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjszs.ecnu.edu.cn/",
+   "aPlus": [
+    "教育学",
+    "世界史"
+   ],
+   "aCount": 12,
+   "strength": "较强"
+  },
+  {
+   "name": "天津大学",
+   "city": "天津",
+   "province": "天津",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.tju.edu.cn/",
+   "aPlus": [
+    "化学工程与技术"
+   ],
+   "aCount": 14,
+   "strength": "较强"
+  },
+  {
+   "name": "南开大学",
+   "city": "天津",
+   "province": "天津",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.nankai.edu.cn/",
+   "aPlus": [],
+   "aCount": 14,
+   "strength": "较强"
+  },
+  {
+   "name": "北京理工大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://grd.bit.edu.cn/",
+   "aPlus": [
+    "兵器科学与技术"
+   ],
+   "aCount": 9,
+   "strength": "较强"
+  },
+  {
+   "name": "华南理工大学",
+   "city": "广州",
+   "province": "广东",
+   "region": "华南",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.scut.edu.cn/",
+   "aPlus": [
+    "轻工技术与工程"
+   ],
+   "aCount": 8,
+   "strength": "较强"
+  },
+  {
+   "name": "吉林大学",
+   "city": "长春",
+   "province": "吉林",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yjsy.jlu.edu.cn/",
+   "aPlus": [],
+   "aCount": 11,
+   "strength": "较强"
+  },
+  {
+   "name": "山东大学",
+   "city": "济南",
+   "province": "山东",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://www.yz.sdu.edu.cn/",
+   "aPlus": [
+    "数学"
+   ],
+   "aCount": 8,
+   "strength": "较强"
+  },
+  {
+   "name": "厦门大学",
+   "city": "厦门",
+   "province": "福建",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://gs.xmu.edu.cn/",
+   "aPlus": [
+    "海洋科学"
+   ],
+   "aCount": 7,
+   "strength": "较强"
+  },
+  {
+   "name": "电子科技大学",
+   "city": "成都",
+   "province": "四川",
+   "region": "西南",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.uestc.edu.cn/",
+   "aPlus": [
+    "电子科学与技术",
+    "信息与通信工程"
+   ],
+   "aCount": 4,
+   "strength": "较强"
+  },
+  {
+   "name": "东北师范大学",
+   "city": "长春",
+   "province": "吉林",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsy.nenu.edu.cn/",
+   "aPlus": [
+    "马克思主义理论"
+   ],
+   "aCount": 6,
+   "strength": "有特色"
+  },
+  {
+   "name": "北京科技大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yzxc.ustb.edu.cn/",
+   "aPlus": [
+    "科学技术史",
+    "冶金工程"
+   ],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "中国海洋大学",
+   "city": "青岛",
+   "province": "山东",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.ouc.edu.cn/",
+   "aPlus": [
+    "海洋科学",
+    "水产"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "北京交通大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.bjtu.edu.cn/",
+   "aPlus": [
+    "系统科学"
+   ],
+   "aCount": 5,
+   "strength": "有特色"
+  },
+  {
+   "name": "华南师范大学",
+   "city": "广州",
+   "province": "广东",
+   "region": "华南",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.scnu.edu.cn/",
+   "aPlus": [
+    "心理学"
+   ],
+   "aCount": 4,
+   "strength": "有特色"
+  },
+  {
+   "name": "大连理工大学",
+   "city": "大连",
+   "province": "辽宁",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://gs.dlut.edu.cn/",
+   "aPlus": [],
+   "aCount": 7,
+   "strength": "有特色"
+  },
+  {
+   "name": "北京邮电大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yzb.bupt.edu.cn/",
+   "aPlus": [
+    "信息与通信工程"
+   ],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "南京师范大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.njnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 6,
+   "strength": "有特色"
+  },
+  {
+   "name": "河海大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.hhu.edu.cn/",
+   "aPlus": [
+    "水利工程"
+   ],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "西北工业大学",
+   "city": "西安",
+   "province": "陕西",
+   "region": "西北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yzb.nwpu.edu.cn/",
+   "aPlus": [
+    "航空宇航科学与技术"
+   ],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "西安电子科技大学",
+   "city": "西安",
+   "province": "陕西",
+   "region": "西北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gr.xidian.edu.cn/",
+   "aPlus": [
+    "电子科学与技术"
+   ],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "中央财经大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.cufe.edu.cn/",
+   "aPlus": [
+    "应用经济学"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "云南大学",
+   "city": "昆明",
+   "province": "云南",
+   "region": "西南",
+   "zone": "B",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "http://www.grs.ynu.edu.cn/",
+   "aPlus": [
+    "民族学"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "兰州大学",
+   "city": "兰州",
+   "province": "甘肃",
+   "region": "西北",
+   "zone": "B",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://yz.lzu.edu.cn/",
+   "aPlus": [
+    "草学"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "南京理工大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.njust.edu.cn/",
+   "aPlus": [
+    "兵器科学与技术"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "哈尔滨工程大学",
+   "city": "哈尔滨",
+   "province": "黑龙江",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yzb.hrbeu.edu.cn/",
+   "aPlus": [
+    "船舶与海洋工程"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "湖南大学",
+   "city": "长沙",
+   "province": "湖南",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://gra.hnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 5,
+   "strength": "有特色"
+  },
+  {
+   "name": "西北大学",
+   "city": "西安",
+   "province": "陕西",
+   "region": "西北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjs.nwu.edu.cn/",
+   "aPlus": [
+    "考古学"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "西南交通大学",
+   "city": "成都",
+   "province": "四川",
+   "region": "西南",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gsnews.swjtu.edu.cn/",
+   "aPlus": [
+    "交通运输工程"
+   ],
+   "aCount": 2,
+   "strength": "有特色"
+  },
+  {
+   "name": "首都师范大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "双非",
+    "双一流"
+   ],
+   "gradSite": "https://grad.cnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 5,
+   "strength": "有特色"
+  },
+  {
+   "name": "东北大学",
+   "city": "沈阳",
+   "province": "辽宁",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "http://yz.neu.edu.cn/",
+   "aPlus": [],
+   "aCount": 4,
+   "strength": "有特色"
+  },
+  {
+   "name": "中国政法大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsy.cupl.edu.cn/",
+   "aPlus": [
+    "法学"
+   ],
+   "aCount": 1,
+   "strength": "有特色"
+  },
+  {
+   "name": "华东理工大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gschool.ecust.edu.cn/",
+   "aPlus": [
+    "化学工程与技术"
+   ],
+   "aCount": 1,
+   "strength": "有特色"
+  },
+  {
+   "name": "华中师范大学",
+   "city": "武汉",
+   "province": "湖北",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.ccnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 4,
+   "strength": "有特色"
+  },
+  {
+   "name": "对外经济贸易大学",
+   "city": "北京",
+   "province": "北京",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsy.uibe.edu.cn/",
+   "aPlus": [],
+   "aCount": 4,
+   "strength": "有特色"
+  },
+  {
+   "name": "武汉理工大学",
+   "city": "武汉",
+   "province": "湖北",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "http://gd.whut.edu.cn/",
+   "aPlus": [
+    "材料科学与工程"
+   ],
+   "aCount": 1,
+   "strength": "有特色"
+  },
+  {
+   "name": "上海财经大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://gs.sufe.edu.cn/",
+   "aPlus": [],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "南京航空航天大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://www.graduate.nuaa.edu.cn/",
+   "aPlus": [],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "重庆大学",
+   "city": "重庆",
+   "province": "重庆",
+   "region": "西南",
+   "zone": "A",
+   "tier": [
+    "985",
+    "211",
+    "双一流",
+    "34所自划线"
+   ],
+   "gradSite": "https://graduate.cqu.edu.cn/",
+   "aPlus": [],
+   "aCount": 3,
+   "strength": "有特色"
+  },
+  {
+   "name": "上海大学",
+   "city": "上海",
+   "province": "上海",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjszs.shu.edu.cn/",
+   "aPlus": [],
+   "aCount": 2,
+   "strength": "待补充"
+  },
+  {
+   "name": "苏州大学",
+   "city": "苏州",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "http://yjs.suda.edu.cn/",
+   "aPlus": [],
+   "aCount": 2,
+   "strength": "待补充"
+  },
+  {
+   "name": "西南财经大学",
+   "city": "成都",
+   "province": "四川",
+   "region": "西南",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.swufe.edu.cn/",
+   "aPlus": [],
+   "aCount": 2,
+   "strength": "待补充"
+  },
+  {
+   "name": "合肥工业大学",
+   "city": "合肥",
+   "province": "安徽",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "http://yjszs.hfut.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "扬州大学",
+   "city": "扬州",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://yjsc.yzu.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "暨南大学",
+   "city": "广州",
+   "province": "广东",
+   "region": "华南",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.jnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "江苏大学",
+   "city": "镇江",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://yjsy.ujs.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "浙江工业大学",
+   "city": "杭州",
+   "province": "浙江",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "http://www.yz.zjut.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "燕山大学",
+   "city": "秦皇岛",
+   "province": "河北",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://gs.ysu.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "福州大学",
+   "city": "福州",
+   "province": "福建",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsy.fzu.edu.cn/",
+   "aPlus": [],
+   "aCount": 1,
+   "strength": "待补充"
+  },
+  {
+   "name": "南京邮电大学",
+   "city": "南京",
+   "province": "江苏",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "双非",
+    "双一流"
+   ],
+   "gradSite": "https://yzb.njupt.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "天津财经大学",
+   "city": "天津",
+   "province": "天津",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://yjsy.tjufe.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "太原理工大学",
+   "city": "太原",
+   "province": "山西",
+   "region": "华北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://www.gs.tyut.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "广西大学",
+   "city": "南宁",
+   "province": "广西",
+   "region": "华南",
+   "zone": "B",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsc.gxu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "昆明理工大学",
+   "city": "昆明",
+   "province": "云南",
+   "region": "西南",
+   "zone": "B",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://yjs.kust.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "杭州电子科技大学",
+   "city": "杭州",
+   "province": "浙江",
+   "region": "华东",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://grs.hdu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "深圳大学",
+   "city": "深圳",
+   "province": "广东",
+   "region": "华南",
+   "zone": "A",
+   "tier": [
+    "双非"
+   ],
+   "gradSite": "https://yz.szu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "湖南师范大学",
+   "city": "长沙",
+   "province": "湖南",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yjsy.hunnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "湘潭大学",
+   "city": "湘潭",
+   "province": "湖南",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "双非",
+    "双一流"
+   ],
+   "gradSite": "https://yjsc.xtu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "辽宁大学",
+   "city": "沈阳",
+   "province": "辽宁",
+   "region": "东北",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://grs.lnu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  },
+  {
+   "name": "郑州大学",
+   "city": "郑州",
+   "province": "河南",
+   "region": "华中",
+   "zone": "A",
+   "tier": [
+    "211",
+    "双一流"
+   ],
+   "gradSite": "https://yz.zzu.edu.cn/",
+   "aPlus": [],
+   "aCount": 0,
+   "strength": "待补充"
+  }
+ ]
+}

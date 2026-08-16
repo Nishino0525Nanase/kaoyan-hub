@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>考研择校资料库 · KaoyanHub</title>
+<meta name="description" content="开源的考研择校资料库：79 所热门院校档案、2026 年考研国家线全表、历年分数线趋势、院校对比与官方备考资源。数据公开可校验，欢迎 PR 补充。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127891;</text></svg>">
+<style>
+:root{
+  color-scheme: light;
+  --surface-0:#f6f5f2; --surface-1:#fcfcfb; --surface-2:#ffffff;
+  --line:#e3e1db; --line-strong:#cfccc3;
+  --text-1:#0b0b0b; --text-2:#52514e; --text-3:#807e77;
+  --accent:#2a78d6; --accent-soft:#e8f0fc;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+  --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --good:#0ca30c; --warn:#fab219; --crit:#d03b3b;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.05);
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --surface-0:#141413; --surface-1:#1a1a19; --surface-2:#232320;
+    --line:#33332f; --line-strong:#4a4a45;
+    --text-1:#ffffff; --text-2:#c3c2b7; --text-3:#8e8d84;
+    --accent:#3987e5; --accent-soft:#1d2c40;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --surface-0:#141413; --surface-1:#1a1a19; --surface-2:#232320;
+  --line:#33332f; --line-strong:#4a4a45;
+  --text-1:#ffffff; --text-2:#c3c2b7; --text-3:#8e8d84;
+  --accent:#3987e5; --accent-soft:#1d2c40;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+  --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--surface-0); color:var(--text-1);
+  font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--surface-0) 88%,transparent);
+  backdrop-filter:saturate(1.6) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.hbar{display:flex;align-items:center;gap:14px;height:58px}
+.logo{font-weight:700;font-size:17px;letter-spacing:-.2px;white-space:nowrap}
+.logo span{color:var(--accent)}
+.hspace{flex:1}
+.iconbtn{
+  border:1px solid var(--line);background:var(--surface-1);color:var(--text-2);
+  height:34px;padding:0 12px;border-radius:9px;cursor:pointer;font-size:13px;
+  display:inline-flex;align-items:center;gap:6px;font-family:inherit;
+}
+.iconbtn:hover{border-color:var(--line-strong);color:var(--text-1)}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;padding:0 0 10px;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+.tab{
+  border:0;background:transparent;color:var(--text-2);font-family:inherit;font-size:14px;
+  padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;font-weight:500;
+}
+.tab:hover{background:var(--surface-2);color:var(--text-1)}
+.tab[aria-selected="true"]{background:var(--accent);color:#fff}
+
+/* ---------- generic ---------- */
+main{padding:22px 0 70px}
+.panel{display:none}
+.panel.on{display:block;animation:fade .22s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.card{background:var(--surface-1);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+h2.sec{font-size:19px;margin:0 0 4px;letter-spacing:-.2px}
+p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
+.muted{color:var(--text-3);font-size:12.5px}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.searchbox{position:relative}
+.searchbox input{
+  width:100%;height:44px;padding:0 40px 0 40px;border-radius:11px;
+  border:1px solid var(--line);background:var(--surface-1);color:var(--text-1);
+  font-size:15px;font-family:inherit;
+}
+.searchbox input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+.searchbox .mag{position:absolute;left:14px;top:12px;color:var(--text-3);font-size:16px;pointer-events:none}
+.searchbox .clr{position:absolute;right:8px;top:8px;width:28px;height:28px;border:0;background:transparent;color:var(--text-3);cursor:pointer;font-size:17px;border-radius:6px}
+.searchbox .clr:hover{background:var(--surface-2);color:var(--text-1)}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.flabel{font-size:12px;color:var(--text-3);margin-right:2px;min-width:44px}
+.chip{
+  border:1px solid var(--line);background:var(--surface-1);color:var(--text-2);
+  padding:5px 11px;border-radius:999px;font-size:12.5px;cursor:pointer;font-family:inherit;
+}
+.chip:hover{border-color:var(--line-strong);color:var(--text-1)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---------- school grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:12px}
+.school{padding:15px 16px 13px;display:flex;flex-direction:column;gap:9px;position:relative;transition:border-color .15s}
+.school:hover{border-color:var(--line-strong)}
+.school.picked{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--shadow)}
+.stop{display:flex;align-items:flex-start;gap:9px}
+.sname{font-weight:650;font-size:15.5px;line-height:1.35;flex:1}
+.scity{color:var(--text-3);font-size:12.5px;font-weight:400;margin-left:6px}
+.pick{
+  flex-shrink:0;width:26px;height:26px;border-radius:8px;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--text-3);cursor:pointer;font-size:15px;line-height:1;
+  display:flex;align-items:center;justify-content:center;font-family:inherit;
+}
+.pick:hover{border-color:var(--accent);color:var(--accent)}
+.pick[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.badges{display:flex;flex-wrap:wrap;gap:5px}
+.badge{font-size:11px;padding:2px 7px;border-radius:5px;border:1px solid var(--line);color:var(--text-2);background:var(--surface-2);white-space:nowrap}
+.badge.b985{border-color:#e34948;color:#e34948}
+.badge.b34{border-color:var(--s7);color:var(--s7)}
+.badge.b211{border-color:var(--s1);color:var(--s1)}
+.badge.bsy{border-color:var(--s3);color:var(--s3)}
+.aplus{display:flex;flex-wrap:wrap;gap:5px}
+.ap{font-size:11.5px;padding:2px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.sfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:9px;margin-top:auto}
+.meter{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-2)}
+.bars{display:flex;gap:2px}
+.bars i{width:5px;height:11px;border-radius:2px;background:var(--line-strong)}
+.bars i.f{background:var(--accent)}
+.glink{font-size:12.5px;white-space:nowrap}
+.empty{text-align:center;padding:60px 20px;color:var(--text-3)}
+
+/* ---------- compare ---------- */
+.cmpwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--surface-2);font-weight:600;font-size:12.5px;color:var(--text-2);position:sticky;top:0}
+tbody tr:hover td{background:var(--surface-2)}
+td.rowh,th.rowh{background:var(--surface-2);font-weight:600;color:var(--text-2);white-space:nowrap;font-size:12.5px;position:sticky;left:0;z-index:1}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- charts ---------- */
+.chartcard{padding:18px 18px 12px;margin-bottom:16px}
+.chead{margin-bottom:12px}
+.ctitle{font-size:15.5px;font-weight:650;margin:0 0 2px}
+.cdesc{font-size:12.5px;color:var(--text-3);margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:4px;margin:12px 0 0}
+.lg{
+  display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:4px 9px;
+  border-radius:999px;border:1px solid var(--line);background:var(--surface-1);
+  color:var(--text-2);cursor:pointer;font-family:inherit;
+}
+.lg:hover{border-color:var(--line-strong)}
+.lg .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.lg[aria-pressed="false"]{opacity:.42}
+.lg[aria-pressed="true"]{color:var(--text-1);border-color:var(--line-strong)}
+svg.chart{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.gl{stroke:var(--line);stroke-width:1}
+.axt{fill:var(--text-3);font-size:11px;font-variant-numeric:tabular-nums}
+.axt.b{fill:var(--text-2)}
+.tip{
+  position:fixed;pointer-events:none;z-index:99;opacity:0;transition:opacity .1s;
+  background:var(--surface-2);border:1px solid var(--line-strong);border-radius:10px;
+  padding:9px 11px;font-size:12.5px;box-shadow:var(--shadow);max-width:240px;
+}
+.tip .tt{font-weight:650;margin-bottom:5px;font-size:12.5px}
+.tip .tr{display:flex;align-items:center;gap:7px;line-height:1.7;white-space:nowrap}
+.tip .tr .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tip .tr .nm{color:var(--text-2);flex:1}
+.tip .tr .vl{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---------- lines table ---------- */
+.seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:2px;gap:2px}
+.seg button{border:0;background:transparent;color:var(--text-2);font-family:inherit;font-size:13px;padding:5px 13px;border-radius:7px;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--accent);color:#fff}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+
+/* ---------- resources ---------- */
+.rgroup{margin-bottom:22px}
+.rlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.rl{padding:13px 15px;display:block;color:inherit}
+.rl:hover{border-color:var(--accent);text-decoration:none}
+.rl b{display:block;font-size:14px;font-weight:600;margin-bottom:3px;color:var(--accent)}
+.rl span{font-size:12.5px;color:var(--text-2);line-height:1.55}
+.tips{padding:15px 18px}
+.tips li{font-size:13.5px;color:var(--text-2);margin-bottom:7px;line-height:1.6}
+.tips li:last-child{margin-bottom:0}
+
+/* ---------- misc ---------- */
+.notice{
+  padding:12px 15px;border-radius:11px;background:var(--surface-1);border:1px solid var(--line);
+  font-size:12.5px;color:var(--text-2);line-height:1.6;margin-bottom:18px;
+}
+.notice b{color:var(--text-1)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 34px;color:var(--text-3);font-size:12.5px}
+.dockbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:color-mix(in srgb,var(--surface-1) 94%,transparent);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);padding:10px 18px calc(10px + env(safe-area-inset-bottom));
+  display:none;align-items:center;gap:10px;
+}
+.dockbar.on{display:flex}
+body.hasdock{padding-bottom:66px}
+.dockbar .txt{flex:1;font-size:13px;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn{border:0;background:var(--accent);color:#fff;font-family:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:9px;cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--text-2);border:1px solid var(--line)}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .hbar{height:52px;gap:10px}
+  .logo{font-size:15.5px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="hbar">
+      <div class="logo">考研<span>择校</span>资料库</div>
+      <div class="hspace"></div>
+      <button class="iconbtn" id="themeBtn" title="切换主题">◐ 主题</button>
+      <a class="iconbtn" id="repoLink" href="https://github.com/OWNER/kaoyan-schools" target="_blank" rel="noopener">★ GitHub</a>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab" role="tab" data-panel="schools" aria-selected="true">院校库</button>
+      <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
+      <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
+      <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
+      <button class="tab" role="tab" data-panel="res" aria-selected="false">资料链接</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ 院校库 ============ -->
+  <section class="panel on" id="p-schools">
+    <h2 class="sec">院校库</h2>
+    <p class="sub" id="schoolSub"></p>
+
+    <div class="filters">
+      <div class="searchbox">
+        <span class="mag">⌕</span>
+        <input id="q" type="search" placeholder="搜索学校、城市，或 A+ 学科（如 计算机、法学、口腔）" autocomplete="off">
+        <button class="clr" id="qClear" title="清空" hidden>×</button>
+      </div>
+      <div class="frow" id="fRegion"><span class="flabel">地区</span></div>
+      <div class="frow" id="fTier"><span class="flabel">层次</span></div>
+      <div class="frow" id="fZone"><span class="flabel">分区</span></div>
+    </div>
+
+    <div class="grid" id="schoolGrid"></div>
+    <div class="empty" id="schoolEmpty" hidden>没有匹配的院校，换个关键词试试</div>
+  </section>
+
+  <!-- ============ 国家线 ============ -->
+  <section class="panel" id="p-lines">
+    <h2 class="sec">2026 年考研国家线</h2>
+    <p class="sub" id="lineSub"></p>
+
+    <div class="notice" id="lineNote"></div>
+
+    <div class="toolbar">
+      <div class="seg" id="zoneSeg">
+        <button data-z="A" aria-selected="true">A 区</button>
+        <button data-z="B" aria-selected="false">B 区</button>
+      </div>
+      <span class="muted" id="zoneHint"></span>
+    </div>
+
+    <div class="card cmpwrap" style="margin-bottom:20px">
+      <table id="lineTable"></table>
+    </div>
+
+    <h2 class="sec" style="margin-top:26px">专业学位对应哪条线？</h2>
+    <p class="sub">2024 年起学硕与专硕合并按学科门类划线，下表给出常见专业学位类别对应的门类线。</p>
+    <div class="card cmpwrap">
+      <table id="mapTable"></table>
+    </div>
+  </section>
+
+  <!-- ============ 图表 ============ -->
+  <section class="panel" id="p-charts">
+    <h2 class="sec">数据图表</h2>
+    <p class="sub">分数线只反映「进复试的最低门槛」，趋势比绝对值更有参考价值。</p>
+
+    <div class="card chartcard">
+      <div class="chead">
+        <p class="ctitle">历年考研国家线趋势（A 区总分）</p>
+        <p class="cdesc">点击下方图例可切换显示的学科门类，最多同时显示 8 条</p>
+      </div>
+      <svg class="chart" id="trendSvg" viewBox="0 0 760 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="历年考研国家线趋势折线图"></svg>
+      <div class="legend" id="trendLegend"></div>
+    </div>
+
+    <div class="card chartcard">
+      <div class="chead">
+        <p class="ctitle">2026 年各学科门类总分线（A 区）</p>
+        <p class="cdesc">同一年不同门类之间不可直接比较难度——试卷与考生群体都不同</p>
+      </div>
+      <svg class="chart" id="barSvg" viewBox="0 0 760 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="2026年各学科门类总分线条形图"></svg>
+    </div>
+
+    <div class="card chartcard">
+      <div class="chead">
+        <p class="ctitle">本库收录院校的地区分布</p>
+        <p class="cdesc">收录以考研热门院校为主，不代表全国研究生招生单位的真实分布</p>
+      </div>
+      <svg class="chart" id="regionSvg" viewBox="0 0 760 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="收录院校地区分布条形图"></svg>
+    </div>
+  </section>
+
+  <!-- ============ 对比 ============ -->
+  <section class="panel" id="p-compare">
+    <h2 class="sec">院校对比</h2>
+    <p class="sub">在「院校库」里点卡片右上角的 ＋ 选择院校，最多同时对比 4 所。</p>
+    <div id="cmpEmpty" class="empty">还没有选择院校<br><button class="btn" style="margin-top:14px" onclick="go('schools')">去院校库选择</button></div>
+    <div class="card cmpwrap" id="cmpWrap" hidden><table id="cmpTable"></table></div>
+  </section>
+
+  <!-- ============ 资料 ============ -->
+  <section class="panel" id="p-res">
+    <h2 class="sec">资料链接</h2>
+    <p class="sub" id="resSub"></p>
+    <div id="resGroups"></div>
+    <h2 class="sec" style="margin-top:26px">几条容易踩坑的常识</h2>
+    <div class="card tips"><ul id="tipList" style="margin:0;padding-left:20px"></ul></div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div>数据来源：教育部、中国研究生招生信息网、教育部学位与研究生教育发展中心第四轮学科评估。本站为开源公益项目，所有数据仅供参考，报考请以目标院校当年官方招生简章为准。</div>
+  <div style="margin-top:8px">数据更新：<span id="upd"></span> · <a href="https://github.com/OWNER/kaoyan-schools" target="_blank" rel="noopener">在 GitHub 上贡献数据</a> · MIT License</div>
+</footer>
+
+<div class="dockbar" id="dock">
+  <span class="txt" id="dockTxt"></span>
+  <button class="btn ghost" onclick="clearPicks()">清空</button>
+  <button class="btn" onclick="go('compare')">对比</button>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script id="data-schools" type="application/json">{"updated":"2026-08","count":79,"note":"学科评估数据为教育部第四轮（2017 年）公开结果；第五轮结果未向社会公布。研招网址已逐一验证。分数线、报录比等逐校数据欢迎通过 Pull Request 补充。","schools":[{"name":"清华大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.tsinghua.edu.cn/","aPlus":["马克思主义理论","设计学","化学","生物学","力学","机械工程","仪器科学与技术","材料科学与工程","动力工程及工程热物理","电气工程","控制科学与工程","计算机科学与技术","建筑学","水利工程","核科学与技术","环境科学与工程","城乡规划学","风景园林学","管理科学与工程","工商管理","公共管理"],"aCount":37,"strength":"顶尖"},{"name":"北京大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://admission.pku.edu.cn/","aPlus":["哲学","应用经济学","政治学","社会学","心理学","中国语言文学","外国语言文学","艺术学理论","考古学","世界史","数学","物理学","化学","地理学","大气科学","生物学","统计学","力学","计算机科学与技术","基础医学","口腔医学"],"aCount":35,"strength":"顶尖"},{"name":"浙江大学","city":"杭州","province":"浙江","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"http://www.grs.zju.edu.cn/yjszs/","aPlus":["生态学","光学工程","控制科学与工程","计算机科学与技术","农业工程","软件工程","园艺学","农业资源与环境","植物保护","临床医学","农林经济管理"],"aCount":39,"strength":"顶尖"},{"name":"中国人民大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://pgs.ruc.edu.cn/","aPlus":["理论经济学","应用经济学","法学","社会学","马克思主义理论","新闻传播学","统计学","工商管理","公共管理"],"aCount":14,"strength":"很强"},{"name":"上海交通大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.sjtu.edu.cn/","aPlus":["生物学","机械工程","船舶与海洋工程","临床医学","工商管理"],"aCount":25,"strength":"很强"},{"name":"复旦大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://gsao.fudan.edu.cn/","aPlus":["哲学","理论经济学","政治学","中国史","数学"],"aCount":23,"strength":"很强"},{"name":"中国科学技术大学","city":"合肥","province":"安徽","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"http://yz.ustc.edu.cn/","aPlus":["物理学","化学","天文学","地球物理学","科学技术史","核科学与技术","安全科学与工程"],"aCount":15,"strength":"很强"},{"name":"北京师范大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.bnu.edu.cn/","aPlus":["教育学","心理学","中国语言文学","戏剧与影视学","中国史","地理学"],"aCount":15,"strength":"很强"},{"name":"武汉大学","city":"武汉","province":"湖北","region":"华中","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://wdyz.whu.edu.cn/","aPlus":["马克思主义理论","地球物理学","测绘科学与技术","图书情报与档案管理"],"aCount":19,"strength":"很强"},{"name":"南京大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://grawww.nju.edu.cn/","aPlus":["天文学","地质学","图书情报与档案管理"],"aCount":21,"strength":"很强"},{"name":"东南大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.seu.edu.cn/","aPlus":["艺术学理论","建筑学","土木工程","交通运输工程","生物医学工程"],"aCount":12,"strength":"很强"},{"name":"中国农业大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.cau.edu.cn/","aPlus":["农业工程","食品科学与工程","作物学","畜牧学","兽医学","草学"],"aCount":9,"strength":"很强"},{"name":"北京航空航天大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.buaa.edu.cn/","aPlus":["仪器科学与技术","材料科学与工程","航空宇航科学与技术","软件工程"],"aCount":14,"strength":"很强"},{"name":"华中科技大学","city":"武汉","province":"湖北","region":"华中","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"http://gszs.hust.edu.cn/","aPlus":["机械工程","光学工程","生物医学工程","公共卫生与预防医学"],"aCount":14,"strength":"很强"},{"name":"哈尔滨工业大学","city":"哈尔滨","province":"黑龙江","region":"东北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.hit.edu.cn/","aPlus":["机械工程","控制科学与工程","环境科学与工程"],"aCount":17,"strength":"很强"},{"name":"同济大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.tongji.edu.cn/","aPlus":["土木工程","环境科学与工程","城乡规划学","管理科学与工程"],"aCount":12,"strength":"较强"},{"name":"中南大学","city":"长沙","province":"湖南","region":"华中","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.csu.edu.cn/","aPlus":["冶金工程","矿业工程","护理学"],"aCount":12,"strength":"较强"},{"name":"中山大学","city":"广州","province":"广东","region":"华南","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://graduate.sysu.edu.cn/zsw/","aPlus":["生态学","工商管理"],"aCount":14,"strength":"较强"},{"name":"西安交通大学","city":"西安","province":"陕西","region":"西北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.xjtu.edu.cn/","aPlus":["动力工程及工程热物理","电气工程"],"aCount":14,"strength":"较强"},{"name":"四川大学","city":"成都","province":"四川","region":"西南","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.scu.edu.cn/","aPlus":["口腔医学"],"aCount":16,"strength":"较强"},{"name":"华东师范大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["985","211","双一流"],"gradSite":"https://yjszs.ecnu.edu.cn/","aPlus":["教育学","世界史"],"aCount":12,"strength":"较强"},{"name":"天津大学","city":"天津","province":"天津","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.tju.edu.cn/","aPlus":["化学工程与技术"],"aCount":14,"strength":"较强"},{"name":"南开大学","city":"天津","province":"天津","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.nankai.edu.cn/","aPlus":[],"aCount":14,"strength":"较强"},{"name":"北京理工大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://grd.bit.edu.cn/","aPlus":["兵器科学与技术"],"aCount":9,"strength":"较强"},{"name":"华南理工大学","city":"广州","province":"广东","region":"华南","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.scut.edu.cn/","aPlus":["轻工技术与工程"],"aCount":8,"strength":"较强"},{"name":"吉林大学","city":"长春","province":"吉林","region":"东北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yjsy.jlu.edu.cn/","aPlus":[],"aCount":11,"strength":"较强"},{"name":"山东大学","city":"济南","province":"山东","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://www.yz.sdu.edu.cn/","aPlus":["数学"],"aCount":8,"strength":"较强"},{"name":"厦门大学","city":"厦门","province":"福建","region":"华东","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://gs.xmu.edu.cn/","aPlus":["海洋科学"],"aCount":7,"strength":"较强"},{"name":"电子科技大学","city":"成都","province":"四川","region":"西南","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.uestc.edu.cn/","aPlus":["电子科学与技术","信息与通信工程"],"aCount":4,"strength":"较强"},{"name":"东北师范大学","city":"长春","province":"吉林","region":"东北","zone":"A","tier":["211","双一流"],"gradSite":"https://yjsy.nenu.edu.cn/","aPlus":["马克思主义理论"],"aCount":6,"strength":"有特色"},{"name":"北京科技大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://yzxc.ustb.edu.cn/","aPlus":["科学技术史","冶金工程"],"aCount":3,"strength":"有特色"},{"name":"中国海洋大学","city":"青岛","province":"山东","region":"华东","zone":"A","tier":["985","211","双一流"],"gradSite":"https://yz.ouc.edu.cn/","aPlus":["海洋科学","水产"],"aCount":2,"strength":"有特色"},{"name":"北京交通大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.bjtu.edu.cn/","aPlus":["系统科学"],"aCount":5,"strength":"有特色"},{"name":"华南师范大学","city":"广州","province":"广东","region":"华南","zone":"A","tier":["211","双一流"],"gradSite":"https://yz.scnu.edu.cn/","aPlus":["心理学"],"aCount":4,"strength":"有特色"},{"name":"大连理工大学","city":"大连","province":"辽宁","region":"东北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://gs.dlut.edu.cn/","aPlus":[],"aCount":7,"strength":"有特色"},{"name":"北京邮电大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://yzb.bupt.edu.cn/","aPlus":["信息与通信工程"],"aCount":3,"strength":"有特色"},{"name":"南京师范大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://yz.njnu.edu.cn/","aPlus":[],"aCount":6,"strength":"有特色"},{"name":"河海大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.hhu.edu.cn/","aPlus":["水利工程"],"aCount":3,"strength":"有特色"},{"name":"西北工业大学","city":"西安","province":"陕西","region":"西北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yzb.nwpu.edu.cn/","aPlus":["航空宇航科学与技术"],"aCount":3,"strength":"有特色"},{"name":"西安电子科技大学","city":"西安","province":"陕西","region":"西北","zone":"A","tier":["211","双一流"],"gradSite":"https://gr.xidian.edu.cn/","aPlus":["电子科学与技术"],"aCount":3,"strength":"有特色"},{"name":"中央财经大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.cufe.edu.cn/","aPlus":["应用经济学"],"aCount":2,"strength":"有特色"},{"name":"云南大学","city":"昆明","province":"云南","region":"西南","zone":"B","tier":["211","双一流"],"gradSite":"http://www.grs.ynu.edu.cn/","aPlus":["民族学"],"aCount":2,"strength":"有特色"},{"name":"兰州大学","city":"兰州","province":"甘肃","region":"西北","zone":"B","tier":["985","211","双一流","34所自划线"],"gradSite":"https://yz.lzu.edu.cn/","aPlus":["草学"],"aCount":2,"strength":"有特色"},{"name":"南京理工大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.njust.edu.cn/","aPlus":["兵器科学与技术"],"aCount":2,"strength":"有特色"},{"name":"哈尔滨工程大学","city":"哈尔滨","province":"黑龙江","region":"东北","zone":"A","tier":["211","双一流"],"gradSite":"https://yzb.hrbeu.edu.cn/","aPlus":["船舶与海洋工程"],"aCount":2,"strength":"有特色"},{"name":"湖南大学","city":"长沙","province":"湖南","region":"华中","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://gra.hnu.edu.cn/","aPlus":[],"aCount":5,"strength":"有特色"},{"name":"西北大学","city":"西安","province":"陕西","region":"西北","zone":"A","tier":["211","双一流"],"gradSite":"https://yjs.nwu.edu.cn/","aPlus":["考古学"],"aCount":2,"strength":"有特色"},{"name":"西南交通大学","city":"成都","province":"四川","region":"西南","zone":"A","tier":["211","双一流"],"gradSite":"https://gsnews.swjtu.edu.cn/","aPlus":["交通运输工程"],"aCount":2,"strength":"有特色"},{"name":"首都师范大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["双非","双一流"],"gradSite":"https://grad.cnu.edu.cn/","aPlus":[],"aCount":5,"strength":"有特色"},{"name":"东北大学","city":"沈阳","province":"辽宁","region":"东北","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"http://yz.neu.edu.cn/","aPlus":[],"aCount":4,"strength":"有特色"},{"name":"中国政法大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://yjsy.cupl.edu.cn/","aPlus":["法学"],"aCount":1,"strength":"有特色"},{"name":"华东理工大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://gschool.ecust.edu.cn/","aPlus":["化学工程与技术"],"aCount":1,"strength":"有特色"},{"name":"华中师范大学","city":"武汉","province":"湖北","region":"华中","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.ccnu.edu.cn/","aPlus":[],"aCount":4,"strength":"有特色"},{"name":"对外经济贸易大学","city":"北京","province":"北京","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://yjsy.uibe.edu.cn/","aPlus":[],"aCount":4,"strength":"有特色"},{"name":"武汉理工大学","city":"武汉","province":"湖北","region":"华中","zone":"A","tier":["211","双一流"],"gradSite":"http://gd.whut.edu.cn/","aPlus":["材料科学与工程"],"aCount":1,"strength":"有特色"},{"name":"上海财经大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://gs.sufe.edu.cn/","aPlus":[],"aCount":3,"strength":"有特色"},{"name":"南京航空航天大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://www.graduate.nuaa.edu.cn/","aPlus":[],"aCount":3,"strength":"有特色"},{"name":"重庆大学","city":"重庆","province":"重庆","region":"西南","zone":"A","tier":["985","211","双一流","34所自划线"],"gradSite":"https://graduate.cqu.edu.cn/","aPlus":[],"aCount":3,"strength":"有特色"},{"name":"上海大学","city":"上海","province":"上海","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://yjszs.shu.edu.cn/","aPlus":[],"aCount":2,"strength":"待补充"},{"name":"苏州大学","city":"苏州","province":"江苏","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"http://yjs.suda.edu.cn/","aPlus":[],"aCount":2,"strength":"待补充"},{"name":"西南财经大学","city":"成都","province":"四川","region":"西南","zone":"A","tier":["211","双一流"],"gradSite":"https://yz.swufe.edu.cn/","aPlus":[],"aCount":2,"strength":"待补充"},{"name":"合肥工业大学","city":"合肥","province":"安徽","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"http://yjszs.hfut.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"扬州大学","city":"扬州","province":"江苏","region":"华东","zone":"A","tier":["双非"],"gradSite":"https://yjsc.yzu.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"暨南大学","city":"广州","province":"广东","region":"华南","zone":"A","tier":["211","双一流"],"gradSite":"https://yz.jnu.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"江苏大学","city":"镇江","province":"江苏","region":"华东","zone":"A","tier":["双非"],"gradSite":"https://yjsy.ujs.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"浙江工业大学","city":"杭州","province":"浙江","region":"华东","zone":"A","tier":["双非"],"gradSite":"http://www.yz.zjut.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"燕山大学","city":"秦皇岛","province":"河北","region":"华北","zone":"A","tier":["双非"],"gradSite":"https://gs.ysu.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"福州大学","city":"福州","province":"福建","region":"华东","zone":"A","tier":["211","双一流"],"gradSite":"https://yjsy.fzu.edu.cn/","aPlus":[],"aCount":1,"strength":"待补充"},{"name":"南京邮电大学","city":"南京","province":"江苏","region":"华东","zone":"A","tier":["双非","双一流"],"gradSite":"https://yzb.njupt.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"天津财经大学","city":"天津","province":"天津","region":"华北","zone":"A","tier":["双非"],"gradSite":"https://yjsy.tjufe.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"太原理工大学","city":"太原","province":"山西","region":"华北","zone":"A","tier":["211","双一流"],"gradSite":"https://www.gs.tyut.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"广西大学","city":"南宁","province":"广西","region":"华南","zone":"B","tier":["211","双一流"],"gradSite":"https://yjsc.gxu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"昆明理工大学","city":"昆明","province":"云南","region":"西南","zone":"B","tier":["双非"],"gradSite":"https://yjs.kust.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"杭州电子科技大学","city":"杭州","province":"浙江","region":"华东","zone":"A","tier":["双非"],"gradSite":"https://grs.hdu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"深圳大学","city":"深圳","province":"广东","region":"华南","zone":"A","tier":["双非"],"gradSite":"https://yz.szu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"湖南师范大学","city":"长沙","province":"湖南","region":"华中","zone":"A","tier":["211","双一流"],"gradSite":"https://yjsy.hunnu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"湘潭大学","city":"湘潭","province":"湖南","region":"华中","zone":"A","tier":["双非","双一流"],"gradSite":"https://yjsc.xtu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"辽宁大学","city":"沈阳","province":"辽宁","region":"东北","zone":"A","tier":["211","双一流"],"gradSite":"https://grs.lnu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"},{"name":"郑州大学","city":"郑州","province":"河南","region":"华中","zone":"A","tier":["211","双一流"],"gradSite":"https://yz.zzu.edu.cn/","aPlus":[],"aCount":0,"strength":"待补充"}]}</script>
+<script id="data-lines" type="application/json">{"year":2026,"note":"自 2024 年起，教育部将学术学位与专业学位合并为一张表，按学科门类统一划线；管理类联考相关的专业学位类别（工商管理、公共管理、会计/图书情报/审计、旅游管理、工程管理）单独划线。","source":["https://yz.chsi.com.cn/kyzx/kp/202602/20260228/2293449093.html","http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202602/W020260228373276320816.pdf"],"academic":[{"name":"哲学","code":"01","A":[326,41,62],"B":[316,38,57]},{"name":"经济学","code":"02","A":[324,40,60],"B":[314,37,56]},{"name":"法学","code":"03","A":[321,40,60],"B":[311,37,56]},{"name":"教育学（体育学）","code":"04","A":[310,38,114],"B":[300,35,105]},{"name":"教育学（教育 / 国际中文教育）","code":"04","A":[347,48,72],"B":[337,45,68]},{"name":"教育学（其他学科专业）","code":"04","A":[347,48,144],"B":[337,45,135]},{"name":"文学","code":"05","A":[354,48,72],"B":[344,45,68]},{"name":"历史学","code":"06","A":[341,45,135],"B":[331,42,126]},{"name":"理学","code":"07","A":[275,35,53],"B":[265,32,48]},{"name":"工学（照顾专业）","code":"08","A":[251,33,50],"B":[241,30,45]},{"name":"工学（其他学科专业）","code":"08","A":[264,35,53],"B":[254,32,48]},{"name":"农学","code":"09","A":[240,33,50],"B":[230,30,45]},{"name":"医学","code":"10","A":[294,36,108],"B":[284,33,99]},{"name":"军事学","code":"11","A":[260,34,51],"B":[250,31,47]},{"name":"管理学（其他学科专业）","code":"12","A":[332,41,62],"B":[322,38,57]},{"name":"艺术学","code":"13","A":[354,38,57],"B":[344,35,53]},{"name":"交叉学科","code":"14","A":[266,35,53],"B":[256,32,48]}],"professionalSeparate":[{"name":"工商管理","code":"1251","A":[146,35,70],"B":[136,30,60]},{"name":"公共管理","code":"1252","A":[168,39,78],"B":[158,34,68]},{"name":"会计 / 图书情报 / 审计","code":"1253·1255·1257","A":[199,51,102],"B":[189,46,92]},{"name":"旅游管理","code":"1254","A":[151,35,70],"B":[141,30,60]},{"name":"工程管理","code":"1256","A":[166,39,78],"B":[156,34,68]}],"professionalMapping":[{"group":"经济学门类线","ref":"经济学","items":["金融","应用统计","税务","国际商务","保险","资产评估"]},{"group":"法学门类线","ref":"法学","items":["法律（非法学）","法律（法学）","社会工作","警务"]},{"group":"教育学（教育 / 国际中文教育）线","ref":"教育学（教育 / 国际中文教育）","items":["教育","国际中文教育"]},{"group":"教育学（其他）线","ref":"教育学（其他学科专业）","items":["应用心理"]},{"group":"教育学（体育学）线","ref":"教育学（体育学）","items":["体育"]},{"group":"文学门类线","ref":"文学","items":["翻译","新闻与传播","出版"]},{"group":"历史学门类线","ref":"历史学","items":["文物与博物馆"]},{"group":"工学（其他）线","ref":"工学（其他学科专业）","items":["建筑学","城市规划","电子信息","机械","材料与化工","资源与环境","能源动力","土木水利","生物与医药","交通运输"]},{"group":"农学门类线","ref":"农学","items":["农业","兽医","风景园林","林业"]},{"group":"医学门类线","ref":"医学","items":["临床医学","口腔医学","公共卫生","护理","药学","中药","中医"]},{"group":"艺术学门类线","ref":"艺术学","items":["艺术"]}],"regionB":["内蒙古","广西","海南","贵州","云南","西藏","甘肃","青海","宁夏","新疆"]}</script>
+<script id="data-history" type="application/json">{"years":[2021,2022,2023,2024,2025,2026],"region":"A","unit":"总分","note":"A 区总分国家线。2024 年起学硕与专硕合并按学科门类划线，因此金融≈经济学线、法律≈法学线、翻译/新闻与传播≈文学线、电子信息≈工学线。","source":["https://yz.chsi.com.cn/kyzx/kp/202602/20260228/2293449093.html","https://yz.chsi.com.cn/kyzx/kp/202502/20250224/2293352975.html","https://yz.chsi.com.cn/kyzx/kp/202403/20240312/2293269492.html","https://yz.chsi.com.cn/kyzx/kp/202203/20220311/2172246782.html","https://yz.chsi.com.cn/kyzx/kydt/202103/20210312/2037434832.html"],"academic":{"哲学":[299,314,323,333,321,326],"经济学":[348,360,346,338,323,324],"法学":[321,335,326,331,323,321],"教育学":[337,351,350,350,341,347],"文学":[355,367,363,365,351,354],"历史学":[321,336,336,345,336,341],"理学":[280,290,279,288,274,275],"工学":[263,273,273,273,260,264],"农学":[252,252,251,251,245,240],"医学":[299,309,296,304,293,294],"管理学":[341,353,340,347,333,332],"艺术学":[346,361,362,362,351,354],"交叉学科":[null,null,265,275,266,266]},"professional":{"工商管理(MBA)":[170,170,167,162,151,146],"会计(MPAcc)":[179,193,197,201,194,199],"公共管理(MPA)":[174,178,175,173,164,168]}}</script>
+<script id="data-res" type="application/json">{"note":"官方与权威渠道优先。欢迎通过 PR 补充你验证过的、长期有效的公开资源；不收录付费引流、需要加微信/进群的链接。","groups":[{"title":"官方必看","desc":"报名、查分、调剂、政策原文，一切以官方为准","links":[{"name":"中国研究生招生信息网（研招网）","url":"https://yz.chsi.com.cn/","desc":"官方报名、调剂、成绩查询、招生目录的唯一入口"},{"name":"研招网 · 硕士专业目录查询","url":"https://yz.chsi.com.cn/zsml/","desc":"按院校 / 学科查各校当年招生专业、考试科目、拟招人数"},{"name":"研招网 · 调剂服务系统","url":"https://yz.chsi.com.cn/tj/","desc":"每年 3—4 月开放，全国唯一官方调剂平台"},{"name":"教育部 · 政策文件","url":"http://www.moe.gov.cn/jyb_xxgk/","desc":"招生管理规定、国家线原文的发布源头"},{"name":"教育部学位与研究生教育发展中心","url":"https://www.cdgdc.edu.cn/","desc":"学科评估、学位认证的官方机构"}]},{"title":"选校与信息核对","desc":"判断一所学校 / 一个专业到底值不值得考","links":[{"name":"全国高等学校名单（教育部）","url":"http://www.moe.gov.cn/jyb_xxgk/s5743/s5744/","desc":"核实学校是否正规、办学层次的权威名单"},{"name":"研招网 · 网上咨询","url":"https://yz.chsi.com.cn/zxdy/","desc":"每年 9 月各校招办官方答疑存档，比论坛可靠"},{"name":"各院校研究生招生网","url":"#schools","desc":"本站「院校库」中每所学校都附了已验证的官方研招网直链"}]},{"title":"公共课备考","desc":"政治 / 英语 / 数学的公开命题依据","links":[{"name":"全国硕士研究生招生考试考试大纲","url":"http://www.moe.gov.cn/","desc":"每年 8—9 月由教育部发布，是公共课复习的唯一命题依据"},{"name":"研招网 · 备考指导","url":"https://yz.chsi.com.cn/kyzx/kydt/","desc":"官方发布的考研动态与备考资讯"}]}],"tips":["国家线只是「有资格进复试」的最低门槛，34 所自划线院校自己划线，通常远高于国家线。","B 区（内蒙古、广西、海南、贵州、云南、西藏、甘肃、青海、宁夏、新疆）国家线一般比 A 区低 10 分。","招生目录、参考书目、复试细则每年都可能变，务必以目标院校当年发布的招生简章为准。","第四轮学科评估是 2017 年的结果，第五轮未向社会公布，只能作为参考而非当前实力的定论。"]}</script>
+
+<script>
+"use strict";
+const J = id => JSON.parse(document.getElementById(id).textContent);
+const DB      = J('data-schools');
+const LINES   = J('data-lines');
+const HIST    = J('data-history');
+const RES     = J('data-res');
+const SCHOOLS = DB.schools;
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const SERIES = ['--s1','--s2','--s3','--s4','--s5','--s6','--s7','--s8'];
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------------- theme ---------------- */
+const themeBtn = $('#themeBtn');
+function applyTheme(t){
+  if(t === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', t);
+  try{ localStorage.setItem('kh-theme', t); }catch(e){}
+  requestAnimationFrame(drawAll);
+}
+themeBtn.onclick = () => {
+  const cur = document.documentElement.getAttribute('data-theme') || 'auto';
+  applyTheme(cur === 'auto' ? 'light' : cur === 'light' ? 'dark' : 'auto');
+};
+try{ const t = localStorage.getItem('kh-theme'); if(t) applyTheme(t); }catch(e){}
+
+/* ---------------- tabs ---------------- */
+function go(name){
+  $$('.tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.panel === name)));
+  $$('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + name));
+  window.scrollTo({top:0, behavior:'smooth'});
+  if(name === 'charts') requestAnimationFrame(drawAll);
+}
+$$('.tab').forEach(b => b.onclick = () => go(b.dataset.panel));
+
+/* ---------------- tooltip ---------------- */
+const tipEl = $('#tip');
+function showTip(html, x, y){
+  tipEl.innerHTML = html;
+  tipEl.style.opacity = 1;
+  const r = tipEl.getBoundingClientRect();
+  let left = x + 14, top = y - r.height - 12;
+  if(left + r.width > innerWidth - 8)  left = x - r.width - 14;
+  if(left < 8) left = 8;
+  if(top < 8) top = y + 18;
+  tipEl.style.left = left + 'px';
+  tipEl.style.top  = top + 'px';
+}
+const hideTip = () => tipEl.style.opacity = 0;
+
+/* ================= 院校库 ================= */
+const REGIONS = [...new Set(SCHOOLS.map(s => s.region))];
+const TIERS   = ['34所自划线','985','211','双一流','双非'];
+const state   = { q:'', region:new Set(), tier:new Set(), zone:new Set() };
+const picks   = [];
+
+function chipRow(host, items, key){
+  items.forEach(v => {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.textContent = v;
+    b.setAttribute('aria-pressed','false');
+    b.onclick = () => {
+      const on = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', String(!on));
+      on ? state[key].delete(v) : state[key].add(v);
+      renderSchools();
+    };
+    host.appendChild(b);
+  });
+}
+chipRow($('#fRegion'), REGIONS, 'region');
+chipRow($('#fTier'),   TIERS,   'tier');
+chipRow($('#fZone'),   ['A 区','B 区'], 'zone');
+
+$('#q').addEventListener('input', e => {
+  state.q = e.target.value.trim().toLowerCase();
+  $('#qClear').hidden = !e.target.value;
+  renderSchools();
+});
+$('#qClear').onclick = () => { $('#q').value=''; state.q=''; $('#qClear').hidden=true; renderSchools(); };
+
+function match(s){
+  if(state.region.size && !state.region.has(s.region)) return false;
+  if(state.tier.size   && !s.tier.some(t => state.tier.has(t))) return false;
+  if(state.zone.size   && !state.zone.has(s.zone + ' 区')) return false;
+  if(!state.q) return true;
+  const hay = (s.name + s.city + s.province + s.region + s.tier.join('') + s.aPlus.join('')).toLowerCase();
+  return hay.includes(state.q);
+}
+const badgeCls = t => t==='985'?'b985' : t==='34所自划线'?'b34' : t==='211'?'b211' : t==='双一流'?'bsy' : '';
+
+function renderSchools(){
+  const list = SCHOOLS.filter(match);
+  $('#schoolSub').textContent =
+    `共收录 ${SCHOOLS.length} 所考研热门院校，当前显示 ${list.length} 所。学科数据为教育部第四轮学科评估（2017）公开结果。`;
+  const grid = $('#schoolGrid');
+  $('#schoolEmpty').hidden = list.length > 0;
+  grid.innerHTML = list.map(s => {
+    const filled = Math.max(1, Math.min(5, Math.round((s.aPlus.length*3 + s.aCount)/9)));
+    const bars = Array.from({length:5}, (_,i) => `<i class="${i<filled?'f':''}"></i>`).join('');
+    const ap = s.aPlus.slice(0,4).map(a => `<span class="ap">${esc(a)}</span>`).join('')
+             + (s.aPlus.length>4 ? `<span class="ap">+${s.aPlus.length-4}</span>` : '');
+    const on = picks.includes(s.name);
+    return `<article class="card school${on?' picked':''}" data-n="${esc(s.name)}">
+      <div class="stop">
+        <div class="sname">${esc(s.name)}<span class="scity">${esc(s.city)}</span></div>
+        <button class="pick" type="button" aria-pressed="${on}" title="加入对比" data-pick="${esc(s.name)}">${on?'✓':'＋'}</button>
+      </div>
+      <div class="badges">${s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join('')}
+        <span class="badge">${esc(s.zone)} 区</span></div>
+      ${s.aPlus.length ? `<div class="aplus">${ap}</div>`
+        : `<div class="muted">第四轮评估 A 类学科 ${s.aCount} 个${s.aCount?'':'（无）'}</div>`}
+      <div class="sfoot">
+        <span class="meter"><span class="bars">${bars}</span>${esc(s.strength)} · A类 ${s.aCount}</span>
+        <a class="glink" href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a>
+      </div>
+    </article>`;
+  }).join('');
+  grid.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => togglePick(b.dataset.pick));
+}
+
+function togglePick(name){
+  const i = picks.indexOf(name);
+  if(i >= 0) picks.splice(i,1);
+  else{
+    if(picks.length >= 4){ alert('最多同时对比 4 所院校'); return; }
+    picks.push(name);
+  }
+  renderSchools(); renderCompare(); renderDock();
+}
+function clearPicks(){ picks.length = 0; renderSchools(); renderCompare(); renderDock(); }
+function renderDock(){
+  $('#dock').classList.toggle('on', picks.length > 0);
+  document.body.classList.toggle('hasdock', picks.length > 0);
+  $('#dockTxt').textContent = `已选 ${picks.length}/4：${picks.join('、')}`;
+  $('#cmpN').textContent = picks.length ? `(${picks.length})` : '';
+}
+
+/* ================= 对比 ================= */
+function renderCompare(){
+  const rows = picks.map(n => SCHOOLS.find(s => s.name === n)).filter(Boolean);
+  $('#cmpEmpty').hidden = rows.length > 0;
+  $('#cmpWrap').hidden  = rows.length === 0;
+  if(!rows.length) return;
+  const fields = [
+    ['所在地',     s => `${esc(s.city)}（${esc(s.province)}）`],
+    ['地区',       s => esc(s.region)],
+    ['考区',       s => `${s.zone} 区${s.zone==='B'?'（国家线低 10 分）':''}`],
+    ['层次',       s => s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join(' ')],
+    ['A+ 学科',    s => s.aPlus.length ? s.aPlus.map(a=>`<span class="ap">${esc(a)}</span>`).join(' ') : '<span class="muted">无</span>'],
+    ['A+ 学科数',  s => `<span class="num">${s.aPlus.length}</span>`],
+    ['A 类学科数', s => `<span class="num">${s.aCount}</span>`],
+    ['学科实力',   s => esc(s.strength)],
+    ['研招网',     s => `<a href="${esc(s.gradSite)}" target="_blank" rel="noopener">官网 ↗</a>`],
+    ['',           s => `<button class="chip" onclick="togglePick('${esc(s.name)}')">移出对比</button>`],
+  ];
+  $('#cmpTable').innerHTML =
+    `<thead><tr><th class="rowh">对比项</th>${rows.map(s=>`<th>${esc(s.name)}</th>`).join('')}</tr></thead>` +
+    `<tbody>${fields.map(([k,fn]) =>
+      `<tr><td class="rowh">${k}</td>${rows.map(s=>`<td>${fn(s)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+}
+
+/* ================= 国家线 ================= */
+let ZONE = 'A';
+$('#lineSub').textContent = LINES.note;
+$('#lineNote').innerHTML = `<b>B 区包括：</b>${LINES.regionB.join('、')}。其余省份为 A 区，国家线通常比 B 区高 10 分。`;
+$$('#zoneSeg button').forEach(b => b.onclick = () => {
+  ZONE = b.dataset.z;
+  $$('#zoneSeg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+  renderLines();
+});
+function renderLines(){
+  $('#zoneHint').textContent = ZONE === 'A' ? '当前显示 A 区（一区）分数线' : '当前显示 B 区（二区）分数线';
+  const row = r => `<tr><td>${esc(r.name)}</td><td class="muted num">${esc(r.code)}</td>
+      <td class="num"><b>${r[ZONE][0]}</b></td><td class="num">${r[ZONE][1]}</td><td class="num">${r[ZONE][2]}</td></tr>`;
+  $('#lineTable').innerHTML =
+    `<thead><tr><th>学科门类 / 专业学位类别</th><th>代码</th><th>总分</th><th>单科(满分=100)</th><th>单科(满分&gt;100)</th></tr></thead>
+     <tbody>
+       <tr><td class="rowh" colspan="5">学术学位 · 学科门类（专业学位同门类者一并适用）</td></tr>
+       ${LINES.academic.map(row).join('')}
+       <tr><td class="rowh" colspan="5">单独划线的专业学位类别（管理类联考）</td></tr>
+       ${LINES.professionalSeparate.map(row).join('')}
+     </tbody>`;
+  $('#mapTable').innerHTML =
+    `<thead><tr><th>对应门类线</th><th>2026 A 区总分</th><th>包含的专业学位类别</th></tr></thead><tbody>` +
+    LINES.professionalMapping.map(g => {
+      const ref = LINES.academic.find(a => a.name === g.ref);
+      return `<tr><td class="rowh">${esc(g.group)}</td><td class="num"><b>${ref?ref.A[0]:'—'}</b></td>
+              <td>${g.items.map(i=>`<span class="badge">${esc(i)}</span>`).join(' ')}</td></tr>`;
+    }).join('') + '</tbody>';
+}
+
+/* ================= 资料 ================= */
+$('#resSub').textContent = RES.note;
+$('#resGroups').innerHTML = RES.groups.map(g => `
+  <div class="rgroup">
+    <h3 style="font-size:15px;margin:0 0 2px">${esc(g.title)}</h3>
+    <p class="muted" style="margin:0 0 10px">${esc(g.desc)}</p>
+    <div class="rlinks">${g.links.map(l => {
+      const inner = `<b>${esc(l.name)} ↗</b><span>${esc(l.desc)}</span>`;
+      return l.url.startsWith('#')
+        ? `<a class="card rl" href="javascript:void 0" onclick="go('schools')">${inner}</a>`
+        : `<a class="card rl" href="${esc(l.url)}" target="_blank" rel="noopener">${inner}</a>`;
+    }).join('')}</div>
+  </div>`).join('');
+$('#tipList').innerHTML = RES.tips.map(t => `<li>${esc(t)}</li>`).join('');
+$('#upd').textContent = DB.updated;
+
+/* ================= charts ================= */
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (t, a) => { const e = document.createElementNS(NS, t); for(const k in a) e.setAttribute(k, a[k]); return e; };
+
+/* ---- 折线图：历年国家线趋势 ----
+   13 个门类多于 8 个分类色槽，因此不循环取色：每条曲线在被选中时「占用」一个空闲色槽，
+   取消选中才释放。这样取消任意一条曲线都不会导致其余曲线换色。 */
+const TREND_KEYS = Object.keys(HIST.academic);
+const slotOf = new Map();                       // 门类 -> 色槽下标
+function claimSlot(k){
+  if(slotOf.has(k)) return true;
+  const used = new Set(slotOf.values());
+  for(let i = 0; i < SERIES.length; i++) if(!used.has(i)){ slotOf.set(k, i); return true; }
+  return false;                                  // 8 个色槽已满
+}
+['经济学','法学','文学','理学','工学','管理学'].forEach(claimSlot);
+const trendOn  = () => TREND_KEYS.filter(k => slotOf.has(k));
+const varOf    = k => SERIES[slotOf.get(k)];
+function buildTrendLegend(){
+  $('#trendLegend').innerHTML = TREND_KEYS.map(k => {
+    const on = slotOf.has(k);
+    const bg = on ? `var(${varOf(k)})` : 'var(--line-strong)';
+    return `<button class="lg" type="button" data-k="${esc(k)}" aria-pressed="${on}">
+       <span class="dot" style="background:${bg}"></span>${esc(k)}</button>`;
+  }).join('');
+  $$('#trendLegend .lg').forEach(b => b.onclick = () => {
+    const k = b.dataset.k;
+    if(slotOf.has(k)) slotOf.delete(k);
+    else if(!claimSlot(k)){ alert('最多同时显示 8 条曲线，请先取消一条'); return; }
+    buildTrendLegend(); drawTrend();
+  });
+}
+function drawTrend(){
+  const svg = $('#trendSvg'); svg.innerHTML = '';
+  const W = 760, H = 340, ML = 44, MR = 58, MT = 14, MB = 34;
+  const years = HIST.years;
+  const keys = trendOn();
+  const colorOf = k => cssv(varOf(k));
+  const vals = keys.flatMap(k => HIST.academic[k]).filter(v => v != null);
+  if(!keys.length || !vals.length){
+    svg.appendChild(mk('text',{x:W/2,y:H/2,'text-anchor':'middle',class:'axt'})).textContent = '请至少选择一个学科门类';
+    return;
+  }
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const pad = Math.max(12, (hi-lo)*0.14); lo = Math.floor((lo-pad)/10)*10; hi = Math.ceil((hi+pad)/10)*10;
+  const X = i => ML + i*(W-ML-MR)/(years.length-1);
+  const Y = v => MT + (hi-v)/(hi-lo)*(H-MT-MB);
+
+  const step = Math.max(10, Math.ceil((hi-lo)/6/10)*10);
+  for(let v = lo; v <= hi; v += step){
+    svg.appendChild(mk('line',{x1:ML,x2:W-MR,y1:Y(v),y2:Y(v),class:'gl'}));
+    const t = mk('text',{x:ML-8,y:Y(v)+4,'text-anchor':'end',class:'axt'}); t.textContent = v; svg.appendChild(t);
+  }
+  years.forEach((y,i) => {
+    const t = mk('text',{x:X(i),y:H-12,'text-anchor':'middle',class:'axt b'}); t.textContent = y; svg.appendChild(t);
+  });
+
+  keys.forEach(k => {
+    const c = colorOf(k), d = HIST.academic[k];
+    let path = '', started = false;
+    d.forEach((v,i) => { if(v==null){ started=false; return; }
+      path += (started?' L':' M') + X(i) + ' ' + Y(v); started = true; });
+    svg.appendChild(mk('path',{d:path.trim(),fill:'none',stroke:c,'stroke-width':2,
+      'stroke-linecap':'round','stroke-linejoin':'round'}));
+    d.forEach((v,i) => { if(v==null) return;
+      svg.appendChild(mk('circle',{cx:X(i),cy:Y(v),r:4,fill:c,stroke:cssv('--surface-1'),'stroke-width':2})); });
+    // 末端直接标注（≤4 条时）
+    if(keys.length <= 4){
+      const last = d.length-1;
+      if(d[last] != null){
+        const t = mk('text',{x:X(last)+9,y:Y(d[last])+4,class:'axt',fill:c,'font-weight':600});
+        t.textContent = k; svg.appendChild(t);
+      }
+    }
+  });
+
+  const hair = mk('line',{x1:0,x2:0,y1:MT,y2:H-MB,stroke:cssv('--line-strong'),'stroke-width':1,opacity:0});
+  svg.appendChild(hair);
+  const hit = mk('rect',{x:0,y:0,width:W,height:H,fill:'transparent'});
+  svg.appendChild(hit);
+  function onMove(ev){
+    const p = ev.touches ? ev.touches[0] : ev;
+    const box = svg.getBoundingClientRect();
+    const sx = (p.clientX - box.left) / box.width * W;
+    let i = Math.round((sx - ML) / ((W-ML-MR)/(years.length-1)));
+    i = Math.max(0, Math.min(years.length-1, i));
+    hair.setAttribute('x1', X(i)); hair.setAttribute('x2', X(i)); hair.setAttribute('opacity', .8);
+    const rows = keys.map(k => ({k, v:HIST.academic[k][i], c:colorOf(k)}))
+                     .filter(r => r.v != null).sort((a,b) => b.v - a.v);
+    showTip(`<div class="tt">${years[i]} 年 · A 区总分线</div>` + rows.map(r =>
+      `<div class="tr"><span class="dot" style="background:${r.c}"></span><span class="nm">${esc(r.k)}</span><span class="vl">${r.v}</span></div>`
+    ).join(''), p.clientX, p.clientY);
+  }
+  hit.addEventListener('mousemove', onMove);
+  hit.addEventListener('touchmove', e => { onMove(e); }, {passive:true});
+  hit.addEventListener('mouseleave', () => { hideTip(); hair.setAttribute('opacity',0); });
+  hit.addEventListener('touchend',   () => { hideTip(); hair.setAttribute('opacity',0); });
+}
+
+/* ---- 横向条形图（通用） ---- */
+function drawBars(svgSel, items, opt){
+  const svg = $(svgSel); svg.innerHTML = '';
+  const W = 760, ML = opt.labelW, MR = 54, MT = 6, rowH = opt.rowH, gap = 6;
+  const H = MT + items.length*rowH;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H + 8}`);
+  const max = Math.max(...items.map(d => d.v));
+  const bw = v => Math.max(2, v / max * (W - ML - MR));
+  items.forEach((d,i) => {
+    const y = MT + i*rowH;
+    const lab = mk('text',{x:ML-10,y:y+rowH/2+4,'text-anchor':'end',class:'axt b'});
+    lab.textContent = d.k.length > opt.maxLabel ? d.k.slice(0,opt.maxLabel) + '…' : d.k;
+    svg.appendChild(lab);
+    const track = mk('rect',{x:ML,y:y+gap/2,width:W-ML-MR,height:rowH-gap,rx:4,fill:cssv('--surface-0')});
+    svg.appendChild(track);
+    const bar = mk('rect',{x:ML,y:y+gap/2,width:bw(d.v),height:rowH-gap,rx:4,fill:d.c || cssv('--s1')});
+    svg.appendChild(bar);
+    const val = mk('text',{x:ML+bw(d.v)+9,y:y+rowH/2+4,class:'axt b','font-weight':600});
+    val.textContent = d.v; svg.appendChild(val);
+    const hit = mk('rect',{x:0,y:y,width:W,height:rowH,fill:'transparent',style:'cursor:pointer'});
+    hit.addEventListener('mousemove', ev => showTip(
+      `<div class="tt">${esc(d.k)}</div><div class="tr"><span class="dot" style="background:${d.c||cssv('--s1')}"></span>
+       <span class="nm">${esc(opt.unit)}</span><span class="vl">${d.v}</span></div>` +
+      (d.note ? `<div class="muted" style="margin-top:4px">${esc(d.note)}</div>` : ''),
+      ev.clientX, ev.clientY));
+    hit.addEventListener('mouseleave', hideTip);
+    hit.addEventListener('click', () => { if(opt.onClick) opt.onClick(d); });
+    svg.appendChild(hit);
+  });
+}
+
+function drawLineBars(){
+  const seq = ['#0d366b','#104281','#184f95','#1c5cab','#256abf','#2a78d6','#3987e5','#5598e7','#6da7ec','#86b6ef'];
+  const seqD = ['#cde2fb','#b7d3f6','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf','#1c5cab'];
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+                 (document.documentElement.getAttribute('data-theme') !== 'light' && dark);
+  const ramp = isDark ? seqD : seq;
+  const items = LINES.academic.map(a => ({k:a.name, v:a.A[0], note:`单科线 ${a.A[1]} / ${a.A[2]}`}))
+                             .sort((a,b) => b.v - a.v);
+  const n = items.length;
+  items.forEach((d,i) => d.c = ramp[Math.min(ramp.length-1, Math.round(i/(n-1)*(ramp.length-1)))]);
+  drawBars('#barSvg', items, {labelW:190, rowH:26, maxLabel:13, unit:'A 区总分线'});
+}
+
+function drawRegionBars(){
+  const cnt = {};
+  SCHOOLS.forEach(s => cnt[s.region] = (cnt[s.region]||0)+1);
+  const items = Object.entries(cnt).map(([k,v]) => ({k, v, c:cssv('--s1'),
+    note:`占收录院校的 ${(v/SCHOOLS.length*100).toFixed(0)}%`}))
+    .sort((a,b) => b.v - a.v);
+  drawBars('#regionSvg', items, {labelW:70, rowH:34, maxLabel:6, unit:'收录院校数',
+    onClick:d => { state.region.clear(); state.region.add(d.k);
+      $$('#fRegion .chip').forEach(c => c.setAttribute('aria-pressed', String(c.textContent === d.k)));
+      renderSchools(); go('schools'); }});
+}
+function drawAll(){ drawTrend(); drawLineBars(); drawRegionBars(); }
+
+/* ---------------- boot ---------------- */
+renderSchools(); renderCompare(); renderDock(); renderLines();
+buildTrendLegend(); drawAll();
+addEventListener('resize', () => { hideTip(); });
+window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
+</script>
+</body>
+</html>
