@@ -376,6 +376,20 @@ body.hasdock{padding-bottom:66px}
 
     <div class="card chartcard">
       <div class="chead">
+        <p class="ctitle">2026 年各校复试线对比</p>
+        <p class="cdesc" id="lineCmpDesc"></p>
+      </div>
+      <div class="toolbar" style="margin-bottom:10px">
+        <div class="seg" id="trackSeg">
+          <button data-t="cs" aria-selected="true">计算机 / 电子信息</button>
+          <button data-t="fin" aria-selected="false">金融 / 经济类</button>
+        </div>
+      </div>
+      <svg class="chart" id="cutSvg" viewBox="0 0 760 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="各校 2026 年复试线对比条形图"></svg>
+    </div>
+
+    <div class="card chartcard">
+      <div class="chead">
         <p class="ctitle">近年初试科目变动的院校数量</p>
         <p class="cdesc">含院校库内外的全部记录；「改考 408」是计算机方向近年最主流的变动</p>
       </div>
@@ -537,7 +551,7 @@ const badgeCls = t => t==='985'?'b985' : t==='34所自划线'?'b34' : t==='211'?
 function renderSchools(){
   const list = SCHOOLS.filter(match);
   $('#schoolSub').textContent =
-    `共收录 ${SCHOOLS.length} 所考研热门院校，当前显示 ${list.length} 所。学科数据为教育部第四轮学科评估（2017）公开结果。`;
+    `共收录 ${SCHOOLS.length} 所院校，当前显示 ${list.length} 所。其中 ${PROG.stats.schools} 所已收录逐专业数据（${PROG.stats.programs} 个专业、${PROG.stats.withLines} 个有复试线、${PROG.stats.withRetestRatio} 个有复试录取比）。学科数据为教育部第四轮学科评估（2017）结果。`;
   const grid = $('#schoolGrid');
   $('#schoolEmpty').hidden = list.length > 0;
   grid.innerHTML = list.map(s => {
@@ -599,10 +613,18 @@ function lineText(p){
   return p.lines.map(l => `${l.year}年 <b>${l.score}</b>`).join(' · ');
 }
 function ratioText(p){
-  if(p.applied && p.admitted) return `${p.applied} 报 / ${p.admitted} 录 · <b>${(p.applied/p.admitted).toFixed(1)}:1</b>`;
-  if(p.admitted) return `录取 <b>${p.admitted}</b> 人 · 报考人数未公布`;
-  if(p.seats && p.seats.plan) return `拟招 <b>${p.seats.plan}</b> 人${p.seats.tuimian?`（推免 ${p.seats.tuimian}）`:''}`;
-  return '<span class="muted">未公布</span>';
+  const bits = [];
+  if(p.applied && p.admitted)
+    bits.push(`报录比 <b>${(p.applied/p.admitted).toFixed(1)}:1</b>（${p.applied} 报 / ${p.admitted} 录）`);
+  else if(p.retest && p.admitted)
+    bits.push(`复试 <b>${p.retest}</b> → 录 <b>${p.admitted}</b> · 复试录取比 <b>${(p.retest/p.admitted).toFixed(2)}:1</b>`);
+  else if(p.admitted) bits.push(`拟录取 <b>${p.admitted}</b> 人`);
+  else if(p.retest)   bits.push(`进复试 <b>${p.retest}</b> 人`);
+  if(p.seats && p.seats.plan)
+    bits.push(`拟招 ${p.seats.plan} 人${p.seats.tuimian?`（推免 ${p.seats.tuimian}）`:''}`);
+  if(!bits.length) return '<span class="muted">未公布</span>';
+  if(p.dataYear) bits.push(`<span class="muted">${p.dataYear} 年</span>`);
+  return bits.join(' · ');
 }
 function openDetail(name){
   const s = SCHOOLS.find(x => x.name === name);
@@ -970,6 +992,32 @@ function drawRegionBars(){
       $$('#fRegion .chip').forEach(c => c.setAttribute('aria-pressed', String(c.textContent === d.k)));
       renderSchools(); go('schools'); }});
 }
+/* ---- 各校 2026 复试线对比（按方向切换） ---- */
+let CUT_TRACK = 'cs';
+$$('#trackSeg button').forEach(b => b.onclick = () => {
+  CUT_TRACK = b.dataset.t;
+  $$('#trackSeg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+  drawCutBars();
+});
+function drawCutBars(){
+  const items = PROG.records
+    .filter(p => p.track === CUT_TRACK)
+    .map(p => { const l = p.lines.find(x => x.year === 2026); return l ? {p, l} : null; })
+    .filter(Boolean)
+    .map(({p,l}) => ({
+      k: `${p.school}·${p.name.replace(/（.*?）/g,'').slice(0,8)}`, v: l.score,
+      c: p.degree === '学硕' ? cssv('--s1') : cssv('--s2'),
+      note: `${p.degree} · ${p.college || ''}${p.retest&&p.admitted?` · 复试 ${p.retest} 录 ${p.admitted}`:''}`
+    }))
+    .sort((a,b) => b.v - a.v).slice(0, 22);
+  $('#lineCmpDesc').textContent = items.length
+    ? `共 ${items.length} 个项目有 2026 年数据（蓝＝学硕，橙＝专硕）。分数线只反映当年一志愿录取的最低门槛，招生人数少的项目分数线波动极大，别只看数字。`
+    : '该方向暂无 2026 年复试线数据。';
+  const svg = $('#cutSvg');
+  if(!items.length){ svg.innerHTML = ''; svg.setAttribute('viewBox','0 0 760 60'); return; }
+  drawBars('#cutSvg', items, {labelW:215, rowH:24, maxLabel:16, unit:'2026 复试线'});
+}
+
 function drawChgBars(){
   const all = CHG_ALL.concat(CHG.extra);
   const keys = [...new Set(all.map(c => `${c.year} · ${c.type}`))];
@@ -987,7 +1035,7 @@ function drawChgBars(){
   drawBars('#chgSvg', items, {labelW:150, rowH:30, maxLabel:14, unit:'院校数',
     onClick:() => go('changes')});
 }
-function drawAll(){ drawTrend(); drawLineBars(); drawChgBars(); drawRegionBars(); }
+function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawChgBars(); drawRegionBars(); }
 
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();

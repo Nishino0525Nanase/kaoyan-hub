@@ -1,227 +1,4789 @@
 {
-  "updated": "2026-08",
-  "note": "逐校逐专业的初试科目、复试线、招生与报录数据。confidence 字段说明数据可信度：official=来自学校官网/研招网；secondary=来自考研平台汇总，未经官方核实；partial=部分字段核实、部分缺失。null 表示确实查不到，不是 0，也没有估算。这一块是本项目最需要社区补充的部分——各校的复试线与招生计划大多以 PDF 或图片发布，无法批量抓取。",
-  "tracks": {
-    "cs": "计算机 / 电子信息",
-    "fin": "金融 / 经济类"
-  },
-  "records": [
+ "updated": "2026-08",
+ "note": "逐校逐专业的初试科目、复试线、招录数据。confidence 说明可信度：official=来自学校官网/研招网；secondary=来自考研平台汇总，未经官方核实；partial=部分核实。查不到的字段一律 null，不估算、不编造。「复试录取比」= 复试人数 ÷ 拟录取人数，反映进复试后被刷的比例，不是报录比——报考人数绝大多数学校不公布。",
+ "tracks": {
+  "cs": "计算机 / 电子信息",
+  "fin": "金融 / 经济类"
+ },
+ "records": [
+  {
+   "school": "上海交通大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "电子信息与电气工程学院 计算机学院",
+   "subjects": [
     {
-      "school": "中央财经大学", "track": "cs", "code": "085410", "name": "人工智能", "degree": "专硕", "college": "信息学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"302","name":"数学（二）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [{"year":2024,"score":273,"note":"校线（分专业划定），来源为考研平台汇总"},{"year":2025,"score":285,"note":"校线（分专业划定），来源为考研平台汇总"}],
-      "seats": {"year":2026,"plan":14,"tuimian":null}, "applied": 81, "admitted": 20,
-      "tuition": "20000 元/年", "years": 2,
-      "changes": "与 085404 计算机技术大类招生：初试后统一划线，按总成绩结合专业志愿确定录取专业。业务课二为统考 408 搭配数学二。",
-      "sources": [{"url":"https://ie.cufe.edu.cn/info/1341/6757.htm","official":true},{"url":"https://gs.cufe.edu.cn/info/1028/6862.htm","official":true}],
-      "confidence": "official"
+     "code": "101",
+     "name": "思想政治理论"
     },
     {
-      "school": "中央财经大学", "track": "cs", "code": "085404", "name": "计算机技术", "degree": "专硕", "college": "信息学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"302","name":"数学（二）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [{"year":2024,"score":273,"note":"与人工智能统一划线，来源为考研平台汇总"},{"year":2025,"score":285,"note":"与人工智能统一划线，来源为考研平台汇总"}],
-      "seats": {"year":2026,"plan":6,"tuimian":null}, "applied": 25, "admitted": 6,
-      "tuition": "20000 元/年", "years": 2,
-      "changes": "与 085410 人工智能大类招生、统一划线。另设非全日制计算机技术（智能金融方向）。",
-      "sources": [{"url":"https://ie.cufe.edu.cn/info/1341/6757.htm","official":true}],
-      "confidence": "official"
+     "code": "201",
+     "name": "英语（一）"
     },
     {
-      "school": "湖南大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "信息科学与工程学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"408","name":"计算机学科专业基础（2026 年起由 866 数据结构改为统考）"}],
-      "lines": [{"year":2025,"score":349,"note":"院线（学硕），单科 50/70"},{"year":2026,"score":365,"note":"院线（学硕），单科 50/75"}],
-      "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": 26,
-      "tuition": "8000 元/年", "years": null,
-      "changes": "2026 年学硕改考 408；2027 年起 085400 电子信息专硕也并入 408。",
-      "sources": [{"url":"https://csee.hnu.edu.cn/zsjy/sszs.htm","official":true},{"url":"https://noobdream.com/schoolinfo/38/","official":false}],
-      "confidence": "secondary"
+     "code": "301",
+     "name": "数学（一）"
     },
     {
-      "school": "西北大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "信息科学与技术学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"408","name":"计算机学科专业基础（2026 年起改为统考）"}],
-      "lines": [{"year":2024,"score":297,"note":"来源未标明院线/校线"},{"year":2025,"score":281,"note":"来源未标明院线/校线"},{"year":2026,"score":285,"note":"来源未标明院线/校线"}],
-      "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": 27,
-      "tuition": "8000 元/年", "years": 3,
-      "changes": "2026 年起业务课二由自命题（数据结构+操作系统+计算机网络）改为统考 408。",
-      "sources": [{"url":"https://yzb.nwu.edu.cn/","official":true},{"url":"https://noobdream.com/schoolinfo/52/","official":false}],
-      "confidence": "secondary"
-    },
-    {
-      "school": "西北大学", "track": "cs", "code": "085400", "name": "电子信息（软件工程方向）", "degree": "专硕", "college": "信息科学与技术学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":null,"name":"外国语（英一/英二待核实）"},{"code":null,"name":"数学（数一/数二待核实）"},{"code":"408","name":"计算机学科专业基础（2026 年起改为统考）"}],
-      "lines": [{"year":2024,"score":286,"note":"软件方向线，来源未标明院线/校线"},{"year":2025,"score":260,"note":"软件方向线，来源未标明院线/校线"},{"year":2026,"score":288,"note":"软件方向线，来源未标明院线/校线"}],
-      "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": 77,
-      "tuition": "12000 元/年", "years": 3,
-      "changes": "2026 年起改考统考 408。该方向为学院招生最多的项目：2024 年 107 人、2025 年 111 人、2026 年 77 人。",
-      "sources": [{"url":"https://yzb.nwu.edu.cn/","official":true},{"url":"https://noobdream.com/schoolinfo/52/","official":false}],
-      "confidence": "partial"
-    },
-    {
-      "school": "哈尔滨工程大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "计算机科学与技术学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201/202/203","name":"英语一 / 俄语 / 日语 选一"},{"code":"301","name":"数学（一）"},{"code":"811","name":"计算机专业基础综合（自命题）"}],
-      "lines": [], "seats": {"year":2026,"plan":25,"tuimian":45}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "学硕仍为自命题 811。复试笔试：计算机网络、数据库原理、软件能力水平测试（机试）。注意 2026 年计算机学院多个专业已改考 408，学硕口径需以当年目录核对。",
-      "sources": [{"url":"https://yzb.hrbeu.edu.cn/2025/0930/c3279a341475/page.htm","official":true},{"url":"http://cstc.hrbeu.edu.cn/2025/0415/c3688a336756/page.htm","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "哈尔滨工程大学", "track": "cs", "code": "085404", "name": "计算机技术", "degree": "专硕", "college": "计算机科学与技术学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201/202/203","name":"英语一 / 俄语 / 日语 选一"},{"code":"301","name":"数学（一）"},{"code":null,"name":"专业基础综合（科目代码待官方目录核实）"}],
-      "lines": [], "seats": {"year":2026,"plan":89,"tuimian":31}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "统考计划为学院内最大项目（推免 31 + 统考 89，另非全日制 5）。",
-      "sources": [{"url":"https://yzb.hrbeu.edu.cn/2025/0930/c3279a341475/page.htm","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "南京理工大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "计算机科学与工程学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "2026 年目录中 085410 人工智能仅招非全日制，全日制统考主力为 081200 与 085404。复试：程序设计（C++ 上机）、编译原理与算法设计。",
-      "sources": [{"url":"https://gs.njust.edu.cn/zsw/84/58/c4587a361560/page.htm","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "南京理工大学", "track": "cs", "code": "085404", "name": "计算机技术", "degree": "专硕", "college": "计算机科学与工程学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"302","name":"数学（二）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "计算机科学与工程学院 2026 年拟招全日制 315 人、非全日制 30 人（学院合计口径，未分专业）。",
-      "sources": [{"url":"https://gs.njust.edu.cn/zsw/6b/27/c4587a355111/page.htm","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "兰州大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "信息科学与工程学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"806","name":"计算机专业基础（数据结构、操作系统、计算机组成原理各 50 分）"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": 3,
-      "changes": "学校 2026 年 6 月 17 日发布《关于 2027 年硕士研究生招生考试部分专业初试自命题科目调整的公告》，是否涉及 806 改 408 待核实。复试科目：离散数学。",
-      "sources": [{"url":"https://yz.lzu.edu.cn/shuoshishengzhaosheng/shuoshijianzhang/2026/0617/333466.html","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "兰州大学", "track": "cs", "code": "085404", "name": "计算机技术", "degree": "专硕", "college": "信息科学与工程学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"302","name":"数学（二）"},{"code":"806","name":"计算机专业基础（自命题）"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": 3,
-      "changes": "复试科目：计算机网络。2027 年自命题科目有调整公告，具体内容待核实。",
-      "sources": [{"url":"https://yz.lzu.edu.cn/shuoshishengzhaosheng/shuoshijianzhang/2026/0617/333466.html","official":true}],
-      "confidence": "partial"
-    },
-    {
-      "school": "云南大学", "track": "cs", "code": "081200", "name": "计算机科学与技术", "degree": "学硕", "college": "信息学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": 40,
-      "tuition": "8000 元/年", "years": 3,
-      "changes": "学硕按二级学科方向分列（系统结构 / 软件与理论 / 应用技术），2026 年三方向录取合计约 40 人。云南属 B 区，国家线比 A 区低 10 分。",
-      "sources": [{"url":"http://www.grs.ynu.edu.cn/info/1008/5075.htm","official":true},{"url":"https://noobdream.com/schoolinfo/8/","official":false}],
-      "confidence": "partial"
-    },
-    {
-      "school": "云南大学", "track": "cs", "code": "085400", "name": "电子信息", "degree": "专硕", "college": "信息学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"302","name":"数学（二）"},{"code":"408","name":"计算机学科专业基础"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": 143,
-      "tuition": "12000 元/年", "years": 3,
-      "changes": "分计算机方向与人工智能方向。2026 年录取：计算机方向 59+7 人、人工智能方向 69+8 人，为信息学院招生最多的项目。数据来源为考研平台汇总。",
-      "sources": [{"url":"http://www.ise.ynu.edu.cn/page/135/?news_list_id=3","official":true},{"url":"https://noobdream.com/schoolinfo/8/","official":false}],
-      "confidence": "partial"
-    },
-    {
-      "school": "上海交通大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "安泰经管学院 / 上海高级金融学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"303","name":"数学（三）"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "注意外语是英语一而非英语二，与多数院校不同。",
-      "sources": [{"url":"https://yzb.sjtu.edu.cn/post/3309","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "上海交通大学", "track": "fin", "code": "020200", "name": "应用经济学", "degree": "学硕", "college": "安泰经济与管理学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"301","name":"数学（一）"},{"code":"841","name":"经济学（Ⅰ）"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "应用经济学考数学一，不是数三——这是个常见误区。",
-      "sources": [{"url":"https://yzb.sjtu.edu.cn/post/3309","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "武汉大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "经济与管理学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"396","name":"经济类综合能力"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "431 参考书：黄宪《货币金融学》(第七版)、何国华《国际金融学》、罗斯《公司理财》(第十一版)。",
-      "sources": [{"url":"https://ems.whu.edu.cn/info/2023/275551.htm","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "山东大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "经济学院 / 经济研究院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"396","name":"经济类综合能力"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "经济学院与经济研究院两个招生单位科目一致。",
-      "sources": [{"url":"https://www.yz.sdu.edu.cn/","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "山东大学", "track": "fin", "code": "020200", "name": "应用经济学", "degree": "学硕", "college": "经济学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"303","name":"数学（三）"},{"code":"807","name":"经济学原理"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null, "changes": null,
-      "sources": [{"url":"https://www.yz.sdu.edu.cn/","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "西南财经大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "金融学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"303","name":"数学（三）"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "考数学三而非 396，业务课一难度高于同类财经院校。",
-      "sources": [{"url":"https://yzcx.swufe.edu.cn/chaxun/yzb/ss/2026/01zszc&zyml/2026ssml.html","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "西南财经大学", "track": "fin", "code": "020200", "name": "应用经济学", "degree": "学硕", "college": "经济学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201","name":"英语（一）"},{"code":"303","name":"数学（三）"},{"code":"802","name":"经济学二"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null, "changes": null,
-      "sources": [{"url":"https://yzcx.swufe.edu.cn/chaxun/yzb/ss/2026/01zszc&zyml/2026ssml.html","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "华东师范大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "经济与管理学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"396","name":"经济类综合能力（2025 级起由数学三改为 396）"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "自 2025 级起业务课一由 303 数学三改为 396 经济类综合能力，难度下降；同时新增非全日制招生。",
-      "sources": [{"url":"https://sem.ecnu.edu.cn/24/49/c42845a599113/page.htm","official":true}],
-      "confidence": "official"
-    },
-    {
-      "school": "苏州大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "东吴商学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"396","name":"经济类综合能力"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null, "changes": null,
-      "sources": [{"url":"https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf","official":false}],
-      "confidence": "secondary"
-    },
-    {
-      "school": "苏州大学", "track": "fin", "code": "020200", "name": "应用经济学", "degree": "学硕", "college": "东吴商学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"201/203","name":"英语（一）或日语"},{"code":"303","name":"数学（三）"},{"code":"807","name":"微观与宏观经济学"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null, "changes": null,
-      "sources": [{"url":"https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf","official":false}],
-      "confidence": "secondary"
-    },
-    {
-      "school": "上海大学", "track": "fin", "code": "025100", "name": "金融", "degree": "专硕", "college": "经济学院",
-      "subjects": [{"code":"101","name":"思想政治理论"},{"code":"204","name":"英语（二）"},{"code":"303","name":"数学（三）"},{"code":"431","name":"金融学综合"}],
-      "lines": [], "seats": {"year":2026,"plan":null,"tuimian":null}, "applied": null, "admitted": null,
-      "tuition": null, "years": null,
-      "changes": "复试科目：国际金融实务。来源页面未标注适用年份，建议按最新年度目录复核。",
-      "sources": [{"url":"https://yjszs.shu.edu.cn/info/1142/4852.htm","official":true}],
-      "confidence": "partial"
+     "code": "408",
+     "name": "计算机学科专业基础"
     }
-  ]
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 369,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 369,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 377,
+     "note": "复试线"
+    }
+   ],
+   "retest": 6,
+   "admitted": 5,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "学硕统考名额极少",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/16/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "电子信息与电气工程学院 网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 321,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 314,
+     "note": "复试线（当年按电子信息网安方向统计）"
+    },
+    {
+     "year": 2024,
+     "score": 315,
+     "note": "复试线（当年按电子信息网安方向统计）"
+    }
+   ],
+   "retest": 25,
+   "admitted": 10,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "2026 年拟录取 3 人（复试人数未公布）",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/16/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向 · 清源研究院）",
+   "degree": "专硕",
+   "college": "电子信息与电气工程学院 / 清源研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 341,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 340,
+     "note": "复试线"
+    }
+   ],
+   "retest": 17,
+   "admitted": 12,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/16/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机与大数据技术）",
+   "degree": "专硕",
+   "college": "电子信息与电气工程学院 计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 341,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 340,
+     "note": "复试线"
+    }
+   ],
+   "retest": 157,
+   "admitted": 75,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/16/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程方向）",
+   "degree": "专硕",
+   "college": "电子信息与电气工程学院 软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 327,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 321,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 340,
+     "note": "复试线"
+    }
+   ],
+   "retest": 24,
+   "admitted": 10,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "该方向 2026 年起由自命题改考 408 统考",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/16/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "安泰经济与管理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "841",
+     "name": "经济学（Ⅰ）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "应用经济学考数学一，不是数三——这是个常见误区。",
+   "sources": [
+    {
+     "url": "https://yzb.sjtu.edu.cn/post/3309",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "上海交通大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "安泰经管学院 / 上海高级金融学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "注意外语是英语一而非英语二，与多数院校不同。",
+   "sources": [
+    {
+     "url": "https://yzb.sjtu.edu.cn/post/3309",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "上海大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "复试科目：国际金融实务。来源页面未标注适用年份，建议按最新年度目录复核。",
+   "sources": [
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1142/4852.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 355,
+     "note": "复试线，单科 55/105/100"
+    },
+    {
+     "year": 2025,
+     "score": 350,
+     "note": "复试线，单科 55/100/110"
+    },
+    {
+     "year": 2024,
+     "score": 375,
+     "note": "复试线，单科 55/100"
+    }
+   ],
+   "retest": 37,
+   "admitted": 25,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "人工智能与数据科学学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 350,
+     "note": "复试线，单科 50/90/80"
+    },
+    {
+     "year": 2025,
+     "score": 300,
+     "note": "复试线，单科 50/45/70"
+    }
+   ],
+   "retest": 69,
+   "admitted": 28,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "复试人数 69 为人工智能+大数据两方向合并口径；2026 年新设人工智能与数据科学学院",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（大数据方向）",
+   "degree": "专硕",
+   "college": "人工智能与数据科学学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "复试线，单科 50/90/70"
+    },
+    {
+     "year": 2025,
+     "score": 300,
+     "note": "复试线，单科 50/45/70"
+    }
+   ],
+   "retest": 69,
+   "admitted": 17,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "复试人数为两方向合并口径",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（网络空间安全方向）",
+   "degree": "专硕",
+   "college": "网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": null,
+     "name": "密码学与网络安全（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 305,
+     "note": "复试线，单科 50/70"
+    },
+    {
+     "year": 2025,
+     "score": 320,
+     "note": "复试线，单科 45/70"
+    },
+    {
+     "year": 2024,
+     "score": 305,
+     "note": "复试线，单科 60/70"
+    }
+   ],
+   "retest": 33,
+   "admitted": 21,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "该院不考 408，考自命题《密码学与网络安全》；2026 年复试 23 人",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术）",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 355,
+     "note": "复试线，单科 55/105/100"
+    },
+    {
+     "year": 2025,
+     "score": 340,
+     "note": "复试线，单科 50/90"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "复试线，单科 55/95/100"
+    }
+   ],
+   "retest": 98,
+   "admitted": 78,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国科学技术大学",
+   "track": "cs",
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "软件学院（苏州）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 388,
+     "note": "复试线，单科 60/100"
+    },
+    {
+     "year": 2025,
+     "score": 370,
+     "note": "复试线，单科 60/100"
+    },
+    {
+     "year": 2024,
+     "score": 376,
+     "note": "复试线，单科 60/100"
+    }
+   ],
+   "retest": 598,
+   "admitted": 486,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "招生规模全校最大，但分数线也最高——英二数二组合拉高了总分",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/202/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "cs",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 285,
+     "note": "与人工智能统一划线，来源为考研平台汇总"
+    },
+    {
+     "year": 2024,
+     "score": 273,
+     "note": "与人工智能统一划线，来源为考研平台汇总"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 6,
+    "tuimian": null
+   },
+   "applied": 25,
+   "admitted": 6,
+   "tuition": "20000 元/年",
+   "years": 2,
+   "changes": "与 085410 人工智能大类招生、统一划线。另设非全日制计算机技术（智能金融方向）。",
+   "sources": [
+    {
+     "url": "https://ie.cufe.edu.cn/info/1341/6757.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "cs",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 285,
+     "note": "校线（分专业划定），来源为考研平台汇总"
+    },
+    {
+     "year": 2024,
+     "score": 273,
+     "note": "校线（分专业划定），来源为考研平台汇总"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 14,
+    "tuimian": null
+   },
+   "applied": 81,
+   "admitted": 20,
+   "tuition": "20000 元/年",
+   "years": 2,
+   "changes": "与 085404 计算机技术大类招生：初试后统一划线，按总成绩结合专业志愿确定录取专业。业务课二为统考 408 搭配数学二。",
+   "sources": [
+    {
+     "url": "https://ie.cufe.edu.cn/info/1341/6757.htm",
+     "official": true
+    },
+    {
+     "url": "https://gs.cufe.edu.cn/info/1028/6862.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "云南大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": 40,
+   "tuition": "8000 元/年",
+   "years": 3,
+   "changes": "学硕按二级学科方向分列（系统结构 / 软件与理论 / 应用技术），2026 年三方向录取合计约 40 人。云南属 B 区，国家线比 A 区低 10 分。",
+   "sources": [
+    {
+     "url": "http://www.grs.ynu.edu.cn/info/1008/5075.htm",
+     "official": true
+    },
+    {
+     "url": "https://noobdream.com/schoolinfo/8/",
+     "official": false
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "云南大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": 143,
+   "tuition": "12000 元/年",
+   "years": 3,
+   "changes": "分计算机方向与人工智能方向。2026 年录取：计算机方向 59+7 人、人工智能方向 69+8 人，为信息学院招生最多的项目。数据来源为考研平台汇总。",
+   "sources": [
+    {
+     "url": "http://www.ise.ynu.edu.cn/page/135/?news_list_id=3",
+     "official": true
+    },
+    {
+     "url": "https://noobdream.com/schoolinfo/8/",
+     "official": false
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "兰州大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "806",
+     "name": "计算机专业基础（数据结构、操作系统、计算机组成原理各 50 分）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": 3,
+   "changes": "学校 2026 年 6 月 17 日发布《关于 2027 年硕士研究生招生考试部分专业初试自命题科目调整的公告》，是否涉及 806 改 408 待核实。复试科目：离散数学。",
+   "sources": [
+    {
+     "url": "https://yz.lzu.edu.cn/shuoshishengzhaosheng/shuoshijianzhang/2026/0617/333466.html",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "兰州大学",
+   "track": "cs",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "806",
+     "name": "计算机专业基础（自命题）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": 3,
+   "changes": "复试科目：计算机网络。2027 年自命题科目有调整公告，具体内容待核实。",
+   "sources": [
+    {
+     "url": "https://yz.lzu.edu.cn/shuoshishengzhaosheng/shuoshijianzhang/2026/0617/333466.html",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "北京大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机学院（昌平校区）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 340,
+     "note": "复试线，单科 55/90"
+    },
+    {
+     "year": 2025,
+     "score": 370,
+     "note": "复试线，单科 50/90"
+    },
+    {
+     "year": 2024,
+     "score": 380,
+     "note": "复试线，单科 55/90"
+    }
+   ],
+   "retest": 33,
+   "admitted": 24,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/4/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "北京大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术（计算机应用技术）",
+   "degree": "学硕",
+   "college": "深圳研究生院 信息工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "retest": null,
+   "admitted": 25,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2025 年录取 31 人；未公布复试分数线与复试人数",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/4/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "北京大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（1-4 方向）",
+   "degree": "专硕",
+   "college": "软件与微电子学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 378,
+     "note": "复试线，单科 55/90"
+    },
+    {
+     "year": 2025,
+     "score": 357,
+     "note": "复试线，单科 50/90"
+    },
+    {
+     "year": 2024,
+     "score": 380,
+     "note": "复试线，单科 55/90"
+    }
+   ],
+   "retest": 401,
+   "admitted": 196,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年方向由 1-5 缩减为 1-4，拟录取规模较 2025 年（327 人）大幅下降",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/4/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华东师范大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "经济与管理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力（2025 级起由数学三改为 396）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "自 2025 级起业务课一由 303 数学三改为 396 经济类综合能力，难度下降；同时新增非全日制招生。",
+   "sources": [
+    {
+     "url": "https://sem.ecnu.edu.cn/24/49/c42845a599113/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "院线，单科 50/90"
+    },
+    {
+     "year": 2025,
+     "score": 335,
+     "note": "院线，单科 50/45/90"
+    },
+    {
+     "year": 2024,
+     "score": 370,
+     "note": "院线，单科 60/90"
+    }
+   ],
+   "retest": 18,
+   "admitted": 14,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 340,
+     "note": "院线，单科 50/85/80"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "院线，单科 50/85"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "院线，单科 55/80/85"
+    }
+   ],
+   "retest": 40,
+   "admitted": 29,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": null,
+     "name": "数据结构与模式识别（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 335,
+     "note": "院线"
+    },
+    {
+     "year": 2025,
+     "score": 315,
+     "note": "院线，单科 50/45/75"
+    }
+   ],
+   "retest": 48,
+   "admitted": 41,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "该方向不考 408，考自命题专业课",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（网络空间安全方向）",
+   "degree": "专硕",
+   "college": "网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "院线，单科 50/85/80"
+    },
+    {
+     "year": 2025,
+     "score": 300,
+     "note": "院线，单科 50/85"
+    },
+    {
+     "year": 2024,
+     "score": 300,
+     "note": "院线，单科 55/70/75"
+    }
+   ],
+   "retest": 64,
+   "admitted": 50,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年分数线较 2025 年上涨 60 分，是本批涨幅最大的项目",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "院线，单科 50/90"
+    },
+    {
+     "year": 2025,
+     "score": 315,
+     "note": "院线，单科 50/45/90"
+    },
+    {
+     "year": 2024,
+     "score": 355,
+     "note": "院线，单科 60/90"
+    }
+   ],
+   "retest": 156,
+   "admitted": 127,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "华中科技大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程方向）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 320,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 320,
+     "note": "院线，单科 45/85"
+    },
+    {
+     "year": 2024,
+     "score": 345,
+     "note": "院线，单科 55/90"
+    }
+   ],
+   "retest": 86,
+   "admitted": 70,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/23/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 371,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 369,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 373,
+     "note": "院线，单科 50/75"
+    }
+   ],
+   "retest": 15,
+   "admitted": 12,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "普通计划口径；另有 11 人专项复试+9 人专项调剂复试",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 367,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 353,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2024,
+     "score": 359,
+     "note": "院线，单科 50/75"
+    }
+   ],
+   "retest": 93,
+   "admitted": 76,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": null,
+     "name": "数据结构+操作系统+计算机网络+软件工程（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 354,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 372,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2024,
+     "score": 340,
+     "note": "院线，单科 55/85"
+    }
+   ],
+   "retest": 141,
+   "admitted": 117,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年分数线较 2025 年下降 18 分",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "智能软件与工程学院（苏州校区）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": null,
+     "name": "数据结构+操作系统+计算机网络+软件工程（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 369,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 361,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2024,
+     "score": 315,
+     "note": "院线，单科 55/85"
+    }
+   ],
+   "retest": 4,
+   "admitted": 3,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "统考名额逐年收缩：2025 年 20 人 → 2026 年 3 人",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "智能科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": null,
+     "name": "算法+人工智能+概率统计（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 380,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 337,
+     "note": "院线，单科 55/85"
+    }
+   ],
+   "retest": 17,
+   "admitted": 14,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年分数线较 2025 年暴涨 43 分，同时招生规模从 37 人缩至 14 人",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": null,
+     "name": "数据结构+人工智能+概率统计（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 353,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 315,
+     "note": "院线，单科 55/85"
+    }
+   ],
+   "retest": 6,
+   "admitted": 5,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "统考名额极少（2025 年仅 1 人）",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京大学",
+   "track": "cs",
+   "code": "085412",
+   "name": "网络与信息安全",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 335,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2025,
+     "score": 336,
+     "note": "院线，单科 55/85"
+    },
+    {
+     "year": 2024,
+     "score": 315,
+     "note": "院线，单科 50/75"
+    }
+   ],
+   "retest": 11,
+   "admitted": 9,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "南大网安走 085412 专硕代码，不是 083900",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/17/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南京理工大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "2026 年目录中 085410 人工智能仅招非全日制，全日制统考主力为 081200 与 085404。复试：程序设计（C++ 上机）、编译原理与算法设计。",
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/zsw/84/58/c4587a361560/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "南京理工大学",
+   "track": "cs",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "计算机科学与工程学院 2026 年拟招全日制 315 人、非全日制 30 人（学院合计口径，未分专业）。",
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/zsw/6b/27/c4587a355111/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算学部（本部）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 395,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "复试线，单科 50/42/70"
+    },
+    {
+     "year": 2024,
+     "score": 325,
+     "note": "复试线，单科 50/70/75"
+    }
+   ],
+   "retest": 4,
+   "admitted": 1,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年一志愿统考名额极度收缩，复试线暴涨；另有 9 人专项复试、5 人专项拟录",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/28/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "计算学部（本部）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "837",
+     "name": "网络与信息安全基础（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 365,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "复试线，单科 50/42/70"
+    },
+    {
+     "year": 2024,
+     "score": 325,
+     "note": "复试线，单科 50/70/75"
+    }
+   ],
+   "retest": 1,
+   "admitted": 1,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "该专业不考 408，考 837 网络与信息安全基础",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/28/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "计算学部（本部）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 365,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "复试线，单科 50/42/70"
+    },
+    {
+     "year": 2024,
+     "score": 325,
+     "note": "复试线，单科 50/70/75"
+    }
+   ],
+   "retest": 108,
+   "admitted": 24,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "本部口径；哈工大另有郑州/重庆/苏州/安徽等异地研究院分流录取，2025 年本部 81 人外另录 160 余人",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/28/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "哈工大（深圳）计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "854",
+     "name": "计算机基础（组成原理+操作系统+数据结构与算法+计算机网络）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 365,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "复试线，单科 50/42/70"
+    },
+    {
+     "year": 2024,
+     "score": 325,
+     "note": "复试线，单科 50/70/75"
+    }
+   ],
+   "retest": 189,
+   "admitted": 104,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "深圳校区考自命题 854，不考 408；招生规模远大于本部",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/28/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "哈工大（威海）计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "854",
+     "name": "计算机基础（组成原理+操作系统+数据结构与算法+计算机网络）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 365,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 310,
+     "note": "复试线，单科 50/42/70"
+    },
+    {
+     "year": 2024,
+     "score": 325,
+     "note": "复试线，单科 50/70/75"
+    }
+   ],
+   "retest": 60,
+   "admitted": 53,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "威海校区考自命题 854，不考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/28/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "哈尔滨工程大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201/202/203",
+     "name": "英语一 / 俄语 / 日语 选一"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "811",
+     "name": "计算机专业基础综合（自命题）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 25,
+    "tuimian": 45
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "学硕仍为自命题 811。复试笔试：计算机网络、数据库原理、软件能力水平测试（机试）。注意 2026 年计算机学院多个专业已改考 408，学硕口径需以当年目录核对。",
+   "sources": [
+    {
+     "url": "https://yzb.hrbeu.edu.cn/2025/0930/c3279a341475/page.htm",
+     "official": true
+    },
+    {
+     "url": "http://cstc.hrbeu.edu.cn/2025/0415/c3688a336756/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "哈尔滨工程大学",
+   "track": "cs",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201/202/203",
+     "name": "英语一 / 俄语 / 日语 选一"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": null,
+     "name": "专业基础综合（科目代码待官方目录核实）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 89,
+    "tuimian": 31
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "统考计划为学院内最大项目（推免 31 + 统考 89，另非全日制 5）。",
+   "sources": [
+    {
+     "url": "https://yzb.hrbeu.edu.cn/2025/0930/c3279a341475/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算与智能创新学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 314,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 314,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线"
+    }
+   ],
+   "retest": 9,
+   "admitted": 6,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2026 年计算机科学技术学院并入新建的计算与智能创新学院",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/14/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "计算与智能创新学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 314,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 314,
+     "note": "复试线"
+    }
+   ],
+   "retest": 12,
+   "admitted": 6,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/14/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "计算与智能创新学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 371,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 314,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线"
+    }
+   ],
+   "retest": 400,
+   "admitted": 315,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "复旦计算机专硕考英二+数二+408，公共课难度低于多数同层次院校",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/14/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程 · 全日制）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 343,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 334,
+     "note": "复试线"
+    },
+    {
+     "year": 2023,
+     "score": 357,
+     "note": "复试线，单科 50/75"
+    }
+   ],
+   "retest": 82,
+   "admitted": null,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "来源给出的 137 人为全日制+非全日制合计，无法拆分，故拟录取留空",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/14/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程 · 非全日制）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 309,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 300,
+     "note": "复试线"
+    },
+    {
+     "year": 2023,
+     "score": 300,
+     "note": "复试线，单科 50/75"
+    }
+   ],
+   "retest": 74,
+   "admitted": null,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "非全日制，分数线明显低于全日制",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/14/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "山东大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "807",
+     "name": "经济学原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://www.yz.sdu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "山东大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "经济学院 / 经济研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "经济学院与经济研究院两个招生单位科目一致。",
+   "sources": [
+    {
+     "url": "https://www.yz.sdu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 295,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 325,
+     "note": "复试线，单科 50/100"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "复试线，单科 50/60/85"
+    }
+   ],
+   "retest": 3,
+   "admitted": 3,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "学硕统考名额极少，绝大部分走推免，故复试线接近国家线——低分数线不等于好考",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/15/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 350,
+     "note": "复试线，单科 50/100/80"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线，单科 55/90"
+    },
+    {
+     "year": 2023,
+     "score": 360,
+     "note": "复试线"
+    }
+   ],
+   "retest": 46,
+   "admitted": 46,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/15/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（网络空间安全方向）",
+   "degree": "专硕",
+   "college": "国家网络安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 370,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 350,
+     "note": "复试线，单科 50/100/85"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线，单科 55/90"
+    }
+   ],
+   "retest": 147,
+   "admitted": 119,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/15/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 350,
+     "note": "复试线，单科 50/100/80"
+    },
+    {
+     "year": 2025,
+     "score": 320,
+     "note": "复试线，单科 50/90"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线，单科 55/90"
+    }
+   ],
+   "retest": 123,
+   "admitted": 24,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "一志愿普通计划口径；2026 年一志愿录取规模较 2025 年（105 人）大幅缩减",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/15/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "经济与管理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "431 参考书：黄宪《货币金融学》(第七版)、何国华《国际金融学》、罗斯《公司理财》(第十一版)。",
+   "sources": [
+    {
+     "url": "https://ems.whu.edu.cn/info/2023/275551.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 382,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 375,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 381,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 12,
+   "admitted": 9,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "普通计划口径；另有 19 人进专项复试、11 人专项拟录",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "083500",
+   "name": "软件工程",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 378,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 357,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 359,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 7,
+   "admitted": 5,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 373,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 341,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 365,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 10,
+   "admitted": 7,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 373,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 351,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 320,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 276,
+   "admitted": 87,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "复试人数 276 为软件学院人工智能+软件工程两方向合并口径",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "国际联合学院（海宁国际校区）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 333,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2025,
+     "score": 309,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2024,
+     "score": 340,
+     "note": "最低录取分"
+    }
+   ],
+   "retest": 21,
+   "admitted": 13,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（大数据方向）",
+   "degree": "专硕",
+   "college": "工程师学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 328,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2025,
+     "score": 319,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2024,
+     "score": 362,
+     "note": "最低录取分"
+    }
+   ],
+   "retest": 38,
+   "admitted": 25,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机 / 网安方向）",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 377,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 347,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 378,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 137,
+   "admitted": 88,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "拟录取 88 为计算机方向，网安方向另录 14 人",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机方向）",
+   "degree": "专硕",
+   "college": "工程师学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 339,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2025,
+     "score": 307,
+     "note": "最低录取分"
+    },
+    {
+     "year": 2024,
+     "score": 356,
+     "note": "最低录取分"
+    }
+   ],
+   "retest": 11,
+   "admitted": 8,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "浙江大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程方向）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 373,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 349,
+     "note": "院线，单科 50/75"
+    },
+    {
+     "year": 2024,
+     "score": 320,
+     "note": "院线，单科 55/80"
+    }
+   ],
+   "retest": 276,
+   "admitted": 134,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "复试人数为软件学院两方向合并口径；该方向 2025 年起由自命题改考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/18/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "计算机科学与技术系",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "826",
+     "name": "计算机专业基础综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 343,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 356,
+     "note": "复试线"
+    },
+    {
+     "year": 2023,
+     "score": 353,
+     "note": "复试线"
+    }
+   ],
+   "retest": 20,
+   "admitted": 13,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "2027 年起业务课二由 826 改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "083500",
+   "name": "软件工程",
+   "degree": "学硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "914",
+     "name": "软件工程基础（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 347,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 360,
+     "note": "复试线，单科 50/80"
+    },
+    {
+     "year": 2023,
+     "score": 340,
+     "note": "复试线，单科 50/80"
+    }
+   ],
+   "retest": 2,
+   "admitted": 2,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "学硕统考名额极少，绝大部分名额走推免",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "083900",
+   "name": "网络空间安全",
+   "degree": "学硕",
+   "college": "网络科学与网络空间研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "826",
+     "name": "计算机专业基础综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 325,
+     "note": "复试线，单科 50/100/75"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线，单科 60/88"
+    },
+    {
+     "year": 2023,
+     "score": 330,
+     "note": "复试线"
+    }
+   ],
+   "retest": 14,
+   "admitted": 10,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "2027 年起改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（人工智能方向）",
+   "degree": "专硕",
+   "college": "深圳国际研究生院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "962",
+     "name": "自命题专业课（按方向不同）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 336,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "复试线"
+    }
+   ],
+   "retest": 57,
+   "admitted": 46,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "2026 年拟录取 32+1；2027 年起由 827 电路原理改考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（网络空间安全方向）",
+   "degree": "专硕",
+   "college": "网络科学与网络空间研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "826",
+     "name": "计算机专业基础综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 333,
+     "note": "复试线，单科 50/110/70"
+    }
+   ],
+   "retest": 15,
+   "admitted": 14,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2027 年起改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术方向）",
+   "degree": "专硕",
+   "college": "深圳国际研究生院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "826",
+     "name": "计算机专业基础综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "复试线"
+    },
+    {
+     "year": 2025,
+     "score": 325,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 355,
+     "note": "复试线"
+    }
+   ],
+   "retest": 46,
+   "admitted": 38,
+   "applied": null,
+   "dataYear": 2025,
+   "changes": "2026 年拟录取 23+1；2027 年起改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（计算机技术）",
+   "degree": "专硕",
+   "college": "计算机科学与技术系",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "826",
+     "name": "计算机专业基础综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 332,
+     "note": "复试线"
+    }
+   ],
+   "retest": 20,
+   "admitted": 13,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2027 年起改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程方向）",
+   "degree": "专硕",
+   "college": "软件学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "914",
+     "name": "软件工程基础（自命题）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "复试线，单科 50/80"
+    },
+    {
+     "year": 2025,
+     "score": 325,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 335,
+     "note": "复试线，单科 50/80"
+    }
+   ],
+   "retest": 20,
+   "admitted": 19,
+   "applied": null,
+   "dataYear": 2026,
+   "changes": "2027 年起 824 软件工程基础综合改考 408（媒体口径，待官方目录确认）",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "清华大学",
+   "track": "cs",
+   "code": "085411",
+   "name": "大数据技术与工程",
+   "degree": "专硕",
+   "college": "深圳国际研究生院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "复试线"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "复试线，单科 50/90"
+    },
+    {
+     "year": 2023,
+     "score": 325,
+     "note": "复试线，单科 50/90"
+    }
+   ],
+   "retest": 30,
+   "admitted": 15,
+   "applied": null,
+   "dataYear": 2024,
+   "changes": "2025 年拟录取 10、2026 年 17；2027 年起改考统考 408",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/5/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "湖南大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础（2026 年起由 866 数据结构改为统考）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 365,
+     "note": "院线（学硕），单科 50/75"
+    },
+    {
+     "year": 2025,
+     "score": 349,
+     "note": "院线（学硕），单科 50/70"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": 26,
+   "tuition": "8000 元/年",
+   "years": null,
+   "changes": "2026 年学硕改考 408；2027 年起 085400 电子信息专硕也并入 408。",
+   "sources": [
+    {
+     "url": "https://csee.hnu.edu.cn/zsjy/sszs.htm",
+     "official": true
+    },
+    {
+     "url": "https://noobdream.com/schoolinfo/38/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "苏州大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "东吴商学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201/203",
+     "name": "英语（一）或日语"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "807",
+     "name": "微观与宏观经济学"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "苏州大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "东吴商学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "西北大学",
+   "track": "cs",
+   "code": "081200",
+   "name": "计算机科学与技术",
+   "degree": "学硕",
+   "college": "信息科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础（2026 年起改为统考）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 285,
+     "note": "来源未标明院线/校线"
+    },
+    {
+     "year": 2025,
+     "score": 281,
+     "note": "来源未标明院线/校线"
+    },
+    {
+     "year": 2024,
+     "score": 297,
+     "note": "来源未标明院线/校线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": 27,
+   "tuition": "8000 元/年",
+   "years": 3,
+   "changes": "2026 年起业务课二由自命题（数据结构+操作系统+计算机网络）改为统考 408。",
+   "sources": [
+    {
+     "url": "https://yzb.nwu.edu.cn/",
+     "official": true
+    },
+    {
+     "url": "https://noobdream.com/schoolinfo/52/",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "西北大学",
+   "track": "cs",
+   "code": "085400",
+   "name": "电子信息（软件工程方向）",
+   "degree": "专硕",
+   "college": "信息科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": null,
+     "name": "外国语（英一/英二待核实）"
+    },
+    {
+     "code": null,
+     "name": "数学（数一/数二待核实）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础（2026 年起改为统考）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 288,
+     "note": "软件方向线，来源未标明院线/校线"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "软件方向线，来源未标明院线/校线"
+    },
+    {
+     "year": 2024,
+     "score": 286,
+     "note": "软件方向线，来源未标明院线/校线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": 77,
+   "tuition": "12000 元/年",
+   "years": 3,
+   "changes": "2026 年起改考统考 408。该方向为学院招生最多的项目：2024 年 107 人、2025 年 111 人、2026 年 77 人。",
+   "sources": [
+    {
+     "url": "https://yzb.nwu.edu.cn/",
+     "official": true
+    },
+    {
+     "url": "https://noobdream.com/schoolinfo/52/",
+     "official": false
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "西南财经大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "802",
+     "name": "经济学二"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzcx.swufe.edu.cn/chaxun/yzb/ss/2026/01zszc&zyml/2026ssml.html",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  },
+  {
+   "school": "西南财经大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": null,
+    "tuimian": null
+   },
+   "applied": null,
+   "admitted": null,
+   "tuition": null,
+   "years": null,
+   "changes": "考数学三而非 396，业务课一难度高于同类财经院校。",
+   "sources": [
+    {
+     "url": "https://yzcx.swufe.edu.cn/chaxun/yzb/ss/2026/01zszc&zyml/2026ssml.html",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "dataYear": null
+  }
+ ],
+ "stats": {
+  "programs": 83,
+  "schools": 22,
+  "withLines": 63,
+  "withRetestRatio": 56,
+  "withApplied": 2
+ }
 }
