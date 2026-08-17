@@ -24,6 +24,8 @@ const files = {
   __DATA_LINES__:   'data/national-lines-2026.json',
   __DATA_HISTORY__: 'data/national-lines-history.json',
   __DATA_RES__:     'data/resources.json',
+  __DATA_PROGRAMS__:'data/programs.json',
+  __DATA_CHANGES__: 'data/exam-changes.json',
 };
 
 let html = read('src/template.html');

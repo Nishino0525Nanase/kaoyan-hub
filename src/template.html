@@ -212,6 +212,48 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 34px;colo
 }
 .dockbar.on{display:flex}
 body.hasdock{padding-bottom:66px}
+
+/* ---------- 改考预警 ---------- */
+.badge.chg{border-color:var(--crit);color:var(--crit);font-weight:600}
+.badge.chg2{border-color:var(--warn);color:#8a6100}
+:root[data-theme="dark"] .badge.chg2{color:var(--warn)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .badge.chg2{color:var(--warn)}}
+.srcflag{font-size:11px;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--text-3);white-space:nowrap}
+.srcflag.off{border-color:var(--good);color:var(--good)}
+.chgrow td{font-size:13px}
+.arrow{color:var(--text-3);padding:0 6px}
+.old{text-decoration:line-through;color:var(--text-3)}
+.new{font-weight:600}
+.yearpill{display:inline-block;min-width:52px;text-align:center;font-variant-numeric:tabular-nums;font-weight:600;
+  padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:12px}
+
+/* ---------- 详情弹层 ---------- */
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:80;display:none;
+  align-items:flex-end;justify-content:center;backdrop-filter:blur(2px)}
+.mask.on{display:flex}
+@media (min-width:700px){.mask{align-items:center;padding:24px}}
+.modal{background:var(--surface-1);width:100%;max-width:720px;max-height:88vh;overflow-y:auto;
+  border-radius:18px 18px 0 0;border:1px solid var(--line);box-shadow:var(--shadow);
+  padding:20px 20px calc(24px + env(safe-area-inset-bottom));animation:up .2s ease}
+@media (min-width:700px){.modal{border-radius:18px;padding-bottom:24px}}
+@keyframes up{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
+.mhead{display:flex;align-items:flex-start;gap:12px;margin-bottom:4px}
+.mhead h3{margin:0;font-size:19px;flex:1}
+.mclose{border:0;background:var(--surface-2);color:var(--text-2);width:32px;height:32px;border-radius:9px;
+  cursor:pointer;font-size:18px;line-height:1;font-family:inherit;flex-shrink:0}
+.prog{border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-top:12px;background:var(--surface-2)}
+.prog h4{margin:0 0 2px;font-size:14.5px}
+.subj{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px;margin:10px 0}
+.subj div{font-size:12.5px;background:var(--surface-1);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.subj b{color:var(--accent);font-variant-numeric:tabular-nums}
+.kv{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--text-2);margin-top:8px}
+.kv span b{color:var(--text-1);font-variant-numeric:tabular-nums}
+.warnbox{border-left:3px solid var(--warn);background:var(--surface-1);padding:8px 11px;border-radius:0 8px 8px 0;
+  font-size:12.5px;color:var(--text-2);margin-top:10px;line-height:1.6}
+.nodata{font-size:12.5px;color:var(--text-3);padding:14px 0;line-height:1.7}
+.det{border:1px solid var(--line);background:var(--surface-2);color:var(--text-2);font-size:12px;
+  padding:3px 9px;border-radius:7px;cursor:pointer;font-family:inherit}
+.det:hover{border-color:var(--accent);color:var(--accent)}
 .dockbar .txt{flex:1;font-size:13px;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .btn{border:0;background:var(--accent);color:#fff;font-family:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:9px;cursor:pointer;white-space:nowrap}
 .btn.ghost{background:transparent;color:var(--text-2);border:1px solid var(--line)}
@@ -234,6 +276,7 @@ body.hasdock{padding-bottom:66px}
     </div>
     <nav class="tabs" role="tablist">
       <button class="tab" role="tab" data-panel="schools" aria-selected="true">院校库</button>
+      <button class="tab" role="tab" data-panel="changes" aria-selected="false">改考预警 <span id="chgN"></span></button>
       <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
       <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
@@ -262,6 +305,25 @@ body.hasdock{padding-bottom:66px}
 
     <div class="grid" id="schoolGrid"></div>
     <div class="empty" id="schoolEmpty" hidden>没有匹配的院校，换个关键词试试</div>
+  </section>
+
+  <!-- ============ 改考预警 ============ -->
+  <section class="panel" id="p-changes">
+    <h2 class="sec">改考预警</h2>
+    <p class="sub" id="chgSub"></p>
+    <div class="notice" id="chgNote"></div>
+
+    <div class="filters">
+      <div class="frow" id="fChgYear"><span class="flabel">年度</span></div>
+      <div class="frow" id="fChgType"><span class="flabel">类型</span></div>
+      <div class="frow" id="fChgSrc"><span class="flabel">来源</span></div>
+    </div>
+
+    <div class="card cmpwrap" style="margin-bottom:20px"><table id="chgTable"></table></div>
+
+    <h2 class="sec" style="margin-top:26px">院校库之外的变动</h2>
+    <p class="sub">这些学校暂未收录进院校库，但同期也调整了初试科目，一并列出供参考。</p>
+    <div class="card cmpwrap"><table id="chgExtra"></table></div>
   </section>
 
   <!-- ============ 国家线 ============ -->
@@ -314,6 +376,14 @@ body.hasdock{padding-bottom:66px}
 
     <div class="card chartcard">
       <div class="chead">
+        <p class="ctitle">近年初试科目变动的院校数量</p>
+        <p class="cdesc">含院校库内外的全部记录；「改考 408」是计算机方向近年最主流的变动</p>
+      </div>
+      <svg class="chart" id="chgSvg" viewBox="0 0 760 200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="近年初试科目变动院校数量条形图"></svg>
+    </div>
+
+    <div class="card chartcard">
+      <div class="chead">
         <p class="ctitle">本库收录院校的地区分布</p>
         <p class="cdesc">收录以考研热门院校为主，不代表全国研究生招生单位的真实分布</p>
       </div>
@@ -353,6 +423,10 @@ body.hasdock{padding-bottom:66px}
 
 <div class="tip" id="tip"></div>
 
+<div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+
+<script id="data-programs" type="application/json">__DATA_PROGRAMS__</script>
+<script id="data-changes" type="application/json">__DATA_CHANGES__</script>
 <script id="data-schools" type="application/json">__DATA_SCHOOLS__</script>
 <script id="data-lines" type="application/json">__DATA_LINES__</script>
 <script id="data-history" type="application/json">__DATA_HISTORY__</script>
@@ -365,7 +439,16 @@ const DB      = J('data-schools');
 const LINES   = J('data-lines');
 const HIST    = J('data-history');
 const RES     = J('data-res');
+const PROG    = J('data-programs');
+const CHG     = J('data-changes');
 const SCHOOLS = DB.schools;
+
+/* 按学校名建索引，供院校卡片、详情弹层与对比表复用 */
+const progBy = new Map(), chgBy = new Map();
+PROG.records.forEach(r => { if(!progBy.has(r.school)) progBy.set(r.school, []); progBy.get(r.school).push(r); });
+CHG.changes.forEach(c => { if(!chgBy.has(c.school)) chgBy.set(c.school, []); chgBy.get(c.school).push(c); });
+chgBy.forEach(v => v.sort((a,b) => b.year - a.year));
+const TRACK_LABEL = PROG.tracks;
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -463,22 +546,30 @@ function renderSchools(){
     const ap = s.aPlus.slice(0,4).map(a => `<span class="ap">${esc(a)}</span>`).join('')
              + (s.aPlus.length>4 ? `<span class="ap">+${s.aPlus.length-4}</span>` : '');
     const on = picks.includes(s.name);
+    const cs = chgBy.get(s.name) || [], ps = progBy.get(s.name) || [];
+    const newest = cs.length ? Math.max(...cs.map(c => c.year)) : null;
+    const chgBadge = cs.length
+      ? `<span class="badge ${newest >= 2027 ? 'chg' : 'chg2'}">⚠ ${newest} 改考</span>` : '';
     return `<article class="card school${on?' picked':''}" data-n="${esc(s.name)}">
       <div class="stop">
         <div class="sname">${esc(s.name)}<span class="scity">${esc(s.city)}</span></div>
         <button class="pick" type="button" aria-pressed="${on}" title="加入对比" data-pick="${esc(s.name)}">${on?'✓':'＋'}</button>
       </div>
       <div class="badges">${s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join('')}
-        <span class="badge">${esc(s.zone)} 区</span></div>
+        <span class="badge">${esc(s.zone)} 区</span>${chgBadge}</div>
       ${s.aPlus.length ? `<div class="aplus">${ap}</div>`
         : `<div class="muted">第四轮评估 A 类学科 ${s.aCount} 个${s.aCount?'':'（无）'}</div>`}
       <div class="sfoot">
         <span class="meter"><span class="bars">${bars}</span>${esc(s.strength)} · A类 ${s.aCount}</span>
-        <a class="glink" href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a>
+        <span style="display:flex;gap:6px;align-items:center">
+          <button class="det" type="button" data-det="${esc(s.name)}">详情${ps.length?` · ${ps.length} 专业`:''}</button>
+          <a class="glink" href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a>
+        </span>
       </div>
     </article>`;
   }).join('');
   grid.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => togglePick(b.dataset.pick));
+  grid.querySelectorAll('[data-det]').forEach(b => b.onclick = () => openDetail(b.dataset.det));
 }
 
 function togglePick(name){
@@ -498,6 +589,128 @@ function renderDock(){
   $('#cmpN').textContent = picks.length ? `(${picks.length})` : '';
 }
 
+/* ================= 详情弹层 ================= */
+const srcTag = o => `<span class="srcflag${o?' off':''}">${o?'官方来源':'二手来源'}</span>`;
+const subjLine = p => p.subjects.map((s,i) =>
+  `<div><span class="muted">${['政治','外语','业务课一','业务课二'][i]||''}</span><br>
+    ${s.code?`<b>${esc(s.code)}</b> `:''}${esc(s.name)}</div>`).join('');
+function lineText(p){
+  if(!p.lines || !p.lines.length) return '<span class="muted">未收录</span>';
+  return p.lines.map(l => `${l.year}年 <b>${l.score}</b>`).join(' · ');
+}
+function ratioText(p){
+  if(p.applied && p.admitted) return `${p.applied} 报 / ${p.admitted} 录 · <b>${(p.applied/p.admitted).toFixed(1)}:1</b>`;
+  if(p.admitted) return `录取 <b>${p.admitted}</b> 人 · 报考人数未公布`;
+  if(p.seats && p.seats.plan) return `拟招 <b>${p.seats.plan}</b> 人${p.seats.tuimian?`（推免 ${p.seats.tuimian}）`:''}`;
+  return '<span class="muted">未公布</span>';
+}
+function openDetail(name){
+  const s = SCHOOLS.find(x => x.name === name);
+  if(!s) return;
+  const ps = progBy.get(name) || [], cs = chgBy.get(name) || [];
+  const body = `
+    <div class="mhead">
+      <h3>${esc(s.name)}<span class="scity">${esc(s.city)} · ${esc(s.region)} · ${s.zone} 区</span></h3>
+      <button class="mclose" type="button" onclick="closeDetail()">×</button>
+    </div>
+    <div class="badges" style="margin-bottom:6px">
+      ${s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join('')}</div>
+    ${s.aPlus.length?`<div class="aplus" style="margin-bottom:4px">${s.aPlus.map(a=>`<span class="ap">${esc(a)}</span>`).join('')}</div>`:''}
+    <div class="kv"><span>第四轮 A 类学科 <b>${s.aCount}</b> 个</span>
+      <span><a href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网官网 ↗</a></span></div>
+
+    ${cs.length ? `<h4 style="margin:18px 0 0;font-size:14.5px">⚠ 初试科目变动</h4>` +
+      cs.map(c => `<div class="warnbox">
+        <span class="yearpill">${c.year} 考研</span> <b>${esc(c.type)}</b> ${srcTag(c.official)}<br>
+        ${c.from && c.from!=='—' ? `<span class="old">${esc(c.from)}</span><span class="arrow">→</span><span class="new">${esc(c.to)}</span><br>` : ''}
+        <span class="muted">适用范围：${esc(c.scope)}</span>
+        ${c.note?`<br>${esc(c.note)}`:''}
+        <br><a href="${esc(c.source)}" target="_blank" rel="noopener">查看来源 ↗</a>
+      </div>`).join('') : ''}
+
+    <h4 style="margin:20px 0 0;font-size:14.5px">专业详情</h4>
+    ${ps.length ? ps.map(p => `<div class="prog">
+        <h4>${esc(p.code)} ${esc(p.name)}
+          <span class="badge" style="margin-left:6px">${esc(p.degree)}</span>
+          ${srcTag(p.confidence === 'official')}</h4>
+        <div class="muted">${esc(p.college)} · ${esc(TRACK_LABEL[p.track]||p.track)}</div>
+        <div class="subj">${subjLine(p)}</div>
+        <div class="kv">
+          <span>复试线：${lineText(p)}</span>
+          <span>招录：${ratioText(p)}</span>
+          ${p.tuition?`<span>学费：<b>${esc(p.tuition)}</b></span>`:''}
+          ${p.years?`<span>学制：<b>${p.years} 年</b></span>`:''}
+        </div>
+        ${p.changes?`<div class="warnbox">${esc(p.changes)}</div>`:''}
+        <div class="kv" style="margin-top:9px">${p.sources.map(x =>
+          `<a href="${esc(x.url)}" target="_blank" rel="noopener">${x.official?'官方':'二手'}来源 ↗</a>`).join('')}</div>
+      </div>`).join('')
+    : `<div class="nodata">这所学校的逐专业数据还没有收录。<br>
+        本项目的复试线与报录比依赖社区补充——各校大多以 PDF 或图片发布这类数据，无法批量抓取。<br>
+        如果你手上有官方来源，欢迎按 CONTRIBUTING 提 PR。</div>`}`;
+  $('#modal').innerHTML = body;
+  $('#mask').classList.add('on');
+  $('#modal').scrollTop = 0;
+}
+function closeDetail(){ $('#mask').classList.remove('on'); }
+$('#mask').addEventListener('click', e => { if(e.target.id === 'mask') closeDetail(); });
+addEventListener('keydown', e => { if(e.key === 'Escape') closeDetail(); });
+
+/* ================= 改考预警 ================= */
+const CHG_ALL   = CHG.changes;
+const chgState  = { year:new Set(), type:new Set(), src:new Set() };
+const CHG_YEARS = [...new Set(CHG_ALL.concat(CHG.extra).map(c => c.year))].sort((a,b) => b - a);
+const CHG_TYPES = [...new Set(CHG_ALL.concat(CHG.extra).map(c => c.type))];
+function chgChips(host, items, key, fmt){
+  items.forEach(v => {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.textContent = fmt ? fmt(v) : v;
+    b.setAttribute('aria-pressed','false');
+    b.onclick = () => {
+      const on = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', String(!on));
+      on ? chgState[key].delete(v) : chgState[key].add(v);
+      renderChanges();
+    };
+    host.appendChild(b);
+  });
+}
+chgChips($('#fChgYear'), CHG_YEARS, 'year', y => y + ' 考研');
+chgChips($('#fChgType'), CHG_TYPES, 'type');
+chgChips($('#fChgSrc'),  ['官方来源','二手来源'], 'src');
+
+function chgMatch(c){
+  if(chgState.year.size && !chgState.year.has(c.year)) return false;
+  if(chgState.type.size && !chgState.type.has(c.type)) return false;
+  if(chgState.src.size  && !chgState.src.has(c.official ? '官方来源' : '二手来源')) return false;
+  return true;
+}
+function chgRows(list, clickable){
+  if(!list.length) return `<tr><td colspan="5" class="muted" style="padding:26px;text-align:center">没有匹配的记录</td></tr>`;
+  return list.map(c => `<tr class="chgrow">
+    <td><span class="yearpill">${c.year}</span></td>
+    <td><b>${esc(c.school)}</b><br><span class="muted">${esc(TRACK_LABEL[c.track] || '其他方向')}</span>
+      ${clickable ? `<br><button class="det" type="button" style="margin-top:5px" data-det2="${esc(c.school)}">院校详情</button>` : ''}</td>
+    <td><span class="badge ${c.type==='改回自命题'?'chg2':c.type==='其他变动'?'':'chg'}">${esc(c.type)}</span></td>
+    <td>${c.from && c.from!=='—'
+      ? `<span class="old">${esc(c.from)}</span><span class="arrow">→</span><span class="new">${esc(c.to)}</span>` : '<span class="muted">见说明</span>'}
+      <br><span class="muted">${esc(c.scope)}</span>${c.note?`<br><span class="muted">${esc(c.note)}</span>`:''}</td>
+    <td>${srcTag(c.official)}<br><a href="${esc(c.source)}" target="_blank" rel="noopener" style="font-size:12px">来源 ↗</a></td>
+  </tr>`).join('');
+}
+function renderChanges(){
+  const list = CHG_ALL.filter(chgMatch);
+  const off  = CHG_ALL.filter(c => c.official).length;
+  $('#chgSub').textContent =
+    `院校库内共 ${CHG_ALL.length} 条初试科目变动记录（其中 ${off} 条有官方来源），另有 ${CHG.extra.length} 条来自库外院校。当前显示 ${list.length} 条。`;
+  $('#chgNote').innerHTML = `<b>为什么这页最该先看：</b>${esc(CHG.note)}`;
+  const head = `<thead><tr><th>年度</th><th>院校</th><th>类型</th><th>科目变动与范围</th><th>来源</th></tr></thead>`;
+  $('#chgTable').innerHTML = head + `<tbody>${chgRows(list, true)}</tbody>`;
+  $('#chgExtra').innerHTML = head + `<tbody>${chgRows(CHG.extra.filter(chgMatch), false)}</tbody>`;
+  $('#chgTable').querySelectorAll('[data-det2]').forEach(b => b.onclick = () => openDetail(b.dataset.det2));
+  $('#chgN').textContent = `(${CHG_ALL.length})`;
+}
+
 /* ================= 对比 ================= */
 function renderCompare(){
   const rows = picks.map(n => SCHOOLS.find(s => s.name === n)).filter(Boolean);
@@ -513,8 +726,42 @@ function renderCompare(){
     ['A+ 学科数',  s => `<span class="num">${s.aPlus.length}</span>`],
     ['A 类学科数', s => `<span class="num">${s.aCount}</span>`],
     ['学科实力',   s => esc(s.strength)],
+    ['⚠ 改考提示', s => {
+      const cs = chgBy.get(s.name) || [];
+      if(!cs.length) return '<span class="muted">近三年未见变动记录</span>';
+      return cs.map(c => `<div style="margin-bottom:6px"><span class="yearpill">${c.year}</span>
+        <span class="badge ${c.type==='改回自命题'?'chg2':c.type==='其他变动'?'':'chg'}">${esc(c.type)}</span>
+        <br><span class="muted">${esc(c.scope)}</span></div>`).join('');
+    }],
+    ['收录专业',   s => {
+      const ps = progBy.get(s.name) || [];
+      return ps.length ? ps.map(p => `<div>${esc(p.code)} ${esc(p.name)}
+        <span class="muted">${esc(p.degree)}</span></div>`).join('') : '<span class="muted">未收录</span>';
+    }],
+    ['初试科目',   s => {
+      const ps = progBy.get(s.name) || [];
+      if(!ps.length) return '<span class="muted">未收录</span>';
+      return ps.map(p => `<div style="margin-bottom:6px"><b>${esc(p.name)}</b><br>
+        <span class="muted">${p.subjects.map(x => (x.code?x.code+' ':'') + x.name).join(' / ')}</span></div>`).join('');
+    }],
+    ['复试线',     s => {
+      const ps = (progBy.get(s.name) || []).filter(p => p.lines && p.lines.length);
+      if(!ps.length) return '<span class="muted">未收录</span>';
+      return ps.map(p => `<div style="margin-bottom:4px"><span class="muted">${esc(p.name)}</span><br>${lineText(p)}</div>`).join('');
+    }],
+    ['招录情况',   s => {
+      const ps = progBy.get(s.name) || [];
+      if(!ps.length) return '<span class="muted">未收录</span>';
+      return ps.map(p => `<div style="margin-bottom:4px"><span class="muted">${esc(p.name)}</span><br>${ratioText(p)}</div>`).join('');
+    }],
+    ['学费 / 学制', s => {
+      const ps = (progBy.get(s.name) || []).filter(p => p.tuition || p.years);
+      if(!ps.length) return '<span class="muted">未收录</span>';
+      return ps.map(p => `<div><span class="muted">${esc(p.name)}</span> ${esc(p.tuition||'—')}${p.years?` · ${p.years} 年`:''}</div>`).join('');
+    }],
     ['研招网',     s => `<a href="${esc(s.gradSite)}" target="_blank" rel="noopener">官网 ↗</a>`],
-    ['',           s => `<button class="chip" onclick="togglePick('${esc(s.name)}')">移出对比</button>`],
+    ['',           s => `<button class="chip" onclick="openDetail('${esc(s.name)}')">查看详情</button>
+                         <button class="chip" onclick="togglePick('${esc(s.name)}')">移出对比</button>`],
   ];
   $('#cmpTable').innerHTML =
     `<thead><tr><th class="rowh">对比项</th>${rows.map(s=>`<th>${esc(s.name)}</th>`).join('')}</tr></thead>` +
@@ -723,13 +970,31 @@ function drawRegionBars(){
       $$('#fRegion .chip').forEach(c => c.setAttribute('aria-pressed', String(c.textContent === d.k)));
       renderSchools(); go('schools'); }});
 }
-function drawAll(){ drawTrend(); drawLineBars(); drawRegionBars(); }
+function drawChgBars(){
+  const all = CHG_ALL.concat(CHG.extra);
+  const keys = [...new Set(all.map(c => `${c.year} · ${c.type}`))];
+  const items = keys.map(k => ({k, v: all.filter(c => `${c.year} · ${c.type}` === k).length}))
+                    .filter(d => d.v > 0).sort((a,b) => b.v - a.v).slice(0, 8);
+  const n = items.length;
+  const seqL = ['#0d366b','#184f95','#256abf','#2a78d6','#3987e5','#5598e7','#6da7ec','#86b6ef'];
+  const seqD = ['#cde2fb','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf'];
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+                 (document.documentElement.getAttribute('data-theme') !== 'light' && dark);
+  const ramp = isDark ? seqD : seqL;
+  items.forEach((d,i) => { d.c = ramp[Math.min(ramp.length-1, Math.round(i/Math.max(1,n-1)*(ramp.length-1)))];
+    d.note = '点击可跳到改考预警页'; });
+  drawBars('#chgSvg', items, {labelW:150, rowH:30, maxLabel:14, unit:'院校数',
+    onClick:() => go('changes')});
+}
+function drawAll(){ drawTrend(); drawLineBars(); drawChgBars(); drawRegionBars(); }
 
 /* ---------------- boot ---------------- */
-renderSchools(); renderCompare(); renderDock(); renderLines();
+renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
 buildTrendLegend(); drawAll();
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
+window.openDetail = openDetail; window.closeDetail = closeDetail;
 </script>
 </body>
 </html>
