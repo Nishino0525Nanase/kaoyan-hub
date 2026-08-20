@@ -959,7 +959,7 @@ function drawBars(svgSel, items, opt){
     hit.addEventListener('mousemove', ev => showTip(
       `<div class="tt">${esc(d.k)}</div><div class="tr"><span class="dot" style="background:${d.c||cssv('--s1')}"></span>
        <span class="nm">${esc(opt.unit)}</span><span class="vl">${d.v}</span></div>` +
-      (d.note ? `<div class="muted" style="margin-top:4px">${esc(d.note)}</div>` : ''),
+      (d.note ? `<div class="muted" style="margin-top:4px;white-space:pre-line">${esc(d.note)}</div>` : ''),
       ev.clientX, ev.clientY));
     hit.addEventListener('mouseleave', hideTip);
     hit.addEventListener('click', () => { if(opt.onClick) opt.onClick(d); });
@@ -1007,11 +1007,16 @@ function drawCutBars(){
     .map(({p,l}) => ({
       k: `${p.school}·${p.name.replace(/（.*?）/g,'').slice(0,8)}`, v: l.score,
       c: p.degree === '学硕' ? cssv('--s1') : cssv('--s2'),
-      note: `${p.degree} · ${p.college || ''}${p.retest&&p.admitted?` · 复试 ${p.retest} 录 ${p.admitted}`:''}`
+      note: `${p.degree} · ${p.college || ''}\n口径：${l.note || '未注明'}`
+          + (p.retest && p.admitted ? `\n复试 ${p.retest} → 录 ${p.admitted}` : '')
+          + (p.seats && p.seats.plan ? `\n招生计划 ${p.seats.plan} 人` : '')
     }))
     .sort((a,b) => b.v - a.v).slice(0, 22);
   $('#lineCmpDesc').textContent = items.length
-    ? `共 ${items.length} 个项目有 2026 年数据（蓝＝学硕，橙＝专硕）。分数线只反映当年一志愿录取的最低门槛，招生人数少的项目分数线波动极大，别只看数字。`
+    ? `共 ${items.length} 个项目有 2026 年数据（蓝＝学硕，橙＝专硕）。`
+      + (CUT_TRACK === 'fin'
+         ? '注意口径不统一：不少财经院校只公布「门类校线」而非逐专业院线，两者可能差几十分，鼠标悬停可看每条的口径说明。'
+         : '分数线只反映当年一志愿录取的最低门槛，招生人数少的项目波动极大，务必同时看招生人数。')
     : '该方向暂无 2026 年复试线数据。';
   const svg = $('#cutSvg');
   if(!items.length){ svg.innerHTML = ''; svg.setAttribute('viewBox','0 0 760 60'); return; }

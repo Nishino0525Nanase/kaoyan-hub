@@ -455,6 +455,417 @@
    "dataYear": null
   },
   {
+   "school": "上海财经大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院 / 金融学院 / 商学院等",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "校线·经济学[02]统一，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 323,
+     "note": "校线"
+    },
+    {
+     "year": 2024,
+     "score": 338,
+     "note": "校线"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.sufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海财经大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "校线·经济学[02]统一，单科 40/60；院线更高但未公开"
+    },
+    {
+     "year": 2025,
+     "score": 323,
+     "note": "校线"
+    },
+    {
+     "year": 2024,
+     "score": 338,
+     "note": "校线"
+    },
+    {
+     "year": 2023,
+     "score": 346,
+     "note": "校线"
+    }
+   ],
+   "admitted": 87,
+   "dataYear": 2025,
+   "changes": "全日制业务课一为 303 数学三，非全日制为 396——同一专业全日制与非全的考试科目不同，报名前务必看清",
+   "sources": [
+    {
+     "url": "https://gs.sufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "上海财经大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "校线·经济学[02]统一，单科 40/60"
+    }
+   ],
+   "changes": "2027 年起业务课一由 303 数学三改为 396 经济类综合能力（金融学院公告）",
+   "sources": [
+    {
+     "url": "https://sof.sufe.edu.cn/f5/01/c7108a259329/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院 / 财政金融学院等",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 340,
+     "note": "校线·经济学[02]学术学位统一口径，单科 55/55/90/90"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "财政金融学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 375,
+     "note": "校线，单科 55/55/90/90"
+    },
+    {
+     "year": 2025,
+     "score": 360,
+     "note": "二手汇总，未经官网核实"
+    },
+    {
+     "year": 2024,
+     "score": 385,
+     "note": "二手汇总，未经官网核实"
+    }
+   ],
+   "changes": "业务课一是 396 经济类综合能力而非 303 数学三——这是人大财金金融专硕最关键的差异",
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（苏州校区）",
+   "degree": "专硕",
+   "college": "智慧治理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 370,
+     "note": "校线，单科 55/55/90/90"
+    },
+    {
+     "year": 2025,
+     "score": 355,
+     "note": "二手汇总"
+    },
+    {
+     "year": 2024,
+     "score": 345,
+     "note": "二手汇总"
+    }
+   ],
+   "changes": "业务课一为 396 经济类综合能力；苏州校区线略低于本部",
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "统计学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 340,
+     "note": "校线，单科 55/55/90/90"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "商学院 / 国际学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "校线，单科 55/55/90/90"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中国人民大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "财政金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 395,
+     "note": "校线，单科 55/55/90/90"
+    }
+   ],
+   "changes": "395 分是人大经济类里最高的一条线，高于金融专硕的 375",
+   "sources": [
+    {
+     "url": "https://pgs.ruc.edu.cn/info/1043/3553.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
    "school": "中国科学技术大学",
    "track": "cs",
    "code": "081200",
@@ -933,6 +1344,181 @@
    "confidence": "official",
    "retest": null,
    "dataYear": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 330,
+     "note": "院线·全日制，单科 40/60"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.cufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 339,
+     "note": "院线·全日制，单科 40/60"
+    }
+   ],
+   "changes": "2026 年复试线官方仅以图片发布，无法核实文本，故只收录 2025 年",
+   "sources": [
+    {
+     "url": "https://gs.cufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "统计与数学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 342,
+     "note": "院线·全日制，单科 41/62"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.cufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "国际经济与贸易学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 337,
+     "note": "院线·全日制，单科 40/60"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.cufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "中央财经大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "保险学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 323,
+     "note": "院线·全日制，单科 40/60"
+    }
+   ],
+   "changes": "323 是中财经济类里最低的一条院线",
+   "sources": [
+    {
+     "url": "https://gs.cufe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
   },
   {
    "school": "云南大学",
@@ -2226,6 +2812,430 @@
    "dataYear": null
   },
   {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "020204",
+   "name": "金融学",
+   "degree": "学硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 325,
+     "note": "一志愿复试线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 38,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "学硕线 325，比金融专硕 343 低 18 分",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（科技金融研究中心）",
+   "degree": "专硕",
+   "college": "科技金融研究中心",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 336,
+     "note": "一志愿复试线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 18,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "招生计划 18 人（含推免），线比金融学院低 7 分",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（金融学院）",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 343,
+     "note": "一志愿复试线，单科为国家线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 102,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "招生计划 102 人（含推免）。南开虽是 396 经济类联考试点校，但经济类专业仍考 303 数学三——务必以当年招生目录为准",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "统计与数据科学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 339,
+     "note": "一志愿复试线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 180,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "招生计划 180 人（含推免），是本批规模最大的经济类项目",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "国际经济与政治学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 355,
+     "note": "一志愿复试线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 66,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "招生计划 66 人（含推免），355 是南开经济类最高线",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "南开大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 340,
+     "note": "一志愿复试线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "招生计划 10 人（含推免）",
+   "sources": [
+    {
+     "url": "https://yzb.nankai.edu.cn/2574/list.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "校线·经济学[02]「其他学科专业」档，单科 50/80"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "2026 统考计划分系：金融系 19、财政系 14、国贸系 9、统计系 3、经研所 4、WISE 5、能源中心 8、邹至庄 4",
+   "sources": [
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（王亚南经济研究院）",
+   "degree": "专硕",
+   "college": "王亚南经济研究院 WISE",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "校线·经济学[02]「其他学科专业」档，单科 50/80"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 19,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 统考计划 19 人",
+   "sources": [
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（经济学院）",
+   "degree": "专硕",
+   "college": "经济学院金融系",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "校线·经济学[02]「其他学科专业」档，单科 50/80"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 80,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 统考计划 80 人（全日制 40 + 非全 40）。厦大把 0251 金融与 0252 应用统计单独放在 330 档，其余经济类专硕是 350 档",
+   "sources": [
+    {
+     "url": "https://zs.xmu.edu.cn/info/1055/35502.htm",
+     "official": true
+    },
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "经济学院统计学与数据科学系",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 330,
+     "note": "校线·经济学[02]「其他学科专业」档，单科 50/80"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 43,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 统考计划 43 人；另有 WISE 非全日制 25 人",
+   "sources": [
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "经济学院国际经济与贸易系",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 350,
+     "note": "校线·经济学[02]专业学位（不含 0251/0252），单科 50/90"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 8,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 统考计划仅 8 人，且线比金融高 20 分",
+   "sources": [
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "厦门大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "经济学院金融系",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 350,
+     "note": "校线·经济学[02]专业学位（不含 0251/0252），单科 50/90"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 9,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 统考计划 9 人",
+   "sources": [
+    {
+     "url": "https://seyjszs.xmu.edu.cn/info/1026/55224.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
    "school": "哈尔滨工业大学",
    "track": "cs",
    "code": "081200",
@@ -2937,6 +3947,466 @@
    "years": null
   },
   {
+   "school": "复旦大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "校线·经济学[02]学术学位，单科 55/90"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://econ.fudan.edu.cn/info/1314/41507.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 380,
+     "note": "校线，单科 55/90"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 130,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "经济学院 2026 年金融硕士招生计划 130 人",
+   "sources": [
+    {
+     "url": "https://econ.fudan.edu.cn/info/1314/41507.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 345,
+     "note": "校线，单科 55/80"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 37,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 年拟招不超过 37 人",
+   "sources": [
+    {
+     "url": "https://econ.fudan.edu.cn/info/1314/41507.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "复旦大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 345,
+     "note": "校线，单科 55/80"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 38,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 年拟招不超过 38 人",
+   "sources": [
+    {
+     "url": "https://econ.fudan.edu.cn/info/1314/41507.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "020204",
+   "name": "金融学（中国金融学院）",
+   "degree": "学硕",
+   "college": "中国金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 335,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 366,
+     "note": "院线"
+    }
+   ],
+   "changes": "同一专业不同学院差 36 分（324 vs 360），选学院比选专业更影响上岸",
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "020204",
+   "name": "金融学（国际经济贸易学院）",
+   "degree": "学硕",
+   "college": "国际经济贸易学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 335,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 366,
+     "note": "院线"
+    }
+   ],
+   "changes": "学硕线 360 反而高于金融专硕的 357",
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（中国金融学院）",
+   "degree": "专硕",
+   "college": "中国金融学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 357,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 345,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 368,
+     "note": "院线"
+    }
+   ],
+   "changes": "学院名称由「金融学院」变更为「中国金融学院」，查往年资料时注意",
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（国际经济贸易学院）",
+   "degree": "专硕",
+   "college": "国际经济贸易学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 357,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 345,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 368,
+     "note": "院线"
+    },
+    {
+     "year": 2023,
+     "score": 371,
+     "note": "院线"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "统计学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 370,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 360,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 381,
+     "note": "院线"
+    }
+   ],
+   "changes": "370 是贸大经济类最高线",
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "国际经济贸易学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 357,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 335,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 355,
+     "note": "院线"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "对外经济贸易大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "保险学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 334,
+     "note": "院线，单科 40/60"
+    },
+    {
+     "year": 2025,
+     "score": 333,
+     "note": "院线"
+    },
+    {
+     "year": 2024,
+     "score": 350,
+     "note": "院线"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yjsy.uibe.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
    "school": "山东大学",
    "track": "fin",
    "code": "020200",
@@ -3027,6 +4497,110 @@
    "confidence": "official",
    "retest": null,
    "dataYear": null
+  },
+  {
+   "school": "山东大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（经济学院）",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "396",
+     "name": "经济类综合能力"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 28,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 年招生计划 28 人，复试差额比例 1:2；院线未公开发布",
+   "sources": [
+    {
+     "url": "https://www.econ.sdu.edu.cn/info/1084/13379.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "山东大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融（金融研究院）",
+   "degree": "专硕",
+   "college": "金融研究院",
+   "subjects": [],
+   "lines": [],
+   "changes": "金融研究院（单位代码 020）单独组织复试、单独公布名单，分数线未公开",
+   "sources": [
+    {
+     "url": "https://www.yz.sdu.edu.cn/info/1022/1368.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "山东大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "经济学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 年招生计划 10 人",
+   "sources": [
+    {
+     "url": "https://www.econ.sdu.edu.cn/info/1084/13379.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null
   },
   {
    "school": "武汉大学",
@@ -3279,6 +4853,76 @@
   {
    "school": "武汉大学",
    "track": "fin",
+   "code": "020100",
+   "name": "理论经济学",
+   "degree": "学硕",
+   "college": "经济与管理学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 360,
+     "note": "复试基本分数线，单科 60/60/100/100"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.whu.edu.cn/zsgz/sszs/a2026n.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济与管理学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 380,
+     "note": "复试基本分数线，单科 60/60/100/100"
+    }
+   ],
+   "changes": "学硕与金融专硕同为 380 分",
+   "sources": [
+    {
+     "url": "https://gs.whu.edu.cn/zsgz/sszs/a2026n.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
    "code": "025100",
    "name": "金融",
    "degree": "专硕",
@@ -3321,6 +4965,111 @@
    "confidence": "official",
    "retest": null,
    "dataYear": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
+   "code": "025200",
+   "name": "应用统计",
+   "degree": "专硕",
+   "college": "数学与统计学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 325,
+     "note": "复试基本分数线，单科 50/60/90/75"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.whu.edu.cn/zsgz/sszs/a2026n.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
+   "code": "025400",
+   "name": "国际商务",
+   "degree": "专硕",
+   "college": "经济与管理学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "复试基本分数线（等同国家线），单科 40/40/60/60"
+    }
+   ],
+   "changes": "324 等同国家线，与金融专硕的 380 差 56 分",
+   "sources": [
+    {
+     "url": "https://gs.whu.edu.cn/zsgz/sszs/a2026n.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "武汉大学",
+   "track": "fin",
+   "code": "025500",
+   "name": "保险",
+   "degree": "专硕",
+   "college": "经济与管理学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 324,
+     "note": "复试基本分数线（等同国家线），单科 40/40/60/60"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.whu.edu.cn/zsgz/sszs/a2026n.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
   },
   {
    "school": "浙江大学",
@@ -4735,6 +6484,68 @@
   {
    "school": "西南财经大学",
    "track": "fin",
+   "code": "020200",
+   "name": "应用经济学",
+   "degree": "学硕",
+   "college": "经济学院 / 金融学院等",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "802",
+     "name": "经济学二"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 323,
+     "note": "校线·经济学[02]学术学位，单科 40/60"
+    },
+    {
+     "year": 2024,
+     "score": 338,
+     "note": "校线"
+    },
+    {
+     "year": 2023,
+     "score": 346,
+     "note": "校线"
+    }
+   ],
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzcx.swufe.edu.cn/chaxun/yzbwww/fsx/fsx.html",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
+  },
+  {
+   "school": "西南财经大学",
+   "track": "fin",
    "code": "025100",
    "name": "金融",
    "degree": "专硕",
@@ -4777,12 +6588,74 @@
    "confidence": "official",
    "retest": null,
    "dataYear": null
+  },
+  {
+   "school": "西南财经大学",
+   "track": "fin",
+   "code": "025100",
+   "name": "金融",
+   "degree": "专硕",
+   "college": "金融学院 / 证券期货学院等",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "303",
+     "name": "数学（三）"
+    },
+    {
+     "code": "431",
+     "name": "金融学综合"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "score": 323,
+     "note": "校线·金融类专业学位统一，单科 40/60"
+    },
+    {
+     "year": 2024,
+     "score": 338,
+     "note": "校线"
+    },
+    {
+     "year": 2023,
+     "score": 346,
+     "note": "校线"
+    }
+   ],
+   "changes": "西财各学院院线显著高于校线，只看校线会严重低估难度；2026 年校线官方以图片发布，未收录",
+   "sources": [
+    {
+     "url": "https://yzcx.swufe.edu.cn/chaxun/yzbwww/fsx/fsx.html",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null
   }
  ],
  "stats": {
-  "programs": 83,
-  "schools": 22,
-  "withLines": 63,
+  "programs": 130,
+  "schools": 27,
+  "withLines": 107,
   "withRetestRatio": 56,
   "withApplied": 2
  }
