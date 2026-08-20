@@ -390,6 +390,14 @@ body.hasdock{padding-bottom:66px}
 
     <div class="card chartcard">
       <div class="chead">
+        <p class="ctitle">进了复试还会被刷掉多少？</p>
+        <p class="cdesc" id="ratioDesc"></p>
+      </div>
+      <svg class="chart" id="ratioSvg" viewBox="0 0 760 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="复试录取比排行条形图"></svg>
+    </div>
+
+    <div class="card chartcard">
+      <div class="chead">
         <p class="ctitle">近年初试科目变动的院校数量</p>
         <p class="cdesc">含院校库内外的全部记录；「改考 408」是计算机方向近年最主流的变动</p>
       </div>
@@ -1000,7 +1008,7 @@ $$('#trackSeg button').forEach(b => b.onclick = () => {
   drawCutBars();
 });
 function drawCutBars(){
-  const items = PROG.records
+  let items = PROG.records
     .filter(p => p.track === CUT_TRACK)
     .map(p => { const l = p.lines.find(x => x.year === 2026); return l ? {p, l} : null; })
     .filter(Boolean)
@@ -1011,9 +1019,11 @@ function drawCutBars(){
           + (p.retest && p.admitted ? `\n复试 ${p.retest} → 录 ${p.admitted}` : '')
           + (p.seats && p.seats.plan ? `\n招生计划 ${p.seats.plan} 人` : '')
     }))
-    .sort((a,b) => b.v - a.v).slice(0, 22);
+    .sort((a,b) => b.v - a.v);
+  const CAP = 28, total = items.length, cut = Math.max(0, total - CAP);
+  items = items.slice(0, CAP);
   $('#lineCmpDesc').textContent = items.length
-    ? `共 ${items.length} 个项目有 2026 年数据（蓝＝学硕，橙＝专硕）。`
+    ? `共 ${total} 个项目有 2026 年数据${cut ? `，图中按分数从高到低只画前 ${CAP} 个（另有 ${cut} 个未显示）` : ''}（蓝＝学硕，橙＝专硕）。`
       + (CUT_TRACK === 'fin'
          ? '注意口径不统一：不少财经院校只公布「门类校线」而非逐专业院线，两者可能差几十分，鼠标悬停可看每条的口径说明。'
          : '分数线只反映当年一志愿录取的最低门槛，招生人数少的项目波动极大，务必同时看招生人数。')
@@ -1021,6 +1031,29 @@ function drawCutBars(){
   const svg = $('#cutSvg');
   if(!items.length){ svg.innerHTML = ''; svg.setAttribute('viewBox','0 0 760 60'); return; }
   drawBars('#cutSvg', items, {labelW:215, rowH:24, maxLabel:16, unit:'2026 复试线'});
+}
+
+/* ---- 复试录取比（刷人比例）排行 ---- */
+function drawRatioBars(){
+  const all = PROG.records
+    .filter(p => p.retest && p.admitted && p.retest >= p.admitted)
+    .map(p => ({
+      k: `${p.school}·${p.name.replace(/（.*?）/g,'').slice(0,8)}`,
+      v: +(p.retest / p.admitted).toFixed(2),
+      c: p.track === 'cs' ? cssv('--s1') : cssv('--s3'),
+      note: `${p.dataYear || ''} 年 · ${p.degree}\n复试 ${p.retest} 人 → 录取 ${p.admitted} 人\n`
+          + `约每 ${(p.retest/p.admitted).toFixed(1)} 个进复试的人里录 1 个`
+    }))
+    .sort((a,b) => b.v - a.v);
+  const CAP = 20, cut = Math.max(0, all.length - CAP);
+  const items = all.slice(0, CAP);
+  $('#ratioDesc').textContent = items.length
+    ? `复试录取比 = 复试人数 ÷ 拟录取人数，数值越大说明进复试后被刷得越狠。`
+      + `共 ${all.length} 个项目有数据${cut ? `，图中只画最高的 ${CAP} 个（另有 ${cut} 个未显示）` : ''}。`
+      + `这不是报录比——报考人数绝大多数学校不公布。`
+    : '暂无数据。';
+  if(!items.length){ $('#ratioSvg').innerHTML = ''; return; }
+  drawBars('#ratioSvg', items, {labelW:215, rowH:26, maxLabel:16, unit:'复试录取比'});
 }
 
 function drawChgBars(){
@@ -1040,7 +1073,7 @@ function drawChgBars(){
   drawBars('#chgSvg', items, {labelW:150, rowH:30, maxLabel:14, unit:'院校数',
     onClick:() => go('changes')});
 }
-function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawChgBars(); drawRegionBars(); }
+function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawRatioBars(); drawChgBars(); drawRegionBars(); }
 
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
