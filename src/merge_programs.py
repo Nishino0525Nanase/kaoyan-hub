@@ -12,7 +12,7 @@ DEFAULTS = {
     "seats": {"year": None, "plan": None, "tuimian": None},
     "retest": None, "admitted": None, "applied": None, "dataYear": None,
     "tuition": None, "years": None, "changes": None,
-    "sources": [], "confidence": "partial",
+    "sources": [], "confidence": "partial", "scale": 500,
 }
 
 base = json.load(open(os.path.join(D, 'programs-base.json'), encoding='utf-8'))
@@ -40,17 +40,23 @@ for r in records:
 
 out.sort(key=lambda r: (r['school'], r['track'], r['code'], r['name']))
 
+# MPAcc 是 300 分制，其余 500 分制——写死在记录里，避免图表跨制混比
+for r in out:
+    r['scale'] = 300 if r['track'] == 'acc' else 500
+
 schools = sorted({r['school'] for r in out})
 with_lines = sum(1 for r in out if r['lines'])
 with_ratio = sum(1 for r in out if r['retest'] and r['admitted'])
 
 base['records'] = out
+from collections import Counter
 base['stats'] = {
     "programs": len(out),
     "schools": len(schools),
     "withLines": with_lines,
     "withRetestRatio": with_ratio,
     "withApplied": sum(1 for r in out if r['applied']),
+    "byTrack": dict(Counter(r['track'] for r in out)),
 }
 base['note'] = (
     "逐校逐专业的初试科目、复试线、招录数据。confidence 说明可信度："

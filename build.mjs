@@ -26,6 +26,7 @@ const files = {
   __DATA_RES__:     'data/resources.json',
   __DATA_PROGRAMS__:'data/programs.json',
   __DATA_CHANGES__: 'data/exam-changes.json',
+  __DATA_TRACKS__:  'data/track-catalog.json',
 };
 
 let html = read('src/template.html');

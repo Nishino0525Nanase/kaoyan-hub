@@ -276,6 +276,7 @@ body.hasdock{padding-bottom:66px}
     </div>
     <nav class="tabs" role="tablist">
       <button class="tab" role="tab" data-panel="schools" aria-selected="true">院校库</button>
+      <button class="tab" role="tab" data-panel="majors" aria-selected="false">专业方向</button>
       <button class="tab" role="tab" data-panel="changes" aria-selected="false">改考预警 <span id="chgN"></span></button>
       <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
@@ -305,6 +306,33 @@ body.hasdock{padding-bottom:66px}
 
     <div class="grid" id="schoolGrid"></div>
     <div class="empty" id="schoolEmpty" hidden>没有匹配的院校，换个关键词试试</div>
+  </section>
+
+
+  <!-- ============ 专业方向 ============ -->
+  <section class="panel" id="p-majors">
+    <h2 class="sec">专业方向</h2>
+    <p class="sub" id="majSub"></p>
+
+    <div class="filters">
+      <div class="frow" style="gap:8px">
+        <div class="seg" id="majSeg"></div>
+      </div>
+      <div class="searchbox">
+        <span class="mag">⌕</span>
+        <input id="majQ" type="search" placeholder="在本方向内搜索：学校、学院、专业代码或名称" autocomplete="off">
+        <button class="clr" id="majClear" title="清空" hidden>×</button>
+      </div>
+      <div class="frow" id="fMajDeg"><span class="flabel">学位</span></div>
+      <div class="frow" id="fMajCode"><span class="flabel">代码</span></div>
+      <div class="frow" id="fMajHas"><span class="flabel">数据</span></div>
+    </div>
+
+    <div class="notice" id="majNote"></div>
+
+    <div id="majCatalog"></div>
+
+    <div class="card cmpwrap"><table id="majTable"></table></div>
   </section>
 
   <!-- ============ 改考预警 ============ -->
@@ -380,10 +408,7 @@ body.hasdock{padding-bottom:66px}
         <p class="cdesc" id="lineCmpDesc"></p>
       </div>
       <div class="toolbar" style="margin-bottom:10px">
-        <div class="seg" id="trackSeg">
-          <button data-t="cs" aria-selected="true">计算机 / 电子信息</button>
-          <button data-t="fin" aria-selected="false">金融 / 经济类</button>
-        </div>
+        <div class="seg" id="trackSeg"></div>
       </div>
       <svg class="chart" id="cutSvg" viewBox="0 0 760 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="各校 2026 年复试线对比条形图"></svg>
     </div>
@@ -447,6 +472,7 @@ body.hasdock{padding-bottom:66px}
 
 <div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 
+<script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
 <script id="data-programs" type="application/json">__DATA_PROGRAMS__</script>
 <script id="data-changes" type="application/json">__DATA_CHANGES__</script>
 <script id="data-schools" type="application/json">__DATA_SCHOOLS__</script>
@@ -463,6 +489,7 @@ const HIST    = J('data-history');
 const RES     = J('data-res');
 const PROG    = J('data-programs');
 const CHG     = J('data-changes');
+const TRACKS  = J('data-tracks');
 const SCHOOLS = DB.schools;
 
 /* 按学校名建索引，供院校卡片、详情弹层与对比表复用 */
@@ -741,6 +768,142 @@ function renderChanges(){
   $('#chgN').textContent = `(${CHG_ALL.length})`;
 }
 
+
+/* ================= 专业方向 ================= */
+let MAJ_TRACK = 'cs';
+const majState = { q:'', deg:new Set(), code:new Set(), has:new Set() };
+
+$('#majSeg').innerHTML = Object.entries(TRACKS.tracks)
+  .map(([k,v]) => `<button data-t="${k}" aria-selected="${k==='cs'}">${esc(v.short)}</button>`).join('');
+$$('#majSeg button').forEach(b => b.onclick = () => {
+  MAJ_TRACK = b.dataset.t;
+  $$('#majSeg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+  majState.code.clear();
+  buildMajFilters();
+  renderMajors();
+});
+$('#majQ').addEventListener('input', e => {
+  majState.q = e.target.value.trim().toLowerCase();
+  $('#majClear').hidden = !e.target.value;
+  renderMajors();
+});
+$('#majClear').onclick = () => { $('#majQ').value=''; majState.q=''; $('#majClear').hidden=true; renderMajors(); };
+
+function majChips(host, items, key){
+  host.querySelectorAll('.chip').forEach(c => c.remove());
+  items.forEach(v => {
+    const b = document.createElement('button');
+    b.className='chip'; b.type='button'; b.textContent=v;
+    b.setAttribute('aria-pressed', String(majState[key].has(v)));
+    b.onclick = () => {
+      const on = b.getAttribute('aria-pressed')==='true';
+      b.setAttribute('aria-pressed', String(!on));
+      on ? majState[key].delete(v) : majState[key].add(v);
+      renderMajors();
+    };
+    host.appendChild(b);
+  });
+}
+function buildMajFilters(){
+  const rows = PROG.records.filter(r => r.track === MAJ_TRACK);
+  majChips($('#fMajDeg'), [...new Set(rows.map(r => r.degree))], 'deg');
+  const codes = [...new Set(rows.map(r => r.code))].sort();
+  majChips($('#fMajCode'), codes, 'code');
+  majChips($('#fMajHas'), ['有复试线','有招录数据','官方来源'], 'has');
+}
+
+function majMatch(r){
+  if(r.track !== MAJ_TRACK) return false;
+  if(majState.deg.size  && !majState.deg.has(r.degree)) return false;
+  if(majState.code.size && !majState.code.has(r.code))  return false;
+  if(majState.has.has('有复试线')   && !r.lines.length) return false;
+  if(majState.has.has('有招录数据') && !(r.retest || r.admitted || (r.seats && r.seats.plan))) return false;
+  if(majState.has.has('官方来源')   && r.confidence !== 'official') return false;
+  if(!majState.q) return true;
+  return (r.school + r.code + r.name + (r.college||'')).toLowerCase().includes(majState.q);
+}
+
+const confTag = c => c === 'official'
+  ? '<span class="srcflag off">官方</span>'
+  : c === 'low' ? '<span class="srcflag" style="border-color:var(--crit);color:var(--crit)">存疑</span>'
+  : '<span class="srcflag">二手</span>';
+
+function renderMajors(){
+  const t = TRACKS.tracks[MAJ_TRACK];
+  const all = PROG.records.filter(r => r.track === MAJ_TRACK);
+  const rows = all.filter(majMatch).sort((a,b) => {
+    const la = a.lines[0] ? a.lines[0].score : -1, lb = b.lines[0] ? b.lines[0].score : -1;
+    return lb - la;
+  });
+  $('#majSub').textContent = `${t.desc}　本方向共收录 ${all.length} 个项目，当前显示 ${rows.length} 个。`;
+  $('#majNote').innerHTML = MAJ_TRACK === 'acc'
+    ? `<b>⚠ ${t.scale} 分制：</b>MPAcc 初试只考 199 管理类综合能力（200 分）+ 204 英语二（100 分），满分 300，不考政治。`
+      + `下表分数与其他方向的 500 分制<b>完全不可比</b>。`
+    : `<b>${t.scale} 分制。</b>表格按 2026 年（或最近一年）复试线从高到低排序。「口径」列写明这条线是校线、院线还是一志愿线——`
+      + `<b>跨学校比较前先确认口径一致</b>。`;
+
+  // 方向说明块（0854 目录 / MPAcc 说明）
+  let cat = '';
+  if(MAJ_TRACK === 'ee'){
+    const c = TRACKS.catalog0854;
+    cat = `<div class="card chartcard" style="margin-bottom:16px">
+      <div class="chead"><p class="ctitle">${esc(c.title)}</p>
+        <p class="cdesc">${esc(c.source)}</p></div>
+      <div class="badges" style="gap:6px;margin-bottom:12px">
+        ${c.items.map(i => `<span class="badge${['085404','085405','085410'].includes(i.code)?'':' b211'}"
+          title="${esc(i.note||'')}"><b>${i.code}</b> ${esc(i.name)}${i.note?` · ${esc(i.note)}`:''}</span>`).join('')}
+      </div>
+      <p class="muted" style="margin:0 0 10px">灰色的三个（085404 计算机技术、085405 软件工程、085410 人工智能）归在「计算机」方向里，切上面的标签查看。</p>
+      ${c.warnings.map(w => `<div class="warnbox">${mdBold(w)}</div>`).join('')}
+      <div class="kv" style="margin-top:10px">${c.sourceUrls.map((u,i) =>
+        `<a href="${esc(u)}" target="_blank" rel="noopener">目录来源 ${i+1} ↗</a>`).join('')}</div>
+    </div>`;
+  } else if(MAJ_TRACK === 'acc'){
+    const a = TRACKS.accNotes;
+    cat = `<div class="card chartcard" style="margin-bottom:16px">
+      <div class="chead"><p class="ctitle">${esc(a.title)}</p></div>
+      ${a.items.map(w => `<div class="warnbox">${mdBold(w)}</div>`).join('')}
+    </div>`;
+  }
+  $('#majCatalog').innerHTML = cat;
+
+  const lineCell = r => r.lines.length
+    ? r.lines.map(l => `<div><span class="muted">${l.year}</span> <b class="num">${l.score}</b></div>`).join('')
+    : '<span class="muted">未收录</span>';
+  const noteCell = r => r.lines.length
+    ? `<span class="muted">${esc(r.lines[0].note || '未注明')}</span>` : '<span class="muted">—</span>';
+  const subjCell = r => r.subjects.length
+    ? r.subjects.map(x => `<div class="muted">${x.code?`<b style="color:var(--accent)">${esc(x.code)}</b> `:''}${esc(x.name)}</div>`).join('')
+    : '<span class="muted">未收录</span>';
+
+  $('#majTable').innerHTML =
+    `<thead><tr><th>院校 · 学院</th><th>专业</th><th>学位</th><th>初试科目</th>
+      <th>复试线<br><span class="muted" style="font-weight:400">${t.scale} 分制</span></th>
+      <th>口径</th><th>招录</th><th>学费 / 学制</th><th>来源</th></tr></thead><tbody>` +
+    (rows.length ? rows.map(r => `<tr>
+      <td><b>${esc(r.school)}</b><br><span class="muted">${esc(r.college || '—')}</span>
+        <br><button class="det" type="button" style="margin-top:5px" data-det3="${esc(r.school)}">院校详情</button></td>
+      <td><span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span><br>${esc(r.name)}</td>
+      <td><span class="badge">${esc(r.degree)}</span></td>
+      <td style="min-width:150px">${subjCell(r)}</td>
+      <td class="num">${lineCell(r)}</td>
+      <td style="max-width:160px">${noteCell(r)}</td>
+      <td style="min-width:140px">${ratioText(r)}</td>
+      <td>${r.tuition ? esc(r.tuition) : '<span class="muted">未收录</span>'}
+        ${r.years ? `<br><span class="muted">学制 ${r.years} 年</span>` : ''}</td>
+      <td>${confTag(r.confidence)}<br>${r.sources.map(x =>
+        `<a href="${esc(x.url)}" target="_blank" rel="noopener" style="font-size:12px">来源 ↗</a>`).join(' ')}
+        ${r.changes ? `<br><span class="muted" style="font-size:11.5px">${esc(r.changes)}</span>` : ''}</td>
+    </tr>`).join('')
+    : `<tr><td colspan="9" class="muted" style="padding:30px;text-align:center">没有匹配的项目</td></tr>`)
+    + '</tbody>';
+  $('#majTable').querySelectorAll('[data-det3]').forEach(b => b.onclick = () => openDetail(b.dataset.det3));
+}
+/* 极简 **粗体** 渲染，仅用于说明文案 */
+function mdBold(str){
+  return esc(str).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+}
+
 /* ================= 对比 ================= */
 function renderCompare(){
   const rows = picks.map(n => SCHOOLS.find(s => s.name === n)).filter(Boolean);
@@ -1002,6 +1165,8 @@ function drawRegionBars(){
 }
 /* ---- 各校 2026 复试线对比（按方向切换） ---- */
 let CUT_TRACK = 'cs';
+$('#trackSeg').innerHTML = Object.entries(TRACKS.tracks)
+  .map(([k,v]) => `<button data-t="${k}" aria-selected="${k==='cs'}">${esc(v.short)}</button>`).join('');
 $$('#trackSeg button').forEach(b => b.onclick = () => {
   CUT_TRACK = b.dataset.t;
   $$('#trackSeg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
@@ -1022,15 +1187,22 @@ function drawCutBars(){
     .sort((a,b) => b.v - a.v);
   const CAP = 28, total = items.length, cut = Math.max(0, total - CAP);
   items = items.slice(0, CAP);
+  const sc = TRACKS.tracks[CUT_TRACK].scale;
+  const extra = CUT_TRACK === 'fin'
+      ? '注意口径不统一：不少财经院校只公布「门类校线」而非逐专业院线，两者可能差几十分，悬停可看每条的口径。'
+    : CUT_TRACK === 'acc'
+      ? '⚠ MPAcc 是 300 分制（管综 200 + 英二 100，不考政治），这些数字不能和其他方向的 500 分制分数线比较。'
+    : CUT_TRACK === 'ee'
+      ? '注意不少学校 0854 只划大类校线、不分二级代码，悬停可看每条的口径与学院。'
+      : '分数线只反映当年一志愿录取的最低门槛，招生人数少的项目波动极大，务必同时看招生人数。';
   $('#lineCmpDesc').textContent = items.length
-    ? `共 ${total} 个项目有 2026 年数据${cut ? `，图中按分数从高到低只画前 ${CAP} 个（另有 ${cut} 个未显示）` : ''}（蓝＝学硕，橙＝专硕）。`
-      + (CUT_TRACK === 'fin'
-         ? '注意口径不统一：不少财经院校只公布「门类校线」而非逐专业院线，两者可能差几十分，鼠标悬停可看每条的口径说明。'
-         : '分数线只反映当年一志愿录取的最低门槛，招生人数少的项目波动极大，务必同时看招生人数。')
+    ? `共 ${total} 个项目有 2026 年数据${cut ? `，图中按分数从高到低只画前 ${CAP} 个（另有 ${cut} 个未显示）` : ''}`
+      + `（${sc} 分制，蓝＝学硕，橙＝专硕）。` + extra
     : '该方向暂无 2026 年复试线数据。';
   const svg = $('#cutSvg');
   if(!items.length){ svg.innerHTML = ''; svg.setAttribute('viewBox','0 0 760 60'); return; }
-  drawBars('#cutSvg', items, {labelW:215, rowH:24, maxLabel:16, unit:'2026 复试线'});
+  drawBars('#cutSvg', items, {labelW:215, rowH:24, maxLabel:16,
+    unit:`2026 复试线（${TRACKS.tracks[CUT_TRACK].scale} 分制）`});
 }
 
 /* ---- 复试录取比（刷人比例）排行 ---- */
@@ -1040,7 +1212,7 @@ function drawRatioBars(){
     .map(p => ({
       k: `${p.school}·${p.name.replace(/（.*?）/g,'').slice(0,8)}`,
       v: +(p.retest / p.admitted).toFixed(2),
-      c: p.track === 'cs' ? cssv('--s1') : cssv('--s3'),
+      c: {cs:cssv('--s1'), ee:cssv('--s2'), fin:cssv('--s3'), acc:cssv('--s4')}[p.track] || cssv('--s1'),
       note: `${p.dataYear || ''} 年 · ${p.degree}\n复试 ${p.retest} 人 → 录取 ${p.admitted} 人\n`
           + `约每 ${(p.retest/p.admitted).toFixed(1)} 个进复试的人里录 1 个`
     }))
@@ -1077,6 +1249,7 @@ function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawRatioBars();
 
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
+buildMajFilters(); renderMajors();
 buildTrendLegend(); drawAll();
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
