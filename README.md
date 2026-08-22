@@ -2,7 +2,7 @@
 
 > 一个开源、零依赖、数据可校验的考研择校工具。所有数据来自教育部与研招网等公开渠道，欢迎 PR 补充。
 
-**在线访问：** https://OWNER.github.io/kaoyan-hub/
+**在线访问：** https://Nishino0525Nanase.github.io/kaoyan-hub/
 
 ---
 
@@ -79,7 +79,7 @@
 ## 本地运行
 
 ```bash
-git clone https://github.com/OWNER/kaoyan-hub.git
+git clone https://github.com/Nishino0525Nanase/kaoyan-hub.git
 cd kaoyan-hub
 python3 src/merge_programs.py   # 合并逐专业数据（改了 programs-* 才需要）
 node build.mjs                  # 把 data/*.json 注入模板，生成 index.html
