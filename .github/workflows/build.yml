@@ -1,0 +1,51 @@
+name: 构建校验
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths: ['data/**', 'src/**', 'build.mjs', 'scripts/**']
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+
+      - name: 校验所有 JSON 语法
+        run: |
+          for f in data/*.json; do
+            python3 -c "import json,sys; json.load(open('$f'))" || { echo "❌ $f JSON 格式错误"; exit 1; }
+            echo "✓ $f"
+          done
+
+      - name: 重新合并逐专业数据
+        run: python3 src/merge_programs.py
+
+      - name: 检查 programs.json 是否与各批次一致
+        run: |
+          git diff --quiet data/programs.json || {
+            echo "❌ data/programs.json 与各 programs-*.json 不一致。"
+            echo "   请在本地跑 python3 src/merge_programs.py 后一起提交。"
+            git diff --stat data/programs.json
+            exit 1
+          }
+          echo "✓ programs.json 已是最新"
+
+      - name: 构建页面
+        run: node build.mjs
+
+      - name: 检查 index.html 是否与数据一致
+        run: |
+          git diff --quiet index.html || {
+            echo "❌ index.html 与 data/ 不一致。请在本地跑 node build.mjs 后一起提交。"
+            exit 1
+          }
+          echo "✓ index.html 已是最新"

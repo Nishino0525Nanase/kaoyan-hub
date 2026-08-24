@@ -29,7 +29,68 @@ const files = {
   __DATA_TRACKS__:  'data/track-catalog.json',
 };
 
+/* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */
+const NOW = new Date();
+const Y = NOW.getUTCFullYear(), M = NOW.getUTCMonth() + 1;
+const monthsSince = (ym) => {
+  if (!ym) return null;
+  const [y, m] = String(ym).split('-').map(Number);
+  return (Y - y) * 12 + (M - (m || 1));
+};
+const grade = (mo) => mo == null ? 'unknown' : mo <= 6 ? 'fresh' : mo <= 12 ? 'aging' : 'stale';
+
+function freshness() {
+  const rd = (f) => JSON.parse(read(`data/${f}`));
+  const progs = rd('programs.json');
+  const years = progs.records.flatMap(r => (r.lines || []).map(l => l.year)).filter(Boolean);
+  const newestLine = years.length ? Math.max(...years) : null;
+  const staleRecords = progs.records.filter(r => {
+    const y = (r.lines || [])[0]?.year || r.dataYear;
+    return y && y < Y - 1;
+  }).length;
+
+  const sets = [
+    { key: '国家线',        file: 'national-lines-2026.json',    updated: '2026-02', note: '每年 2—3 月教育部发布新一年' },
+    { key: '历年国家线趋势', file: 'national-lines-history.json', updated: '2026-02', note: '随每年国家线一起更新' },
+    { key: '院校档案',      file: 'schools.json',                updated: rd('schools.json').updated, note: '研招网链接、层次、学科评估' },
+    { key: '改考预警',      file: 'exam-changes.json',           updated: rd('exam-changes.json').updated, note: '每年 4—9 月是各校发布改考公告的高峰' },
+    { key: '逐专业数据',    file: 'programs.json',               updated: progs.updated, note: `最新收录到 ${newestLine || '—'} 年复试线` },
+    { key: '方向目录',      file: 'track-catalog.json',          updated: rd('track-catalog.json').updated, note: '0854 二级目录、MPAcc 说明' },
+  ].map(x => {
+    const mo = monthsSince(x.updated);
+    return { ...x, monthsAgo: mo, grade: grade(mo) };
+  });
+
+  // 季节提醒：现在这个月，考研人该盯什么
+  const CAL = {
+    2: '国家线通常本月或下月发布，盯研招网',
+    3: '国家线发布 + 各校复试线陆续公布；调剂系统开放',
+    4: '调剂高峰；各校开始发布下一年改考公告',
+    5: '改考公告高峰，本库的改考预警最该更新',
+    6: '改考公告高峰',
+    7: '改考公告高峰；暑期强化',
+    8: '考试大纲发布；招生简章陆续出',
+    9: '招生专业目录发布（初试科目的权威来源）；预报名',
+    10: '正式报名',
+    11: '现场确认 / 网上确认',
+    12: '初试',
+    1: '初试成绩陆续公布',
+  };
+
+  return {
+    builtAt: `${Y}-${String(M).padStart(2, '0')}`,
+    sets,
+    staleRecords,
+    totalRecords: progs.records.length,
+    seasonHint: CAL[M] || null,
+    month: M,
+  };
+}
+
+const FRESH = freshness();
+
 let html = read('src/template.html');
+html = html.replaceAll('__DATA_FRESH__', inject(FRESH));
 for (const [token, path] of Object.entries(files)) {
   const parsed = JSON.parse(read(path));           // 顺带校验 JSON 合法性
   html = html.replaceAll(token, inject(parsed));

@@ -1,0 +1,63 @@
+name: 链接体检
+
+on:
+  schedule:
+    - cron: '17 3 1 * *'        # 每月 1 号 UTC 03:17
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: 检查所有数据文件里的链接
+        id: check
+        continue-on-error: true
+        run: node scripts/check-links.mjs
+
+      - name: 有失效链接就开 Issue
+        if: steps.check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const r = JSON.parse(fs.readFileSync('link-report.json', 'utf8'));
+            if (!r.dead.length) return;
+
+            let body = `链接体检发现 **${r.dead.length}** 条确定失效（404/410）的链接。\n\n`;
+            body += `检查时间：${r.checkedAt}　总计 ${r.total} 条，正常 ${r.ok} 条。\n\n`;
+            body += `## 需要修的\n\n`;
+            for (const d of r.dead) {
+              body += `- [ ] \`${d.url}\` （HTTP ${d.status}）\n`;
+              for (const ref of d.refs.slice(0, 3)) body += `      - ${ref.file} → \`${ref.path}\`\n`;
+            }
+            if (r.suspect.length) {
+              body += `\n## 存疑（超时或 5xx，教育网常见，未必真失效）\n\n`;
+              for (const s of r.suspect.slice(0, 25)) body += `- \`${s.url}\` — ${s.error || 'HTTP ' + s.status}\n`;
+              if (r.suspect.length > 25) body += `\n…另有 ${r.suspect.length - 25} 条。\n`;
+            }
+            body += `\n---\n修好后请更新对应的 \`data/*.json\`，然后 \`node build.mjs\` 重新生成页面。`;
+
+            const title = `链接体检：${r.dead.length} 条失效（${r.checkedAt}）`;
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'link-rot',
+            });
+            if (existing.data.length) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.data[0].number, title, body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['link-rot', 'data'],
+              });
+            }

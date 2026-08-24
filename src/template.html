@@ -227,6 +227,22 @@ body.hasdock{padding-bottom:66px}
 .yearpill{display:inline-block;min-width:52px;text-align:center;font-variant-numeric:tabular-nums;font-weight:600;
   padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:12px}
 
+/* ---------- 新鲜度 ---------- */
+.freshbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.fcard{flex:1 1 150px;min-width:140px;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:var(--surface-1)}
+.fcard .fk{font-size:13px;font-weight:600;margin-bottom:3px}
+.fcard .fv{font-size:12.5px;font-variant-numeric:tabular-nums}
+.fcard .fn{font-size:11.5px;color:var(--text-3);margin-top:4px;line-height:1.5}
+.dot2{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.g-fresh .dot2{background:var(--good)}   .g-fresh .fv{color:var(--good)}
+.g-aging .dot2{background:var(--warn)}   .g-aging .fv{color:#8a6100}
+.g-stale .dot2{background:var(--crit)}   .g-stale .fv{color:var(--crit)}
+.g-unknown .dot2{background:var(--line-strong)} .g-unknown .fv{color:var(--text-3)}
+:root[data-theme="dark"] .g-aging .fv{color:var(--warn)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .g-aging .fv{color:var(--warn)}}
+.season{border-left:3px solid var(--accent);background:var(--surface-1);padding:10px 13px;border-radius:0 9px 9px 0;
+  font-size:13px;color:var(--text-2);margin-bottom:16px;line-height:1.6}
+
 /* ---------- 详情弹层 ---------- */
 .mask{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:80;display:none;
   align-items:flex-end;justify-content:center;backdrop-filter:blur(2px)}
@@ -292,6 +308,8 @@ body.hasdock{padding-bottom:66px}
   <section class="panel on" id="p-schools">
     <h2 class="sec">院校库</h2>
     <p class="sub" id="schoolSub"></p>
+    <div class="season" id="seasonHint2" hidden></div>
+    <div class="freshbar" id="freshBar"></div>
 
     <div class="filters">
       <div class="searchbox">
@@ -472,6 +490,7 @@ body.hasdock{padding-bottom:66px}
 
 <div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 
+<script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
 <script id="data-programs" type="application/json">__DATA_PROGRAMS__</script>
 <script id="data-changes" type="application/json">__DATA_CHANGES__</script>
@@ -490,6 +509,7 @@ const RES     = J('data-res');
 const PROG    = J('data-programs');
 const CHG     = J('data-changes');
 const TRACKS  = J('data-tracks');
+const FRESH   = J('data-fresh');
 const SCHOOLS = DB.schools;
 
 /* 按学校名建索引，供院校卡片、详情弹层与对比表复用 */
@@ -768,6 +788,24 @@ function renderChanges(){
   $('#chgN').textContent = `(${CHG_ALL.length})`;
 }
 
+
+
+/* ================= 数据新鲜度 ================= */
+function renderFresh(){
+  const GL = { fresh:'较新', aging:'该复核了', stale:'已过期', unknown:'未知' };
+  $('#freshBar').innerHTML = FRESH.sets.map(x => `
+    <div class="fcard g-${x.grade}">
+      <div class="fk">${esc(x.key)}</div>
+      <div class="fv"><span class="dot2"></span>${x.updated ? esc(x.updated) : '未标注'}
+        ${x.monthsAgo != null ? `· ${x.monthsAgo} 个月前` : ''} · ${GL[x.grade]}</div>
+      <div class="fn">${esc(x.note)}</div>
+    </div>`).join('');
+  if(FRESH.seasonHint){
+    $('#seasonHint2').hidden = false;
+    $('#seasonHint2').innerHTML = `<b>${FRESH.month} 月了：</b>${esc(FRESH.seasonHint)}。`
+      + (FRESH.staleRecords ? `　本库有 <b>${FRESH.staleRecords}</b> 条逐专业记录的最新数据早于 ${FRESH.builtAt.slice(0,4)-1} 年，属于该复核的范围。` : '');
+  }
+}
 
 /* ================= 专业方向 ================= */
 let MAJ_TRACK = 'cs';
@@ -1249,7 +1287,7 @@ function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawRatioBars();
 
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
-buildMajFilters(); renderMajors();
+buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;

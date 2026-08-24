@@ -1,0 +1,94 @@
+{
+  "note": "被守望的页面。脚本定期抓取，与上次的内容指纹比对，变了就开 Issue 提醒人工核对。只放「更新了就意味着数据要改」的页面，不要什么都盯。",
+  "targets": [
+    {
+      "id": "national-line",
+      "name": "研招网 · 国家线专题",
+      "url": "https://yz.chsi.com.cn/kyzx/zt/kyfs.shtml",
+      "why": "每年 2—3 月发布新一年国家线。变了就要更新 national-lines-*.json",
+      "season": [2, 3, 4],
+      "keywords": ["国家线", "分数线", "初试成绩基本要求"]
+    },
+    {
+      "id": "moe-policy",
+      "name": "教育部 · 信息公开（招生政策）",
+      "url": "http://www.moe.gov.cn/jyb_xxgk/",
+      "why": "招生管理规定、专业目录调整的源头",
+      "season": [8, 9, 10, 12, 1, 2, 3],
+      "keywords": ["研究生招生", "硕士", "专业学位"]
+    },
+    {
+      "id": "chsi-zsml",
+      "name": "研招网 · 硕士专业目录查询",
+      "url": "https://yz.chsi.com.cn/zsml/",
+      "why": "每年 9 月更新当年招生专业目录，是初试科目变动的权威来源",
+      "season": [8, 9, 10],
+      "keywords": ["专业目录", "招生"]
+    },
+    {
+      "id": "chsi-tj",
+      "name": "研招网 · 调剂服务系统",
+      "url": "https://yz.chsi.com.cn/tj/",
+      "why": "每年 3—4 月开放，调剂数据的唯一官方来源",
+      "season": [3, 4, 5],
+      "keywords": ["调剂"]
+    },
+    {
+      "id": "cdgdc",
+      "name": "教育部学位与研究生教育发展中心",
+      "url": "https://www.cdgdc.edu.cn/",
+      "why": "第五轮学科评估若公布，会从这里出——那将是本库最大的一次数据更新",
+      "season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "keywords": ["学科评估", "第五轮", "评估结果"]
+    }
+  ],
+  "schoolWatch": {
+    "note": "各校研招网的通知列表页。抓取后只看是否出现改考相关关键词，出现就提醒。这类页面结构千差万别，做不到精确解析，定位是「预警」而非「取数」。",
+    "keywords": ["初试科目", "科目调整", "调整初试", "改考", "408", "招生专业目录", "参考书目"],
+    "season": [4, 5, 6, 7, 8, 9],
+    "sites": [
+      { "school": "清华大学", "url": "https://yz.tsinghua.edu.cn/" },
+      { "school": "北京大学", "url": "https://admission.pku.edu.cn/" },
+      { "school": "北京航空航天大学", "url": "https://yzb.buaa.edu.cn/" },
+      { "school": "北京理工大学", "url": "https://grd.bit.edu.cn/" },
+      { "school": "北京邮电大学", "url": "https://yzb.bupt.edu.cn/" },
+      { "school": "北京科技大学", "url": "https://yzxc.ustb.edu.cn/" },
+      { "school": "天津大学", "url": "https://yzb.tju.edu.cn/" },
+      { "school": "南开大学", "url": "https://yzb.nankai.edu.cn/" },
+      { "school": "哈尔滨工业大学", "url": "https://yzb.hit.edu.cn/" },
+      { "school": "哈尔滨工程大学", "url": "https://yzb.hrbeu.edu.cn/" },
+      { "school": "东北大学", "url": "http://yz.neu.edu.cn/" },
+      { "school": "东北师范大学", "url": "https://yjsy.nenu.edu.cn/" },
+      { "school": "复旦大学", "url": "https://gsao.fudan.edu.cn/" },
+      { "school": "上海交通大学", "url": "https://yzb.sjtu.edu.cn/" },
+      { "school": "同济大学", "url": "https://yz.tongji.edu.cn/" },
+      { "school": "华东师范大学", "url": "https://yjszs.ecnu.edu.cn/" },
+      { "school": "南京大学", "url": "https://grawww.nju.edu.cn/" },
+      { "school": "东南大学", "url": "https://yzb.seu.edu.cn/" },
+      { "school": "南京航空航天大学", "url": "https://www.graduate.nuaa.edu.cn/" },
+      { "school": "南京理工大学", "url": "https://gs.njust.edu.cn/" },
+      { "school": "南京邮电大学", "url": "https://yzb.njupt.edu.cn/" },
+      { "school": "浙江大学", "url": "http://www.grs.zju.edu.cn/yjszs/" },
+      { "school": "杭州电子科技大学", "url": "https://grs.hdu.edu.cn/" },
+      { "school": "中国科学技术大学", "url": "http://yz.ustc.edu.cn/" },
+      { "school": "厦门大学", "url": "https://gs.xmu.edu.cn/" },
+      { "school": "山东大学", "url": "https://www.yz.sdu.edu.cn/" },
+      { "school": "武汉大学", "url": "https://wdyz.whu.edu.cn/" },
+      { "school": "华中科技大学", "url": "http://gszs.hust.edu.cn/" },
+      { "school": "湖南大学", "url": "https://gra.hnu.edu.cn/" },
+      { "school": "中南大学", "url": "https://yz.csu.edu.cn/" },
+      { "school": "中山大学", "url": "https://graduate.sysu.edu.cn/zsw/" },
+      { "school": "华南理工大学", "url": "https://yz.scut.edu.cn/" },
+      { "school": "四川大学", "url": "https://yz.scu.edu.cn/" },
+      { "school": "电子科技大学", "url": "https://yz.uestc.edu.cn/" },
+      { "school": "西安交通大学", "url": "https://yz.xjtu.edu.cn/" },
+      { "school": "西北工业大学", "url": "https://yzb.nwpu.edu.cn/" },
+      { "school": "西安电子科技大学", "url": "https://gr.xidian.edu.cn/" },
+      { "school": "中央财经大学", "url": "https://gs.cufe.edu.cn/" },
+      { "school": "上海财经大学", "url": "https://gs.sufe.edu.cn/" },
+      { "school": "对外经济贸易大学", "url": "https://yjsy.uibe.edu.cn/" },
+      { "school": "西南财经大学", "url": "https://yz.swufe.edu.cn/" },
+      { "school": "中国人民大学", "url": "https://pgs.ruc.edu.cn/" }
+    ]
+  }
+}
