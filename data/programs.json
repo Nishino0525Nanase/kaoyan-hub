@@ -925,6 +925,36 @@
    "scale": 500
   },
   {
+   "school": "东北师范大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（信息科学与技术学院）",
+   "degree": "专硕",
+   "college": "信息科学与技术学院",
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "按 085400 统一招生，不单列二级代码",
+   "sources": [
+    {
+     "url": "https://ist.nenu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
    "school": "东南大学",
    "track": "acc",
    "scale": 300,
@@ -1795,6 +1825,83 @@
   },
   {
    "school": "中国人民大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（信息学院 · 非全日制）",
+   "degree": "专硕",
+   "college": "信息学院",
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "⚠ 信息学院 0854 只招非全日制",
+   "sources": [
+    {
+     "url": "http://info.ruc.edu.cn/rcpy/gcss/zsxx2/da51127048d8438ab99dc49cc60207ec.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "中国人民大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（高瓴人工智能学院）",
+   "degree": "专硕",
+   "college": "高瓴人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "按 085400 统一招生，仅设人工智能方向，全日制 3 年",
+   "sources": [
+    {
+     "url": "http://ai.ruc.edu.cn/newslist/notice/index.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "中国人民大学",
    "track": "fin",
    "code": "020200",
    "name": "应用经济学",
@@ -2059,6 +2166,66 @@
    "admitted": null,
    "applied": null,
    "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "中国农业大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术",
+   "degree": "专硕",
+   "college": "信息与电气工程学院",
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "该校按二级代码招生，不用 085400",
+   "sources": [
+    {
+     "url": "https://ciee.cau.edu.cn/art/2025/7/4/art_50390_1074792.html",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "中国农业大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "信息与电气工程学院",
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "该校按二级代码招生，不用 085400",
+   "sources": [
+    {
+     "url": "https://ciee.cau.edu.cn/art/2025/7/4/art_50390_1074792.html",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
    "tuition": null,
    "years": null,
    "scale": 500
@@ -3554,6 +3721,53 @@
    "scale": 500
   },
   {
+   "school": "北京师范大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（人工智能学院）",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 50,
+    "tuimian": 12
+   },
+   "dataYear": 2026,
+   "changes": "按 085400 统一招生，下设计算机技术/人工智能/大数据/教育人工智能 4 方向。未来技术学院不招 0854",
+   "sources": [
+    {
+     "url": "https://yz.bnu.edu.cn/content/zyml/2026/ssxx_yxsm-040.html",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
    "school": "北京理工大学",
    "track": "cs",
    "code": "081200",
@@ -4349,6 +4563,329 @@
   },
   {
    "school": "华东师范大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程",
+   "degree": "专硕",
+   "college": "信息与电子工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 131,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 全日制 78 + 非全日制 53；学院由通信与电子工程学院更名",
+   "sources": [
+    {
+     "url": "https://ieeic.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "信息与电子工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 65,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 全日制 43 + 非全日制 22",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 130,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 全日制 65 + 非全日制 65",
+   "sources": [
+    {
+     "url": "https://cs.ecnu.edu.cn/6c/c7/c19867a748743/page.psp",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 318,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 27,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 同校同专业，卓越工程师学院 318 分，比软件工程学院 264 高 54 分",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程（软件工程学院）",
+   "degree": "专硕",
+   "college": "软件工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 174,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 全日制 79 + 非全日制 95；2025 年仅招非全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "精密光谱科学与技术高等研究院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 6,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 招生规模极小（6 人）；2025 年仅招非全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "空间人工智能学院等多单位",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线；多单位分别划 264/310/321"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（信息学部）"
+    }
+   ],
+   "seats": {
+    "year": 2025,
+    "plan": 37,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 2026 由多个单位分别招生并分别划线，最高 321、最低 264",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
+   "track": "ee",
+   "code": "085411",
+   "name": "大数据技术与工程",
+   "degree": "专硕",
+   "college": "数据科学与工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 264,
+     "note": "校线（分专业划定）"
+    },
+    {
+     "year": 2025,
+     "score": 260,
+     "note": "校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 108,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "2026 全日制 68 + 非全日制 40；2025 年仅招非全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.ecnu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华东师范大学",
    "track": "fin",
    "code": "025100",
    "name": "金融",
@@ -4854,6 +5391,36 @@
     "plan": null,
     "tuimian": null
    },
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "华南理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（全校统一代码）",
+   "degree": "专硕",
+   "college": null,
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "⚠ 按 085400 统一招生；分学院明细未取得（官网 robots 屏蔽），目录在 yanzhao.scut.edu.cn",
+   "sources": [
+    {
+     "url": "https://yz.scut.edu.cn/2025/1009/c30381a604485/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "low",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
    "applied": null,
    "tuition": null,
    "years": null,
@@ -6332,6 +6899,186 @@
   },
   {
    "school": "厦门大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术",
+   "degree": "专硕",
+   "college": "电子科学与技术学院（国家示范性微电子学院）",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线·工学专业学位，单科 50/75"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 13,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "该校按二级代码招生",
+   "sources": [
+    {
+     "url": "https://ese.xmu.edu.cn/info/1018/33451.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "厦门大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "电子科学与技术学院（国家示范性微电子学院）",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线·工学专业学位，单科 50/75"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "院线要求不低于校线",
+   "sources": [
+    {
+     "url": "https://ese.xmu.edu.cn/info/1018/33451.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "厦门大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "电子科学与技术学院（国家示范性微电子学院）",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线·工学专业学位，单科 50/75"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 31,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "该系 0854 里招生规模最大",
+   "sources": [
+    {
+     "url": "https://ese.xmu.edu.cn/info/1018/33451.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "厦门大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "电子科学与技术学院（国家示范性微电子学院）",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线·工学专业学位，单科 50/75"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://ese.xmu.edu.cn/info/1018/33451.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "厦门大学",
+   "track": "ee",
+   "code": "085412",
+   "name": "网络与信息安全",
+   "degree": "专硕",
+   "college": null,
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 270,
+     "note": "校线，单科 40/65；与其他专硕分开划线"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 校线比其他 0854 方向低 30 分；招生学院未核实",
+   "sources": [
+    {
+     "url": "https://zs.xmu.edu.cn/info/1055/35502.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "厦门大学",
    "track": "fin",
    "code": "020200",
    "name": "应用经济学",
@@ -6543,6 +7290,283 @@
     }
    ],
    "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 381,
+     "note": "院线"
+    },
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 36,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 院线 381 比校线 300 高 81 分——吉大只看校线会严重误判",
+   "sources": [
+    {
+     "url": "https://yjsy.jlu.edu.cn/info/1011/6074.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程",
+   "degree": "专硕",
+   "college": "通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）；院线未取得"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "官方细则列有该专业，院线未公布文本",
+   "sources": [
+    {
+     "url": "https://dce.jlu.edu.cn/info/1032/10919.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 369,
+     "note": "院线，单科 45/45/68/80"
+    },
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 25,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yjsy.jlu.edu.cn/info/1011/6074.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 337,
+     "note": "院线"
+    },
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 89,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "按招生计划（含推免）120% 划院线",
+   "sources": [
+    {
+     "url": "https://ccst.jlu.edu.cn/",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）；院线未取得"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "官方细则列有该专业，院线未公布文本",
+   "sources": [
+    {
+     "url": "https://dce.jlu.edu.cn/info/1032/10919.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "仪器科学与电气工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 343,
+     "note": "院线，单科 45/45/68/80"
+    },
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yjsy.jlu.edu.cn/info/1011/6074.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": null,
+    "plan": null,
+    "tuimian": null
+   },
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "吉林大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 348,
+     "note": "院线"
+    },
+    {
+     "year": 2026,
+     "score": 300,
+     "note": "校线（0854 门类）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 12,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "按招生计划（不含推免）130% 划院线",
+   "sources": [
+    {
+     "url": "https://yjsy.jlu.edu.cn/info/1011/6074.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
    "retest": null,
    "admitted": null,
    "applied": null,
@@ -8667,6 +9691,53 @@
    "admitted": null,
    "applied": null,
    "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500
+  },
+  {
+   "school": "山东大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "集成电路学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "824",
+     "name": "数字电路（或 830 半导体物理）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 32,
+    "tuimian": null
+   },
+   "dataYear": 2026,
+   "changes": "该校按二级代码招生；其余学院 0854 明细未取得（目录 PDF 截断）",
+   "sources": [
+    {
+     "url": "https://www.yz.sdu.edu.cn/info/1022/1246.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
    "tuition": null,
    "years": null,
    "scale": 500
@@ -12530,15 +13601,15 @@
   }
  ],
  "stats": {
-  "programs": 244,
-  "schools": 47,
-  "withLines": 216,
+  "programs": 272,
+  "schools": 52,
+  "withLines": 236,
   "withRetestRatio": 110,
   "withApplied": 2,
   "byTrack": {
    "acc": 29,
    "cs": 117,
-   "ee": 40,
+   "ee": 68,
    "fin": 58
   }
  }

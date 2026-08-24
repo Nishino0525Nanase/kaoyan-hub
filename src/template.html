@@ -227,6 +227,17 @@ body.hasdock{padding-bottom:66px}
 .yearpill{display:inline-block;min-width:52px;text-align:center;font-variant-numeric:tabular-nums;font-weight:600;
   padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:12px}
 
+/* ---------- 覆盖缺口 ---------- */
+.gapwrap{margin-bottom:16px}
+.gapgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:7px;margin-top:10px}
+.gapcell{border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12.5px;background:var(--surface-1);
+  display:flex;align-items:center;justify-content:space-between;gap:6px}
+.gapcell.has{border-color:var(--good)}
+.gapcell .gn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gapcell .gc{font-size:11px;color:var(--text-3);flex-shrink:0;font-variant-numeric:tabular-nums}
+.gapcell.has .gc{color:var(--good);font-weight:600}
+.gapcell a{font-size:11px;flex-shrink:0}
+
 /* ---------- 名额结构 ---------- */
 .quotabox{border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-top:11px;background:var(--surface-1)}
 .quotabox h5{margin:0 0 9px;font-size:13.5px;display:flex;align-items:center;gap:7px}
@@ -1013,6 +1024,30 @@ function renderMajors(){
       ${a.items.map(w => `<div class="warnbox">${mdBold(w)}</div>`).join('')}
     </div>`;
   }
+  // 覆盖缺口：把「哪些学校还没数据」变成一份可操作的清单，而不是让人自己猜
+  const covered = new Map();
+  PROG.records.filter(r => r.track === MAJ_TRACK).forEach(r => {
+    covered.set(r.school, (covered.get(r.school) || 0) + 1);
+  });
+  const inLib = SCHOOLS.map(s => ({ s, n: covered.get(s.name) || 0 }));
+  const done = inLib.filter(x => x.n > 0), todo = inLib.filter(x => x.n === 0);
+  cat += `<div class="card chartcard gapwrap">
+    <div class="chead">
+      <p class="ctitle">本方向的收录缺口</p>
+      <p class="cdesc">院校库 ${SCHOOLS.length} 所里，<b>${done.length}</b> 所已有本方向数据，<b>${todo.length}</b> 所还空着。
+        空着的不代表这些学校不招——多数是还没查到。绿框是已收录，数字是该校本方向的项目数。</p>
+    </div>
+    <div class="gapgrid">
+      ${done.sort((a,b)=>b.n-a.n).map(x => `<div class="gapcell has">
+        <span class="gn">${esc(x.s.name)}</span><span class="gc">${x.n}</span></div>`).join('')}
+      ${todo.map(x => `<div class="gapcell">
+        <span class="gn muted">${esc(x.s.name)}</span>
+        <a href="${esc(x.s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a></div>`).join('')}
+    </div>
+    <p class="muted" style="margin:12px 0 0;font-size:12px">
+      想补数据？点空着那格的「研招网」进官网找招生专业目录和复试分数线，
+      按 CONTRIBUTING.md 的格式加进 <code>data/programs-*.json</code> 提 PR 即可。</p>
+  </div>`;
   $('#majCatalog').innerHTML = cat;
 
   const lineCell = r => r.lines.length
