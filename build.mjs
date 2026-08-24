@@ -27,6 +27,7 @@ const files = {
   __DATA_PROGRAMS__:'data/programs.json',
   __DATA_CHANGES__: 'data/exam-changes.json',
   __DATA_TRACKS__:  'data/track-catalog.json',
+  __DATA_QUOTA__:   'data/quota-retest.json',
 };
 
 /* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */

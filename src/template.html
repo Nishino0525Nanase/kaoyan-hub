@@ -227,6 +227,17 @@ body.hasdock{padding-bottom:66px}
 .yearpill{display:inline-block;min-width:52px;text-align:center;font-variant-numeric:tabular-nums;font-weight:600;
   padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:12px}
 
+/* ---------- 名额结构 ---------- */
+.quotabox{border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-top:11px;background:var(--surface-1)}
+.quotabox h5{margin:0 0 9px;font-size:13.5px;display:flex;align-items:center;gap:7px}
+.qbar{display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--surface-0);margin:9px 0 7px}
+.qbar span{display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:0}
+.qbar .qt{background:var(--s8)}   /* 推免 */
+.qbar .qe{background:var(--s1)}   /* 统考 */
+.qwarn{font-size:12.5px;color:var(--crit);font-weight:600;margin-top:6px}
+.rrow{display:flex;gap:8px;font-size:12.5px;line-height:1.65;margin-top:5px}
+.rrow b{color:var(--text-2);font-weight:600;min-width:66px;flex-shrink:0}
+
 /* ---------- 新鲜度 ---------- */
 .freshbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
 .fcard{flex:1 1 150px;min-width:140px;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:var(--surface-1)}
@@ -490,6 +501,7 @@ body.hasdock{padding-bottom:66px}
 
 <div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 
+<script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
 <script id="data-programs" type="application/json">__DATA_PROGRAMS__</script>
@@ -510,6 +522,37 @@ const PROG    = J('data-programs');
 const CHG     = J('data-changes');
 const TRACKS  = J('data-tracks');
 const FRESH   = J('data-fresh');
+const QUOTA   = J('data-quota');
+/* 名额与复试细则的匹配。
+   注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
+   （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
+   会把一个学院的总名额重复displayed到每个方向上——那是错误数据。
+   所以这里分两级：精确匹配（学校+代码+学院）才算「本项目的名额」；
+   只对上学校+代码的，标记为 coarse，页面上必须写明是该代码合计口径。 */
+const quotaExact = new Map(), quotaCoarse = new Map();
+QUOTA.records.forEach(r => {
+  if(r.college) quotaExact.set(r.school + '|' + r.code + '|' + r.college, r);
+  const k = r.school + '|' + r.code;
+  if(!quotaCoarse.has(k)) quotaCoarse.set(k, []);
+  quotaCoarse.get(k).push(r);
+});
+function quotaOf(school, code, college){
+  if(college){
+    const hit = quotaExact.get(school + '|' + code + '|' + college);
+    if(hit) return { rec: hit, coarse: false };
+  }
+  const list = quotaCoarse.get(school + '|' + code);
+  if(!list || !list.length) return null;
+  if(list.length !== 1) return null;   // 多条候选无法定位 —— 宁可不显示
+  const cand = list[0];
+  // 两边都写了学院却对不上（互不包含），说明不是同一个招生单位，拒绝匹配。
+  // 复旦软件学院不该显示计算与智能创新学院的名额。
+  if(college && cand.college){
+    const a = college.replace(/[（(].*?[）)]/g, ''), b = cand.college.replace(/[（(].*?[）)]/g, '');
+    if(!a.includes(b) && !b.includes(a)) return null;
+  }
+  return { rec: cand, coarse: true };
+}
 const SCHOOLS = DB.schools;
 
 /* 按学校名建索引，供院校卡片、详情弹层与对比表复用 */
@@ -719,6 +762,7 @@ function openDetail(name){
           ${p.years?`<span>学制：<b>${p.years} 年</b></span>`:''}
         </div>
         ${p.changes?`<div class="warnbox">${esc(p.changes)}</div>`:''}
+        ${quotaBlock(p.school, p.code, p.college)}
         <div class="kv" style="margin-top:9px">${p.sources.map(x =>
           `<a href="${esc(x.url)}" target="_blank" rel="noopener">${x.official?'官方':'二手'}来源 ↗</a>`).join('')}</div>
       </div>`).join('')
@@ -789,6 +833,72 @@ function renderChanges(){
 }
 
 
+
+
+/* ---- 表格里的名额小格 ---- */
+function quotaCell(r){
+  const m = quotaOf(r.school, r.code, r.college);
+  if(!m) return '<span class="muted">未收录</span>';
+  const q = m.rec, Q = q.quota || {};
+  const bits = [];
+  if(Q.exam != null)      bits.push(`统考 <b>${Q.exam}</b>`);
+  if(Q.tuimian != null)   bits.push(`推免 <b>${Q.tuimian}</b>`);
+  if(Q.planTotal != null && Q.exam == null) bits.push(`计划 <b>${Q.planTotal}</b>`);
+  if(!bits.length) return '<span class="muted">未收录</span>';
+  let w = m.coarse ? '<br><span class="muted" style="font-size:11px">该代码合计口径</span>' : '';
+  if(Q.exam != null && Q.exam <= 10) w = '<br><span style="color:var(--crit);font-size:11.5px;font-weight:600">⚠ 名额极少</span>';
+  else if(Q.tuimianRatio != null && Q.tuimianRatio >= 0.8) w = `<br><span style="color:var(--crit);font-size:11.5px;font-weight:600">⚠ 推免 ${(Q.tuimianRatio*100).toFixed(0)}%</span>`;
+  return bits.join(' · ') + w;
+}
+
+/* ---- 名额结构与复试细则渲染 ---- */
+function quotaBlock(school, code, college){
+  const m = quotaOf(school, code, college);
+  if(!m) return '';
+  const q = m.rec, Q = q.quota || {}, R = q.retest || {};
+  let bar = '';
+  if(Q.tuimian != null && Q.exam != null && (Q.tuimian + Q.exam) > 0){
+    const tot = Q.tuimian + Q.exam;
+    const tp = Math.round(Q.tuimian / tot * 100);
+    bar = `<div class="qbar">
+      <span class="qt" style="width:${tp}%">${tp >= 12 ? `推免 ${Q.tuimian}` : ''}</span>
+      <span class="qe" style="width:${100-tp}%">${100-tp >= 12 ? `统考 ${Q.exam}` : ''}</span>
+    </div>`;
+  }
+  const nums = [];
+  if(Q.planTotal != null) nums.push(`计划 <b>${Q.planTotal}</b>`);
+  if(Q.tuimian != null)   nums.push(`推免 <b>${Q.tuimian}</b>`);
+  if(Q.exam != null)      nums.push(`统考 <b>${Q.exam}</b>`);
+  if(Q.tuimianRatio != null) nums.push(`推免占 <b>${(Q.tuimianRatio*100).toFixed(1)}%</b>`);
+
+  // 统考名额极少时给出显式警告——这比分数线重要得多
+  let warn = '';
+  if(Q.exam != null && Q.exam <= 10)
+    warn = `<div class="qwarn">⚠ 统考名额只有 ${Q.exam} 个，分数线在这里参考价值有限</div>`;
+  else if(Q.tuimianRatio != null && Q.tuimianRatio >= 0.8)
+    warn = `<div class="qwarn">⚠ 推免占 ${(Q.tuimianRatio*100).toFixed(0)}%，留给统考的名额很少</div>`;
+
+  const rl = [];
+  if(R.ratio)   rl.push(['复试比例', R.ratio]);
+  if(R.weight)  rl.push(['成绩构成', R.weight]);
+  if(R.hasMachineTest != null) rl.push(['机试', R.hasMachineTest ? '有' : '无（细则未提及）']);
+  if(R.subjects) rl.push(['复试内容', R.subjects]);
+  if(R.passLine) rl.push(['淘汰规则', R.passLine]);
+
+  return `<div class="quotabox">
+    <h5>名额结构与复试细则 ${srcTag(q.confidence === 'official')}
+      ${Q.year ? `<span class="muted" style="font-weight:400">${Q.year} 年</span>` : ''}
+      ${m.coarse ? `<span class="badge chg2">该代码合计口径，非本方向单独数据</span>` : ''}</h5>
+    ${q.college ? `<div class="muted" style="font-size:12px;margin-bottom:6px">数据对应：${esc(q.college)}</div>` : ''}
+    ${nums.length ? `<div class="kv" style="margin-top:0">${nums.map(n=>`<span>${n}</span>`).join('')}</div>` : ''}
+    ${bar}${warn}
+    ${Q.note ? `<div class="muted" style="font-size:12px;line-height:1.6;margin-top:6px">口径：${esc(Q.note)}</div>` : ''}
+    ${rl.length ? `<div style="margin-top:9px;border-top:1px solid var(--line);padding-top:8px">
+      ${rl.map(([k,v])=>`<div class="rrow"><b>${k}</b><span>${esc(v)}</span></div>`).join('')}</div>` : ''}
+    <div class="kv" style="margin-top:8px">${q.sources.map(x =>
+      `<a href="${esc(x.url)}" target="_blank" rel="noopener">${x.official?'官方':'二手'}来源 ↗</a>`).join('')}</div>
+  </div>`;
+}
 
 /* ================= 数据新鲜度 ================= */
 function renderFresh(){
@@ -917,7 +1027,7 @@ function renderMajors(){
   $('#majTable').innerHTML =
     `<thead><tr><th>院校 · 学院</th><th>专业</th><th>学位</th><th>初试科目</th>
       <th>复试线<br><span class="muted" style="font-weight:400">${t.scale} 分制</span></th>
-      <th>口径</th><th>招录</th><th>学费 / 学制</th><th>来源</th></tr></thead><tbody>` +
+      <th>口径</th><th>招录</th><th>名额结构</th><th>学费 / 学制</th><th>来源</th></tr></thead><tbody>` +
     (rows.length ? rows.map(r => `<tr>
       <td><b>${esc(r.school)}</b><br><span class="muted">${esc(r.college || '—')}</span>
         <br><button class="det" type="button" style="margin-top:5px" data-det3="${esc(r.school)}">院校详情</button></td>
@@ -927,6 +1037,7 @@ function renderMajors(){
       <td class="num">${lineCell(r)}</td>
       <td style="max-width:160px">${noteCell(r)}</td>
       <td style="min-width:140px">${ratioText(r)}</td>
+      <td style="min-width:130px">${quotaCell(r)}</td>
       <td>${r.tuition ? esc(r.tuition) : '<span class="muted">未收录</span>'}
         ${r.years ? `<br><span class="muted">学制 ${r.years} 年</span>` : ''}</td>
       <td>${confTag(r.confidence)}<br>${r.sources.map(x =>
