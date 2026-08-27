@@ -215,6 +215,14 @@ body.hasdock{padding-bottom:66px}
 
 /* ---------- 改考预警 ---------- */
 .badge.chg{border-color:var(--crit);color:var(--crit);font-weight:600}
+/* 分数线口径：校线 / 院线 / 一志愿线 / 国家线——混着比是这份数据最容易骗人的地方，所以给颜色 */
+.badge.k-yuan{border-color:var(--s2);color:var(--s2);font-weight:600}
+.badge.k-xiao{border-color:var(--s1);color:var(--s1)}
+.badge.k-yzy{border-color:var(--s4);color:#8a6100}
+.badge.k-guo{border-color:var(--s3);color:var(--s3)}
+:root[data-theme="dark"] .badge.k-yzy{color:var(--s4)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .badge.k-yzy{color:var(--s4)}}
+.subl{font-size:11px;color:var(--text-2);letter-spacing:.02em}
 .badge.chg2{border-color:var(--warn);color:#8a6100}
 :root[data-theme="dark"] .badge.chg2{color:var(--warn)}
 @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .badge.chg2{color:var(--warn)}}
@@ -233,6 +241,10 @@ body.hasdock{padding-bottom:66px}
 .gapcell{border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12.5px;background:var(--surface-1);
   display:flex;align-items:center;justify-content:space-between;gap:6px}
 .gapcell.has{border-color:var(--good)}
+.gapcell.part{border-color:var(--warn);border-style:dashed}
+.gapcell.part .gc{color:#8a6100;font-weight:600}
+:root[data-theme="dark"] .gapcell.part .gc{color:var(--warn)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .gapcell.part .gc{color:var(--warn)}}
 .gapcell .gn{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .gapcell .gc{font-size:11px;color:var(--text-3);flex-shrink:0;font-variant-numeric:tabular-nums}
 .gapcell.has .gc{color:var(--good);font-weight:600}
@@ -714,12 +726,25 @@ function renderDock(){
 
 /* ================= 详情弹层 ================= */
 const srcTag = o => `<span class="srcflag${o?' off':''}">${o?'官方来源':'二手来源'}</span>`;
+/* 口径徽章：kind 是结构化口径，note 是自由文字补充 */
+const KINDCLS = {'院线':'k-yuan','校线':'k-xiao','一志愿线':'k-yzy','国家线':'k-guo'};
+const kindTag = l => l && l.kind
+  ? `<span class="badge ${KINDCLS[l.kind]||''}">${esc(l.kind)}</span>`
+  : '<span class="muted">未注明</span>';
+/* 单科线：很多人是死在单科上而不是总分上，有就显示 */
+const subLine = l => {
+  const a = [l.politics, l.english, l.math, l.pro];
+  return a.some(x => x != null)
+    ? `<div class="subl">单科 ${a.map(x => x == null ? '—' : x).join(' / ')}</div>` : '';
+};
 const subjLine = p => p.subjects.map((s,i) =>
   `<div><span class="muted">${['政治','外语','业务课一','业务课二'][i]||''}</span><br>
     ${s.code?`<b>${esc(s.code)}</b> `:''}${esc(s.name)}</div>`).join('');
 function lineText(p){
   if(!p.lines || !p.lines.length) return '<span class="muted">未收录</span>';
-  return p.lines.map(l => `${l.year}年 <b>${l.score}</b>`).join(' · ');
+  return p.lines.map(l =>
+    `<div style="margin-bottom:4px">${l.year}年 <b>${l.score}</b> ${kindTag(l)}${subLine(l)}</div>`
+  ).join('');
 }
 function ratioText(p){
   const bits = [];
@@ -1029,17 +1054,31 @@ function renderMajors(){
   PROG.records.filter(r => r.track === MAJ_TRACK).forEach(r => {
     covered.set(r.school, (covered.get(r.school) || 0) + 1);
   });
-  const inLib = SCHOOLS.map(s => ({ s, n: covered.get(s.name) || 0 }));
-  const done = inLib.filter(x => x.n > 0), todo = inLib.filter(x => x.n === 0);
+  /* 0854 大类被拆进两个标签：085404/085405/085410 等计算机方向归 cs，其余归 ee。
+     只按 track 判空会把清华、北大这种「0854 数据都在计算机标签下」的学校误报成完全空白，
+     所以再算一份大类口径，单独标成第三种状态。 */
+  const kin = new Map();
+  if(MAJ_TRACK === 'cs' || MAJ_TRACK === 'ee'){
+    PROG.records.filter(r => String(r.code || '').startsWith('0854') && r.track !== MAJ_TRACK)
+      .forEach(r => kin.set(r.school, (kin.get(r.school) || 0) + 1));
+  }
+  const inLib = SCHOOLS.map(s => ({ s, n: covered.get(s.name) || 0, kn: kin.get(s.name) || 0 }));
+  const done = inLib.filter(x => x.n > 0);
+  const part = inLib.filter(x => x.n === 0 && x.kn > 0);
+  const todo = inLib.filter(x => x.n === 0 && x.kn === 0);
+  const otherLabel = MAJ_TRACK === 'ee' ? '计算机' : '电子信息';
   cat += `<div class="card chartcard gapwrap">
     <div class="chead">
       <p class="ctitle">本方向的收录缺口</p>
-      <p class="cdesc">院校库 ${SCHOOLS.length} 所里，<b>${done.length}</b> 所已有本方向数据，<b>${todo.length}</b> 所还空着。
-        空着的不代表这些学校不招——多数是还没查到。绿框是已收录，数字是该校本方向的项目数。</p>
+      <p class="cdesc">院校库 ${SCHOOLS.length} 所里，<b>${done.length}</b> 所已有本方向数据${
+        part.length ? `，<b>${part.length}</b> 所的 0854 数据全在「${otherLabel}」标签下` : ''}，<b>${todo.length}</b> 所还空着。
+        空着的不代表这些学校不招——多数是还没查到。绿框是已收录，黄色虚线框要切到另一个标签看，数字是项目数。</p>
     </div>
     <div class="gapgrid">
       ${done.sort((a,b)=>b.n-a.n).map(x => `<div class="gapcell has">
         <span class="gn">${esc(x.s.name)}</span><span class="gc">${x.n}</span></div>`).join('')}
+      ${part.sort((a,b)=>b.kn-a.kn).map(x => `<div class="gapcell part" title="该校 0854 有 ${x.kn} 条，但都归在「${otherLabel}」标签下">
+        <span class="gn">${esc(x.s.name)}</span><span class="gc">${otherLabel} ${x.kn}</span></div>`).join('')}
       ${todo.map(x => `<div class="gapcell">
         <span class="gn muted">${esc(x.s.name)}</span>
         <a href="${esc(x.s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a></div>`).join('')}
@@ -1051,10 +1090,13 @@ function renderMajors(){
   $('#majCatalog').innerHTML = cat;
 
   const lineCell = r => r.lines.length
-    ? r.lines.map(l => `<div><span class="muted">${l.year}</span> <b class="num">${l.score}</b></div>`).join('')
+    ? r.lines.map(l => `<div style="margin-bottom:3px"><span class="muted">${l.year}</span> <b class="num">${l.score}</b>${subLine(l)}</div>`).join('')
     : '<span class="muted">未收录</span>';
-  const noteCell = r => r.lines.length
-    ? `<span class="muted">${esc(r.lines[0].note || '未注明')}</span>` : '<span class="muted">—</span>';
+  const noteCell = r => {
+    if(!r.lines.length) return '<span class="muted">—</span>';
+    const l = r.lines[0];
+    return kindTag(l) + (l.note ? `<div class="muted" style="font-size:11px;margin-top:4px">${esc(l.note)}</div>` : '');
+  };
   const subjCell = r => r.subjects.length
     ? r.subjects.map(x => `<div class="muted">${x.code?`<b style="color:var(--accent)">${esc(x.code)}</b> `:''}${esc(x.name)}</div>`).join('')
     : '<span class="muted">未收录</span>';
@@ -1364,7 +1406,7 @@ function drawCutBars(){
     .map(({p,l}) => ({
       k: `${p.school}·${p.name.replace(/（.*?）/g,'').slice(0,8)}`, v: l.score,
       c: p.degree === '学硕' ? cssv('--s1') : cssv('--s2'),
-      note: `${p.degree} · ${p.college || ''}\n口径：${l.note || '未注明'}`
+      note: `${p.degree} · ${p.college || ''}\n口径：${l.kind || l.note || '未注明'}`
           + (p.retest && p.admitted ? `\n复试 ${p.retest} → 录 ${p.admitted}` : '')
           + (p.seats && p.seats.plan ? `\n招生计划 ${p.seats.plan} 人` : '')
     }))

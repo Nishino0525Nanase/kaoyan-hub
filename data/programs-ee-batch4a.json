@@ -1,0 +1,11 @@
+{
+  "note": "0854 电子信息 · 批次 4A（郑州大学 / 暨南大学 / 燕山大学 / 广西大学 / 昆明理工大学 / 湘潭大学 / 湖南师范大学 / 扬州大学）。收集中。",
+  "records": [
+    {"school":"郑州大学","track":"ee","code":"085402","name":"通信工程（含宽带网络、移动通信等）","degree":"专硕","college":"电气与信息工程学院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www5.zzu.edu.cn/eie/info/1055/5237.htm","official":true}],"confidence":"partial"},
+    {"school":"郑州大学","track":"ee","code":"085406","name":"控制工程","degree":"专硕","college":"电气与信息工程学院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www5.zzu.edu.cn/eie/info/1055/5237.htm","official":true}],"confidence":"partial"},
+    {"school":"郑州大学","track":"ee","code":"085404","name":"计算机技术（计算机与人工智能学院）","degree":"专硕","college":"计算机与人工智能学院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www7.zzu.edu.cn/csai/info/1147/3965.htm","official":true}],"confidence":"partial"},
+    {"school":"郑州大学","track":"ee","code":"085410","name":"人工智能","degree":"专硕","college":"计算机与人工智能学院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www7.zzu.edu.cn/csai/info/1147/3965.htm","official":true}],"confidence":"partial"},
+    {"school":"郑州大学","track":"ee","code":"085407","name":"仪器仪表工程","degree":"专硕","college":"物理学院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www5.zzu.edu.cn/wuli/info/1106/6789.htm","official":true}],"confidence":"partial"},
+    {"school":"郑州大学","track":"ee","code":"085404","name":"计算机技术（河南先进技术研究院）","degree":"专硕","college":"河南先进技术研究院","subjects":[],"lines":[],"dataYear":2026,"changes":null,"sources":[{"url":"https://www7.zzu.edu.cn/xjy/info/1047/3101.htm","official":true}],"confidence":"partial"}
+  ]
+}

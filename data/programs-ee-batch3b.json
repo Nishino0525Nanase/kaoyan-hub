@@ -1,0 +1,3336 @@
+{
+ "note": "0854 电子信息 · 批次三B（华东理工/上海大学/苏州大学/武汉理工/合肥工业/江苏大学，共 66 条，其中 53 条带复试线）。三个最该记住的点：① 同校同代码、不同学院，线能差近 100 分——上海大学 085400 在机电工程与自动化学院要 362 分，在微电子学院只要 264 分（＝国家线）且有 195 个统考名额；华东理工 085406 控制工程 01 方向 324 分、02 工业软件方向只要 260 分，而且后者专业课考 801 化工原理不是 816 控制原理。② 招生粒度分三派：武汉理工全校、上海大学部分学院用 085400 不拆二级代码，靠「学院+研究方向」区分；苏州大学、江苏大学、华东理工按二级代码拆开招；合肥工业最特殊——全日制用二级代码、非全日制用 085400（085403 集成电路、085405 软件、085408 光电在合工大都只有非全日制）。③ 名额比分数线更能说明难度：合肥工业公布的分专业计划已扣除推免，公布数即统考名额；江苏大学 085404 报 489 录 75（约 6.5:1），而农业工程学院 085406 报 34 录 33 几乎全录；苏州大学 085403 集成电路线三年连降到压国家线(260)却在扩招（10→16→17），同校 085404 计算机技术却是 10 个名额配 364 分。另注：0854 的冷门入口普遍藏在非电类学院——江苏大学 085407/085408 在机械工程学院、合肥工业 085412 在数学学院、上海大学 085400 在上海电影学院和材料科学与工程学院、苏州大学 085410 在未来科学与工程学院。分数线口径：合肥工业与华东理工＝校线（分专业划定）；上海大学、江苏大学、武汉理工、苏州大学＝院线（学院自主划定，苏大更是明确不划统一校线）。",
+ "records": [
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（信息科学与工程学院）",
+   "degree": "专硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "814",
+     "name": "信号与系统（含数字信号处理）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 317,
+     "politics": 50,
+     "english": 50,
+     "math": 80,
+     "pro": 80,
+     "kind": "校线",
+     "note": "2025 校线（分专业划定），高于工学国家线 57 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 49,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "全日制01不区分研究方向，内含现代电子系统设计/人工智能/信号处理与通信系统/计算机视觉/物联网技术与应用/网络与信息安全 6 个培养方向",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://www.yanshuoshi.com/html/fsfsx/35084.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（卓越工程师学院·集成电路专项）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "814",
+     "name": "信号与系统（含数字信号处理）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 295,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线；单科走国家线，总分 295 比信息学院同代码低 22 分——卓工院是性价比洼地"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 15,
+    "tuimian": null,
+    "tongkao": 15
+   },
+   "dataYear": 2026,
+   "changes": "卓工院同代码下另有 01 工程硕博士专项 3 人，仅从推免生中选拔，统考生只能报 02 集成电路专项；依托信息科学与工程学院培养",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://www.yanshuoshi.com/html/fsfsx/35084.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（卓越工程师学院·非全日制产教融合）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "814",
+     "name": "信号与系统（含数字信号处理）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": 10
+   },
+   "dataYear": 2026,
+   "changes": "非全日制 03 产教融合专项，含集成电路设计等 6 方向，依托信息科学与工程学院培养；仅招推免，2025 校线表无该条目",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术（信息科学与工程学院）",
+   "degree": "专硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 322,
+     "politics": 40,
+     "english": 40,
+     "math": 70,
+     "pro": 70,
+     "kind": "校线",
+     "note": "2025 校线（分专业划定）"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 72,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "含人工智能/可信软件与系统/数据分析与应用/媒体计算/网络与信息工程/工业软件等方向；另有上海振华重工专项 1 人",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://www.yanshuoshi.com/html/fsfsx/35084.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 3,
+    "tuimian": 3,
+    "tongkao": 0
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 仅从推免生中选拔，统考不招；依托信息科学与工程学院培养；仅招推免，2025 校线表无该条目",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（信息科学与工程学院）",
+   "degree": "专硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "816",
+     "name": "控制原理"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 324,
+     "politics": 48,
+     "english": 48,
+     "math": 70,
+     "pro": 70,
+     "kind": "校线",
+     "note": "2025 校线（分专业划定），0854 里最高"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 159,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "华东理工 0854 里名额最大的一个方向（159 人）。含工业自动化/人工智能与机器人/智能感知与物联网/电气与电子工程/检测技术与自动化装置/智能制造等方向；另含上海振华重工专项 4 人",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://www.yanshuoshi.com/html/fsfsx/35084.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（信息科学与工程学院·工业软件方向）",
+   "degree": "专硕",
+   "college": "信息科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "801",
+     "name": "化工原理"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线＝当年工学国家线(260)，压线即可进复试；与同代码 01 方向的 324 相差 64 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 同为 085406 控制工程，但 02 工业软件方向专业课考 801 化工原理（不是 816 控制原理），报名前务必看清方向代码",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://www.yanshuoshi.com/html/fsfsx/35084.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "华东理工大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 4,
+    "tuimian": 4,
+    "tongkao": 0
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 仅从推免生中选拔，统考不招；依托信息科学与工程学院培养；仅招推免，2025 校线表无该条目",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/13/be58796444d78b293e5b15c92d95ea7f.pdf",
+     "official": false
+    },
+    {
+     "url": "https://gschool.ecust.edu.cn/2025/0319/c12710a176351/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术",
+   "degree": "专硕",
+   "college": "电子信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "837",
+     "name": "信号系统与数字逻辑"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "⚠ 2025 院线＝当年工学国家线(260)，压线即可进复试；较 2024 的 333 暴跌 73 分"
+    },
+    {
+     "year": 2024,
+     "total": 333,
+     "politics": 37,
+     "english": 37,
+     "math": 56,
+     "pro": 56,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 348,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": "当年未录统考生"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 线和名额都在剧烈波动：统考录取 2023 年 0 人 → 2024 年 30 人 → 2025 年 40 人 → 2026 计划仅 17 人（缩招约 57%）；复试线 348→333→260（2025 直接压国家线）。名额腰斩＋线触底，说明 2025 生源不足、2026 学校主动收缩，2027 报考风险大。复试笔试 017002 电路分析和C语言 + 综合面试",
+   "sources": [
+    {
+     "url": "https://jixun.iqihang.com/zixun/fenshuxian/2026710568.html",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 17,
+    "tuimian": null,
+    "tongkao": 17
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程",
+   "degree": "专硕",
+   "college": "电子信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "837",
+     "name": "信号系统与数字逻辑"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 338,
+     "politics": 47,
+     "english": 47,
+     "math": 70,
+     "pro": 70,
+     "kind": "院线",
+     "note": "2025 院线（专硕）；同年该院学硕 081000 只要 326——⚠ 专硕线比学硕线还高 12 分"
+    },
+    {
+     "year": 2023,
+     "total": 300,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": "2023 专硕线"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 苏大电子信息学院里最难的一条：2025 院线 338、单科 47/47/70/70，明显高于同院 085401 的 260。统考录取 2023 年 19 人、2024/2025 各约 25 人。与 085401 同考 837 信号系统与数字逻辑，但线差 78 分——同一张卷子、同一个学院，报 085401 比报 085402 划算得多",
+   "sources": [
+    {
+     "url": "https://jixun.iqihang.com/zixun/fenshuxian/2025704340.html",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2025,
+    "plan": 25,
+    "tuimian": null,
+    "tongkao": 25
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "电子信息学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "863",
+     "name": "半导体物理基础与数字逻辑"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "⚠ 2025 院线＝当年工学国家线(260)；2024 为 306、2023 为 345，三年连降 85 分"
+    },
+    {
+     "year": 2024,
+     "total": 306,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 345,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": "划线但未招统考生"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 本批最值得捡漏的一条：线三年连降到压国家线（345→306→260），名额却在扩（2024 年 10 → 2025 年 16 → 2026 年 17）。专业课 863 半导体物理基础与数字逻辑（刘恩科《半导体物理学》第七版 1-5 章 + 阎石《数字电子技术基础》第六版），与同院 085401/085402 的 837 不是同一张卷；复试 017003 半导体器件和集成电路设计",
+   "sources": [
+    {
+     "url": "https://jixun.iqihang.com/zixun/fenshuxian/2026708232.html",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 17,
+    "tuimian": null,
+    "tongkao": 17
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 364,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "2025 院线；较 2024 的 325 猛涨 39 分，单科反而降到国家线水平——纯总分绞杀"
+    },
+    {
+     "year": 2024,
+     "total": 325,
+     "politics": 37,
+     "english": 37,
+     "math": 56,
+     "pro": 56,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 335,
+     "politics": 38,
+     "english": 38,
+     "math": 57,
+     "pro": 57,
+     "kind": "院线",
+     "note": "当年未招统考生"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 苏大 0854 里最卷的一条：统考名额三年都只有 10 人（2023 年甚至 0 人），2025 院线飙到 364。考 408 全国统考卷，和同院 085405/085410/085411/085412 用同一张卷子，但这几个方向名额与线差别很大，报名时优先比名额而不是比名字。复试 018001 计算机综合实践 + 综合面试",
+   "sources": [
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=732690&m=content",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": 10
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（计算机科学与技术学院）",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 351,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "2025 院线；2024 为 333，逆势涨 18 分"
+    },
+    {
+     "year": 2024,
+     "total": 333,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": null
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 苏大 085410 有两个学院同时在招：计算机科学与技术学院（统考 10 人、2025 线 351）和未来科学与工程学院（统考 17 人、2025 线 343）。计算机学院名额三年稳定在 10 人、线更高，是两者中更难的一个。复试 018001 计算机综合实践 + 综合面试",
+   "sources": [
+    {
+     "url": "https://jixun.iqihang.com/zixun/fenshuxian/2026711546.html",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": 10
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085411",
+   "name": "大数据技术与工程",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "下设 01 大数据技术与工程、02 保密技术 两个方向",
+   "sources": [
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085412",
+   "name": "网络与信息安全",
+   "degree": "专硕",
+   "college": "计算机科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2023,
+     "total": 324,
+     "politics": 38,
+     "english": 38,
+     "math": 57,
+     "pro": 57,
+     "kind": "院线",
+     "note": "2023 院线；2025 线未取到"
+    },
+    {
+     "year": 2022,
+     "total": 325,
+     "politics": 38,
+     "english": 38,
+     "math": 57,
+     "pro": 57,
+     "kind": "院线",
+     "note": null
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "下设 01 网络与信息安全、02 保密技术 两个方向；只取到 2022/2023 院线（324/325），2024-2025 线未取到",
+   "sources": [
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=351929&m=content",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   }
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "仪器科学与光电工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 295,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 35 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 102,
+    "tuimian": null,
+    "tongkao": 102
+   },
+   "dataYear": 2026,
+   "changes": "合工大 0854 里统考名额最大的一个（102 人，全日制）。该校公布的分专业招生计划已扣除推免，故此数即统考名额",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程（非全日制）",
+   "degree": "专硕",
+   "college": "仪器科学与光电工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线；等于当年工学国家线(260)，即压线进复试"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": 10
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 085408 在合工大只有非全日制；另有单独考试 1 人",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（电气与自动化工程学院）",
+   "degree": "专硕",
+   "college": "电气与自动化工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 352,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 92 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 30,
+    "tuimian": null,
+    "tongkao": 30
+   },
+   "dataYear": 2026,
+   "changes": "全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（电气与自动化工程学院·非全日制）",
+   "degree": "专硕",
+   "college": "电气与自动化工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线；等于当年工学国家线(260)，即压线进复试"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 15,
+    "tuimian": null,
+    "tongkao": 15
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 该学院非全日制用 085400 不分二级代码，全日制则用 085406",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程",
+   "degree": "专硕",
+   "college": "计算机与信息学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 363,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 103 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 39,
+    "tuimian": null,
+    "tongkao": 39
+   },
+   "dataYear": 2026,
+   "changes": "全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术（计算机与信息学院）",
+   "degree": "专硕",
+   "college": "计算机与信息学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 326,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 66 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 41,
+    "tuimian": null,
+    "tongkao": 41
+   },
+   "dataYear": 2026,
+   "changes": "全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程（非全日制）",
+   "degree": "专硕",
+   "college": "计算机与信息学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线；等于当年工学国家线(260)，即压线进复试"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 15,
+    "tuimian": null,
+    "tongkao": 15
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 085405 在合工大只有非全日制；另有单独考试 5 人",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（计算机与信息学院）",
+   "degree": "专硕",
+   "college": "计算机与信息学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 317,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 57 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 46,
+    "tuimian": null,
+    "tongkao": 46
+   },
+   "dataYear": 2026,
+   "changes": "全日制；计算机与信息学院里名额最多的 0854 方向，比 085404 计算机技术还多",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（微电子学院）",
+   "degree": "专硕",
+   "college": "微电子学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 334,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 74 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 61,
+    "tuimian": null,
+    "tongkao": 61
+   },
+   "dataYear": 2026,
+   "changes": "全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程（非全日制）",
+   "degree": "专硕",
+   "college": "微电子学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 260,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线；等于当年工学国家线(260)，即压线进复试"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 25,
+    "tuimian": null,
+    "tongkao": 25
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 085403 在合工大只有非全日制，想读全日制集成电路要报微电子学院的 085401",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085412",
+   "name": "网络与信息安全（非全日制）",
+   "degree": "专硕",
+   "college": "数学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 266,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "校线",
+     "note": "2025 校线，高于工学国家线(260) 6 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 12,
+    "tuimian": null,
+    "tongkao": 12
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 罕见：085412 挂在数学学院，且只有非全日制",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（物理学院）",
+   "degree": "专硕",
+   "college": "物理学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 34,
+    "tuimian": null,
+    "tongkao": 34
+   },
+   "dataYear": 2026,
+   "changes": "全日制；⚠ 同一个 085401 代码，微电子学院和物理学院都在招，报名要选对学院；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（物理学院·非全日制）",
+   "degree": "专硕",
+   "college": "物理学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 10,
+    "tuimian": null,
+    "tongkao": 10
+   },
+   "dataYear": 2026,
+   "changes": "非全日制用 085400 不分二级代码；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 16,
+    "tuimian": null,
+    "tongkao": 16
+   },
+   "dataYear": 2026,
+   "changes": "全日制；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 8,
+    "tuimian": null,
+    "tongkao": 8
+   },
+   "dataYear": 2026,
+   "changes": "全日制；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 7,
+    "tuimian": null,
+    "tongkao": 7
+   },
+   "dataYear": 2026,
+   "changes": "全日制；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085407",
+   "name": "仪器仪表工程（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 8,
+    "tuimian": null,
+    "tongkao": 8
+   },
+   "dataYear": 2026,
+   "changes": "全日制；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（卓越工程师学院）",
+   "degree": "专硕",
+   "college": "卓越工程师学院",
+   "subjects": [],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 7,
+    "tuimian": null,
+    "tongkao": 7
+   },
+   "dataYear": 2026,
+   "changes": "全日制；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（通信与信息工程学院）",
+   "degree": "专硕",
+   "college": "通信与信息工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 347,
+     "politics": 35,
+     "english": 35,
+     "math": 75,
+     "pro": 67,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；退役大学生计划单列为 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "上海大学 0854 不是全校统一代码：通信/机自/微电子/材料/电影/中欧用 085400，计算机学院和未来技术学院用二级代码",
+   "sources": [
+    {
+     "url": "https://scie.shu.edu.cn/info/1065/46165.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 129,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：外语口语及听力100+专业基础100+专业综合100",
+    "note": null
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（机电工程与自动化学院）",
+   "degree": "专硕",
+   "college": "机电工程与自动化学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 362,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；上大 0854 全校最高线；另有士兵专项1人、退役大学生计划线 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 单科只要 35/35/53/53（国家线水平）但总分要 362，是典型的“总分绞杀”型",
+   "sources": [
+    {
+     "url": "https://auto.shu.edu.cn/info/1123/83822.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 104,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "笔试：微机硬件及软件(8086+C语言)100分；面试200分(英语60+专业综合140)。复试满分300，低于180分不录取",
+    "note": null
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（微电子学院）",
+   "degree": "专硕",
+   "college": "微电子学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；＝当年工学国家线，压线即可进复试"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 全批次性价比最高的一条：195 个统考名额且复试线压国家线（264），与同校机自学院 085400 的 362 差 98 分",
+   "sources": [
+    {
+     "url": "https://sme.shu.edu.cn/info/1030/6642.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 195,
+    "tuimian": null,
+    "tongkao": 195
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：英语翻译/口语及听力100+专业基础100+专业综合能力100，面试不少于20分钟",
+    "note": null
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（材料科学与工程学院）",
+   "degree": "专硕",
+   "college": "材料科学与工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；＝当年工学国家线"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "材料学院也在招 085400，复试线压国家线，容易被忽略",
+   "sources": [
+    {
+     "url": "https://mat.shu.edu.cn/info/1019/26808.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（上海电影学院）",
+   "degree": "专硕",
+   "college": "上海电影学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 328,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 冷门入口：上海电影学院也招 085400 电子信息（影视技术方向），线 328",
+   "sources": [
+    {
+     "url": "https://sfa.shu.edu.cn/info/1212/43394.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（中欧工程技术学院）",
+   "degree": "专硕",
+   "college": "中欧工程技术学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 340,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "中欧工程技术学院（UTSEUS）招 085400，线 340",
+   "sources": [
+    {
+     "url": "https://utseus.shu.edu.cn/info/1010/5486.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程（计算机工程与科学学院）",
+   "degree": "专硕",
+   "college": "计算机工程与科学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 358,
+     "politics": 45,
+     "english": 40,
+     "math": 75,
+     "pro": 75,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；单科要求高于国家线：政治45、外语40、业务课75/75"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 上大计算机学院不用 085400，用二级代码；085405 是该院统考名额最大的 0854 方向（57）",
+   "sources": [
+    {
+     "url": "https://cs.shu.edu.cn/info/1081/50381.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 57,
+    "tuimian": null,
+    "tongkao": 57
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：专业基础能力120(编程机试70+综合笔试50)+专业综合面试130+外语50，180分及以下不录取",
+    "note": "差额复试，未公布具体比例"
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（计算机工程与科学学院）",
+   "degree": "专硕",
+   "college": "计算机工程与科学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 305,
+     "politics": 45,
+     "english": 40,
+     "math": 75,
+     "pro": 60,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "统考仅 7 人，但线(305)比同院 085405(358)低 53 分——名额少、线低，属于小而险",
+   "sources": [
+    {
+     "url": "https://cs.shu.edu.cn/info/1081/50381.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 7,
+    "tuimian": null,
+    "tongkao": 7
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：专业基础能力120(编程机试70+综合笔试50)+专业综合面试130+外语50",
+    "note": null
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085412",
+   "name": "网络与信息安全（计算机工程与科学学院）",
+   "degree": "专硕",
+   "college": "计算机工程与科学学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 335,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "统考 6 人",
+   "sources": [
+    {
+     "url": "https://cs.shu.edu.cn/info/1081/50381.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 6,
+    "tuimian": null,
+    "tongkao": 6
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：专业基础能力120(编程机试70+综合笔试50)+专业综合面试130+外语50",
+    "note": null
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术（计算机工程与科学学院·非全日制）",
+   "degree": "专硕",
+   "college": "计算机工程与科学学院",
+   "subjects": [],
+   "lines": [],
+   "dataYear": 2026,
+   "changes": "⚠ 085404 计算机技术在上大只有非全日制（80 人），想读全日制计算机方向只能报 085405/085410/085412",
+   "sources": [
+    {
+     "url": "https://cs.shu.edu.cn/info/1081/50381.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 80,
+    "tuimian": null,
+    "tongkao": 80
+   }
+  },
+  {
+   "school": "上海大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（未来技术学院）",
+   "degree": "专硕",
+   "college": "未来技术学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 334,
+     "politics": 50,
+     "english": 40,
+     "math": 80,
+     "pro": 70,
+     "kind": "院线",
+     "note": "2026 院线（各学院自主划定、由研究生院统一公布）。当年工学国家线 A 区 264；单科要求全校最严：政治50、外语40、业务课80/70"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 同为 085410 人工智能，未来技术学院统考 83 人、线 334；计算机学院统考 7 人、线 305。两个学院差别极大，报名前必须选对",
+   "sources": [
+    {
+     "url": "https://ai.shu.edu.cn/info/1087/3738.htm",
+     "official": true
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=748333&m=content",
+     "official": false
+    },
+    {
+     "url": "https://yjszs.shu.edu.cn/info/1004/8584.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "seats": {
+    "year": 2026,
+    "plan": 83,
+    "tuimian": null,
+    "tongkao": 83
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "初试50%+复试50%",
+    "content": "复试满分300：英语能力面试100+复试科目面试100+科研能力面试100（全面试，无笔试）",
+    "note": null
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程（计算机科学与通信工程学院）",
+   "degree": "专硕",
+   "college": "计算机科学与通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 报考 35 人、录取 8 人"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 江苏大学 085402 通信工程有两个学院同时在招（计算机科学与通信工程学院 8 人 / 电气信息工程学院 11 人），报名必须选对学院；复试科目 952 数字信号处理",
+   "sources": [
+    {
+     "url": "https://cs.ujs.edu.cn/info/1069/47467.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 8,
+    "tuimian": null,
+    "tongkao": 8
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机科学与通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 315,
+     "politics": 35,
+     "english": 35,
+     "math": 70,
+     "pro": 70,
+     "kind": "院线",
+     "note": "江苏大学 0854 里唯一明显高于国家线的一条（+51）；2026 全日制报考 489 人、录取 75 人，约 6.5:1"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "全日制 68 人另加非全日制 10 人；复试科目 905 程序设计。报考人数全校 0854 最多",
+   "sources": [
+    {
+     "url": "https://cs.ujs.edu.cn/info/1069/47467.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 68,
+    "tuimian": null,
+    "tongkao": 68
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "计算机科学与通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 全日制报考 45 人、录取 7 人"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "全日制仅 7 人，另有非全日制 5 人；复试科目 905 程序设计",
+   "sources": [
+    {
+     "url": "https://cs.ujs.edu.cn/info/1069/47467.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 7,
+    "tuimian": null,
+    "tongkao": 7
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "计算机科学与通信工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 报考 62 人、录取 9 人"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "复试科目 905 程序设计",
+   "sources": [
+    {
+     "url": "https://cs.ujs.edu.cn/info/1069/47467.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 9,
+    "tuimian": null,
+    "tongkao": 9
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程（电气信息工程学院）",
+   "degree": "专硕",
+   "college": "电气信息工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 报考 27 人、录取 15 人（另 8 推免、4 非全）"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 与计算机科学与通信工程学院同代码不同学院；另有非全日制 4 人",
+   "sources": [
+    {
+     "url": "https://eie.ujs.edu.cn/info/1143/20423.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 11,
+    "tuimian": null,
+    "tongkao": 11
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（电气信息工程学院）",
+   "degree": "专硕",
+   "college": "电气信息工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；分两个方向划线，均为国家A线：控制工程方向报139录45、农业电气化与信息化工程方向报50录21"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "全日制 66 人（控制工程 45 + 农业电气化与信息化工程 21），另有卓工专项 6 人、非全日制 5 人。名额大且压国家线",
+   "sources": [
+    {
+     "url": "https://eie.ujs.edu.cn/info/1143/20423.htm",
+     "official": true
+    },
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 66,
+    "tuimian": null,
+    "tongkao": 66
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "机械工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 报考 77 人、录取 25 人"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 挂在机械工程学院，容易被只盯电类学院的考生漏掉",
+   "sources": [
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "机械工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 311,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "总分 311 高于国家线 47 分，但单科只要国家线水平；2026 全日制报考 68 录 21，非全日制报考 2 却录 35（大量调剂/非全扩招）"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 同样挂在机械工程学院；非全日制录取数远超报考数，说明非全靠调剂补齐",
+   "sources": [
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   }
+  },
+  {
+   "school": "江苏大学",
+   "track": "ee",
+   "code": "085406",
+   "name": "控制工程（农业工程学院）",
+   "degree": "专硕",
+   "college": "农业工程学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "学院自主划线，实际执行＝2026 工学国家A线(264/35/35/53/53)，即压线进复试；2026 报考 34 人、录取 33 人，几乎全录"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 农业工程学院也招 085406 控制工程，报录比接近 1:1，是本校 0854 里最容易上岸的入口之一。该条与电气信息工程学院的 085406 为不同学院，需在目录中核对方向代码",
+   "sources": [
+    {
+     "url": "https://yz.ujs.edu.cn/info/1014/8467.htm",
+     "official": true
+    },
+    {
+     "url": "https://cs.ujs.edu.cn/info/1428/43597.htm",
+     "official": true
+    }
+   ],
+   "confidence": "partial",
+   "retest": {
+    "ratio": 1.2,
+    "weight": "初试50%+复试50%（总成绩=初试总分÷5×50%+复试总分×50%）",
+    "content": "复试总分100分：复试科目考核30%+综合能力面试60%+外语听说10%",
+    "note": "进入复试人数一般不少于已公布招生计划的120%"
+   }
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（信息工程学院）",
+   "degree": "专硕",
+   "college": "信息工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "855",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 280,
+     "politics": 40,
+     "english": 40,
+     "math": 60,
+     "pro": 90,
+     "kind": "院线",
+     "note": "2025 院线；该院 2024 为 339、2023 为 363，2025 断崖式下跌 59 分"
+    },
+    {
+     "year": 2024,
+     "total": 339,
+     "politics": 52,
+     "english": 52,
+     "math": 86,
+     "pro": 89,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 363,
+     "politics": 55,
+     "english": 55,
+     "math": 99,
+     "pro": 99,
+     "kind": "院线",
+     "note": null
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 125,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 武汉理工全校 0854 都用 085400 不分二级代码，靠“学院+研究方向”区分。信息工程学院名额最大（125），且 2025 线只有 280，是本校最好的入口",
+   "sources": [
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=739352&m=content",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（自动化学院·控制工程方向）",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "848",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 358,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "2025 院线；单科只要国家线，但总分 358 比信息工程学院同代码高 78 分"
+    },
+    {
+     "year": 2024,
+     "total": 338,
+     "politics": 37,
+     "english": 37,
+     "math": 56,
+     "pro": 56,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 365,
+     "politics": 38,
+     "english": 38,
+     "math": 57,
+     "pro": 57,
+     "kind": "院线",
+     "note": null
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 39,
+    "tuimian": null,
+    "tongkao": null
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 2026 计划从 2025 的 56 人砍到 39 人（-30%），线又高，是本校 0854 里最难的一条",
+   "sources": [
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=739352&m=content",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·计算机方向）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 348,
+     "politics": 50,
+     "english": 45,
+     "math": 85,
+     "pro": 85,
+     "kind": "院线",
+     "note": "2026 院线；源表单科列为 50/45/85"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 45,
+    "tuimian": null,
+    "tongkao": 45
+   },
+   "dataYear": 2026,
+   "changes": "正常统考通道，45 人（另 1 专项）",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·计算机·襄阳示范区专项）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 313,
+     "politics": 50,
+     "english": 45,
+     "math": 85,
+     "pro": 85,
+     "kind": "院线",
+     "note": "2026 院线，比本部同方向低 35 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 6,
+    "tuimian": null,
+    "tongkao": 6
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 襄阳示范区专项：线比本部低 35 分，2026 另接收 13 人调剂——分不够又想上武理计算机的主要通道",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·计算机·海南专项）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 275,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线，仅比国家线(264)高 11 分，比本部同方向低 73 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 15,
+    "tuimian": null,
+    "tongkao": 15
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 海南专项 15 人、线 275，是武理计算机方向门槛最低的入口（需接受海南校区培养）",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·软件工程方向）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 333,
+     "politics": 50,
+     "english": 45,
+     "math": 85,
+     "pro": 85,
+     "kind": "院线",
+     "note": "2026 院线，比同院计算机方向低 15 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 29,
+    "tuimian": null,
+    "tongkao": 29
+   },
+   "dataYear": 2026,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·软件工程·襄阳示范区专项）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 315,
+     "politics": 50,
+     "english": 45,
+     "math": 85,
+     "pro": 85,
+     "kind": "院线",
+     "note": "2026 院线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 14,
+    "tuimian": null,
+    "tongkao": 14
+   },
+   "dataYear": 2026,
+   "changes": "襄阳示范区专项",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（计算机与人工智能学院·软件工程·海南专项）",
+   "degree": "专硕",
+   "college": "计算机与人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 303,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 22,
+    "tuimian": null,
+    "tongkao": 22
+   },
+   "dataYear": 2026,
+   "changes": "海南专项",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（国家卓越工程师学院·计算机方向）",
+   "degree": "专硕",
+   "college": "国家卓越工程师学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 264,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线＝工学国家线(264)"
+    },
+    {
+     "year": 2025,
+     "total": 280,
+     "politics": 40,
+     "english": 40,
+     "math": 60,
+     "pro": 90,
+     "kind": "院线",
+     "note": "2025 院线"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 0,
+    "tuimian": null,
+    "tongkao": 0
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 2026 一志愿计划 0 人，全部 10 人靠调剂进——不要一志愿报，但是极好的调剂目标",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=739352&m=content",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "武汉理工大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息（国家卓越工程师学院·软件方向）",
+   "degree": "专硕",
+   "college": "国家卓越工程师学院",
+   "subjects": [],
+   "lines": [
+    {
+     "year": 2026,
+     "total": 269,
+     "politics": 35,
+     "english": 35,
+     "math": 53,
+     "pro": 53,
+     "kind": "院线",
+     "note": "2026 院线，仅比国家线高 5 分"
+    }
+   ],
+   "seats": {
+    "year": 2026,
+    "plan": 3,
+    "tuimian": null,
+    "tongkao": 3
+   },
+   "dataYear": 2026,
+   "changes": "⚠ 一志愿仅 3 人，另接收 12 人调剂",
+   "sources": [
+    {
+     "url": "https://noobdream.com/schoolinfo/93/",
+     "official": false
+    },
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=739352&m=content",
+     "official": false
+    },
+    {
+     "url": "http://gd.whut.edu.cn/zs/tzgg/202603/t20260323_624233.shtml",
+     "official": true
+    }
+   ],
+   "confidence": "secondary"
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "光电科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "841",
+     "name": "应用光学"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 317,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "2025 院线（苏大各学院自主划线）；2024 为 324、2023 为 324"
+    },
+    {
+     "year": 2024,
+     "total": 324,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 324,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": "当年划线 324 但实际未招统考生"
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠⚠ 全批次最反常的一条：085408 是专硕，却考 201 英语（一）+ 301 数学（一）+ 841 应用光学，难度按学硕走，别按英二数二准备。招生波动极大：2023 划线但未招统考、2024 招 35、2025 招 41、2026 只剩 28（较 2025 缩招约 32%）。2025 院线 317，单科只要国家线水平",
+   "sources": [
+    {
+     "url": "https://m-jixun.iqihang.com/index.php?a=show&c=index&catid=21&id=714618&m=content",
+     "official": false
+    },
+    {
+     "url": "https://www.kaoyanne.com/15751/",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "seats": {
+    "year": 2026,
+    "plan": 28,
+    "tuimian": null,
+    "tongkao": 28
+   },
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "苏州大学不划统一校线，由各基层培养单位自主确定不低于国家A线的本院复试线"
+   }
+  },
+  {
+   "school": "苏州大学",
+   "track": "ee",
+   "code": "085410",
+   "name": "人工智能（未来科学与工程学院）",
+   "degree": "专硕",
+   "college": "未来科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2025,
+     "total": 343,
+     "politics": 34,
+     "english": 34,
+     "math": 51,
+     "pro": 51,
+     "kind": "院线",
+     "note": "2025 院线；2024 为 303、2023 为 334，波动大"
+    },
+    {
+     "year": 2024,
+     "total": 303,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": null
+    },
+    {
+     "year": 2023,
+     "total": 334,
+     "politics": null,
+     "english": null,
+     "math": null,
+     "pro": null,
+     "kind": "院线",
+     "note": null
+    }
+   ],
+   "dataYear": 2026,
+   "changes": "⚠ 之前容易漏掉的招生单位：苏大未来科学与工程学院也招 085410 人工智能，统考名额从 2024 年 10 人扩到 2025 年 15 人、2026 年 17 人，是苏大 0854 里少数在扩招的方向；2025 线 343，比计算机学院同代码低 8 分而名额多 7 个",
+   "sources": [
+    {
+     "url": "https://jixun.iqihang.com/zixun/fenshuxian/2026711546.html",
+     "official": false
+    },
+    {
+     "url": "https://static.kaoyan.cn/file/2025/10/14/b508ab6bea0197ead319e5b3044bde07.pdf",
+     "official": false
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/8c/3f/c8365a691263/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://yjs.suda.edu.cn/01/61/c8365a655713/page.htm",
+     "official": true
+    }
+   ],
+   "confidence": "secondary",
+   "retest": {
+    "ratio": null,
+    "weight": null,
+    "content": null,
+    "note": "⚠ 苏州大学不划统一校线：各基层研究生培养单位自主确定不低于国家A线的本院复试线，只在各学院复试录取实施细则中公布；本次采集时 suda.edu.cn 各学院站点均不可达，故 lines 留空，报考前请到对应学院官网核对"
+   },
+   "seats": {
+    "year": 2026,
+    "plan": 17,
+    "tuimian": null,
+    "tongkao": 17
+   }
+  }
+ ]
+}

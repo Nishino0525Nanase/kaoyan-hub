@@ -15,6 +15,34 @@ DEFAULTS = {
     "sources": [], "confidence": "partial", "scale": 500,
 }
 
+
+LINE_KEYS = ('politics', 'english', 'math', 'pro')
+
+def _norm_lines(lines):
+    """统一两代字段名。
+
+    早期批次写 {year, score, note}；2026-08 之后的批次按更细的规范写
+    {year, total, politics, english, math, pro, kind, note}。合并时把 total 归一到
+    score（页面读的是 score），同时保留单科与口径——口径(kind) 尤其重要：
+    校线 / 院线 / 一志愿线 混着比是这份数据最容易骗人的地方。
+    """
+    out = []
+    for l in lines:
+        total = l.get('score') if l.get('score') is not None else l.get('total')
+        if total is None or not l.get('year'):
+            continue                      # 没分数或没年份的行没有意义，丢掉
+        n = {'year': l['year'], 'score': total}
+        for k in LINE_KEYS:
+            if l.get(k) is not None:
+                n[k] = l[k]
+        if l.get('kind'):
+            n['kind'] = l['kind']
+        if l.get('note'):
+            n['note'] = l['note']
+        out.append(n)
+    return out
+
+
 base = json.load(open(os.path.join(D, 'programs-base.json'), encoding='utf-8'))
 records = list(base['records'])
 extra_sources = []
@@ -30,8 +58,7 @@ seen, out = set(), []
 for r in records:
     for k, v in DEFAULTS.items():
         r.setdefault(k, json.loads(json.dumps(v)))
-    r['lines'] = sorted([l for l in r['lines'] if l.get('score')],
-                        key=lambda l: -l['year'])
+    r['lines'] = sorted(_norm_lines(r['lines']), key=lambda l: -l['year'])
     key = (r['school'], r['code'], r['name'], r.get('college'))
     if key in seen:
         continue
@@ -46,6 +73,8 @@ for r in out:
 
 schools = sorted({r['school'] for r in out})
 with_lines = sum(1 for r in out if r['lines'])
+with_kind = sum(1 for r in out if any(l.get('kind') for l in r['lines']))
+with_sub = sum(1 for r in out if any(any(l.get(k) is not None for k in LINE_KEYS) for l in r['lines']))
 with_ratio = sum(1 for r in out if r['retest'] and r['admitted'])
 
 base['records'] = out
@@ -55,6 +84,8 @@ base['stats'] = {
     "schools": len(schools),
     "withLines": with_lines,
     "withRetestRatio": with_ratio,
+    "withLineKind": with_kind,
+    "withSubjectLines": with_sub,
     "withApplied": sum(1 for r in out if r['applied']),
     "byTrack": dict(Counter(r['track'] for r in out)),
 }
@@ -68,4 +99,4 @@ base['note'] = (
 json.dump(base, open(os.path.join(D, 'programs.json'), 'w', encoding='utf-8'),
           ensure_ascii=False, indent=1)
 print(f"✓ programs.json: {len(out)} 个专业 / {len(schools)} 所学校 · "
-      f"有复试线 {with_lines} · 有复试录取比 {with_ratio}")
+      f"有复试线 {with_lines} · 有复试录取比 {with_ratio} · 标了口径 {with_kind} · 有单科线 {with_sub}")
