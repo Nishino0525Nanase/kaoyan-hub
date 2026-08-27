@@ -46,10 +46,12 @@ def _norm_lines(lines):
 base = json.load(open(os.path.join(D, 'programs-base.json'), encoding='utf-8'))
 records = list(base['records'])
 extra_sources = []
+not_eligible = list(base.get('notEligible', []))
 
 for path in sorted(glob.glob(os.path.join(D, 'programs-*-batch*.json'))):
     b = json.load(open(path, encoding='utf-8'))
     records += b['records']
+    not_eligible += b.get('notEligible', [])
     if b.get('source'):
         extra_sources.append(b['source'])
 
@@ -77,6 +79,10 @@ with_kind = sum(1 for r in out if any(l.get('kind') for l in r['lines']))
 with_sub = sum(1 for r in out if any(any(l.get(k) is not None for k in LINE_KEYS) for l in r['lines']))
 with_ratio = sum(1 for r in out if r['retest'] and r['admitted'])
 
+# 「查证过、确实不招」和「还没查」对考生意义完全不同，必须分开存
+_seen_ne = set()
+base['notEligible'] = [x for x in not_eligible
+                       if not (x['school'] in _seen_ne or _seen_ne.add(x['school']))]
 base['records'] = out
 from collections import Counter
 base['stats'] = {
@@ -87,6 +93,7 @@ base['stats'] = {
     "withLineKind": with_kind,
     "withSubjectLines": with_sub,
     "withApplied": sum(1 for r in out if r['applied']),
+    "notEligible": len(base['notEligible']),
     "byTrack": dict(Counter(r['track'] for r in out)),
 }
 base['note'] = (

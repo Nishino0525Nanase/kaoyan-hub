@@ -242,6 +242,9 @@ body.hasdock{padding-bottom:66px}
   display:flex;align-items:center;justify-content:space-between;gap:6px}
 .gapcell.has{border-color:var(--good)}
 .gapcell.part{border-color:var(--warn);border-style:dashed}
+.gapcell.none{opacity:.62;background:var(--surface-2)}
+.gapcell.none .gn{text-decoration:line-through;text-decoration-color:var(--text-3)}
+.gapcell.none .gc{color:var(--text-3)}
 .gapcell.part .gc{color:#8a6100;font-weight:600}
 :root[data-theme="dark"] .gapcell.part .gc{color:var(--warn)}
 @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .gapcell.part .gc{color:var(--warn)}}
@@ -1062,17 +1065,24 @@ function renderMajors(){
     PROG.records.filter(r => String(r.code || '').startsWith('0854') && r.track !== MAJ_TRACK)
       .forEach(r => kin.set(r.school, (kin.get(r.school) || 0) + 1));
   }
+  /* 查证过确实不招 ≠ 还没查。前者是结论，后者是待办，混在一起会让人白跑一趟官网。 */
+  const NE = new Map((PROG.notEligible || []).map(x => [x.school, x]));
   const inLib = SCHOOLS.map(s => ({ s, n: covered.get(s.name) || 0, kn: kin.get(s.name) || 0 }));
   const done = inLib.filter(x => x.n > 0);
   const part = inLib.filter(x => x.n === 0 && x.kn > 0);
-  const todo = inLib.filter(x => x.n === 0 && x.kn === 0);
+  const rest = inLib.filter(x => x.n === 0 && x.kn === 0);
+  const isEE = MAJ_TRACK === 'cs' || MAJ_TRACK === 'ee';
+  const none = isEE ? rest.filter(x => NE.has(x.s.name)) : [];
+  const todo = isEE ? rest.filter(x => !NE.has(x.s.name)) : rest;
   const otherLabel = MAJ_TRACK === 'ee' ? '计算机' : '电子信息';
   cat += `<div class="card chartcard gapwrap">
     <div class="chead">
       <p class="ctitle">本方向的收录缺口</p>
       <p class="cdesc">院校库 ${SCHOOLS.length} 所里，<b>${done.length}</b> 所已有本方向数据${
-        part.length ? `，<b>${part.length}</b> 所的 0854 数据全在「${otherLabel}」标签下` : ''}，<b>${todo.length}</b> 所还空着。
-        空着的不代表这些学校不招——多数是还没查到。绿框是已收录，黄色虚线框要切到另一个标签看，数字是项目数。</p>
+        part.length ? `，<b>${part.length}</b> 所的 0854 数据全在「${otherLabel}」标签下` : ''}${
+        none.length ? `，<b>${none.length}</b> 所经查证确实不招` : ''}，<b>${todo.length}</b> 所还没查到。
+        绿框已收录，黄色虚线框要切到另一个标签看，划掉的是查证过确实不开这个专业的（鼠标悬停看依据），
+        剩下白框的不代表不招，只是还没查——欢迎补。</p>
     </div>
     <div class="gapgrid">
       ${done.sort((a,b)=>b.n-a.n).map(x => `<div class="gapcell has">
@@ -1082,6 +1092,8 @@ function renderMajors(){
       ${todo.map(x => `<div class="gapcell">
         <span class="gn muted">${esc(x.s.name)}</span>
         <a href="${esc(x.s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a></div>`).join('')}
+      ${none.map(x => `<div class="gapcell none" title="${esc(NE.get(x.s.name).reason || '')}">
+        <span class="gn">${esc(x.s.name)}</span><span class="gc">不招</span></div>`).join('')}
     </div>
     <p class="muted" style="margin:12px 0 0;font-size:12px">
       想补数据？点空着那格的「研招网」进官网找招生专业目录和复试分数线，
