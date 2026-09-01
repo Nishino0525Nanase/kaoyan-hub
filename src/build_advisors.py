@@ -315,6 +315,19 @@ doc = {
 for c in doc["colleges"]:
     c["count"] = len(c["advisors"])
 doc["total"] = sum(c["count"] for c in doc["colleges"])
+doc["schoolsCovered"] = len({c["school"] for c in doc["colleges"]})
+
+# ── 覆盖缺口 ────────────────────────────────────────────────
+# 导师名录目前只有中山大学。逐人转录很重（中大四个学院抓了 6 个官网页面），
+# 只能一所一所补。这里如实列出还没查的学校，别让空白被误读成「没有导师」。
+_here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(_here,"data","schools.json"),encoding="utf-8") as f:
+    _all = [x["name"] for x in json.load(f)["schools"]]
+_done = {c["school"] for c in doc["colleges"]}
+doc["gaps"] = sorted(n for n in _all if n not in _done)
+doc["coverage"] = {"covered": len(_done), "total": len(_all),
+                   "note": ("分母是院校库收录的学校数。导师数据只收官网师资页/招生方向表，"
+                            "逐所转录，缺口列表里的学校是还没查，不是查不到。")}
 
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(os.path.join(here, "data", "advisors.json"), "w", encoding="utf-8") as f:

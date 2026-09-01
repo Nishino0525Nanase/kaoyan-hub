@@ -102,27 +102,41 @@ def stats(rows):
     beds = sorted({r[2] for r in rows})
     return {"min": min(fees), "max": max(fees), "bedTypes": beds}
 
-doc = {
- "updated": "2025-07",
- "source": SRC,
- "sourceLabel": "2025学年中山大学学生宿舍住宿费收费标准公示表",
- "sourcePage": "https://xxgk.sysu.edu.cn/cat/122",
- "confidence": "official",
- "fetched": "2026-09-01",
- "note": ("住宿费与宿舍条件逐行抄自学校信息公开网公示的 PDF，单位为元/生·学年，不含水电费。"
-          "该表只公示楼栋的房型、面积、价格与设备，"
-          "不公示哪栋楼分配给研究生、哪栋分配给本科生——本库不推测这一层，"
-          "分配以录取后学校的实际安排为准。"),
- "caveats": [
-   "招生简章明确写了学费不包含住宿费，住宿费单独缴纳。",
-   "研究生宿舍的具体分配（几人间、哪个园区）由学校统一安排，不是报考时能选的。",
-   "该表按学年公示，每年 7 月前后更新，报考当年请重新核对。",
- ],
- "scope": ("已收录东校园、深圳校区、珠海校区的全部国内生房型——"
-           "对应本库导师名录里四个学院所在的校区。"
-           "南校园、北校园房型数量庞大（原表共 18 页），尚未逐行录入，需要时查原表。"),
- "excluded": "国际生房型（另一套收费标准）不收录。",
- "campuses": [
+# ── 华中科技大学 · 主校区 / 同济校区 ────────────────────────────
+# 来源《华中科技大学2024年研究生新生入学须知》(研招网转载)
+# 这份比中大那张表更对口——它本身就是研究生口径。
+F_HUST4 = "四人间"
+HUST_MAIN = [
+ ("韵苑一/二/四栋，东六/七舍，西一/二/五/六/八/九/十四/十五舍","—",4,None,1120,"四人间"),
+ ("东九/十/十二舍，南一/二/三舍","—",4,None,1320,"四人间"),
+ ("东一舍，教七/八舍，西四/七/十/十一/十二/十三/十六/十七舍","—",2,None,1440,"双人间"),
+ ("博士生公寓1-4栋","—",2,None,1740,"双人间（博士生公寓）"),
+ ("博士生公寓1-4栋","—",1,None,2080,"单人间（博士生公寓）"),
+ ("博士生公寓1-4栋","—",1,None,2480,"无障碍间（博士生公寓）"),
+ ("新博士生公寓A、B栋","—",1,None,1980,"套房内单人间（博士生公寓）"),
+]
+HUST_TJ = [
+ ("学子苑502栋（博士生宿舍）","—",2,None,1440,"双人间"),
+ ("学子苑505栋、506栋","—",4,None,1320,"四人间"),
+]
+
+def rooms2(rows):
+    return [{"building":b,"tier":(t if t!="—" else None),"beds":n,"area":a,
+             "fee":f,"facilities":fac} for b,t,n,a,f,fac in rows]
+
+def stats2(rows):
+    fees=[r[4] for r in rows]; beds=sorted({r[2] for r in rows})
+    return {"min":min(fees),"max":max(fees),"bedTypes":beds}
+
+SYSU = {
+ "school":"中山大学","granularity":"building",
+ "audience":"公示表未区分本科生 / 研究生，只按楼栋公示",
+ "confidence":"official","dataYear":"2025学年",
+ "source":SRC,"sourceLabel":"2025学年中山大学学生宿舍住宿费收费标准公示表",
+ "sourcePage":"https://xxgk.sysu.edu.cn/cat/122","fetched":"2026-09-01",
+ "scope":("已录入东校园、深圳校区、珠海校区的全部国内生房型（对应导师名录里四个学院所在校区）。"
+          "南校园、北校园房型数量庞大（原表 18 页），尚未逐行录入。国际生房型不收录。"),
+ "campuses":[
    {"id":"east","name":"东校园","city":"广州市番禺区大学城外环东路 132 号",
     "colleges":["电子与信息工程学院（微电子学院）"],
     "rooms":rooms(EAST),"stats":stats(EAST)},
@@ -132,18 +146,94 @@ doc = {
    {"id":"zhuhai","name":"珠海校区","city":"珠海市高新区唐家湾镇大学路 2 号",
     "colleges":["微电子科学与技术学院"],
     "rooms":rooms(ZH),"stats":stats(ZH)},
+ ]}
+
+HUST = {
+ "school":"华中科技大学","granularity":"building",
+ "audience":"研究生（该文件本身即研究生入学须知）",
+ "confidence":"official","dataYear":"2024",
+ "source":"https://yz.chsi.com.cn/kyzx/yxzc/202408/20240802/2293305978.html",
+ "sourceLabel":"华中科技大学2024年研究生新生入学须知","sourcePage":None,
+ "fetched":"2026-09-01",
+ "scope":("主校区与同济校区学子苑，按原文的楼栋分组照录。"
+          "原文同济校区 503 栋之后的内容在检索结果中被截断，未录入。"
+          "该须知按年发布，2025/2026 版发布后需重新核对。"),
+ "campuses":[
+   {"id":"main","name":"主校区","city":"武汉市洪山区珞喻路 1037 号","colleges":[],
+    "rooms":rooms2(HUST_MAIN),"stats":stats2(HUST_MAIN)},
+   {"id":"tongji","name":"同济校区","city":"武汉市硚口区航空路 13 号","colleges":[],
+    "rooms":rooms2(HUST_TJ),"stats":stats2(HUST_TJ)},
+ ]}
+
+SCUT = {
+ "school":"华南理工大学","granularity":"range",
+ "audience":"本科招生章程口径，未单列研究生标准",
+ "confidence":"partial","dataYear":"2025",
+ "source":"https://www.dxsbb.com/news/52746.html",
+ "sourceLabel":"华南理工大学2025年招生章程（收费标准条款）","sourcePage":None,
+ "fetched":"2026-09-01",
+ "range":{"min":600,"max":1600},
+ "scope":("学校只公示了住宿费区间，没有逐楼栋的公示表；且这个区间出自本科招生章程，"
+          "研究生是否同一标准未见明文。要准确数字需查学校信息公开栏目或直接问研究生院。"),
+ "campuses":[]}
+
+WHU = {
+ "school":"武汉大学","granularity":"range",
+ "audience":"研究生","confidence":"official","dataYear":"2023",
+ "source":"https://wdyz.whu.edu.cn/info/1027/3144.htm",
+ "sourceLabel":"武汉大学研究生招生信息网 · 常见问题","sourcePage":None,
+ "fetched":"2026-09-01",
+ "range":{"min":920,"max":2480},
+ "scope":("研招网答疑给的是区间，原文说明宿舍由学校统筹安排、住宿地点不同条件不同，"
+          "标准经湖北省物价部门核定。页面更新于 2023 年，可能已过期。"),
+ "campuses":[]}
+
+doc = {
+ "updated": "2026-09",
+ "note": ("各校住宿费与宿舍条件，逐条抄自学校官方渠道（信息公开公示表 / 研究生入学须知 / "
+          "招生章程），单位一律为元/生·学年，不含水电费。"
+          "各校公示粒度差别很大：有的逐楼栋公示（granularity=building），"
+          "有的只给一个区间（granularity=range）——本库如实保留这个差别，不去补齐。"),
+ "caveats": [
+   "住宿费与学费分开缴纳，招生简章里的学费不含住宿。",
+   "研究生宿舍的具体分配（几人间、哪个园区）多由学校统筹安排，不是报考时能选的。",
+   "各校标准按学年公示，报考当年请重新核对。",
  ],
+ "schools": [SYSU, HUST, SCUT, WHU],
 }
-for c in doc["campuses"]:
-    c["count"] = len(c["rooms"])
-doc["total"] = sum(c["count"] for c in doc["campuses"])
+
+for sc in doc["schools"]:
+    for c in sc.get("campuses",[]):
+        c["count"] = len(c["rooms"])
+    sc["count"] = sum(c["count"] for c in sc.get("campuses",[]))
+    if sc["granularity"] == "range":
+        sc["stats"] = {"min":sc["range"]["min"],"max":sc["range"]["max"],"bedTypes":[]}
+    else:
+        fees=[r["fee"] for c in sc["campuses"] for r in c["rooms"]]
+        beds=sorted({r["beds"] for c in sc["campuses"] for r in c["rooms"]})
+        sc["stats"]={"min":min(fees),"max":max(fees),"bedTypes":beds}
+
+doc["total"] = sum(sc["count"] for sc in doc["schools"])
+doc["schoolsCovered"] = len(doc["schools"])
+
+# ── 覆盖缺口：院校库里有、但住宿数据还没查的学校 ──────────────
+# 沿用本库对 0854 覆盖用的同一套写法：明确区分「已录入」和「还没查」，
+# 不让空白看起来像是「这学校没有宿舍数据」。
+_here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(_here,"data","schools.json"),encoding="utf-8") as f:
+    _all = [x["name"] for x in json.load(f)["schools"]]
+_done = {sc["school"] for sc in doc["schools"]}
+doc["gaps"] = sorted(n for n in _all if n not in _done)
+doc["coverage"] = {"covered": len(_done), "total": len(_all),
+                   "note": "分母是院校库收录的学校数；缺口列表里的学校只是还没查，不代表查不到。"}
 
 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(os.path.join(here,"data","dorms.json"),"w",encoding="utf-8") as f:
     json.dump(doc,f,ensure_ascii=False,indent=1)
 
-print(f"✓ dorms.json  共 {doc['total']} 条房型")
-for c in doc["campuses"]:
-    s=c["stats"]
-    print(f"   {c['name']:<8} {c['count']:>3} 条  {s['min']}–{s['max']} 元/年  "
-          f"房型 {'/'.join(str(b)+'人' for b in s['bedTypes'])}")
+print(f"✓ dorms.json  {doc['schoolsCovered']} 所学校，{doc['total']} 条房型")
+for sc in doc["schools"]:
+    st=sc["stats"]
+    g = "逐楼栋" if sc["granularity"]=="building" else "仅区间"
+    print(f"   {sc['school']:<10} {g}  {st['min']}–{st['max']} 元/年  "
+          f"{sc['count']} 条  conf={sc['confidence']}  {sc['dataYear']}")

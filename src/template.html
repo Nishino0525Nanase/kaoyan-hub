@@ -1610,30 +1610,51 @@ function advCard(a, q){
     </div>`;
 }
 
-function dormBlock(campusId){
-  const c = DORM.campuses.find(x => x.id === campusId);
-  if(!c) return '';
-  const s = c.stats;
+function dormOf(school, campusId){
+  const sc = DORM.schools.find(x => x.school === school);
+  if(!sc) return null;
+  return { sc, c: sc.campuses.find(x => x.id === campusId) || null };
+}
+
+function dormBlock(school, campusId){
+  const hit = dormOf(school, campusId);
+  if(!hit) return `<p class="advmeta">校区住宿：本库暂未录入 ${esc(school)} 的住宿数据。</p>`;
+  const { sc, c } = hit;
+  const meta = `<span class="muted">${esc(sc.sourceLabel)}　${esc(sc.dataYear)}　conf=${esc(sc.confidence)}</span>`;
+  const foot = `<p class="dormcav"><b>口径：</b>${esc(sc.audience)}<br>
+      <b>范围：</b>${esc(sc.scope)}<br>
+      ${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}<br>
+      来源：<a href="${esc(sc.source)}" target="_blank" rel="noopener">${esc(sc.sourceLabel)}</a></p>`;
+
+  if(sc.granularity === 'range'){
+    return `<details class="dorm">
+      <summary>校区住宿：${esc(sc.school)}　
+        <span class="dormrange">${sc.range.min}–${sc.range.max} 元/学年</span>
+        <span class="muted">该校只公示区间</span></summary>
+      <div class="dormbody"><p class="advmeta" style="margin-top:10px">
+        学校没有逐楼栋的公示表，只给了这一个区间。${meta}</p>${foot}</div>
+    </details>`;
+  }
+  if(!c) return `<p class="advmeta">校区住宿：已录入 ${esc(sc.school)}，但没有「${esc(campusId)}」这个校区的数据。</p>`;
+
+  const st = c.stats;
   const rows = c.rooms.map(r => `<tr>
       <td class="b">${esc(r.building)}</td>
       <td>${r.beds} 人</td>
-      <td>${esc(r.area)}</td>
+      <td>${r.area ? esc(r.area) : '<span class="advnull">—</span>'}</td>
       <td class="fee">${r.fee}</td>
       <td>${esc(r.facilities)}</td>
     </tr>`).join('');
   return `<details class="dorm">
-    <summary>校区住宿：${esc(c.name)}　
-      <span class="dormrange">${s.min}–${s.max} 元/学年</span>
-      <span class="muted">${s.bedTypes.map(b => b + ' 人间').join(' / ')}　共 ${c.count} 种房型</span>
+    <summary>校区住宿：${esc(sc.school)} · ${esc(c.name)}　
+      <span class="dormrange">${st.min}–${st.max} 元/学年</span>
+      <span class="muted">${st.bedTypes.map(b => b + ' 人间').join(' / ')}　${c.count} 种房型</span>
     </summary>
     <div class="dormbody">
       <table class="dormt">
         <tr><th>楼栋</th><th>房型</th><th>人均㎡</th><th>元/学年</th><th>设备条件</th></tr>
         ${rows}
-      </table>
-      <p class="dormcav"><b>注意：</b>${esc(DORM.note)}<br>
-        ${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}<br>
-        来源：<a href="${esc(DORM.source)}" target="_blank" rel="noopener">${esc(DORM.sourceLabel)}</a>（${esc(DORM.updated)} 公示）</p>
+      </table>${foot}
     </div>
   </details>`;
 }
@@ -1653,13 +1674,17 @@ function renderAdvisors(){
         <span class="muted">${list.length} / ${col.count} 人</span>
       </div>
       <p class="advmeta">${esc(col.scope)}　·　来源：<a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>（${esc(col.fetched)} 抓取）</p>
-      ${dormBlock(col.campusId)}
+      ${dormBlock(col.school, col.campusId)}
       <div class="advgrid">${list.map(a => advCard(a, q)).join('')}</div>
     </section>`;
   });
   host.innerHTML = html || `<div class="card advempty">没有匹配的导师。<br>试试换个关键词，或者清掉上面的筛选。</div>`;
-  $('#advSub').textContent =
-    `${ADV.colleges.length} 个学院、${ADV.total} 位导师，当前显示 ${shown} 位。数据更新于 ${ADV.updated}。`;
+  const ac = ADV.coverage, dc = DORM.coverage;
+  $('#advSub').innerHTML =
+    `${ADV.colleges.length} 个学院、${ADV.total} 位导师，当前显示 ${shown} 位。` +
+    `<br><span class="muted">覆盖度：导师 ${ac.covered}/${ac.total} 所　·　` +
+    `住宿 ${dc.covered}/${dc.total} 所（${DORM.schools.map(x => esc(x.school)).join('、')}）　·　` +
+    `其余学校是还没查，不是查不到</span>`;
   $('#advClr').hidden = !q;
 }
 

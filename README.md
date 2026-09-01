@@ -143,10 +143,15 @@ node build.mjs                  # 把 data/*.json 注入模板，生成 index.ht
     ├── track-catalog.json           # 方向定义、0854 二级目录、MPAcc 说明
     ├── quota-retest.json            # 推免/统考名额拆分、复试细则
     ├── advisors.json                # 导师名录（各学院官网师资页原文转录）
-    ├── dorms.json                   # 校区住宿（学校信息公开网住宿费公示表）
+    ├── dorms.json                   # 校区住宿（各校公示表/研究生入学须知，含覆盖缺口）
     ├── watch-targets.json           # 数据源守望清单
     └── resources.json               # 资料链接与常识提示
 ```
+
+导师名录与校区住宿两块目前覆盖度还低（分别 1/79 和 4/79 所），
+两个 JSON 里都带 `gaps` 字段列出还没查的学校——空白是「还没查」，不是「查不到」。
+住宿数据的 `granularity` 区分两种粒度：`building` 是学校逐楼栋公示的（中大、华科），
+`range` 是学校只给了一个区间的（华工、武大）。不同粒度如实保留，不做补齐。
 
 **改数据只改 `data/*.json`，然后跑 `node build.mjs`。** 改样式或交互改 `src/template.html`。
 不要直接编辑 `index.html`——它会被构建覆盖。
