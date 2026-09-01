@@ -89,6 +89,30 @@ h2.sec{font-size:19px;margin:0 0 4px;letter-spacing:-.2px}
 p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .muted{color:var(--text-3);font-size:12.5px}
 
+/* ---------- 导师名录 ---------- */
+.advcol{margin-bottom:26px}
+.advhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:3px}
+.advhead h3{margin:0;font-size:16px;letter-spacing:-.2px}
+.advcampus{font-size:12px;padding:2px 8px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}
+.advmeta{color:var(--text-3);font-size:12.5px;margin:0 0 12px}
+.advgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.adv{padding:13px 15px;display:flex;flex-direction:column;gap:7px;transition:border-color .15s}
+.adv:hover{border-color:var(--line-strong)}
+.advtop{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.advname{font-weight:650;font-size:15px}
+.advtitle{font-size:11.5px;padding:1px 7px;border-radius:5px;border:1px solid var(--line);color:var(--text-2)}
+.advtitle.t教授{border-color:#e34948;color:#e34948}
+.advtitle.t副教授{border-color:var(--s1);color:var(--s1)}
+.advtitle.t助理教授{border-color:var(--s3);color:var(--s3)}
+.advareas{font-size:13px;color:var(--text-2);line-height:1.55;margin:0}
+.advdirs{display:flex;flex-wrap:wrap;gap:4px}
+.advdir{font-size:11.5px;padding:2px 7px;border-radius:5px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-2)}
+.advfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:7px;margin-top:auto;font-size:12px}
+.advfoot a{font-size:12px}
+.advnull{color:var(--text-3);font-size:12.5px;font-style:normal}
+.advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
+mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
+
 /* ---------- filters ---------- */
 .filters{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
 .searchbox{position:relative}
@@ -334,6 +358,7 @@ body.hasdock{padding-bottom:66px}
       <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
       <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
+      <button class="tab" role="tab" data-panel="advisors" aria-selected="false">导师名录</button>
       <button class="tab" role="tab" data-panel="res" aria-selected="false">资料链接</button>
     </nav>
   </div>
@@ -502,6 +527,24 @@ body.hasdock{padding-bottom:66px}
   </section>
 
   <!-- ============ 资料 ============ -->
+  <section class="panel" id="p-advisors">
+    <h2 class="sec">导师名录</h2>
+    <p class="sub" id="advSub"></p>
+    <div class="notice" id="advNote"></div>
+
+    <div class="filters">
+      <div class="searchbox">
+        <span class="mag">&#128269;</span>
+        <input id="advQ" type="search" placeholder="搜研究方向，比如 FPGA / PCB / 功率器件 / 天线 / 存算一体" autocomplete="off">
+        <button class="clr" id="advClr" hidden aria-label="清空">&times;</button>
+      </div>
+      <div class="frow" id="fAdvCol"><span class="flabel">学院</span></div>
+      <div class="frow" id="fAdvTitle"><span class="flabel">职称</span></div>
+    </div>
+
+    <div id="advBody"></div>
+  </section>
+
   <section class="panel" id="p-res">
     <h2 class="sec">资料链接</h2>
     <p class="sub" id="resSub"></p>
@@ -527,6 +570,7 @@ body.hasdock{padding-bottom:66px}
 
 <div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 
+<script id="data-adv" type="application/json">__DATA_ADV__</script>
 <script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
@@ -549,6 +593,7 @@ const CHG     = J('data-changes');
 const TRACKS  = J('data-tracks');
 const FRESH   = J('data-fresh');
 const QUOTA   = J('data-quota');
+const ADV     = J('data-adv');
 /* 名额与复试细则的匹配。
    注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
    （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
@@ -1485,10 +1530,107 @@ function drawChgBars(){
 }
 function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawRatioBars(); drawChgBars(); drawRegionBars(); }
 
+
+/* ================= 导师名录 =================
+   数据是各学院官网师资页的原文转录。这里只做「筛选 + 展示」：
+   不排名、不打分、不做任何主观归纳。官网没写的字段显示为「官网未列出」，
+   不用别处的数据去补——补了就没法说清这一条到底来自哪。 */
+const advState = { q:'', col:new Set(), title:new Set() };
+
+function advChips(host, items, key){
+  const el = $(host);
+  items.forEach(v => {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.type = 'button'; b.textContent = v;
+    b.setAttribute('aria-pressed','false');
+    b.onclick = () => {
+      const on = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', String(!on));
+      on ? advState[key].delete(v) : advState[key].add(v);
+      renderAdvisors();
+    };
+    el.appendChild(b);
+  });
+}
+
+function hl(text, q){
+  if(!text) return '';
+  const e = esc(text);
+  if(!q) return e;
+  const needle = esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return e.replace(new RegExp(needle,'gi'), m => '<mark>'+m+'</mark>');
+}
+
+function advMatch(a, col){
+  const q = advState.q.trim().toLowerCase();
+  if(advState.col.size && !advState.col.has(col.name)) return false;
+  if(advState.title.size && !advState.title.has(a.title || '未标注')) return false;
+  if(!q) return true;
+  const hay = [a.name, a.title, a.areas, a.email, (a.directions||[]).join(' '), a.note]
+                .filter(Boolean).join(' ').toLowerCase();
+  return hay.includes(q);
+}
+
+function advCard(a, q){
+  const t = a.title ? `<span class="advtitle t${esc(a.title)}">${esc(a.title)}</span>` : '';
+  const adv = a.advises ? `<span class="advtitle">${a.advises.join(' / ')}导</span>` : '';
+  const note = a.note ? `<span class="advtitle">${esc(a.note)}</span>` : '';
+  const areas = a.areas
+    ? `<p class="advareas">${hl(a.areas, q)}</p>`
+    : (a.directions ? '' : `<p class="advareas advnull">官网师资页未列出研究领域</p>`);
+  const dirs = a.directions
+    ? `<div class="advdirs">${a.directions.map(d => `<span class="advdir">${hl(d,q)}</span>`).join('')}</div>` : '';
+  const mail = a.email
+    ? `<a href="mailto:${esc(a.email)}">${esc(a.email)}</a>`
+    : `<span class="advnull">官网未列邮箱</span>`;
+  const home = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">个人主页 &rarr;</a>` : '';
+  return `<div class="card adv">
+      <div class="advtop"><span class="advname">${hl(a.name,q)}</span>${t}${adv}${note}</div>
+      ${areas}${dirs}
+      <div class="advfoot">${mail}${home}</div>
+    </div>`;
+}
+
+function renderAdvisors(){
+  const q = advState.q.trim();
+  const host = $('#advBody');
+  let shown = 0, html = '';
+  ADV.colleges.forEach(col => {
+    const list = col.advisors.filter(a => advMatch(a, col));
+    if(!list.length) return;
+    shown += list.length;
+    html += `<section class="advcol">
+      <div class="advhead">
+        <h3>${esc(col.name)}</h3>
+        <span class="advcampus">${esc(col.campus)}</span>
+        <span class="muted">${list.length} / ${col.count} 人</span>
+      </div>
+      <p class="advmeta">${esc(col.scope)}　·　来源：<a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>（${esc(col.fetched)} 抓取）</p>
+      <div class="advgrid">${list.map(a => advCard(a, q)).join('')}</div>
+    </section>`;
+  });
+  host.innerHTML = html || `<div class="card advempty">没有匹配的导师。<br>试试换个关键词，或者清掉上面的筛选。</div>`;
+  $('#advSub').textContent =
+    `${ADV.colleges.length} 个学院、${ADV.total} 位导师，当前显示 ${shown} 位。数据更新于 ${ADV.updated}。`;
+  $('#advClr').hidden = !q;
+}
+
+$('#advQ').addEventListener('input', e => { advState.q = e.target.value; renderAdvisors(); });
+$('#advClr').onclick = () => { $('#advQ').value = ''; advState.q = ''; renderAdvisors(); $('#advQ').focus(); };
+
+function buildAdvFilters(){
+  advChips('#fAdvCol', ADV.colleges.map(c => c.name), 'col');
+  const titles = [...new Set(ADV.colleges.flatMap(c => c.advisors.map(a => a.title || '未标注')))];
+  advChips('#fAdvTitle', titles, 'title');
+  $('#advNote').innerHTML =
+    `${esc(ADV.note)}<br><b>${esc(ADV.disclaimer)}</b>`;
+}
+
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
 buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
+buildAdvFilters(); renderAdvisors();
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
 window.openDetail = openDetail; window.closeDetail = closeDetail;

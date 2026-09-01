@@ -1,0 +1,2528 @@
+{
+ "updated": "2026-09",
+ "note": "中山大学电子/微电子/集成电路四个学院的导师名录，逐条抄自各学院官网，研究方向为学院原文，未做归纳、未加任何主观评价。官网未列出的字段（邮箱、研究领域、个人主页）一律 null，不推测、不补全。本文件只收录官方公开信息，不收录任何来源的导师评价、打分或传闻。",
+ "disclaimer": "研究方向随课题组调整，招生资格逐年认定，务必以各学院当年招生公告和导师本人回复为准。",
+ "colleges": [
+  {
+   "id": "seit",
+   "school": "中山大学",
+   "name": "电子与信息工程学院（微电子学院）",
+   "campus": "广州·东校园",
+   "site": "https://seit.sysu.edu.cn/",
+   "source": "https://seit.sysu.edu.cn/faculty",
+   "sourceLabel": "专任教师",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "专任教师中的教授与副教授；助理教授、专职研究人员未收录",
+   "advisors": [
+    {
+     "name": "别亚青",
+     "title": "副教授",
+     "email": "bieyq@mail.sysu.edu.cn",
+     "areas": "近红外光电探测器件；近红外电致发光器件；硅基片上有源光电器件集成与互联",
+     "url": "https://seit.sysu.edu.cn/teacher/BieYaqing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "蔡鑫伦",
+     "title": "教授",
+     "email": null,
+     "areas": "III-V族和硅基光子集成器件的研究，主要围绕未来光电集成系统中的关键光电材料、器件及其集成子系统开展研究",
+     "url": "https://seit.sysu.edu.cn/teacher/CaiXinlun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "曹兆龙",
+     "title": "副教授",
+     "email": "caozhlong@mail.sysu.edu.cn",
+     "areas": "光纳米生物传感芯片（超构表面）；下一代中远红外及太赫兹技术；基于机器学习的光场调控；新型二维光电探测、调制器件",
+     "url": "https://seit.sysu.edu.cn/teacher/CaoZhaolong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "曹洹",
+     "title": "副教授",
+     "email": "caoh28@mail.sysu.edu.cn",
+     "areas": "参量下转换光源及量子点光源的多光子纠缠，线性与非线性光学，光量子计算、精密测量、量子网络、量子物理基础研究的实验检验",
+     "url": "https://seit.sysu.edu.cn/teacher/CaoHuan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈焕君",
+     "title": "教授",
+     "email": "chenhj8@mail.sysu.edu.cn",
+     "areas": "纳米光子与纳米光电子；极化激元物理、材料及光电器件研究；太赫兹及中远红外探测材料与器件",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenHuanjun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈惠琄",
+     "title": "副教授",
+     "email": "chenhuix5@mail.sysu.edu.cn",
+     "areas": "面向生物医学应用的智能传感系统，包括传感元件加工、嵌入式电路设计、硬件系统集成、软件开发、人工智能图像识别或信号识别；有创/无创式脑机接口、微针阵列传感系统、可穿戴设备、手术电子导管",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenHuixuan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈军",
+     "title": "教授",
+     "email": "stscjun@mail.sysu.edu.cn",
+     "areas": "真空微纳电子器件，研究方向包括大面积纳米冷阴极电子源，纳米冷阴极发光、显示、X射线源和探测器件",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenJun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈琨",
+     "title": "副教授",
+     "email": "chenk69@mail.sysu.edu.cn",
+     "areas": "二维半导体材料与异质结生长；材料生长机理研究，材料成长过程和相关电学性能第一性原理模拟计算；新型二维半导体材料微纳光电子器件研发；二维半导体材料新奇物理特性研究",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenKun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈立",
+     "title": "教授",
+     "email": "chenli55@mail.sysu.edu.cn",
+     "areas": "纠错编码技术，及其在数字通信系统中的应用",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenLi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈翔",
+     "title": "教授",
+     "email": "chenxiang@mail.sysu.edu.cn",
+     "areas": "5G/6G移动通信与物联网、卫星通信、人工智能驱动无线网络、大模型硬件加速器",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenXiang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈梓敏",
+     "title": "副教授",
+     "email": "chenzim8@mail.sysu.edu.cn",
+     "areas": "宽禁带、超宽禁带化合物半导体材料、芯片与应用；光电功能材料与应用；金属有机化学气相沉积技术",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenZimin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈钰杰",
+     "title": "教授",
+     "email": "chenyj69@mail.sysu.edu.cn",
+     "areas": "面向光通信、光计算、光学成像以及量子科技的微纳光子器件与集成光电芯片",
+     "url": "https://seit.sysu.edu.cn/teacher/ChenYujie",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "邓少芝",
+     "title": "教授",
+     "email": "stsdsz@mail.sysu.edu.cn",
+     "areas": "微电子学，光学工程，凝聚态物理；场致电子发射，平板显示技术、集成电路技术",
+     "url": "https://seit.sysu.edu.cn/teacher/DengShaozhi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "桂许春",
+     "title": "副教授",
+     "email": "guixch@mail.sysu.edu.cn",
+     "areas": "二维原子晶体材料与光电器件；柔性传感器件与电子皮肤；电磁波吸收与屏蔽器件",
+     "url": "https://seit.sysu.edu.cn/teacher/GuiXuchun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "郭建平",
+     "title": "教授",
+     "email": "guojp3@mail.sysu.edu.cn",
+     "areas": "模拟与数模混合集成电路（电源管理、能量收集、无线传能、激光雷达）",
+     "url": "https://seit.sysu.edu.cn/teacher/GuoJianping",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "韩羽",
+     "title": "副教授",
+     "email": "hany87@mail.sysu.edu.cn",
+     "areas": "硅基光电集成芯片，特别针对硅光芯片亟需集成化合物半导体有源光电子器件的核心问题，聚焦利用“侧向选区外延”方法突破“硅基III-V族激光器单片集成”这一关键研究瓶颈",
+     "url": "https://seit.sysu.edu.cn/teacher/HanYu",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "胡海峰",
+     "title": "教授",
+     "email": "huhaif@mail.sysu.edu.cn",
+     "areas": "计算机视觉、模式识别、人工智能、机器学习、大数据分析",
+     "url": "https://seit.sysu.edu.cn/teacher/HuHaifeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "胡鹏飞",
+     "title": "副教授",
+     "email": "hupf5@mail.sysu.edu.cn",
+     "areas": "微波毫米波天线与电路、集成射频前端设计",
+     "url": "https://seit.sysu.edu.cn/teacher/HuPengfei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄一峰",
+     "title": "副教授",
+     "email": null,
+     "areas": null,
+     "url": "https://seit.sysu.edu.cn/teacher/HuangYifeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄以华",
+     "title": "教授",
+     "email": "huangyih@mail.sysu.edu.cn",
+     "areas": "人工智能、机器学习的理论、方法及其硬件加速与实现技术；FPGA的开发技术以及专用数字集成电路与系统设计技术；现代通信技术与系统设计",
+     "url": "https://seit.sysu.edu.cn/teacher/HuangYihua",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄新烁",
+     "title": "副教授",
+     "email": "huangxsh35@mail.sysu.edu.cn",
+     "areas": "微创式多功能生物医学传感器研究：发展降维加工集成技术，构建微针阵列多参数传感器与可穿戴电路系统，实现同步动态监测皮下组织葡萄糖、炎症因子、离子等多化学指标",
+     "url": "https://seit.sysu.edu.cn/teacher/HuangXinshuo",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "江灏",
+     "title": "教授",
+     "email": "stsjiang@mail.sysu.edu.cn",
+     "areas": "材料外延生长；器件设计与制作",
+     "url": "https://seit.sysu.edu.cn/teacher/JiangHao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "江明",
+     "title": "教授",
+     "email": "jiangm7@mail.sysu.edu.cn",
+     "areas": "现代移动通信系统与技术，包括AI辅助通信、MIMO、OFDM、可见光通信、D2D、信号编解码与检测、信道估计、自适应数据搜索/优化、小区间干扰协调、多点协同通信、自组织网络等",
+     "url": "https://seit.sysu.edu.cn/teacher/JiangMing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "金运姜",
+     "title": "副教授",
+     "email": "jinyj5@mail.sysu.edu.cn",
+     "areas": "新型半导体材料和器件；纳米光子学和纳米电子学；低维（纳米、二维）材料和器件；新功能材料制备及应用",
+     "url": "https://seit.sysu.edu.cn/teacher/JinYunjiang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李凡",
+     "title": "教授",
+     "email": "lifan39@mail.sysu.edu.cn",
+     "areas": "高速相干光通信；大容量光无线融合通信系统；高速短距离光互连",
+     "url": "https://seit.sysu.edu.cn/teacher/LiFan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李显博",
+     "title": "副教授",
+     "email": "lixianbo3@mail.sysu.edu.cn",
+     "areas": "面向自动驾驶的激光雷达(LiDAR)芯片；面向6G应用的无线光通信(Li-Fi)芯片；面向物联网应用的电路与系统；模数混合集成电路",
+     "url": "https://seit.sysu.edu.cn/teacher/LiXianbo",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李元新",
+     "title": "副教授",
+     "email": "liyuanx@mail.sysu.edu.cn",
+     "areas": "天线理论与技术、微波技术",
+     "url": "https://seit.sysu.edu.cn/teacher/LiYuanxin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李朝晖",
+     "title": "教授",
+     "email": "lzhh88@mail.sysu.edu.cn",
+     "areas": "光通信系统、光子集成芯片及智能光信号处理",
+     "url": "https://seit.sysu.edu.cn/teacher/LiZhaohui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "梁凡",
+     "title": "副教授",
+     "email": "isslf@mail.sysu.edu.cn",
+     "areas": "图像/视频压缩编码及相关技术、多媒体通信终端及系统",
+     "url": "https://seit.sysu.edu.cn/teacher/LiangFan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "梁志禧",
+     "title": "副教授",
+     "email": "liangzhx25@mail.sysu.edu.cn",
+     "areas": "5G移动通信天线，电磁场数值计算，天线自动化测试系统",
+     "url": "https://seit.sysu.edu.cn/teacher/LiangZhixi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "梁孝慈",
+     "title": "副教授",
+     "email": "liangxc5@mail.sysu.edu.cn",
+     "areas": "氧化物薄膜晶体管和电解质栅晶体管的器件原理与特性调控，及其在神经形态计算和存储器中的应用",
+     "url": "https://seit.sysu.edu.cn/teacher/LiangXiaoci",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李慧阳",
+     "title": "副教授",
+     "email": "lihy589@mail.sysu.edu.cn",
+     "areas": "微波毫米波多功能滤波电路、毫米波前端芯片及系统",
+     "url": "https://seit.sysu.edu.cn/teacher/LiHuiyang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "林忠劲",
+     "title": "副教授",
+     "email": "linzhj56@mail.sysu.edu.cn",
+     "areas": "基于集成光电子技术的片上光学测量器件，比如片上偏振分析仪、超小型光谱仪；全片上多维度光场调控；基于铌酸锂薄膜光芯片的1MHz到1GHz调制速度的应用研究",
+     "url": "https://seit.sysu.edu.cn/teacher/LinZhongjin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘佰全",
+     "title": "副教授",
+     "email": "liubq33@mail.sysu.edu.cn",
+     "areas": "半导体器件及集成、半导体器件物理领域（融合机器学习、仿真模型等），包括薄膜器件、光电材料与器件、发光与显示器件、微纳结构电子光子与器件、纳米光子学",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuBaiquan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘川",
+     "title": "教授",
+     "email": "liuchuan5@mail.sysu.edu.cn",
+     "areas": "氧化物薄膜晶体管（Oxide TFT）、有机场效应晶体管（OFET）；围绕铟镓锌氧等氧化物半导体材料和有机半导体材料，开展薄膜晶体管器件的真空和印刷制备、缺陷物理、稳定性提升及单元电路研究",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuChuan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘飞",
+     "title": "教授",
+     "email": "liufei@mail.sysu.edu.cn",
+     "areas": "微电子与固体电子学（新型光电纳米器件的制作及其工作特性研究）；凝聚态物理（拓扑绝缘体纳米结构的表面物性及机制研究）；材料物理与化学",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuFei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘洁",
+     "title": "教授",
+     "email": "liujie47@mail.sysu.edu.cn",
+     "areas": "光子计算与大容量光互连通信两个方向，致力于光学原理与人工智能技术的结合；探索统计物理过程启发的计算新范式，研究光物理过程与神经网络的映射机制，并研制相应光电子芯片与系统",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuJie",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘菊华",
+     "title": "教授",
+     "email": "liujh33@mail.sysu.edu.cn",
+     "areas": "5G/6G通信；天线与微波射频应用；无线应用系统设计与人工智能应用",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuJuhua",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘立林",
+     "title": "教授",
+     "email": "liullin@mail.sysu.edu.cn",
+     "areas": "可见光通信及水下无线光通信（关键器件及系统集成）；光场三维显示技术与系统；可靠性工程（失效分析、系统可靠性）",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuLilin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘正勇",
+     "title": "教授",
+     "email": "liuzhengy@mail.sysu.edu.cn",
+     "areas": "高性能新型光信息传感器件及系统",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuZhengyong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘扬",
+     "title": "教授",
+     "email": "liuy69@mail.sysu.edu.cn",
+     "areas": "宽禁带III族氮化物（GaN）功率半导体材料与器件",
+     "url": "https://seit.sysu.edu.cn/teacher/LiuYang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李杨",
+     "title": "教授",
+     "email": "liyang328@mail.sysu.edu.cn",
+     "areas": "基于集成光学的精密测量、集成铌酸锂光子学、集成零折射率超构材料",
+     "url": "https://seit.sysu.edu.cn/teacher/LiYang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陆凯",
+     "title": "副教授",
+     "email": "lukai86@mail.sysu.edu.cn",
+     "areas": "天线理论，芯片封装集成天线技术，织物天线技术，广角扫描相控阵技术，MIMO多天线技术，卫星天线技术，射频/微波/毫米波测量技术，机器学习辅助天线分析与设计",
+     "url": "https://seit.sysu.edu.cn/teacher/LuKai",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "卢星",
+     "title": "教授",
+     "email": "lux86@mail.sysu.edu.cn",
+     "areas": "宽禁带半导体、微纳电子与光电子器件、MEMS集成芯片等",
+     "url": "https://seit.sysu.edu.cn/teacher/LuXing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吕超",
+     "title": "教授",
+     "email": "lvchao@mail.sysu.edu.cn",
+     "areas": "光纤通信，分布式光纤传感，光学性能监测，短距离光通信系统，光纤传感器",
+     "url": "https://seit.sysu.edu.cn/teacher/LvChao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吕泽升",
+     "title": "副教授",
+     "email": "lvzesh@mail.sysu.edu.cn",
+     "areas": "Ⅲ族氮化物、宽禁带半导体；光电探测、成像与集成",
+     "url": "https://seit.sysu.edu.cn/teacher/lvzesheng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "孟祥雨",
+     "title": "副教授",
+     "email": "mengxy26@mail.sysu.edu.cn",
+     "areas": "硅基毫米波及太赫兹通信集成电路技术；集成电路EDA技术",
+     "url": "https://seit.sysu.edu.cn/teacher/MengXiangyu",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "明方飞",
+     "title": "教授",
+     "email": "mingff@mail.sysu.edu.cn",
+     "areas": "表面/界面物理；二维范德华半导体及器件；机器学习与原子制造",
+     "url": "https://seit.sysu.edu.cn/teacher/Mingfangfei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "裴艳丽",
+     "title": "教授",
+     "email": "peiyanli@mail.sysu.edu.cn",
+     "areas": "超宽禁带氧化物半导体外延生长、大功率电力电子器件设计与制造、光电器件设计与制造",
+     "url": "https://seit.sysu.edu.cn/teacher/PeiYanli",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "秦宗",
+     "title": "副教授",
+     "email": "qinzong@mail.sysu.edu.cn",
+     "areas": "光学、算法、图像、视觉、器件共同驱动的人机光电信息交互",
+     "url": "https://seit.sysu.edu.cn/teacher/QinZong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "邵磊",
+     "title": "教授",
+     "email": "shaolei5@mail.sysu.edu.cn",
+     "areas": "纳米光子学、等离激元、光刻技术、片上纳米光源",
+     "url": "https://seit.sysu.edu.cn/teacher/ShaoLei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "佘峻聪",
+     "title": "教授",
+     "email": "shejc@mail.sysu.edu.cn",
+     "areas": "微纳电子器件与器件物理、微纳加工技术与工艺、微纳加工装备及部件",
+     "url": "https://seit.sysu.edu.cn/teacher/SheJuncong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "沈岩",
+     "title": "教授",
+     "email": "shenyan7@mail.sysu.edu.cn",
+     "areas": "真空微纳电子光电子与器件",
+     "url": "https://seit.sysu.edu.cn/teacher/ShenYan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "粟涛",
+     "title": "副教授",
+     "email": "sutao@mail.sysu.edu.cn",
+     "areas": "数字集成电路设计、数字集成电路射频电磁分析",
+     "url": "https://seit.sysu.edu.cn/teacher/SuTao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "孙伟",
+     "title": "教授",
+     "email": "sunwei@mail.sysu.edu.cn",
+     "areas": "信息安全处理与隐秘通信；数字媒体与VR技术；软件工程与数据空间技术",
+     "url": "https://seit.sysu.edu.cn/teacher/SunWei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "唐帅",
+     "title": "副教授",
+     "email": "tangsh58@mail.sysu.edu.cn",
+     "areas": "场发射电子源研究与装备应用（电子显微镜、芯片检测/加工设备、低能电子衍射）；纳米材料原位SEM/TEM电学、热学性质研究；低维纳米材料",
+     "url": "https://seit.sysu.edu.cn/teacher/TangShuai",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王冰",
+     "title": "副教授",
+     "email": "wangb266@mail.sysu.edu.cn",
+     "areas": "三五族化合物半导体的异质外延生长，及其与硅光、微电子系统的混合/异质集成技术",
+     "url": "https://seit.sysu.edu.cn/teacher/WangBing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王大伟",
+     "title": "教授",
+     "email": "wangdw9@mail.sysu.edu.cn",
+     "areas": "经典-量子融合光通信",
+     "url": "https://seit.sysu.edu.cn/teacher/WangDawei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王钢",
+     "title": "教授",
+     "email": "stswangg@mail.sysu.edu.cn",
+     "areas": "宽禁带氧化物半导体薄膜材料及器件外延制备技术、电子器件三维异构集成芯片3D打印制造技术、半导体材料高端装备研发等方向",
+     "url": "https://seit.sysu.edu.cn/teacher/WangGang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王凯",
+     "title": "教授",
+     "email": "wangkai23@mail.sysu.edu.cn",
+     "areas": "传感与成像技术；场耦合薄膜晶体管及其应用：生物医疗传感与成像、光学指纹识别、能量采集、可穿戴电子以及电子皮肤等；类神经突触器件和忆阻器",
+     "url": "https://seit.sysu.edu.cn/teacher/WangKai",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王瑞军",
+     "title": "副教授",
+     "email": "wangrj26@mail.sysu.edu.cn",
+     "areas": "光电集成芯片，半导体激光器芯片，中红外光电子",
+     "url": "https://seit.sysu.edu.cn/teacher/WangRuijun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王玺钧",
+     "title": "副教授",
+     "email": "wangxijun@mail.sysu.edu.cn",
+     "areas": "面向信息新鲜度的智能物联网；基于多智能体强化学习的无人机协作；联邦学习和联邦强化学习；6G通信感知一体化",
+     "url": "https://seit.sysu.edu.cn/teacher/WangXijun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王自鑫",
+     "title": "教授",
+     "email": "wangzix@mail.sysu.edu.cn",
+     "areas": "微弱电信号检测与应用技术、电路系统应用技术、机器人控制技术，具体包括SOC、FPGA、PCB与ASIC设计技术及相关的仿真、自动化测试技术",
+     "url": "https://seit.sysu.edu.cn/teacher/WangZixin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "闻远辉",
+     "title": "副教授",
+     "email": "wenyh56@mail.sysu.edu.cn",
+     "areas": "信息光场调控技术创新和应用研究，在时空多维度光调控器件及其在全光交换等领域的应用积累了丰富的产学研结合研究经验",
+     "url": "https://seit.sysu.edu.cn/teacher/WenYuanhui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吴进",
+     "title": "副教授",
+     "email": "wujin8@mail.sysu.edu.cn",
+     "areas": "面向人机交互和具身智能的柔性传感器、力学/触觉传感、电生理传感、柔性/穿戴式/可拉伸电子器件、嵌入式传感电路、深度学习算法、AI+传感器等",
+     "url": "https://seit.sysu.edu.cn/teacher/WuJin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "伍沛然",
+     "title": "副教授",
+     "email": "wupr3@mail.sysu.edu.cn",
+     "areas": "无线宽带移动通信技术，具体包括：非正交多址接入（NOMA）、物理层新波形(NOW)，全双工通信(Full-duplex)，频域信道均衡(FDE)、认知无线网络(CRN)等",
+     "url": "https://seit.sysu.edu.cn/teacher/WuPeiran",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "夏明华",
+     "title": "教授",
+     "email": "xiamingh@mail.sysu.edu.cn",
+     "areas": "机器学习、人工智能及其在信号处理及无线通信中的应用；5G/6G无线通信系统关键技术：3D网络架构、大规模MIMO、毫米波技术、小蜂窝网络等；物联网技术及应用；无线能量传输/能量收集技术",
+     "url": "https://seit.sysu.edu.cn/teacher/XiaMinghua",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谢曦",
+     "title": "教授",
+     "email": "xiexi27@mail.sysu.edu.cn",
+     "areas": "先进智能传感集成系统和具身智能系统，包括传感元件加工、嵌入式电路设计、硬件系统集成、软件开发、人工智能图像识别或信号识别；基于微纳结构与高灵敏纳米材料的微针/微电极阵列传感器",
+     "url": "https://seit.sysu.edu.cn/teacher/XieXi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "许宁生",
+     "title": "教授",
+     "email": null,
+     "areas": null,
+     "url": "https://seit.sysu.edu.cn/teacher/XuNingsheng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨柏儒",
+     "title": "教授",
+     "email": "yangboru@mail.sysu.edu.cn",
+     "areas": "电泳电子纸基础机理研究与产业化拓展；聚焦非极性介质中微纳颗粒的界面调控开展电泳显示底层机理研究，拓展电子纸在智能防伪、多模态显示、智能控温等高价值应用",
+     "url": "https://seit.sysu.edu.cn/teacher/YangBoru",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨楠",
+     "title": "副教授",
+     "email": null,
+     "areas": "性能实现：MIMO多天线，滤波天线，芯片封装天线，透明天线；天线类型：介质谐振器天线，透镜天线，贴片天线，偶极子天线，微波毫米波无源电路等",
+     "url": "https://seit.sysu.edu.cn/teacher/YangNan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "喻颖",
+     "title": "教授",
+     "email": "yuying26@mail.sysu.edu.cn",
+     "areas": "面向光通信、光互联、无线通信等应用的半导体量子点激光器，混合集成光发射芯片；面向光量子计算、量子存储等量子信息技术应用的半导体量子点量子光源；半导体量子限制材料",
+     "url": "https://seit.sysu.edu.cn/teacher/YuYing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张佰君",
+     "title": "教授",
+     "email": "zhbaij@mail.sysu.edu.cn",
+     "areas": "宽禁带GaN基半导体发光材料与器件；微纳尺度GaN基发光器件；半导体生物传感器；GaN基太赫兹器件",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangBaijun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张斌",
+     "title": "教授",
+     "email": "zhangbin5@mail.sysu.edu.cn",
+     "areas": "硅基异质集成光电子器件，专注于新一代信息处理的光电子集成非线性材料与器件研制及其在光互联、光感知和光传能领域的应用研究",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangBin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张东",
+     "title": "副教授",
+     "email": "zhangd@mail.sysu.edu.cn",
+     "areas": "利用视觉传感器和应变传感器采集人体的姿态、表情和关节皮肤应变信息，基于多模态信号处理理论对面部表情、头部姿态、注视方向、运动状态进行识别",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangDong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张木水",
+     "title": "副教授",
+     "email": "zhangmsh@mail.sysu.edu.cn",
+     "areas": "高速电子系统的硬件电路设计，包括PCB、封装和3D IC的信号完整性、电源完整性和电磁兼容",
+     "url": "https://seit.sysu.edu.cn/teacher/zhangMushui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张旗",
+     "title": "副教授",
+     "email": "zhqi26@mail.sysu.edu.cn",
+     "areas": "新一代无线移动通信网、非正交多址接入、通信感知一体化、空中计算、无线信息与能量的同时传输",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangQi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张彦峰",
+     "title": "教授",
+     "email": "zhangyf33@mail.sysu.edu.cn",
+     "areas": "硅基光电子器件研究；基于硅和氮化硅光波导的新型光学相控阵",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangYanfeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张一明",
+     "title": "副教授",
+     "email": "zhangyim9@mail.sysu.edu.cn",
+     "areas": "电磁场与微波技术方向，包括天线理论与设计、微波毫米波无源器件理论与研究",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangYiming",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张宇",
+     "title": "教授",
+     "email": "stszhyu@mail.sysu.edu.cn",
+     "areas": "真空纳微电子学，微波太赫兹波辐射源器件，微波集成电路，场发射冷阴极电子器件及应用，一维二维纳米材料与器件（石墨烯，碳纳米管，二维材料）",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangYu",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张志鹏",
+     "title": "副教授",
+     "email": null,
+     "areas": "光电探测与成像器件研究（X射线、紫外、可见光，应用于医疗成像和空间探测等）；CT成像装备关键技术研究（平板X射线源、平板X射线探测器、CT成像系统和成像方法等）",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangZhipeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张俊威",
+     "title": "副教授",
+     "email": "zhangjw253@mail.sysu.edu.cn",
+     "areas": "短距离光互连通信系统；模分/空分复用通信系统；通信感知一体化系统；水下无线光通信系统",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhangJunwei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "郑少勇",
+     "title": "教授",
+     "email": "zhengshaoy@mail.sysu.edu.cn",
+     "areas": "面向下一代无线应用的微波毫米波器件理论与设计",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhengShaoyong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "郑泽波",
+     "title": "副教授",
+     "email": "zhengzb5@mail.sysu.edu.cn",
+     "areas": "范德华材料及其微纳结构的中红外—太赫兹新奇光学特性；高分辨近场光学成像与光谱技术；中红外—太赫兹光学/光电微纳器件",
+     "url": "https://seit.sysu.edu.cn/teacher/ZhengZebo",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "余思远",
+     "title": "教授",
+     "email": null,
+     "areas": "集成光电子器件及其在光通信系统与网络中的应用。面向光通信、光互联中的应用需求，从基本物理原理出发，研究创新集成光电子器件（PIC）",
+     "url": "https://seit.sysu.edu.cn/teacher/YuSiyuan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 85
+  },
+  {
+   "id": "sic",
+   "school": "中山大学",
+   "name": "集成电路学院",
+   "campus": "深圳校区",
+   "site": "https://sic.sysu.edu.cn/",
+   "source": "https://sic.sysu.edu.cn/members/index.htm",
+   "sourceLabel": "师资队伍",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "教授、双聘教授、副教授、助理教授；博士后未收录",
+   "advisors": [
+    {
+     "name": "王中风",
+     "title": "教授",
+     "email": "wangzf83@mail.sysu.edu.cn",
+     "areas": "现代纠错码设计与实现、高速有线和无线通信系统；人工智能算法与硬件架构协同优化；后量子加密（PQC）与计算机体系架构安全",
+     "url": null,
+     "note": "国家高层次人才",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "徐建明",
+     "title": "教授",
+     "email": "xujianming@mail.sysu.edu.cn",
+     "areas": "光电融合的异质异构集成，高精度感知技术，智能微系统集成等",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈弟虎",
+     "title": "教授",
+     "email": "stscdh@mail.sysu.edu.cn",
+     "areas": "集成电路设计方法、SoC数字芯片设计；深度学习及其硬件加速器研究与应用；纳米功能材料、微纳传感器件与生物芯片",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "方文啸",
+     "title": "教授",
+     "email": "fangwenx@mail.sysu.edu.cn",
+     "areas": "集成电路及微系统EMC评估与建模、器件级强电磁环境效应、芯片级表面电磁场测量",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张曰理",
+     "title": "教授",
+     "email": "stszyl@mail.sysu.edu.cn",
+     "areas": "新型光电材料与MEMS传感器件；智能传感器设计及深度学习",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谢豪律",
+     "title": "教授",
+     "email": "xiehlv@mail.sysu.edu.cn",
+     "areas": "商业航天和具身智能通信、感知、智能计算一体化SoC数模混合芯片的设计和研究；商业航天和具身智能高性能无线通信算法和校准算法；基于3D空间计算的AI模型、算法研究及低功耗、低成本的芯片化研究",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李兴",
+     "title": "教授",
+     "email": "lixing59@mail.sysu.edu.cn",
+     "areas": "面向电源和传感的数模混合芯片设计",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "曹光植",
+     "title": "教授",
+     "email": "caogzh@mail.sysu.edu.cn",
+     "areas": "具身智能与自主智能系统；端到端自动驾驶；多模态大模型及其云端训练与端侧推理加速",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "姚清河",
+     "title": "教授",
+     "email": "yaoqhe@mail.sysu.edu.cn",
+     "areas": "多物理场保真模型、智能算法及应用",
+     "url": null,
+     "note": "双聘教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "虞志益",
+     "title": "教授",
+     "email": "yuzhiyi@mail.sysu.edu.cn",
+     "areas": "集成电路设计、处理器设计、基于非易失器件的电路与系统、面向人工智能深度学习等应用的电路与系统",
+     "url": null,
+     "note": "双聘教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "柯晴青",
+     "title": "教授",
+     "email": "keqingq@mail.sysu.edu.cn",
+     "areas": "压电晶圆(AlN、ZnO等)生长与薄膜传感器；微纳声学传感元件（PMUT、SAW等）与MEMS微系统；阵列超声换能器与成像检测以及定位应用等",
+     "url": null,
+     "note": "双聘教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘钢",
+     "title": "教授",
+     "email": "liugang82@mail.sysu.edu.cn",
+     "areas": "类脑与智能仿生器件、芯片和集成微系统等",
+     "url": null,
+     "note": "双聘教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "段权珍",
+     "title": "副教授",
+     "email": "duanqzh3@mail.sysu.edu.cn",
+     "areas": "围绕信号频率范围为kHz级别电容型和电压型传感器的适配专用集成电路（ASIC）及关键技术开展技术攻关：C/V转换电路、CDC、增益放大电路、模数转换电路、基准电路、电源管理电路等模拟集成电路设计技术",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "幸新鹏",
+     "title": "副教授",
+     "email": "xingxp@mail.sysu.edu.cn",
+     "areas": "混合信号、模拟集成电路与系统（包括模数转换器、数模转换器、时数转换器、带隙基准源、仪表放大器、LDO等）的设计、建模与测试",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "牟运",
+     "title": "副教授",
+     "email": "mouy5@mail.sysu.edu.cn",
+     "areas": "微系统异质异构集成、先进电子封装材料、光电器件与MEMS封装技术",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "冯浪",
+     "title": "副教授",
+     "email": "fenglang3@mail.sysu.edu.cn",
+     "areas": "电子设计自动化（EDA）布局布线、数字设计前后端联合优化",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "宋苏文",
+     "title": "副教授",
+     "email": "songsw5@mail.sysu.edu.cn",
+     "areas": "面向现代纠错码、量子纠错码的高性能算法与高速、低功耗、低延时硬件架构设计；面向5G/6G的基带信号处理；无损压缩算法与高速硬件实现；面向高速网络通信/短距互联的物理层关键技术",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "林哲",
+     "title": "副教授",
+     "email": "linzh235@mail.sysu.edu.cn",
+     "areas": "数字芯片设计自动化、可重构异构芯片与系统",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王美琪",
+     "title": "副教授",
+     "email": "wangmq53@mail.sysu.edu.cn",
+     "areas": "跨层协同的AI芯片设计与新兴应用加速；基于大模型的电路与智能系统自动化设计",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "廖思宇",
+     "title": "副教授",
+     "email": "liaosy36@mail.sysu.edu.cn",
+     "areas": "高性能的深度学习模型训练与推理算法；特定算法的并行计算设计实现，CUDA/SSE等；生成式人工智能在通讯、医疗、艺术等方面的应用；嵌入式深度学习模型部署",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "彭勃",
+     "title": "副教授",
+     "email": "pengb57@mail.sysu.edu.cn",
+     "areas": "光电融合封装技术，封装可靠性与仿真，触觉传感及表界面力学等方向",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李晓璐",
+     "title": "副教授",
+     "email": "lixlu8@mail.sysu.edu.cn",
+     "areas": "基于人工智能的电路与系统设计，主要面向电源管理及能耗优化",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄莹",
+     "title": "副教授",
+     "email": "huangy888@mail.sysu.edu.cn",
+     "areas": "基于微纳制造的太赫兹波、微波动态功能器件研究；面向感算一体集成电路的MEMS与超材料异质异构微系统研究",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王书润",
+     "title": "副教授",
+     "email": "wangshr27@mail.sysu.edu.cn",
+     "areas": "具身智能、机器视觉表示、图像视频编码",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李莎莎",
+     "title": "助理教授",
+     "email": "lishsh89@mail.sysu.edu.cn",
+     "areas": "光电芯片及异构集成技术、新型纳米光电器件",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王华春",
+     "title": "助理教授",
+     "email": "wanghch36@mail.sysu.edu.cn",
+     "areas": "面向生物医疗应用的植入式生物电子器件、微纳加工以及半导体器件的异质集成技术、宽禁带铝镓氮基深紫外发光器件的透明电极",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "毛文东",
+     "title": "助理教授",
+     "email": "maowd@mail.sysu.edu.cn",
+     "areas": "面向人工智能应用的高效算法设计/优化与高性能硬件处理器研究",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 27
+  },
+  {
+   "id": "mst",
+   "school": "中山大学",
+   "name": "微电子科学与技术学院",
+   "campus": "珠海校区",
+   "site": "https://mst.sysu.edu.cn/",
+   "source": "https://mst.sysu.edu.cn/teacher",
+   "sourceLabel": "专任教师",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "专任教师全部（教授、副教授、助理教授）",
+   "advisors": [
+    {
+     "name": "柯晴青",
+     "title": "教授",
+     "email": "keqingq@mail.sysu.edu.cn",
+     "areas": "智能材料与低功耗器件研发、传感器及MEMS微系统、精密驱动与振动控制、多模态高分辨率成像（光声、超声等)与系统集成",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李云初",
+     "title": "教授",
+     "email": "liyunchu@mail.sysu.edu.cn",
+     "areas": "高性能低功耗模拟/数模混合集成电路设计，高速高精度ADC/DAC数据转换器，无线射频接收发射链路集成，模拟电路及通信相关数字信号处理，高速时钟和数据接口电路",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "徐建明",
+     "title": "教授",
+     "email": "xujianming@mail.sysu.edu.cn",
+     "areas": "光电融合的高速集成芯片制作工艺与高速光电共封装技术研究",
+     "url": null,
+     "note": "双聘",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "虞志益",
+     "title": "教授",
+     "email": "yuzhiyi@mail.sysu.edu.cn",
+     "areas": "集成电路设计、处理器设计、基于非易失器件的电路与系统、面向人工智能深度学习等应用的电路与系统",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王中风",
+     "title": "教授",
+     "email": "wangzf83@mail.sysu.edu.cn",
+     "areas": "现代纠错码设计与实现、高速有线和无线通信系统；人工智能算法与硬件架构协同优化；后量子加密（PQC）与计算机体系架构安全",
+     "url": null,
+     "note": "双聘",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "赵毓斌",
+     "title": "教授",
+     "email": "zhaoyb23@mail.sysu.edu.cn",
+     "areas": "无线感知、室内定位、信息融合",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "蔡琳琳",
+     "title": "副教授",
+     "email": "caillin3@mail.sysu.edu.cn",
+     "areas": "集成电路互连线可靠性研究，先进集成技术热管理，集成芯片辐照效应及加固设计",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈虎",
+     "title": "副教授",
+     "email": "chenh793@mail.sysu.edu.cn",
+     "areas": "具身智能计算架构，深度学习模型优化，实时处理器体系结构",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈庆明",
+     "title": "副教授",
+     "email": "chenqm28@mail.sysu.edu.cn",
+     "areas": "以信息和通信技术为基础的光子芯片研究，包括光波导放大器芯片、集成激光器芯片，光波导传感器芯片等",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈汪勇",
+     "title": "副教授",
+     "email": "chenwangy@mail.sysu.edu.cn",
+     "areas": "集成电路可靠性设计，先进集成技术热管理，AI赋能集成电路EDA",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "官众",
+     "title": "副教授",
+     "email": "guanzh23@mail.sysu.edu.cn",
+     "areas": "基于机器学习、神经网络和AI大模型的芯片后端物理建模与量化仿真，以及相关EDA软件研发",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "胡建国",
+     "title": "副教授",
+     "email": "hujguo@mail.sysu.edu.cn",
+     "areas": "集成电路设计、电子设计自动化、人工智能等",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄健",
+     "title": "副教授",
+     "email": "huangj573@mail.sysu.edu.cn",
+     "areas": "非挥发性存储芯片、存储系统设计及其应用；新型存算一体器件及电路设计；新型半导体器件材料",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄晓",
+     "title": "副教授",
+     "email": "huangx@mail.sysu.edu.cn",
+     "areas": "电路与系统",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄媛",
+     "title": "副教授",
+     "email": "huangy723@mail.sysu.edu.cn",
+     "areas": "微纳真空电子器件、微纳加工集成、柔性可穿戴电子器件及系统集成、储能器件",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄展锋",
+     "title": "副教授",
+     "email": "huangzhf25@mail.sysu.edu.cn",
+     "areas": "高性能光电传感器、近红外探测及成像、光电神经突触器件与机器视觉、纳米材料与薄膜制备、半导体器件界面调控",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "冀晓斌",
+     "title": "副教授",
+     "email": "jixiaob@mail.sysu.edu.cn",
+     "areas": "小型化软体机器人；软体可穿戴智能装置；软体触觉反馈器件与机理研究；新型软体传感、驱动器",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李焱",
+     "title": "副教授",
+     "email": "liyan329@mail.sysu.edu.cn",
+     "areas": "微纳光电子器件，硫系相变材料，有源超表面，集成空间光场调控技术",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "沐浩然",
+     "title": "副教授",
+     "email": "muhr3@mail.sysu.edu.cn",
+     "areas": "类脑光电子器件、类脑光子学器件、多维光场感知器件",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "亓庚浈",
+     "title": "副教授",
+     "email": "qigzh@mail.sysu.edu.cn",
+     "areas": "模拟射频集成电路设计，射频微波发射机、接收机、功率放大器以及前端模块设计等",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "孙翊淋",
+     "title": "副教授",
+     "email": "sunylin7@mail.sysu.edu.cn",
+     "areas": "新型低维半导体器件设计及其功能化研究，仿生神经形态器件设计及其性能调控策略研究，智能感知器件设计及其多模态协同感知机制研究",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谭力源",
+     "title": "副教授",
+     "email": "tanly29@mail.sysu.edu.cn",
+     "areas": "微型机器人、微型无线传感器、微纳加工制造、微流体",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王明羽",
+     "title": "副教授",
+     "email": "wangmingyu@mail.sysu.edu.cn",
+     "areas": "数字集成电路设计、计算机体系结构，包括：多核/众核处理器（CPU）、智能处理器（GPU）、存算一体和芯粒互联网络等",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "肖明",
+     "title": "副教授",
+     "email": "xiaom37@mail.sysu.edu.cn",
+     "areas": "新型存储器器件与人工智能应用、新型传感器器件与物联网应用、纳米材料器件与纳米微纳加工",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "肖山林",
+     "title": "副教授",
+     "email": "xiaoshlin@mail.sysu.edu.cn",
+     "areas": "数字集成电路设计、类脑芯片、新型计算架构、人工智能算法/硬件协同设计",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "许适溥",
+     "title": "副教授",
+     "email": "xushp7@mail.sysu.edu.cn",
+     "areas": "低维材料表界面工程及其传感应用、高特异性气敏传感器研制及其痕量气体检测、铁电材料开发及其器件化应用",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "徐政基",
+     "title": "副教授",
+     "email": "xuzhj27@mail.sysu.edu.cn",
+     "areas": "微纳光电子器件与制造工艺、平面光学、人工智能纳米光子学、测量与传感器技术",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨志强",
+     "title": "副教授",
+     "email": "Yangzhq35@mail.sysu.edu.cn",
+     "areas": "微纳光电子器件与制造工艺、光电子集成芯片、片上声光调控器件",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "朱璐",
+     "title": "副教授",
+     "email": "zhulu5@mail.sysu.edu.cn",
+     "areas": "光探测阵列与芯片、纳米制备和集成、光电神经形态器件与芯片、可穿戴光电子健康器件、海洋光电传感",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "朱述炎",
+     "title": "副教授",
+     "email": "zhushy27@mail.sysu.edu.cn",
+     "areas": "硅基毫米波及太赫兹天线、6G无线通信、毫米波射频集成电路、深度学习、嵌入式系统、集成微纳米光学芯片",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘垚",
+     "title": "助理教授",
+     "email": "liuyao25@mail.sysu.edu.cn",
+     "areas": "数字集成电路设计、硬件安全、计算机安全、网络系统",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "罗华煌",
+     "title": "助理教授",
+     "email": "luohh23@mail.sysu.edu.cn",
+     "areas": "微纳加工制造、MEMS传感器研发、微纳系统设计、传感器集成",
+     "url": null,
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 32
+  },
+  {
+   "id": "sece",
+   "school": "中山大学",
+   "name": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "site": "https://sece.sysu.edu.cn/",
+   "source": "https://sece.sysu.edu.cn/zs/zs01/1419224.htm",
+   "sourceLabel": "研究生导师招生专业方向情况表",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "来源是招生方向表而非师资页，因此有硕导/博导之分和招生方向，但没有邮箱、职称和研究领域简介",
+   "advisors": [
+    {
+     "name": "丛玉来",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 10 人工智能"
+     ]
+    },
+    {
+     "name": "刘京京",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "085400 电子信息 · 03 集成电路工程",
+      "140100 集成电路科学与工程 · 69 不分方向"
+     ]
+    },
+    {
+     "name": "吴亿锋",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "吴建新",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "周炳朋",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "周颖",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 14 电磁空间安全",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "唐燕群",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "姜园",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "孙仕海",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "孙兴华",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "岁江伟",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "庄宏成",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 17 未来无线通信",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "张云",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "张志勇",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "张月",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "张瑞茂",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 10 人工智能"
+     ]
+    },
+    {
+     "name": "张磊",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "张艳",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "张金钡",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "张鹏",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "徐世友",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "戴志强",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "朱祥维",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "李杜",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "李聪端",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 17 未来无线通信",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "段佳",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "段克清",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 12 先进成像与信息处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "焦中兴",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "王亮",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 10 人工智能"
+     ]
+    },
+    {
+     "name": "王伟",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 14 电磁空间安全",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "王小青",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "王涛",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 14 电磁空间安全",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "王青松",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "王鲁平",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "田彪",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "罗志勇",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 17 未来无线通信",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "罗锴",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "肖钰",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "胡俊",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "胡豪涛",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "蔡科超",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "袁雪林",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 16 北斗综合智能导航",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "詹文",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "谢恺",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "谢洪途",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "赖涛",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "赵磊",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "邓天伟",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）",
+      "140100 集成电路科学与工程 · 69 不分方向"
+     ]
+    },
+    {
+     "name": "邓振淼",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "郭瑞",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "郭裕兰",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 10 人工智能"
+     ]
+    },
+    {
+     "name": "陈曾平",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 11 智能信号处理与目标识别",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "饶彬",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 14 电磁空间安全",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "高庆",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 10 人工智能"
+     ]
+    },
+    {
+     "name": "魏玺章",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "黄小红",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 13 智能光电感知",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    },
+    {
+     "name": "黄晓霞",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 18 智能通信与信号处理",
+      "085400 电子信息 · 02 通信工程（含宽带网络、移动通信等）"
+     ]
+    },
+    {
+     "name": "黄海风",
+     "title": null,
+     "email": null,
+     "areas": null,
+     "url": null,
+     "note": null,
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": [
+      "081000 信息与通信工程 · 15 空间信息获取与智能处理",
+      "085400 电子信息 · 01 新一代电子信息技术（含量子技术等）"
+     ]
+    }
+   ],
+   "tracks": [
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "11 智能信号处理与目标识别",
+     "boshi": 9,
+     "shuoshi": 2
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "12 先进成像与信息处理",
+     "boshi": 4,
+     "shuoshi": 2
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "13 智能光电感知",
+     "boshi": 5,
+     "shuoshi": 5
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "14 电磁空间安全",
+     "boshi": 4,
+     "shuoshi": 0
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "15 空间信息获取与智能处理",
+     "boshi": 6,
+     "shuoshi": 0
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "16 北斗综合智能导航",
+     "boshi": 4,
+     "shuoshi": 2
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "17 未来无线通信",
+     "boshi": 3,
+     "shuoshi": 0
+    },
+    {
+     "degree": "学术型",
+     "code": "081000",
+     "program": "信息与通信工程",
+     "direction": "18 智能通信与信号处理",
+     "boshi": 7,
+     "shuoshi": 3
+    },
+    {
+     "degree": "专业型",
+     "code": "085400",
+     "program": "电子信息",
+     "direction": "01 新一代电子信息技术（含量子技术等）",
+     "boshi": 32,
+     "shuoshi": 8
+    },
+    {
+     "degree": "专业型",
+     "code": "085400",
+     "program": "电子信息",
+     "direction": "02 通信工程（含宽带网络、移动通信等）",
+     "boshi": 9,
+     "shuoshi": 3
+    },
+    {
+     "degree": "专业型",
+     "code": "085400",
+     "program": "电子信息",
+     "direction": "03 集成电路工程",
+     "boshi": 1,
+     "shuoshi": 0
+    },
+    {
+     "degree": "专业型",
+     "code": "085400",
+     "program": "电子信息",
+     "direction": "10 人工智能",
+     "boshi": 2,
+     "shuoshi": 3
+    },
+    {
+     "degree": "学术型",
+     "code": "140100",
+     "program": "集成电路科学与工程",
+     "direction": "69 不分方向",
+     "boshi": 2,
+     "shuoshi": 0
+    }
+   ],
+   "count": 58
+  }
+ ],
+ "total": 202
+}

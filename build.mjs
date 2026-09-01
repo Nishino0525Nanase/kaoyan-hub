@@ -28,6 +28,7 @@ const files = {
   __DATA_CHANGES__: 'data/exam-changes.json',
   __DATA_TRACKS__:  'data/track-catalog.json',
   __DATA_QUOTA__:   'data/quota-retest.json',
+  __DATA_ADV__:     'data/advisors.json',
 };
 
 /* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */
@@ -57,6 +58,7 @@ function freshness() {
     { key: '改考预警',      file: 'exam-changes.json',           updated: rd('exam-changes.json').updated, note: '每年 4—9 月是各校发布改考公告的高峰' },
     { key: '逐专业数据',    file: 'programs.json',               updated: progs.updated, note: `最新收录到 ${newestLine || '—'} 年复试线` },
     { key: '方向目录',      file: 'track-catalog.json',          updated: rd('track-catalog.json').updated, note: '0854 二级目录、MPAcc 说明' },
+    { key: '导师名录',      file: 'advisors.json',               updated: rd('advisors.json').updated, note: '各学院官网师资页，随学院更新而变动' },
   ].map(x => {
     const mo = monthsSince(x.updated);
     return { ...x, monthsAgo: mo, grade: grade(mo) };
