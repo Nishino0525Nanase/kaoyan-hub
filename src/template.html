@@ -130,6 +130,123 @@ table.dormt td.fee{color:var(--accent);font-weight:600;white-space:nowrap}
 .dormcav{margin:10px 0 0;padding:9px 11px;border-radius:8px;background:var(--surface-2);font-size:12px;color:var(--text-2);line-height:1.6}
 .dormcav b{color:var(--text-1)}
 
+
+/* ---------- 玻璃拟态基调 ---------- */
+:root{
+  --grad:linear-gradient(135deg,#2a78d6 0%,#5b4bd6 55%,#8e3ad0 100%);
+  --glass:rgba(255,255,255,.62);
+  --glass-line:rgba(255,255,255,.55);
+  --glass-blur:saturate(180%) blur(18px);
+  --ring:0 0 0 3px rgba(42,120,214,.18);
+}
+:root[data-theme="dark"]{
+  --grad:linear-gradient(135deg,#3987e5 0%,#6f5cf0 55%,#a855f7 100%);
+  --glass:rgba(30,30,28,.62);
+  --glass-line:rgba(255,255,255,.09);
+  --ring:0 0 0 3px rgba(57,135,229,.28);
+}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+  --grad:linear-gradient(135deg,#3987e5 0%,#6f5cf0 55%,#a855f7 100%);
+  --glass:rgba(30,30,28,.62);--glass-line:rgba(255,255,255,.09);
+  --ring:0 0 0 3px rgba(57,135,229,.28);
+}}
+
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(52rem 30rem at 12% -8%, rgba(42,120,214,.14), transparent 62%),
+    radial-gradient(46rem 28rem at 92% 4%, rgba(142,58,208,.11), transparent 60%);
+}
+
+header{
+  position:sticky;top:0;z-index:40;
+  background:var(--glass);
+  -webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);
+  border-bottom:1px solid var(--glass-line);
+}
+.logo span{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.iconbtn{display:inline-flex;align-items:center;gap:6px;transition:transform .16s,box-shadow .16s,border-color .16s}
+.iconbtn:hover{transform:translateY(-1px)}
+.iconbtn svg{width:15px;height:15px;flex:none}
+.iconbtn.primary{
+  background:var(--grad);color:#fff;border-color:transparent;
+  box-shadow:0 2px 10px rgba(42,120,214,.28);
+}
+.iconbtn.primary:hover{box-shadow:0 4px 18px rgba(42,120,214,.4)}
+.iconbtn kbd{
+  font:inherit;font-size:10.5px;padding:1px 5px;border-radius:4px;
+  background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.3);
+}
+
+.tab{position:relative;transition:color .16s}
+.tab[aria-selected="true"]::after{
+  content:"";position:absolute;left:10px;right:10px;bottom:-1px;height:2px;
+  border-radius:2px;background:var(--grad);
+}
+
+.card{transition:transform .18s cubic-bezier(.2,.7,.3,1),box-shadow .18s,border-color .18s}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+
+.searchbox input:focus{outline:none;border-color:transparent;box-shadow:var(--ring)}
+
+/* ---------- 全局搜索浮层 ---------- */
+.gsmask{
+  position:fixed;inset:0;z-index:80;display:flex;justify-content:center;
+  padding:12vh 16px 16px;background:rgba(10,10,10,.34);
+  -webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+  animation:gsfade .16s ease-out;
+}
+@keyframes gsfade{from{opacity:0}to{opacity:1}}
+@keyframes gsrise{from{opacity:0;transform:translateY(-10px) scale(.985)}to{opacity:1;transform:none}}
+.gspanel{
+  width:min(680px,100%);max-height:74vh;display:flex;flex-direction:column;
+  border-radius:16px;overflow:hidden;border:1px solid var(--glass-line);
+  background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);
+  box-shadow:0 24px 64px rgba(0,0,0,.28);animation:gsrise .18s cubic-bezier(.2,.7,.3,1);
+}
+.gsinput{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--glass-line)}
+.gsinput svg{width:18px;height:18px;color:var(--text-3);flex:none}
+.gsinput input{
+  flex:1;border:0;background:transparent;font:inherit;font-size:15.5px;
+  color:var(--text-1);outline:none;min-width:0;
+}
+.gsclose{
+  border:1px solid var(--line);background:transparent;color:var(--text-3);
+  font:inherit;font-size:11px;padding:3px 8px;border-radius:6px;cursor:pointer;
+}
+.gsclose:hover{color:var(--text-1);border-color:var(--line-strong)}
+.gsres{overflow-y:auto;padding:6px}
+.gsgrp{font-size:11px;color:var(--text-3);padding:9px 12px 5px;letter-spacing:.04em}
+.gsit{
+  display:flex;align-items:baseline;gap:9px;padding:9px 12px;border-radius:9px;
+  cursor:pointer;font-size:13.5px;line-height:1.5;
+}
+.gsit:hover,.gsit.on{background:var(--accent-soft)}
+.gsit .t{color:var(--text-1);font-weight:600}
+.gsit .d{color:var(--text-3);font-size:12px;flex:1;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gsit .k{
+  font-size:10.5px;padding:1px 6px;border-radius:5px;flex:none;
+  border:1px solid var(--line);color:var(--text-3);
+}
+.gsempty{padding:34px 16px;text-align:center;color:var(--text-3);font-size:13.5px}
+.gsfoot{
+  padding:9px 14px;border-top:1px solid var(--glass-line);
+  font-size:11.5px;color:var(--text-3);display:flex;gap:4px;align-items:center;flex-wrap:wrap;
+}
+.gsfoot kbd{
+  font:inherit;font-size:10.5px;padding:1px 5px;border-radius:4px;
+  border:1px solid var(--line);color:var(--text-2);
+}
+@media (max-width:640px){.gsmask{padding:6vh 10px 10px}.gsit .d{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
 /* ---------- filters ---------- */
 .filters{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
 .searchbox{position:relative}
@@ -365,6 +482,9 @@ body.hasdock{padding-bottom:66px}
     <div class="hbar">
       <div class="logo">考研<span>择校</span>资料库</div>
       <div class="hspace"></div>
+      <button class="iconbtn primary" id="gsBtn" title="全局搜索（快捷键 /）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>搜索</span><kbd>/</kbd>
+      </button>
       <button class="iconbtn" id="themeBtn" title="切换主题">◐ 主题</button>
       <a class="iconbtn" id="repoLink" href="__REPO_URL__" target="_blank" rel="noopener">★ GitHub</a>
     </div>
@@ -380,6 +500,18 @@ body.hasdock{padding-bottom:66px}
     </nav>
   </div>
 </header>
+
+<div class="gsmask" id="gsMask" hidden>
+  <div class="gspanel" role="dialog" aria-label="全局搜索">
+    <div class="gsinput">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="gsQ" type="search" placeholder="搜学校、专业、代码、导师、研究方向、宿舍楼栋…" autocomplete="off">
+      <button class="gsclose" id="gsClose" aria-label="关闭">esc</button>
+    </div>
+    <div class="gsres" id="gsRes"></div>
+    <div class="gsfoot"><kbd>↑</kbd><kbd>↓</kbd> 选择　<kbd>Enter</kbd> 跳转　<kbd>esc</kbd> 关闭</div>
+  </div>
+</div>
 
 <main class="wrap">
 
@@ -1698,6 +1830,130 @@ function buildAdvFilters(){
   $('#advNote').innerHTML =
     `${esc(ADV.note)}<br><b>${esc(ADV.disclaimer)}</b>`;
 }
+
+
+/* ================= 全局搜索 =================
+   把五类数据摊成一个扁平索引，一次搜完。
+   命中后跳到对应面板，并把该面板自己的搜索框填上关键词——
+   这样浮层只负责「找到在哪」，具体筛选还是交给各面板原有的逻辑，
+   不重复实现一套。 */
+let GSIDX = null, gsSel = 0, gsHits = [];
+
+function gsBuild(){
+  if(GSIDX) return GSIDX;
+  const ix = [];
+  SCHOOLS.forEach(s => ix.push({
+    k:'院校', t:s.name,
+    d:[s.city, (s.tier||[]).join('/')].filter(Boolean).join(' · '),
+    hay:[s.name, s.city, s.province, s.region,
+         (s.tier||[]).join(' '), (s.aPlus||[]).join(' ')].filter(Boolean).join(' '),
+    go:{panel:'schools', q:s.name}
+  }));
+  PROG.records.forEach(r => ix.push({
+    k:'专业', t:`${r.school} ${r.name}`,
+    d:[r.code, r.college, (r.subjects||[]).map(x=>x.name).join('+')].filter(Boolean).join(' · '),
+    hay:[r.school, r.name, r.code, r.college,
+         (r.subjects||[]).map(x=>x.name+' '+(x.code||'')).join(' ')].filter(Boolean).join(' '),
+    go:{panel:'majors', q:r.school}
+  }));
+  ADV.colleges.forEach(col => col.advisors.forEach(a => ix.push({
+    k:'导师', t:a.name,
+    d:[col.name, a.title, a.areas || (a.directions||[]).join('；')].filter(Boolean).join(' · '),
+    hay:[a.name, a.title, a.areas, a.email, (a.directions||[]).join(' ')].filter(Boolean).join(' '),
+    go:{panel:'advisors', q:a.name}
+  })));
+  DORM.schools.forEach(sc => (sc.campuses||[]).forEach(c => c.rooms.forEach(r => ix.push({
+    k:'宿舍', t:`${sc.school} ${r.building}`,
+    d:`${c.name} · ${r.beds} 人间 · ${r.fee} 元/学年`,
+    hay:[sc.school, c.name, r.building, r.facilities, r.beds+'人间'].join(' '),
+    go:{panel:'advisors', q:sc.school}
+  }))));
+  (CHG.changes||[]).forEach(c => ix.push({
+    k:'改考', t:`${c.school} ${c.type || ''}`.trim(),
+    d:[c.year, c.scope, c.from && c.to ? `${c.from} → ${c.to}` : null]
+        .filter(Boolean).join(' · '),
+    hay:[c.school, c.type, c.scope, c.from, c.to, c.note, c.year].filter(Boolean).join(' '),
+    go:{panel:'changes', q:c.school}
+  }));
+  ix.forEach(x => x.hay = x.hay.toLowerCase());
+  GSIDX = ix;
+  return ix;
+}
+
+function gsSearch(q){
+  q = q.trim().toLowerCase();
+  if(!q) return [];
+  const terms = q.split(/\s+/).filter(Boolean);
+  const out = [];
+  for(const it of gsBuild()){
+    if(!terms.every(t => it.hay.includes(t))) continue;
+    // 标题里命中的排前面
+    it._s = it.t.toLowerCase().includes(terms[0]) ? 0 : 1;
+    out.push(it);
+    if(out.length > 400) break;
+  }
+  return out.sort((a,b) => a._s - b._s).slice(0, 40);
+}
+
+function gsRender(){
+  const host = $('#gsRes');
+  if(!gsHits.length){
+    host.innerHTML = $('#gsQ').value.trim()
+      ? '<div class="gsempty">没找到。试试学校名、专业代码、导师姓名或研究方向关键词。</div>'
+      : '<div class="gsempty">输入关键词开始搜索<br><span style="font-size:12px">院校 · 专业 · 导师 · 宿舍 · 改考预警，一次搜完</span></div>';
+    return;
+  }
+  let html = '', last = '';
+  gsHits.forEach((h, i) => {
+    if(h.k !== last){ html += `<div class="gsgrp">${esc(h.k)}</div>`; last = h.k; }
+    html += `<div class="gsit${i === gsSel ? ' on' : ''}" data-i="${i}">
+      <span class="t">${esc(h.t)}</span><span class="d">${esc(h.d || '')}</span>
+      <span class="k">${esc(h.k)}</span></div>`;
+  });
+  host.innerHTML = html;
+  host.querySelectorAll('.gsit').forEach(el => {
+    el.onclick = () => gsGo(gsHits[+el.dataset.i]);
+  });
+}
+
+function gsGo(hit){
+  if(!hit) return;
+  gsClose();
+  const tab = document.querySelector(`.tab[data-panel="${hit.go.panel}"]`);
+  if(tab) tab.click();
+  const box = {schools:'#q', majors:'#majQ', advisors:'#advQ'}[hit.go.panel];
+  if(box && $(box)){
+    $(box).value = hit.go.q;
+    $(box).dispatchEvent(new Event('input', {bubbles:true}));
+  }
+  const panel = $('#p-' + hit.go.panel);
+  if(panel) panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function gsOpen(){
+  $('#gsMask').hidden = false;
+  $('#gsQ').value = ''; gsHits = []; gsSel = 0; gsRender();
+  setTimeout(() => $('#gsQ').focus(), 20);
+}
+function gsClose(){ $('#gsMask').hidden = true; }
+
+$('#gsBtn').onclick = gsOpen;
+$('#gsClose').onclick = gsClose;
+$('#gsMask').onclick = e => { if(e.target.id === 'gsMask') gsClose(); };
+$('#gsQ').addEventListener('input', e => {
+  gsHits = gsSearch(e.target.value); gsSel = 0; gsRender();
+});
+$('#gsQ').addEventListener('keydown', e => {
+  if(e.key === 'ArrowDown'){ e.preventDefault(); gsSel = Math.min(gsSel + 1, gsHits.length - 1); gsRender(); }
+  else if(e.key === 'ArrowUp'){ e.preventDefault(); gsSel = Math.max(gsSel - 1, 0); gsRender(); }
+  else if(e.key === 'Enter'){ e.preventDefault(); gsGo(gsHits[gsSel]); }
+  else if(e.key === 'Escape'){ gsClose(); }
+});
+document.addEventListener('keydown', e => {
+  const tag = (e.target.tagName || '').toLowerCase();
+  if(e.key === '/' && tag !== 'input' && tag !== 'textarea'){ e.preventDefault(); gsOpen(); }
+  if(e.key === 'Escape' && !$('#gsMask').hidden) gsClose();
+});
 
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();

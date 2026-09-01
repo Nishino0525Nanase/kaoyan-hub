@@ -84,6 +84,14 @@ _seen_ne = set()
 base['notEligible'] = [x for x in not_eligible
                        if not (x['school'] in _seen_ne or _seen_ne.add(x['school']))]
 base['records'] = out
+
+# tracks 以 track-catalog.json 为准。
+# 之前 programs.json 里手写的那份只有 cs/fin 两条，而记录实际用了四个 track，
+# 结果 ee（379 条，最大的一组）和 acc 在页面上渲染成 undefined。
+_cat = json.load(open(os.path.join(D, 'track-catalog.json'), encoding='utf-8'))
+base['tracks'] = {k: v['label'] for k, v in _cat['tracks'].items()}
+base['trackShort'] = {k: v['short'] for k, v in _cat['tracks'].items()}
+
 from collections import Counter
 base['stats'] = {
     "programs": len(out),
