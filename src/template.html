@@ -113,6 +113,10 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
 
+.pend{font-size:11.5px;padding:1px 7px;border-radius:5px;border:1px dashed var(--line-strong);color:var(--text-3)}
+.lvnote{margin:0 0 12px;padding:9px 12px;border-radius:9px;background:var(--surface-2);
+  border:1px solid var(--line);font-size:12.5px;color:var(--text-2);line-height:1.6}
+
 /* ---------- 校区住宿 ---------- */
 details.dorm{border:1px solid var(--line);border-radius:10px;background:var(--surface-1);margin:0 0 12px;overflow:hidden}
 details.dorm>summary{cursor:pointer;padding:10px 14px;font-size:13.5px;color:var(--text-2);list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -527,6 +531,7 @@ body.hasdock{padding-bottom:66px}
     <div class="season" id="seasonHint2" hidden></div>
     <div class="freshbar" id="freshBar"></div>
 
+    <p class="lvnote" id="lvNote"></p>
     <div class="filters">
       <div class="searchbox">
         <span class="mag">⌕</span>
@@ -899,7 +904,9 @@ function renderSchools(){
       ${s.aPlus.length ? `<div class="aplus">${ap}</div>`
         : `<div class="muted">第四轮评估 A 类学科 ${s.aCount} 个${s.aCount?'':'（无）'}</div>`}
       <div class="sfoot">
-        <span class="meter"><span class="bars">${bars}</span>${esc(s.strength)} · A类 ${s.aCount}</span>
+        <span class="meter">${s.dataLevel === 'roster'
+            ? '<span class="pend">学科数据待补</span>'
+            : `<span class="bars">${bars}</span>${esc(s.strength)} · A类 ${s.aCount}`}</span>
         <span style="display:flex;gap:6px;align-items:center">
           <button class="det" type="button" data-det="${esc(s.name)}">详情${ps.length?` · ${ps.length} 专业`:''}</button>
           <a class="glink" href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网 ↗</a>
@@ -1357,7 +1364,8 @@ function renderCompare(){
     ['A+ 学科',    s => s.aPlus.length ? s.aPlus.map(a=>`<span class="ap">${esc(a)}</span>`).join(' ') : '<span class="muted">无</span>'],
     ['A+ 学科数',  s => `<span class="num">${s.aPlus.length}</span>`],
     ['A 类学科数', s => `<span class="num">${s.aCount}</span>`],
-    ['学科实力',   s => esc(s.strength)],
+    ['学科实力',   s => s.dataLevel === 'roster'
+        ? '<span class="pend">待补</span>' : esc(s.strength)],
     ['⚠ 改考提示', s => {
       const cs = chgBy.get(s.name) || [];
       if(!cs.length) return '<span class="muted">近三年未见变动记录</span>';
@@ -1965,6 +1973,13 @@ renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
 buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
 buildAdvFilters(); renderAdvisors();
+{
+  const L = DB.dataLevels || {};
+  if(L.roster) $('#lvNote').innerHTML =
+    `院校库共 <b>${DB.count}</b> 所：其中 <b>${L.full}</b> 所含第四轮学科评估数据与已验证的研招网址；` +
+    `另 <b>${L.roster}</b> 所目前只录了城市、分区与 985/211/双一流层次，` +
+    `标「学科数据待补」——是<b>还没查</b>，不是该校没有 A 类学科。`;
+}
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
 window.openDetail = openDetail; window.closeDetail = closeDetail;
