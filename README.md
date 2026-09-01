@@ -123,7 +123,8 @@ node build.mjs                  # 把 data/*.json 注入模板，生成 index.ht
 │   ├── template.html                # 页面模板（改样式和交互改这里）
 │   ├── make_schools.py              # 由原始调研数据生成 schools.json
 │   ├── merge_programs.py            # 合并各批 programs-*.json → programs.json
-│   └── build_advisors.py            # 由官网转录数据生成 advisors.json
+│   ├── build_advisors.py            # 由官网转录数据生成 advisors.json
+│   └── build_dorms.py               # 由信息公开网公示表生成 dorms.json
 ├── scripts/
 │   ├── check-links.mjs              # 链接体检（零依赖）
 │   └── watch-sources.mjs            # 数据源守望（零依赖）
@@ -142,6 +143,7 @@ node build.mjs                  # 把 data/*.json 注入模板，生成 index.ht
     ├── track-catalog.json           # 方向定义、0854 二级目录、MPAcc 说明
     ├── quota-retest.json            # 推免/统考名额拆分、复试细则
     ├── advisors.json                # 导师名录（各学院官网师资页原文转录）
+    ├── dorms.json                   # 校区住宿（学校信息公开网住宿费公示表）
     ├── watch-targets.json           # 数据源守望清单
     └── resources.json               # 资料链接与常识提示
 ```

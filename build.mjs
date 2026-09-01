@@ -29,6 +29,7 @@ const files = {
   __DATA_TRACKS__:  'data/track-catalog.json',
   __DATA_QUOTA__:   'data/quota-retest.json',
   __DATA_ADV__:     'data/advisors.json',
+  __DATA_DORM__:    'data/dorms.json',
 };
 
 /* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */
@@ -59,6 +60,7 @@ function freshness() {
     { key: '逐专业数据',    file: 'programs.json',               updated: progs.updated, note: `最新收录到 ${newestLine || '—'} 年复试线` },
     { key: '方向目录',      file: 'track-catalog.json',          updated: rd('track-catalog.json').updated, note: '0854 二级目录、MPAcc 说明' },
     { key: '导师名录',      file: 'advisors.json',               updated: rd('advisors.json').updated, note: '各学院官网师资页，随学院更新而变动' },
+    { key: '校区住宿',      file: 'dorms.json',                  updated: rd('dorms.json').updated, note: '学校信息公开网每年 7 月前后公示新学年标准' },
   ].map(x => {
     const mo = monthsSince(x.updated);
     return { ...x, monthsAgo: mo, grade: grade(mo) };

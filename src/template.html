@@ -113,6 +113,23 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
 
+/* ---------- 校区住宿 ---------- */
+details.dorm{border:1px solid var(--line);border-radius:10px;background:var(--surface-1);margin:0 0 12px;overflow:hidden}
+details.dorm>summary{cursor:pointer;padding:10px 14px;font-size:13.5px;color:var(--text-2);list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+details.dorm>summary::-webkit-details-marker{display:none}
+details.dorm>summary::before{content:"\25B8";color:var(--text-3);transition:transform .15s;display:inline-block}
+details.dorm[open]>summary::before{transform:rotate(90deg)}
+details.dorm>summary:hover{color:var(--text-1);background:var(--surface-2)}
+.dormrange{color:var(--accent);font-weight:600}
+.dormbody{padding:0 14px 13px;border-top:1px solid var(--line)}
+table.dormt{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:10px}
+table.dormt th{text-align:left;font-weight:600;color:var(--text-3);font-size:11.5px;padding:5px 8px 5px 0;border-bottom:1px solid var(--line);white-space:nowrap}
+table.dormt td{padding:6px 8px 6px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text-2)}
+table.dormt td.b{color:var(--text-1);font-weight:550}
+table.dormt td.fee{color:var(--accent);font-weight:600;white-space:nowrap}
+.dormcav{margin:10px 0 0;padding:9px 11px;border-radius:8px;background:var(--surface-2);font-size:12px;color:var(--text-2);line-height:1.6}
+.dormcav b{color:var(--text-1)}
+
 /* ---------- filters ---------- */
 .filters{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
 .searchbox{position:relative}
@@ -571,6 +588,7 @@ body.hasdock{padding-bottom:66px}
 <div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 
 <script id="data-adv" type="application/json">__DATA_ADV__</script>
+<script id="data-dorm" type="application/json">__DATA_DORM__</script>
 <script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
@@ -594,6 +612,7 @@ const TRACKS  = J('data-tracks');
 const FRESH   = J('data-fresh');
 const QUOTA   = J('data-quota');
 const ADV     = J('data-adv');
+const DORM    = J('data-dorm');
 /* 名额与复试细则的匹配。
    注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
    （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
@@ -1591,6 +1610,34 @@ function advCard(a, q){
     </div>`;
 }
 
+function dormBlock(campusId){
+  const c = DORM.campuses.find(x => x.id === campusId);
+  if(!c) return '';
+  const s = c.stats;
+  const rows = c.rooms.map(r => `<tr>
+      <td class="b">${esc(r.building)}</td>
+      <td>${r.beds} 人</td>
+      <td>${esc(r.area)}</td>
+      <td class="fee">${r.fee}</td>
+      <td>${esc(r.facilities)}</td>
+    </tr>`).join('');
+  return `<details class="dorm">
+    <summary>校区住宿：${esc(c.name)}　
+      <span class="dormrange">${s.min}–${s.max} 元/学年</span>
+      <span class="muted">${s.bedTypes.map(b => b + ' 人间').join(' / ')}　共 ${c.count} 种房型</span>
+    </summary>
+    <div class="dormbody">
+      <table class="dormt">
+        <tr><th>楼栋</th><th>房型</th><th>人均㎡</th><th>元/学年</th><th>设备条件</th></tr>
+        ${rows}
+      </table>
+      <p class="dormcav"><b>注意：</b>${esc(DORM.note)}<br>
+        ${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}<br>
+        来源：<a href="${esc(DORM.source)}" target="_blank" rel="noopener">${esc(DORM.sourceLabel)}</a>（${esc(DORM.updated)} 公示）</p>
+    </div>
+  </details>`;
+}
+
 function renderAdvisors(){
   const q = advState.q.trim();
   const host = $('#advBody');
@@ -1606,6 +1653,7 @@ function renderAdvisors(){
         <span class="muted">${list.length} / ${col.count} 人</span>
       </div>
       <p class="advmeta">${esc(col.scope)}　·　来源：<a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>（${esc(col.fetched)} 抓取）</p>
+      ${dormBlock(col.campusId)}
       <div class="advgrid">${list.map(a => advCard(a, q)).join('')}</div>
     </section>`;
   });
