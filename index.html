@@ -131,6 +131,8 @@ table.dormt td.fee{color:var(--accent);font-weight:600;white-space:nowrap}
 .dormcav b{color:var(--text-1)}
 
 
+[hidden]{display:none!important}
+
 /* ---------- 玻璃拟态基调 ---------- */
 :root{
   --grad:linear-gradient(135deg,#2a78d6 0%,#5b4bd6 55%,#8e3ad0 100%);
@@ -194,6 +196,9 @@ header{
 .searchbox input:focus{outline:none;border-color:transparent;box-shadow:var(--ring)}
 
 /* ---------- 全局搜索浮层 ---------- */
+/* [hidden] 是 UA 样式，会被下面的 display:flex 盖掉，
+   所以必须显式写一条同名更高特异度的规则，否则浮层永远可见。 */
+.gsmask[hidden]{display:none}
 .gsmask{
   position:fixed;inset:0;z-index:80;display:flex;justify-content:center;
   padding:12vh 16px 16px;background:rgba(10,10,10,.34);
