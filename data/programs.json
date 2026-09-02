@@ -12707,7 +12707,24 @@
    "name": "电子信息（物理学院·非全日制）",
    "degree": "专硕",
    "college": "物理学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "868",
+     "name": "半导体物理"
+    }
+   ],
    "lines": [],
    "seats": {
     "year": 2026,
@@ -12715,11 +12732,15 @@
     "tuimian": null,
     "tongkao": 10
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "非全日制用 085400 不分二级代码；2025 年校线表中未见该学院该代码，疑为 2026 新增",
    "sources": [
     {
      "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
      "official": true
     }
    ],
@@ -12729,7 +12750,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文；该目录中物理学院 085400 未单列，科目按同院 085401 的 868 半导体物理，仅供参考"
   },
   {
    "school": "合肥工业大学",
@@ -12738,7 +12760,24 @@
    "name": "电子信息（电气与自动化工程学院·非全日制）",
    "degree": "专硕",
    "college": "电气与自动化工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "834",
+     "name": "自动控制原理"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -12753,11 +12792,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 15,
+    "plan": 10,
     "tuimian": null,
-    "tongkao": 15
+    "tongkao": 15,
+    "note": "非全日制"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "⚠ 该学院非全日制用 085400 不分二级代码，全日制则用 085406",
    "sources": [
     {
@@ -12767,6 +12807,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -12775,7 +12819,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -12806,7 +12851,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "卓越工程师学院为新设学院，2023 年招生目录 PDF 中尚无该学院条目，初试科目待学校发布新目录后核实——空缺是还没查到，不是不招"
   },
   {
    "school": "合肥工业大学",
@@ -12815,7 +12861,24 @@
    "name": "新一代电子信息技术（微电子学院）",
    "degree": "专硕",
    "college": "微电子学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "865",
+     "name": "电子科学与技术综合"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -12830,11 +12893,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 61,
+    "plan": 75,
     "tuimian": null,
-    "tongkao": 61
+    "tongkao": 61,
+    "note": "全日制，学院 55 人 + 智能院 20 人"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "全日制",
    "sources": [
     {
@@ -12844,36 +12908,9 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "tuition": null,
-   "years": null,
-   "scale": 500
-  },
-  {
-   "school": "合肥工业大学",
-   "track": "ee",
-   "code": "085401",
-   "name": "新一代电子信息技术（物理学院）",
-   "degree": "专硕",
-   "college": "物理学院",
-   "subjects": [],
-   "lines": [],
-   "seats": {
-    "year": 2026,
-    "plan": 34,
-    "tuimian": null,
-    "tongkao": 34
-   },
-   "dataYear": 2026,
-   "changes": "全日制；⚠ 同一个 085401 代码，微电子学院和物理学院都在招，报名要选对学院；2025 年校线表中未见该学院该代码，疑为 2026 新增",
-   "sources": [
+    },
     {
-     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
      "official": true
     }
    ],
@@ -12883,7 +12920,62 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
+  },
+  {
+   "school": "合肥工业大学",
+   "track": "ee",
+   "code": "085401",
+   "name": "新一代电子信息技术（物理学院）",
+   "degree": "专硕",
+   "college": "物理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "868",
+     "name": "半导体物理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "year": 2026,
+    "plan": 15,
+    "tuimian": null,
+    "tongkao": 34,
+    "note": "全日制，学院 15 人"
+   },
+   "dataYear": "2023",
+   "changes": "全日制；⚠ 同一个 085401 代码，微电子学院和物理学院都在招，报名要选对学院；2025 年校线表中未见该学院该代码，疑为 2026 新增",
+   "sources": [
+    {
+     "url": "https://yjszs.hfut.edu.cn/2026/0320/c13533a317910/pagem.htm",
+     "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "tuition": null,
+   "years": null,
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -12892,7 +12984,24 @@
    "name": "通信工程",
    "degree": "专硕",
    "college": "计算机与信息学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "833",
+     "name": "信号分析与处理综合"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -12907,11 +13016,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 39,
+    "plan": 60,
     "tuimian": null,
-    "tongkao": 39
+    "tongkao": 39,
+    "note": "全日制，学院 30 + 智能院 29 + 工研院 1"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "全日制",
    "sources": [
     {
@@ -12921,6 +13031,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -12929,7 +13043,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -12938,7 +13053,24 @@
    "name": "集成电路工程（非全日制）",
    "degree": "专硕",
    "college": "微电子学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "865",
+     "name": "电子科学与技术综合"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -12955,9 +13087,10 @@
     "year": 2026,
     "plan": 25,
     "tuimian": null,
-    "tongkao": 25
+    "tongkao": 25,
+    "note": "非全日制，学院 25 人"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "⚠ 085403 在合工大只有非全日制，想读全日制集成电路要报微电子学院的 085401",
    "sources": [
     {
@@ -12967,6 +13100,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -12975,7 +13112,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13006,7 +13144,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "卓越工程师学院为新设学院，2023 年招生目录 PDF 中尚无该学院条目，初试科目待学校发布新目录后核实——空缺是还没查到，不是不招"
   },
   {
    "school": "合肥工业大学",
@@ -13015,7 +13154,24 @@
    "name": "计算机技术（计算机与信息学院）",
    "degree": "专硕",
    "college": "计算机与信息学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13030,11 +13186,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 41,
+    "plan": 44,
     "tuimian": null,
-    "tongkao": 41
+    "tongkao": 41,
+    "note": "全日制，学院 26 + 智能院 18"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "全日制",
    "sources": [
     {
@@ -13044,6 +13201,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13052,7 +13213,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13061,7 +13223,24 @@
    "name": "软件工程（非全日制）",
    "degree": "专硕",
    "college": "计算机与信息学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13078,9 +13257,10 @@
     "year": 2026,
     "plan": 15,
     "tuimian": null,
-    "tongkao": 15
+    "tongkao": 15,
+    "note": "非全日制"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "⚠ 085405 在合工大只有非全日制；另有单独考试 5 人",
    "sources": [
     {
@@ -13090,6 +13270,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13098,7 +13282,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13129,7 +13314,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "卓越工程师学院为新设学院，2023 年招生目录 PDF 中尚无该学院条目，初试科目待学校发布新目录后核实——空缺是还没查到，不是不招"
   },
   {
    "school": "合肥工业大学",
@@ -13138,7 +13324,24 @@
    "name": "控制工程（电气与自动化工程学院）",
    "degree": "专硕",
    "college": "电气与自动化工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "834",
+     "name": "自动控制原理"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13153,11 +13356,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 30,
+    "plan": 62,
     "tuimian": null,
-    "tongkao": 30
+    "tongkao": 30,
+    "note": "全日制，学院 34 + 智能院 28"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "全日制",
    "sources": [
     {
@@ -13167,6 +13371,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13175,7 +13383,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13184,7 +13393,24 @@
    "name": "仪器仪表工程",
    "degree": "专硕",
    "college": "仪器科学与光电工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "854",
+     "name": "仪器技术综合"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13199,11 +13425,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 102,
+    "plan": 91,
     "tuimian": null,
-    "tongkao": 102
+    "tongkao": 102,
+    "note": "全日制，学院 73 + 智能院 15 + 光电院 3"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "合工大 0854 里统考名额最大的一个（102 人，全日制）。该校公布的分专业招生计划已扣除推免，故此数即统考名额",
    "sources": [
     {
@@ -13213,6 +13440,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13221,7 +13452,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13252,7 +13484,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "卓越工程师学院为新设学院，2023 年招生目录 PDF 中尚无该学院条目，初试科目待学校发布新目录后核实——空缺是还没查到，不是不招"
   },
   {
    "school": "合肥工业大学",
@@ -13261,7 +13494,24 @@
    "name": "光电信息工程（非全日制）",
    "degree": "专硕",
    "college": "仪器科学与光电工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "854",
+     "name": "仪器技术综合"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13276,11 +13526,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 10,
+    "plan": 15,
     "tuimian": null,
-    "tongkao": 10
+    "tongkao": 10,
+    "note": "非全日制"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "⚠ 085408 在合工大只有非全日制；另有单独考试 1 人",
    "sources": [
     {
@@ -13290,6 +13541,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13298,7 +13553,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13329,7 +13585,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "卓越工程师学院为新设学院，2023 年招生目录 PDF 中尚无该学院条目，初试科目待学校发布新目录后核实——空缺是还没查到，不是不招"
   },
   {
    "school": "合肥工业大学",
@@ -13338,7 +13595,24 @@
    "name": "人工智能（计算机与信息学院）",
    "degree": "专硕",
    "college": "计算机与信息学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "301",
+     "name": "数学一"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13355,9 +13629,10 @@
     "year": 2026,
     "plan": 46,
     "tuimian": null,
-    "tongkao": 46
+    "tongkao": 46,
+    "note": "全日制，学院 28 + 智能院 18"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "全日制；计算机与信息学院里名额最多的 0854 方向，比 085404 计算机技术还多",
    "sources": [
     {
@@ -13367,6 +13642,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13375,7 +13654,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "合肥工业大学",
@@ -13384,7 +13664,24 @@
    "name": "网络与信息安全（非全日制）",
    "degree": "专硕",
    "college": "数学学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "863",
+     "name": "高级语言程序设计"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -13399,11 +13696,12 @@
    ],
    "seats": {
     "year": 2026,
-    "plan": 12,
+    "plan": 10,
     "tuimian": null,
-    "tongkao": 12
+    "tongkao": 12,
+    "note": "非全日制，方向：网络安全与密码／量子计算与安全／应用安全"
    },
-   "dataYear": 2026,
+   "dataYear": "2023",
    "changes": "⚠ 罕见：085412 挂在数学学院，且只有非全日制",
    "sources": [
     {
@@ -13413,6 +13711,10 @@
     {
      "url": "https://yjszs.hfut.edu.cn/2025/0319/c13524a310804/pagem.htm",
      "official": true
+    },
+    {
+     "url": "http://yjszs.hfut.edu.cn/_upload/article/files/d1/5a/4a20a87c4642b45c6285759ffd2c/1e831326-f556-468c-8969-862e53349308.pdf",
+     "official": true
     }
    ],
    "confidence": "official",
@@ -13421,7 +13723,8 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "note": "初试科目取自学校 2023 年招生目录 PDF 原文"
   },
   {
    "school": "吉林大学",
@@ -32882,7 +33185,7 @@
    },
    "合肥工业大学": {
     "n": 18,
-    "sub": 0,
+    "sub": 13,
     "line": 11
    },
    "吉林大学": {
@@ -33093,7 +33396,7 @@
   },
   "totals": {
    "records": 604,
-   "withSubjects": 333,
+   "withSubjects": 346,
    "withLines": 509,
    "withRetestBooks": 9,
    "withRetestSubjects": 21
