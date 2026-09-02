@@ -113,6 +113,12 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
 
+details.rbook{margin-top:7px;font-size:12.5px}
+details.rbook>summary{cursor:pointer;color:var(--accent);list-style:none}
+details.rbook>summary::-webkit-details-marker{display:none}
+details.rbook>summary::before{content:"\25B8 ";transition:transform .15s;display:inline-block}
+details.rbook[open]>summary::before{transform:rotate(90deg)}
+details.rbook ul{margin:6px 0 0;padding-left:18px;color:var(--text-2);line-height:1.65}
 .dgap{font-size:11.5px;padding:1px 7px;border-radius:5px;border:1px solid var(--line);color:var(--text-3);white-space:nowrap}
 .dgap.full{border-color:var(--good);color:var(--good)}
 .dgap.part{border-color:var(--warn);color:var(--warn)}
@@ -1221,7 +1227,7 @@ function majMatch(r){
   if(r.track !== MAJ_TRACK) return false;
   if(majState.deg.size  && !majState.deg.has(r.degree)) return false;
   if(majState.code.size && !majState.code.has(r.code))  return false;
-  if(majState.has.has('有复试线')   && !r.lines.length) return false;
+  if(majState.has.has('有复试线')   && !(r.lines||[]).length) return false;
   if(majState.has.has('有招录数据') && !(r.retest || r.admitted || (r.seats && r.seats.plan))) return false;
   if(majState.has.has('官方来源')   && r.confidence !== 'official') return false;
   if(!majState.q) return true;
@@ -1237,7 +1243,7 @@ function renderMajors(){
   const t = TRACKS.tracks[MAJ_TRACK];
   const all = PROG.records.filter(r => r.track === MAJ_TRACK);
   const rows = all.filter(majMatch).sort((a,b) => {
-    const la = a.lines[0] ? a.lines[0].score : -1, lb = b.lines[0] ? b.lines[0].score : -1;
+    const la = (a.lines||[])[0] ? a.lines[0].score : -1, lb = (b.lines||[])[0] ? b.lines[0].score : -1;
     return lb - la;
   });
   $('#majSub').textContent = `${t.desc}　本方向共收录 ${all.length} 个项目，当前显示 ${rows.length} 个。`;
@@ -1319,17 +1325,21 @@ function renderMajors(){
   </div>`;
   $('#majCatalog').innerHTML = cat;
 
-  const lineCell = r => r.lines.length
+  const lineCell = r => (r.lines||[]).length
     ? r.lines.map(l => `<div style="margin-bottom:3px"><span class="muted">${l.year}</span> <b class="num">${l.score}</b>${subLine(l)}</div>`).join('')
     : '<span class="muted">未收录</span>';
   const noteCell = r => {
-    if(!r.lines.length) return '<span class="muted">—</span>';
+    if(!(r.lines||[]).length) return '<span class="muted">—</span>';
     const l = r.lines[0];
     return kindTag(l) + (l.note ? `<div class="muted" style="font-size:11px;margin-top:4px">${esc(l.note)}</div>` : '');
   };
-  const subjCell = r => r.subjects.length
+  const bookCell = r => (r.retestBooks || []).length
+    ? `<details class="rbook"><summary>复试参考书 ${r.retestBooks.length} 本</summary>
+        <ul>${r.retestBooks.map(b => `<li>${esc(b)}</li>`).join('')}</ul></details>`
+    : '';
+  const subjCell = r => ((r.subjects||[]).length
     ? r.subjects.map(x => `<div class="muted">${x.code?`<b style="color:var(--accent)">${esc(x.code)}</b> `:''}${esc(x.name)}</div>`).join('')
-    : '<span class="muted">未收录</span>';
+    : '<span class="muted">未收录</span>') + bookCell(r);
 
   $('#majTable').innerHTML =
     `<thead><tr><th>院校 · 学院</th><th>专业</th><th>学位</th><th>初试科目</th>
