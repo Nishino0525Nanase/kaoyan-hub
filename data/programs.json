@@ -33178,6 +33178,106 @@
    "admitted": null,
    "applied": null,
    "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "北京信息科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "803",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 94,
+    "exam": 92,
+    "tuimian": 2,
+    "note": "拟招 94，其中统考 92、推免 2"
+   },
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析",
+   "note": "研究方向 00 不区分研究方向；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "北京信息科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "803",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 20,
+    "exam": 18,
+    "tuimian": 2,
+    "note": "拟招 20，其中统考 18、推免 2"
+   },
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路与电子技术",
+   "note": "研究方向 01 自主智能控制；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
   }
  ],
  "notEligible": [
@@ -33374,6 +33474,11 @@
     "n": 12,
     "sub": 7,
     "line": 12
+   },
+   "北京信息科技大学": {
+    "n": 2,
+    "sub": 2,
+    "line": 0
    },
    "北京大学": {
     "n": 3,
@@ -33682,11 +33787,25 @@
    }
   },
   "totals": {
-   "records": 614,
-   "withSubjects": 346,
+   "records": 616,
+   "withSubjects": 348,
    "withLines": 509,
    "withRetestBooks": 9,
-   "withRetestSubjects": 21
+   "withRetestSubjects": 23
+  },
+  "sourceAccess": {
+   "note": "各校招生目录的可达性差异很大，逐所试出来的结论：",
+   "ok": [
+    "电子科技大学：目录 PDF 挂在 xxgkw.uestc.edu.cn/__local/ 下，可直接取",
+    "合肥工业大学：PDF 在 yjszs.hfut.edu.cn/_upload/ 下，含科目与招生计划",
+    "南京大学电科院：网页正文是图片，但附件 PDF 可取（复试参考书目）",
+    "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下"
+   ],
+   "blocked": [
+    "西北工业大学：目录页正文只写「见附件」，附件链接提取不到",
+    "西南交通大学：整站为 vatuu 查询系统，表格由 JS 填充",
+    "北京科技大学：逐专业页面把目录做成 image.png，无文字层"
+   ]
   }
  }
 }
