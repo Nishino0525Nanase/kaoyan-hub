@@ -113,6 +113,8 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
 
+.rsub{margin-top:6px;font-size:12px;color:var(--text-2);line-height:1.5}
+.rsub b{color:var(--good);font-weight:600}
 details.rbook{margin-top:7px;font-size:12.5px}
 details.rbook>summary{cursor:pointer;color:var(--accent);list-style:none}
 details.rbook>summary::-webkit-details-marker{display:none}
@@ -1333,10 +1335,15 @@ function renderMajors(){
     const l = r.lines[0];
     return kindTag(l) + (l.note ? `<div class="muted" style="font-size:11px;margin-top:4px">${esc(l.note)}</div>` : '');
   };
-  const bookCell = r => (r.retestBooks || []).length
-    ? `<details class="rbook"><summary>复试参考书 ${r.retestBooks.length} 本</summary>
-        <ul>${r.retestBooks.map(b => `<li>${esc(b)}</li>`).join('')}</ul></details>`
-    : '';
+  const bookCell = r => {
+    let out = '';
+    if(r.retestSubjects)
+      out += `<div class="rsub"><b>复试</b> ${esc(r.retestSubjects)}</div>`;
+    if((r.retestBooks || []).length)
+      out += `<details class="rbook"><summary>复试参考书 ${r.retestBooks.length} 本</summary>
+        <ul>${r.retestBooks.map(b => `<li>${esc(b)}</li>`).join('')}</ul></details>`;
+    return out;
+  };
   const subjCell = r => ((r.subjects||[]).length
     ? r.subjects.map(x => `<div class="muted">${x.code?`<b style="color:var(--accent)">${esc(x.code)}</b> `:''}${esc(x.name)}</div>`).join('')
     : '<span class="muted">未收录</span>') + bookCell(r);

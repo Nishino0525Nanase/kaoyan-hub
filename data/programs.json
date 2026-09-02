@@ -25829,7 +25829,24 @@
    "name": "新一代电子信息技术",
    "degree": "专硕",
    "college": "信息与通信工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -25837,11 +25854,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": null,
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -25856,7 +25877,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -25865,7 +25888,24 @@
    "name": "新一代电子信息技术",
    "degree": "专硕",
    "college": "电子科学与工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "813/858",
+     "name": "01方向 电磁场与电磁波 / 02方向 信号与系统"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -25873,11 +25913,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": null,
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -25892,7 +25936,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "01方向 微波技术基础；02方向 电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -25901,7 +25947,24 @@
    "name": "新一代电子信息技术（深圳高研院）",
    "degree": "专硕",
    "college": "深圳高等研究院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "813/818",
+     "name": "01方向 电磁场与电磁波 / 02方向 固体物理"
+    }
+   ],
    "lines": [
     {
      "year": 2026,
@@ -25914,15 +25977,19 @@
      "note": "院线"
     }
    ],
-   "dataYear": 2026,
+   "dataYear": "2024",
    "changes": "2026 年另一方向 315 分，两方向各拟录取 6 人",
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
      "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
     }
    ],
-   "confidence": "secondary",
+   "confidence": "official",
    "seats": {
     "year": null,
     "plan": null,
@@ -25933,7 +26000,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "01方向 微波技术基础；02方向 电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -25942,7 +26011,24 @@
    "name": "通信工程",
    "degree": "专硕",
    "college": "信息与通信工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -25950,11 +26036,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": null,
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -25969,7 +26059,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -25978,7 +26070,24 @@
    "name": "集成电路工程",
    "degree": "专硕",
    "college": "集成电路科学与工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "832/866",
+     "name": "01方向 微电子器件 / 02方向 固体电子学基础"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -25986,11 +26095,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": "该院另一方向 2025 年院线 325 分",
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -26005,7 +26118,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -26014,7 +26129,24 @@
    "name": "集成电路工程（深圳高研院）",
    "degree": "专硕",
    "college": "深圳高等研究院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "832",
+     "name": "微电子器件"
+    }
+   ],
    "lines": [
     {
      "year": 2026,
@@ -26028,15 +26160,19 @@
     }
    ],
    "admitted": 24,
-   "dataYear": 2026,
+   "dataYear": "2024",
    "changes": "复试人数深研院合并公布，无法拆分到方向",
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
      "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
     }
    ],
-   "confidence": "secondary",
+   "confidence": "official",
    "seats": {
     "year": null,
     "plan": null,
@@ -26046,7 +26182,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -26055,7 +26193,24 @@
    "name": "控制工程",
    "degree": "专硕",
    "college": "自动化工程学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "839",
+     "name": "自动控制原理"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -26063,11 +26218,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": "比该校 085401/085402 高 45 分",
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -26082,7 +26241,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "微机原理和数字电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -26091,7 +26252,24 @@
    "name": "控制工程（深圳高研院）",
    "degree": "专硕",
    "college": "深圳高等研究院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "839",
+     "name": "自动控制原理"
+    }
+   ],
    "lines": [
     {
      "year": 2026,
@@ -26105,15 +26283,19 @@
     }
    ],
    "admitted": 18,
-   "dataYear": 2026,
+   "dataYear": "2024",
    "changes": "深研院控制工程是电子科大 0854 里最高的线",
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
      "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
     }
    ],
-   "confidence": "secondary",
+   "confidence": "official",
    "seats": {
     "year": null,
     "plan": null,
@@ -26123,7 +26305,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "数字电路与嵌入式系统",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "电子科技大学",
@@ -26132,7 +26316,24 @@
    "name": "大数据技术与工程",
    "degree": "专硕",
    "college": "资源与环境学院",
-   "subjects": [],
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
    "lines": [
     {
      "year": 2025,
@@ -26140,11 +26341,15 @@
      "note": "院线，单科 50/50/75/75"
     }
    ],
-   "dataYear": 2025,
+   "dataYear": "2024",
    "changes": null,
    "sources": [
     {
      "url": "https://yz.uestc.edu.cn/info/1082/5536.htm",
+     "official": true
+    },
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
      "official": true
     }
    ],
@@ -26159,7 +26364,9 @@
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "数字信号处理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
    "school": "福州大学",
@@ -31841,6 +32048,546 @@
     "《模拟电子技术基础》(第七版) 康华光主编，高等教育出版社"
    ],
    "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "信息与通信工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "813/858",
+     "name": "01方向 电磁场与电磁波 / 02方向 信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "01方向 微波技术基础；02方向 电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "机械与电气工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "815",
+     "name": "电路分析基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "自动控制原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "光电科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "840/813",
+     "name": "01方向 物理光学 / 02方向 电磁场与电磁波"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析基础",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "航空航天学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "物理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子科学技术研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "01方向 数字逻辑设计；02方向 计算机专业综合；03方向 模拟电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "通信抗干扰全国重点实验室",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "通信原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "深圳高等研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "通信原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "基础与前沿研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "866/840/820",
+     "name": "01方向 固体电子学基础 / 02方向 物理光学 / 03方向 计算机专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "专业英语",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "深圳高等研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "自动化工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "861",
+     "name": "信号系统与测量基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "微机原理和数字电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   }
  ],
  "notEligible": [
@@ -32279,8 +33026,8 @@
     "line": 6
    },
    "电子科技大学": {
-    "n": 9,
-    "sub": 0,
+    "n": 21,
+    "sub": 21,
     "line": 9
    },
    "福州大学": {
@@ -32345,10 +33092,11 @@
    }
   },
   "totals": {
-   "records": 592,
-   "withSubjects": 312,
+   "records": 604,
+   "withSubjects": 333,
    "withLines": 509,
-   "withRetestBooks": 9
+   "withRetestBooks": 9,
+   "withRetestSubjects": 21
   }
  }
 }
