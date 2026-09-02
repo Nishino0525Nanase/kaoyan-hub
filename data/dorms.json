@@ -1,6 +1,6 @@
 {
  "updated": "2026-09",
- "note": "各校住宿费与宿舍条件，逐条抄自学校官方渠道（信息公开公示表 / 研究生入学须知 / 招生章程），单位一律为元/生·学年，不含水电费。各校公示粒度差别很大：有的逐楼栋公示（granularity=building），有的只给一个区间（granularity=range）——本库如实保留这个差别，不去补齐。",
+ "note": "各校住宿费与宿舍条件，逐条抄自学校官方渠道（信息公开公示表 / 研究生入学须知 / 招生章程），单位一律为元/生·学年，不含水电费。各校公示粒度差别很大：有的逐楼栋公示（granularity=building），有的只给一个区间（granularity=range）——本库如实保留这个差别，不去补齐。　各校公示粒度共三种：building=逐楼栋、range=仅价格区间、policy=只公布是否提供住宿而无价格。",
  "caveats": [
   "住宿费与学费分开缴纳，招生简章里的学费不含住宿。",
   "研究生宿舍的具体分配（几人间、哪个园区）多由学校统筹安排，不是报考时能选的。",
@@ -774,10 +774,31 @@
     "max": 2480,
     "bedTypes": []
    }
+  },
+  {
+   "school": "西北工业大学",
+   "granularity": "policy",
+   "audience": "全日制硕士研究生",
+   "confidence": "official",
+   "dataYear": "2025",
+   "source": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+   "sourceLabel": "西北工业大学2025年硕士研究生招生简章",
+   "sourcePage": null,
+   "fetched": "2026-09-01",
+   "policy": "学校为全日制硕士研究生（学制内）提供住宿",
+   "tuition": "全日制硕士 8000 元/生·年",
+   "scope": "简章只写明「提供住宿」这一政策，未公示房型、面积与住宿费标准，因此本条 granularity=policy，既不是逐楼栋也不是价格区间。",
+   "campuses": [],
+   "count": 0,
+   "stats": {
+    "min": null,
+    "max": null,
+    "bedTypes": []
+   }
   }
  ],
  "total": 72,
- "schoolsCovered": 4,
+ "schoolsCovered": 5,
  "gaps": [
   "上海交通大学",
   "上海大学",
@@ -845,7 +866,6 @@
   "福州大学",
   "苏州大学",
   "西北大学",
-  "西北工业大学",
   "西南交通大学",
   "西南财经大学",
   "西安交通大学",
@@ -856,7 +876,7 @@
   "首都师范大学"
  ],
  "coverage": {
-  "covered": 4,
+  "covered": 5,
   "total": 79,
   "note": "分母是院校库收录的学校数；缺口列表里的学校只是还没查，不代表查不到。"
  }

@@ -1798,6 +1798,15 @@ function dormBlock(school, campusId){
       ${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}<br>
       来源：<a href="${esc(sc.source)}" target="_blank" rel="noopener">${esc(sc.sourceLabel)}</a></p>`;
 
+  if(sc.granularity === 'policy'){
+    return `<details class="dorm">
+      <summary>校区住宿：${esc(sc.school)}　
+        <span class="dormrange">${esc(sc.policy)}</span>
+        <span class="muted">该校未公示房型与价格</span></summary>
+      <div class="dormbody"><p class="advmeta" style="margin-top:10px">
+        ${esc(sc.tuition || '')}　${meta}</p>${foot}</div>
+    </details>`;
+  }
   if(sc.granularity === 'range'){
     return `<details class="dorm">
       <summary>校区住宿：${esc(sc.school)}　
