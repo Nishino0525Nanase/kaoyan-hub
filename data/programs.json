@@ -5403,24 +5403,25 @@
    ],
    "retest": 20,
    "admitted": 13,
-   "dataYear": 2026,
+   "dataYear": "2026",
    "changes": "三年线极稳（349/346/344）",
    "sources": [
     {
-     "url": "https://noobdream.com/schoolinfo/26/",
-     "official": false
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
     }
    ],
-   "confidence": "secondary",
+   "confidence": "official",
    "seats": {
-    "year": null,
-    "plan": null,
-    "tuimian": null
+    "plan": 65,
+    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
    },
    "applied": null,
    "tuition": null,
    "years": null,
-   "scale": 500
+   "scale": 500,
+   "retestSubjects": "6705001 复试专业课",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
   },
   {
    "school": "中山大学",
@@ -33278,6 +33279,1302 @@
    "applied": null,
    "retestSubjects": "电路与电子技术",
    "note": "研究方向 01 自主智能控制；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "080300",
+   "name": "光学工程",
+   "degree": "学硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "882",
+     "name": "光学原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 18,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625001 光学工程综合考试A",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "080900",
+   "name": "电子科学与技术",
+   "degree": "学硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "883",
+     "name": "固体物理A"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 19,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625002 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "081000",
+   "name": "信息与通信工程",
+   "degree": "学硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 18,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625003 电子工程基础综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085402",
+   "name": "通信工程（含宽带网络、移动通信等）",
+   "degree": "专硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 22,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625003 电子工程基础综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "885",
+     "name": "电子技术（数字和模拟）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 81,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625002 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "电子与信息工程学院（微电子学院）",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "882",
+     "name": "光学原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 22,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625004 光学工程综合考试B",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "081000",
+   "name": "信息与通信工程",
+   "degree": "学硕",
+   "college": "电子与通信工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 53,
+    "note": "院系代码 765；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7655001 电路与信号综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子与通信工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 80,
+    "note": "院系代码 765；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7655001 电路与信号综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "集成电路学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "885",
+     "name": "电子技术（数字和模拟）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 20,
+    "note": "院系代码 754；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7545001 专业基础综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "080900",
+   "name": "电子科学与技术",
+   "degree": "学硕",
+   "college": "微电子科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "883",
+     "name": "固体物理A"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 2,
+    "note": "院系代码 772；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7725001 电子工程基础综合 / 7725002 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "微电子科学与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "885",
+     "name": "电子技术（数字和模拟）"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 34,
+    "note": "院系代码 772；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7725001 电子工程基础综合 / 7725002 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "081100",
+   "name": "控制科学与工程",
+   "degree": "学硕",
+   "college": "智能工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "889",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 24,
+    "note": "院系代码 766；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7665001 智能技术综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "智能工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 58,
+    "note": "院系代码 766；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7665001 智能技术综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "080902",
+   "name": "电路与系统",
+   "degree": "学硕",
+   "college": "柔性电子学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 2,
+    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7585002 电路与信号综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "080903",
+   "name": "微电子学与固体电子学",
+   "degree": "学硕",
+   "college": "柔性电子学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "883",
+     "name": "固体物理A"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 4,
+    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7585001 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085401",
+   "name": "新一代电子信息技术（含量子技术等）",
+   "degree": "专硕",
+   "college": "柔性电子学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 4,
+    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7585002 电路与信号综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "柔性电子学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "882",
+     "name": "光学原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 3,
+    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7585001 半导体器件物理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "081000",
+   "name": "信息与通信工程",
+   "degree": "学硕",
+   "college": "系统科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 7,
+    "note": "院系代码 771；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7715002 电子工程基础综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085401",
+   "name": "新一代电子信息技术（含量子技术等）",
+   "degree": "专硕",
+   "college": "系统科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 8,
+    "note": "院系代码 771；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7715003 离散数学与C程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "海洋工程与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 27,
+    "note": "院系代码 767；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7675004 数字信号处理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": null,
+   "code": "081100",
+   "name": "控制科学与工程",
+   "degree": "学硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "889",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 2,
+    "note": "院系代码 724；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7245002 智能技术综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 28,
+    "note": "院系代码 724；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7245001 离散数学与C程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 210,
+    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "6705001 复试专业课",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "085411",
+   "name": "大数据技术与工程",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 40,
+    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "6705001 复试专业课",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "085412",
+   "name": "网络与信息安全",
+   "degree": "专硕",
+   "college": "网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 23,
+    "note": "院系代码 757；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7575001 离散数学与C/C++程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "软件工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 37,
+    "note": "院系代码 725；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7255001 程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": null,
+   "code": "083500",
+   "name": "软件工程",
+   "degree": "学硕",
+   "college": "软件工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 11,
+    "note": "院系代码 725；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7255001 程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文"
   }
  ],
  "notEligible": [
@@ -33456,8 +34753,8 @@
     "line": 8
    },
    "中山大学": {
-    "n": 6,
-    "sub": 6,
+    "n": 33,
+    "sub": 33,
     "line": 6
    },
    "云南大学": {
@@ -33787,11 +35084,11 @@
    }
   },
   "totals": {
-   "records": 616,
-   "withSubjects": 348,
+   "records": 643,
+   "withSubjects": 375,
    "withLines": 509,
    "withRetestBooks": 9,
-   "withRetestSubjects": 23
+   "withRetestSubjects": 51
   },
   "sourceAccess": {
    "note": "各校招生目录的可达性差异很大，逐所试出来的结论：",
@@ -33799,7 +35096,8 @@
     "电子科技大学：目录 PDF 挂在 xxgkw.uestc.edu.cn/__local/ 下，可直接取",
     "合肥工业大学：PDF 在 yjszs.hfut.edu.cn/_upload/ 下，含科目与招生计划",
     "南京大学电科院：网页正文是图片，但附件 PDF 可取（复试参考书目）",
-    "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下"
+    "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下",
+    "中山大学：全校目录 PDF 在 graduate.sysu.edu.cn/zsw/sites/default/files/ 下，含初试+复试+招生数"
    ],
    "blocked": [
     "西北工业大学：目录页正文只写「见附件」，附件链接提取不到",
