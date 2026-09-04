@@ -657,6 +657,90 @@
     }
    ],
    "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "college": "微电子科学与技术学院",
+   "campus": "珠海校区",
+   "quota": {
+    "year": 2025,
+    "planTotal": 34,
+    "tuimian": 23,
+    "exam": 11,
+    "tuimianRatio": 0.676,
+    "note": "细则原文三列：总计划34／已招推免23／公开招考11。推免占比接近七成"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，采取面试方式，无笔试",
+    "hasMachineTest": false,
+    "subjects": "综合评价 20% + 外语应用能力测试 20% + 专业能力及综合素质考核 60%",
+    "duration": "每位考生复试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格，不予录取",
+    "tieBreak": "总成绩同分按初试成绩排序；初试再同分则以初试「业务课二」排序"
+   },
+   "line": {
+    "year": 2025,
+    "total": 336,
+    "politics": 50,
+    "english": 50,
+    "course1": 60,
+    "course2": 60,
+    "note": "院线，不分方向。同院 080900 电子科学与技术(02 电路与系统)为 280/45/45/60/60"
+   },
+   "sources": [
+    {
+     "url": "https://mst.sysu.edu.cn/article/1191",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "college": "集成电路学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2025,
+    "planTotal": null,
+    "tuimian": null,
+    "exam": null,
+    "tuimianRatio": null,
+    "note": "细则原文中的招生人数表是图片，无文字层，取不到——空缺是还没查到，不是不招"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试总分 500 分，占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试 100 分：专业基础综合（模拟电路、数字电路、半导体物理），闭卷，2 小时 + 外语应用能力测试 100 分（面试） + 专业能力及综合素质考核 300 分（面试）",
+    "duration": "面试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于满分 60%（即 300 分）为不合格，不予录取",
+    "tieBreak": "总成绩同分按初试排序；初试同分按复试排序；复试仍同分则以专业课笔试排序"
+   },
+   "line": {
+    "year": 2025,
+    "total": null,
+    "politics": null,
+    "english": null,
+    "course1": null,
+    "course2": null,
+    "note": "细则原文的分数线表为图片，取不到"
+   },
+   "sources": [
+    {
+     "url": "https://sic.sysu.edu.cn/rc/rc05/1418351.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
   }
  ]
 }
