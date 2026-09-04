@@ -113,6 +113,8 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
 
+.cmp{font-size:11.5px;padding:1px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.tmonly{font-size:11.5px;padding:1px 7px;border-radius:5px;border:1px solid var(--warn);color:var(--warn);margin-left:5px;white-space:nowrap}
 .rsub{margin-top:6px;font-size:12px;color:var(--text-2);line-height:1.5}
 .rsub b{color:var(--good);font-weight:600}
 details.rbook{margin-top:7px;font-size:12.5px}
@@ -1018,7 +1020,8 @@ function openDetail(name){
         <h4>${esc(p.code)} ${esc(p.name)}
           <span class="badge" style="margin-left:6px">${esc(p.degree)}</span>
           ${srcTag(p.confidence === 'official')}</h4>
-        <div class="muted">${esc(p.college)} · ${esc(TRACK_LABEL[p.track]||p.track)}</div>
+        <div class="muted">${esc(p.college)} · ${esc(TRACK_LABEL[p.track]||p.track)}${
+          p.campus ? ` · <span class="cmp">${esc(p.campus)}</span>` : ''}</div>
         <div class="subj">${subjLine(p)}</div>
         <div class="kv">
           <span>复试线：${lineText(p)}</span>
@@ -1335,8 +1338,16 @@ function renderMajors(){
     const l = r.lines[0];
     return kindTag(l) + (l.note ? `<div class="muted" style="font-size:11px;margin-top:4px">${esc(l.note)}</div>` : '');
   };
+  const campusCell = r => {
+    let out = '';
+    if(r.campus) out += `<span class="cmp">${esc(r.campus)}</span>`;
+    if(r.tuimianOnly) out += `<span class="tmonly">仅推免</span>`;
+    return out;
+  };
   const bookCell = r => {
     let out = '';
+    if(r.tuimianOnly)
+      out += `<div class="rsub"><b style="color:var(--warn)">仅招推免生</b> 统考生无法报考</div>`;
     if(r.retestSubjects)
       out += `<div class="rsub"><b>复试</b> ${esc(r.retestSubjects)}</div>`;
     if((r.retestBooks || []).length)
@@ -1354,6 +1365,7 @@ function renderMajors(){
       <th>口径</th><th>招录</th><th>名额结构</th><th>学费 / 学制</th><th>来源</th></tr></thead><tbody>` +
     (rows.length ? rows.map(r => `<tr>
       <td><b>${esc(r.school)}</b><br><span class="muted">${esc(r.college || '—')}</span>
+        ${campusCell(r) ? `<br>${campusCell(r)}` : ''}
         <br><button class="det" type="button" style="margin-top:5px" data-det3="${esc(r.school)}">院校详情</button></td>
       <td><span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span><br>${esc(r.name)}</td>
       <td><span class="badge">${esc(r.degree)}</span></td>
