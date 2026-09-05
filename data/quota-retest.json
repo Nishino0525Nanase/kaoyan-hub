@@ -741,6 +741,135 @@
     }
    ],
    "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "081000",
+   "name": "信息与通信工程",
+   "college": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2025,
+    "planTotal": 57,
+    "tuimian": 35,
+    "exam": 22,
+    "tuimianRatio": 0.614,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试占复试成绩 20%（科目同招生专业目录公布的复试专业课） + 外语应用能力测试 20%（面试） + 专业能力及综合素质考核 60%（面试）",
+    "duration": "每位考生复试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格，不予录取",
+    "tieBreak": "总成绩同分按初试排序；初试同分则以面试成绩（外语 + 专业能力及综合素质）排序",
+    "note": "学硕与专硕分别排序、分别划定拟录取名单"
+   },
+   "line": {
+    "year": 2025,
+    "total": 325,
+    "politics": 45,
+    "english": 45,
+    "course1": 65,
+    "course2": 65,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://sece.sysu.edu.cn/zs/zs01/1418328.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息",
+   "college": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2025,
+    "planTotal": 95,
+    "tuimian": 24,
+    "exam": 71,
+    "tuimianRatio": 0.253,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试占复试成绩 20%（科目同招生专业目录公布的复试专业课） + 外语应用能力测试 20%（面试） + 专业能力及综合素质考核 60%（面试）",
+    "duration": "每位考生复试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格，不予录取",
+    "tieBreak": "总成绩同分按初试排序；初试同分则以面试成绩（外语 + 专业能力及综合素质）排序",
+    "note": "学硕与专硕分别排序、分别划定拟录取名单"
+   },
+   "line": {
+    "year": 2025,
+    "total": 370,
+    "politics": 60,
+    "english": 60,
+    "course1": 90,
+    "course2": 90,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://sece.sysu.edu.cn/zs/zs01/1418328.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "140100",
+   "name": "集成电路科学与工程",
+   "college": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2025,
+    "planTotal": 1,
+    "tuimian": 1,
+    "exam": 0,
+    "tuimianRatio": 1.0,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划；原文备注「无公开招考指标」"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试占复试成绩 20%（科目同招生专业目录公布的复试专业课） + 外语应用能力测试 20%（面试） + 专业能力及综合素质考核 60%（面试）",
+    "duration": "每位考生复试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格，不予录取",
+    "tieBreak": "总成绩同分按初试排序；初试同分则以面试成绩（外语 + 专业能力及综合素质）排序",
+    "note": "学硕与专硕分别排序、分别划定拟录取名单"
+   },
+   "line": {
+    "year": 2025,
+    "total": 325,
+    "politics": 45,
+    "english": 45,
+    "course1": 65,
+    "course2": 65,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://sece.sysu.edu.cn/zs/zs01/1418328.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
   }
  ]
 }

@@ -2105,6 +2105,22 @@ function renderSysu(){
      <div class="cmpgrid">${cmp}</div>
      <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
 
+   ${(() => {
+     const C4 = S.compare085400; if(!C4) return '';
+     const cards = C4.rows.map(r => `<div class="card cmpcard">
+       <h4>${esc(r.campus)}<span class="col">${esc(r.college)}</span></h4>
+       <div class="kv"><span class="k">2026 拟招</span><span class="v big">${r.plan2026} 人</span></div>
+       <div class="kv"><span class="k">2025 统考名额</span><span class="v big">${r.exam2025} 人</span></div>
+       <div class="kv"><span class="k">2025 推免占用</span><span class="v">${r.tuimian2025} / ${r.plan2025}</span></div>
+       <div class="kv"><span class="k">2025 院线</span><span class="v">${esc(r.lineDetail)}</span></div>
+       <div class="kv"><span class="k">复试形式</span><span class="v">${esc(r.retestForm)}</span></div>
+       <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p></div>`).join('');
+     return `<section class="sysec"><h3>${esc(C4.title)}</h3>
+       <p class="hint">${esc(C4.sameInitial)}</p>
+       <div class="cmpgrid">${cards}</div>
+       <div class="warnbox" style="margin-top:11px">${esc(C4.caveat)}</div></section>`;
+   })()}
+
    <section class="sysec"><h3>报考要点</h3><div class="kp">${kp}</div></section>
 
    <section class="sysec"><h3>调剂政策</h3>
