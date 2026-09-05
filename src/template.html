@@ -89,6 +89,36 @@ h2.sec{font-size:19px;margin:0 0 4px;letter-spacing:-.2px}
 p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .muted{color:var(--text-3);font-size:12.5px}
 
+.sysec{margin:0 0 26px}
+.sysec h3{margin:0 0 4px;font-size:16px;letter-spacing:-.2px}
+.sysec>p.hint{margin:0 0 12px;color:var(--text-3);font-size:12.5px;line-height:1.6}
+.cmpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}
+.cmpcard{padding:14px 16px;display:flex;flex-direction:column;gap:9px}
+.cmpcard h4{margin:0;font-size:15px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.cmpcard .col{color:var(--text-3);font-size:12px;font-weight:400}
+.kv{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:4px 0;border-bottom:1px solid var(--line)}
+.kv:last-child{border-bottom:0}
+.kv .k{color:var(--text-3);white-space:nowrap}
+.kv .v{color:var(--text-1);text-align:right;font-weight:550}
+.kv .v.big{color:var(--accent);font-size:15px}
+.kv .v.na{color:var(--text-3);font-weight:400}
+.tl{position:relative;padding-left:20px}
+.tl::before{content:"";position:absolute;left:5px;top:5px;bottom:5px;width:2px;border-radius:2px;background:var(--grad)}
+.tli{position:relative;padding:0 0 15px}
+.tli::before{content:"";position:absolute;left:-19px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--surface-1)}
+.tli .when{font-size:12px;color:var(--accent);font-weight:600}
+.tli .what{font-size:14px;color:var(--text-1);margin-top:1px}
+.tli .tn{font-size:12.5px;color:var(--text-3);margin-top:2px;line-height:1.55}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.kpi{padding:12px 14px;border-left:3px solid var(--accent);border-radius:0 9px 9px 0;background:var(--surface-2)}
+.kpi b{display:block;font-size:13.5px;margin-bottom:3px}
+.kpi span{font-size:12.5px;color:var(--text-2);line-height:1.6}
+.kpi a{font-size:12px}
+.warnbox{padding:13px 15px;border-radius:10px;border:1px solid var(--warn);background:var(--surface-2);margin:0 0 12px}
+.warnbox b{color:var(--warn)}
+.idx{display:flex;flex-wrap:wrap;gap:8px}
+.idxi{padding:9px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface-1);font-size:12.5px}
+.idxi b{display:block;font-size:19px;color:var(--accent);line-height:1.2}
 /* ---------- 导师名录 ---------- */
 .advcol{margin-bottom:26px}
 .advhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:3px}
@@ -518,6 +548,7 @@ body.hasdock{padding-bottom:66px}
       <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
       <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
+      <button class="tab" role="tab" data-panel="sysu" aria-selected="false">中大专栏</button>
       <button class="tab" role="tab" data-panel="advisors" aria-selected="false">导师名录</button>
       <button class="tab" role="tab" data-panel="res" aria-selected="false">资料链接</button>
     </nav>
@@ -700,6 +731,13 @@ body.hasdock{padding-bottom:66px}
   </section>
 
   <!-- ============ 资料 ============ -->
+  <section class="panel" id="p-sysu">
+    <h2 class="sec">中山大学专栏</h2>
+    <p class="sub" id="sysuSub"></p>
+    <div class="notice" id="sysuNote"></div>
+    <div id="sysuBody"></div>
+  </section>
+
   <section class="panel" id="p-advisors">
     <h2 class="sec">导师名录</h2>
     <p class="sub" id="advSub"></p>
@@ -745,6 +783,7 @@ body.hasdock{padding-bottom:66px}
 
 <script id="data-adv" type="application/json">__DATA_ADV__</script>
 <script id="data-dorm" type="application/json">__DATA_DORM__</script>
+<script id="data-sysu" type="application/json">__DATA_SYSU__</script>
 <script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
@@ -769,6 +808,7 @@ const FRESH   = J('data-fresh');
 const QUOTA   = J('data-quota');
 const ADV     = J('data-adv');
 const DORM    = J('data-dorm');
+const SYSU    = J('data-sysu');
 /* 名额与复试细则的匹配。
    注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
    （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
@@ -2016,11 +2056,88 @@ document.addEventListener('keydown', e => {
   if(e.key === 'Escape' && !$('#gsMask').hidden) gsClose();
 });
 
+
+/* ================= 中山大学专栏 =================
+   本库其余部分是横向比 147 所学校，这个专栏是纵向把一所挖透。
+   数据全部来自 sysu.json，不在这里重新计算，避免和其他面板对不上。 */
+function renderSysu(){
+  const S = SYSU, C = S.compare085403, T = S.transfer, I = S.index;
+  const na = v => v == null ? '<span class="v na">未查到</span>' : `<span class="v">${v}</span>`;
+
+  const cmp = C.rows.map(r => `<div class="card cmpcard">
+    <h4>${esc(r.campus)}<span class="col">${esc(r.college)}</span></h4>
+    <div class="kv"><span class="k">2026 拟招</span><span class="v big">${r.plan2026} 人</span></div>
+    <div class="kv"><span class="k">2025 总计划</span>${na(r.plan2025 && r.plan2025 + ' 人')}</div>
+    <div class="kv"><span class="k">2025 推免占用</span>${na(r.tuimian2025 && r.tuimian2025 + ' 人')}</div>
+    <div class="kv"><span class="k">2025 统考名额</span>${r.exam2025 != null
+        ? `<span class="v big">${r.exam2025} 人</span>` : na(null)}</div>
+    <div class="kv"><span class="k">2025 院线</span>${na(r.line2025)}</div>
+    <div class="kv"><span class="k">复试形式</span><span class="v">${esc(r.retestForm)}</span></div>
+    <div class="kv"><span class="k">本库导师</span><span class="v">${r.advisors} 人</span></div>
+    <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p>
+  </div>`).join('');
+
+  const tl = S.timeline.map(t => `<div class="tli">
+    <div class="when">${esc(t.when)}</div>
+    <div class="what">${esc(t.what)}</div>
+    ${t.note ? `<div class="tn">${esc(t.note)}${t.src ? ` · <a href="${esc(t.src)}" target="_blank" rel="noopener">官方页</a>` : ''}</div>` : ''}
+  </div>`).join('');
+
+  const kp = S.keyPoints.map(k => `<div class="kpi"><b>${esc(k.t)}</b>
+    <span>${esc(k.d)}</span>
+    ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
+
+  const camp = S.campuses.map(c => `<div class="card cmpcard">
+    <h4>${esc(c.name)}</h4>
+    <p class="hint" style="margin:0">${esc(c.addr)}</p>
+    ${c.colleges.map(x => `<div class="kv"><span class="k">${esc(x.name)}</span>
+        <span class="v">${x.advisors} 位导师 · <a href="${esc(x.retestRule)}" target="_blank" rel="noopener">复试细则</a></span></div>`).join('')}
+    <div class="kv"><span class="k">宿舍</span><span class="v">${c.dormRooms} 种房型 · ${esc(c.dormFee)}</span></div>
+  </div>`).join('');
+
+  const tr = T.example.accepts.map(a => `<div class="kv">
+      <span class="k">${esc(a.code)} ${esc(a.name)}</span>
+      <span class="v">拟调剂 ${a.plan} 人 / 复试 ${a.retestSlots} 人 · ${esc(a.line)}</span></div>`).join('');
+
+  $('#sysuBody').innerHTML = `
+   <section class="sysec"><h3>085403 集成电路工程 · 三校区对比</h3>
+     <p class="hint">${esc(C.sameInitial)}</p>
+     <div class="cmpgrid">${cmp}</div>
+     <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
+
+   <section class="sysec"><h3>报考要点</h3><div class="kp">${kp}</div></section>
+
+   <section class="sysec"><h3>调剂政策</h3>
+     <div class="warnbox"><b>${esc(T.keyFact)}</b></div>
+     <p class="hint">以 ${esc(T.example.college)} ${T.year} 年公告为例，可看出校内调剂的口径：</p>
+     <div class="card cmpcard">${tr}
+       <div class="kv"><span class="k">科目要求</span><span class="v">${esc(T.example.require)}</span></div>
+       <div class="kv"><span class="k">窗口</span><span class="v">${esc(T.example.window)}</span></div>
+     </div>
+     <p class="hint" style="margin-top:8px"><a href="${esc(T.source)}" target="_blank" rel="noopener">调剂公告原文 &rarr;</a></p></section>
+
+   <section class="sysec"><h3>时间线</h3><div class="tl">${tl}</div></section>
+
+   <section class="sysec"><h3>校区 × 学院</h3><div class="cmpgrid">${camp}</div></section>
+
+   <section class="sysec"><h3>本库收录的中大数据</h3>
+     <div class="idx">
+       <div class="idxi"><b>${I.programs}</b>专业记录（${I.programsWithSubjects} 条有科目）</div>
+       <div class="idxi"><b>${I.advisors}</b>位导师（${I.advisorColleges.length} 个学院）</div>
+       <div class="idxi"><b>${I.dormRooms}</b>种宿舍房型</div>
+       <div class="idxi"><b>${I.retestRules}</b>条复试细则</div>
+     </div>
+     <p class="hint" style="margin-top:9px">在「专业方向」「导师名录」「资料链接」各页搜「中山大学」可看到明细。</p></section>`;
+
+  $('#sysuSub').textContent = `${S.school} · 数据更新于 ${S.updated}`;
+  $('#sysuNote').textContent = S.note;
+}
+
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
 buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
-buildAdvFilters(); renderAdvisors();
+buildAdvFilters(); renderAdvisors(); renderSysu();
 {
   const L = DB.dataLevels || {};
   const T = (PROG.completeness || {}).totals || {};
