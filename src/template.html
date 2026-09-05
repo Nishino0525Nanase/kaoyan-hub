@@ -700,6 +700,7 @@ body.hasdock{padding-bottom:66px}
         <input id="advQ" type="search" placeholder="搜研究方向，比如 FPGA / PCB / 功率器件 / 天线 / 存算一体" autocomplete="off">
         <button class="clr" id="advClr" hidden aria-label="清空">&times;</button>
       </div>
+      <div class="frow" id="fAdvSch"><span class="flabel">学校</span></div>
       <div class="frow" id="fAdvCol"><span class="flabel">学院</span></div>
       <div class="frow" id="fAdvTitle"><span class="flabel">职称</span></div>
     </div>
@@ -1448,7 +1449,7 @@ function drawAll(){ drawCutBars(); drawRatioBars(); drawRegionBars(); }
    数据是各学院官网师资页的原文转录。这里只做「筛选 + 展示」：
    不排名、不打分、不做任何主观归纳。官网没写的字段显示为「官网未列出」，
    不用别处的数据去补——补了就没法说清这一条到底来自哪。 */
-const advState = { q:'', col:new Set(), title:new Set() };
+const advState = { q:'', sch:new Set(), col:new Set(), title:new Set() };
 
 function advChips(host, items, key){
   const el = $(host);
@@ -1476,6 +1477,7 @@ function hl(text, q){
 
 function advMatch(a, col){
   const q = advState.q.trim().toLowerCase();
+  if(advState.sch.size && !advState.sch.has(col.school)) return false;
   if(advState.col.size && !advState.col.has(col.name)) return false;
   if(advState.title.size && !advState.title.has(a.title || '未标注')) return false;
   if(!q) return true;
@@ -1572,7 +1574,7 @@ function renderAdvisors(){
     shown += list.length;
     html += `<section class="advcol">
       <div class="advhead">
-        <h3>${esc(col.name)}</h3>
+        <h3>${esc(col.school)} · ${esc(col.name)}</h3>
         <span class="advcampus">${esc(col.campus)}</span>
         <span class="muted">${list.length} / ${col.count} 人</span>
       </div>
@@ -1593,6 +1595,7 @@ $('#advQ').addEventListener('input', e => { advState.q = e.target.value; renderA
 $('#advClr').onclick = () => { $('#advQ').value = ''; advState.q = ''; renderAdvisors(); $('#advQ').focus(); };
 
 function buildAdvFilters(){
+  advChips('#fAdvSch', [...new Set(ADV.colleges.map(c => c.school))], 'sch');
   advChips('#fAdvCol', ADV.colleges.map(c => c.name), 'col');
   const titles = [...new Set(ADV.colleges.flatMap(c => c.advisors.map(a => a.title || '未标注')))];
   advChips('#fAdvTitle', titles, 'title');
@@ -1875,6 +1878,15 @@ function renderNju(){
    <div class="lyr bad"><h4>${esc(H.unverified.label)}<span class="badge2">unverified</span></h4>
      <p class="sub2">${esc(H.unverified.why)}</p>
      <ul>${H.unverified.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+
+   ${NJU.faculty ? `<div class="lyr ok"><h4>师资队伍<span class="badge2">official</span></h4>
+     <p class="sub2">${esc(NJU.faculty.note)}　
+       <a href="${esc(NJU.faculty.source)}" target="_blank" rel="noopener">${esc(NJU.faculty.sourceLabel)} &rarr;</a></p>
+     <p style="margin:0 0 8px;font-size:13px">共 <b>${NJU.faculty.count}</b> 位：${
+       Object.entries(NJU.faculty.byTitle).map(([k,v]) => `${esc(k)} ${v}`).join('　·　')}
+       　<a href="#" onclick="go('advisors');return false;">在导师名录中查看 &rarr;</a></p>
+     <ul>${NJU.faculty.highlights.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+     <p class="sub2" style="margin-top:8px"><b>整体判断：</b>${esc(NJU.faculty.read)}</p></div>` : ''}
 
    <div class="lyr"><h4>${esc(H.verifyPath.label)}</h4>${dl(H.verifyPath.items)}</div>
 

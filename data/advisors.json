@@ -2526,10 +2526,276 @@
     }
    ],
    "count": 58
+  },
+  {
+   "id": "nju-ra",
+   "school": "南京大学",
+   "name": "机器人与自动化学院",
+   "campus": "苏州校区",
+   "campusId": null,
+   "site": "https://ra.nju.edu.cn/",
+   "source": "https://ra.nju.edu.cn/szll/zzjs/index.html",
+   "sourceLabel": "专职教师",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "专职教师全部（教授、副教授、助理教授）；专职科研与博士后未收录",
+   "advisors": [
+    {
+     "name": "周克敏",
+     "title": "教授",
+     "email": null,
+     "areas": "鲁棒控制，多目标优化控制，系统和控制器模型降阶，滞环非线性系统鲁棒控制，系统故障诊断与容错控制及其应用",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335910.html",
+     "note": "学院院长",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "周东华",
+     "title": "教授",
+     "email": null,
+     "areas": "动态系统故障诊断、运行安全性评估理论",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335912.html",
+     "note": "学院名誉主任，兼职",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈春林",
+     "title": "教授",
+     "email": null,
+     "areas": "强化学习、智能机器人、无人驾驶以及复杂系统建模、仿真与控制",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251120/i352846.html",
+     "note": "学院副院长，IEEE Fellow",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李华雄",
+     "title": "教授",
+     "email": null,
+     "areas": "模式识别与智能系统、机器学习与数据挖掘、机器人多模态学习与控制、机器人视觉",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251121/i352917.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "鲁为民",
+     "title": "教授",
+     "email": null,
+     "areas": "自动控制、机器学习、强化学习、云计算、经典和生成式人工智能、产品管理、技术创新和产业化",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251204/i353737.html",
+     "note": "顾问教授，兼职",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "朱波",
+     "title": "副教授",
+     "email": null,
+     "areas": "复杂无人系统建模与鲁棒协同控制",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335916.html",
+     "note": "长聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈建琪",
+     "title": "副教授",
+     "email": null,
+     "areas": "网络化系统控制、信息物理系统安全、鲁棒控制、机器学习与控制、机械臂协同等",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335914.html",
+     "note": "准聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨博渊",
+     "title": "副教授",
+     "email": null,
+     "areas": "工业装备智能运维，机器人多模态学习与控制",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335915.html",
+     "note": "准聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "赵迪",
+     "title": "副教授",
+     "email": null,
+     "areas": "鲁棒控制、安全控制、多模态学习、图像处理",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335913.html",
+     "note": "准聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "许鑫",
+     "title": "副教授",
+     "email": null,
+     "areas": "机器学习及其应用；局部与全局优化；物理信息神经网络在控制决策中的应用；高维模型表示理论及其在机器学习中的应用",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251119/i352813.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王志",
+     "title": "副教授",
+     "email": null,
+     "areas": "强化学习，具身智能",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251119/i352803.html",
+     "note": "准聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "童鑫",
+     "title": "副教授",
+     "email": null,
+     "areas": "混杂反馈控制、机器人规划与控制、多智能体协同控制、复杂网络生成",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335924.html",
+     "note": "准聘副教授",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "闫浩",
+     "title": "副教授",
+     "email": null,
+     "areas": "机器人关节电机及其控制、电动飞行器推进技术、多端口电力电子变压器",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20260403/i371555.html",
+     "note": "准聘副教授，2026 年入职",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张建强",
+     "title": "助理教授",
+     "email": null,
+     "areas": "半导体装备建模与超精密控制、光电跟踪控制、图像检测与目标识别",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335926.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "付瑞",
+     "title": "助理教授",
+     "email": null,
+     "areas": "随机控制理论、随机热动力学、数学物理、最优化运输理论",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335925.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "周小彬",
+     "title": "助理教授",
+     "email": null,
+     "areas": "空中机器人运动规划与控制系统设计",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335921.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张君会",
+     "title": "助理教授",
+     "email": null,
+     "areas": "信息物理安全、自主智能系统、可置信人工智能控制、机器人、自动驾驶",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335923.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "路洋",
+     "title": "助理教授",
+     "email": null,
+     "areas": "信息物理系统的隐私与安全，多机器人系统的协同感知、决策与控制，联邦学习，安全强化学习",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335920.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王丹",
+     "title": "助理教授",
+     "email": null,
+     "areas": "复杂系统智能控制、鲁棒控制与相位理论、网络科学、多智能体系统协同控制、新能源电网",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335918.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "马英杰",
+     "title": "助理教授",
+     "email": null,
+     "areas": "过程系统工程、数值优化、模型预测控制、机器学习、工业智能",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335919.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "魏婧雯",
+     "title": "助理教授",
+     "email": null,
+     "areas": "机器学习、强化学习及其在储能系统健康评估、故障诊断与优化控制中的应用",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251125/i353102.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "孙宇祥",
+     "title": "助理教授",
+     "email": null,
+     "areas": "具身智能、人机融合系统",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251119/i352800.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "梅文杰",
+     "title": "助理教授",
+     "email": null,
+     "areas": "复杂系统的建模分析与控制（数据驱动方法、几何控制、系统安全性等）、人工智能、机器人技术等领域的交叉融合",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20250901/i335917.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吕尚可",
+     "title": "助理教授",
+     "email": null,
+     "areas": "机器人运动控制、强化学习、具身智能",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20251119/i352806.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "高岩",
+     "title": "助理教授",
+     "email": null,
+     "areas": "无人机集群协同控制、多机器人系统安全控制、运动规划、抗扰控制",
+     "url": "http://ra.nju.edu.cn/szll/zzjs/20260407/i372033.html",
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 25
   }
  ],
- "total": 202,
- "schoolsCovered": 1,
+ "total": 227,
+ "schoolsCovered": 2,
  "gaps": [
   "上海交通大学",
   "上海大学",
@@ -2559,7 +2825,6 @@
   "华中科技大学",
   "华南师范大学",
   "华南理工大学",
-  "南京大学",
   "南京师范大学",
   "南京理工大学",
   "南京航空航天大学",
@@ -2611,7 +2876,7 @@
   "首都师范大学"
  ],
  "coverage": {
-  "covered": 1,
+  "covered": 2,
   "total": 79,
   "note": "分母是院校库收录的学校数。导师数据只收官网师资页/招生方向表，逐所转录，缺口列表里的学校是还没查，不是查不到。"
  }
