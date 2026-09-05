@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>考研择校资料库 · KaoyanHub</title>
-<meta name="description" content="开源的考研择校资料库：79 所热门院校档案、2026 年考研国家线全表、历年分数线趋势、院校对比与官方备考资源。数据公开可校验，欢迎 PR 补充。">
+<meta name="description" content="开源的考研择校资料库：中山大学与南京大学控制工程专栏、147 所院校档案、逐校初试复试科目、导师名录与校区住宿。数据均标注来源与可信度，欢迎 PR 补充。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127891;</text></svg>">
 <style>
 :root{
@@ -565,12 +565,12 @@ body.hasdock{padding-bottom:66px}
       <a class="iconbtn" id="repoLink" href="https://github.com/Nishino0525Nanase/kaoyan-hub" target="_blank" rel="noopener">★ GitHub</a>
     </div>
     <nav class="tabs" role="tablist">
-      <button class="tab" role="tab" data-panel="schools" aria-selected="true">院校库</button>
-      <button class="tab" role="tab" data-panel="majors" aria-selected="false">专业方向</button>
-      <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
-      <button class="tab" role="tab" data-panel="sysu" aria-selected="false">中大专栏</button>
+      <button class="tab on" role="tab" data-panel="sysu" aria-selected="true">中大专栏</button>
       <button class="tab" role="tab" data-panel="nju" aria-selected="false">南大控制</button>
+      <button class="tab" role="tab" data-panel="schools" aria-selected="false">院校库</button>
+      <button class="tab" role="tab" data-panel="majors" aria-selected="false">专业方向</button>
       <button class="tab" role="tab" data-panel="advisors" aria-selected="false">导师名录</button>
+      <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
       <button class="tab" role="tab" data-panel="res" aria-selected="false">资料链接</button>
     </nav>
   </div>
@@ -591,7 +591,7 @@ body.hasdock{padding-bottom:66px}
 <main class="wrap">
 
   <!-- ============ 院校库 ============ -->
-  <section class="panel on" id="p-schools">
+  <section class="panel" id="p-schools">
     <h2 class="sec">院校库</h2>
     <p class="sub" id="schoolSub"></p>
     <div class="season" id="seasonHint2" hidden></div>
@@ -641,31 +641,12 @@ body.hasdock{padding-bottom:66px}
     <div class="card cmpwrap"><table id="majTable"></table></div>
   </section>
 
-  <!-- ============ 改考预警 ============ -->
-    <!-- ============ 国家线 ============ -->
     <!-- ============ 图表 ============ -->
   <section class="panel" id="p-charts">
     <h2 class="sec">数据图表</h2>
     <p class="sub">分数线只反映「进复试的最低门槛」，趋势比绝对值更有参考价值。</p>
 
-    <div class="card chartcard">
-      <div class="chead">
-        <p class="ctitle">历年考研国家线趋势（A 区总分）</p>
-        <p class="cdesc">点击下方图例可切换显示的学科门类，最多同时显示 8 条</p>
-      </div>
-      <svg class="chart" id="trendSvg" viewBox="0 0 760 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="历年考研国家线趋势折线图"></svg>
-      <div class="legend" id="trendLegend"></div>
-    </div>
-
-    <div class="card chartcard">
-      <div class="chead">
-        <p class="ctitle">2026 年各学科门类总分线（A 区）</p>
-        <p class="cdesc">同一年不同门类之间不可直接比较难度——试卷与考生群体都不同</p>
-      </div>
-      <svg class="chart" id="barSvg" viewBox="0 0 760 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="2026年各学科门类总分线条形图"></svg>
-    </div>
-
-    <div class="card chartcard">
+            <div class="card chartcard">
       <div class="chead">
         <p class="ctitle">2026 年各校复试线对比</p>
         <p class="cdesc" id="lineCmpDesc"></p>
@@ -684,15 +665,7 @@ body.hasdock{padding-bottom:66px}
       <svg class="chart" id="ratioSvg" viewBox="0 0 760 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="复试录取比排行条形图"></svg>
     </div>
 
-    <div class="card chartcard">
-      <div class="chead">
-        <p class="ctitle">近年初试科目变动的院校数量</p>
-        <p class="cdesc">含院校库内外的全部记录；「改考 408」是计算机方向近年最主流的变动</p>
-      </div>
-      <svg class="chart" id="chgSvg" viewBox="0 0 760 200" preserveAspectRatio="xMidYMid meet" role="img" aria-label="近年初试科目变动院校数量条形图"></svg>
-    </div>
-
-    <div class="card chartcard">
+        <div class="card chartcard">
       <div class="chead">
         <p class="ctitle">本库收录院校的地区分布</p>
         <p class="cdesc">收录以考研热门院校为主，不代表全国研究生招生单位的真实分布</p>
@@ -703,7 +676,7 @@ body.hasdock{padding-bottom:66px}
 
   <!-- ============ 对比 ============ -->
     <!-- ============ 资料 ============ -->
-  <section class="panel" id="p-sysu">
+  <section class="panel on" id="p-sysu">
     <h2 class="sec">中山大学专栏</h2>
     <p class="sub" id="sysuSub"></p>
     <div class="notice" id="sysuNote"></div>
@@ -1361,87 +1334,6 @@ function claimSlot(k){
 ['经济学','法学','文学','理学','工学','管理学'].forEach(claimSlot);
 const trendOn  = () => TREND_KEYS.filter(k => slotOf.has(k));
 const varOf    = k => SERIES[slotOf.get(k)];
-function buildTrendLegend(){
-  $('#trendLegend').innerHTML = TREND_KEYS.map(k => {
-    const on = slotOf.has(k);
-    const bg = on ? `var(${varOf(k)})` : 'var(--line-strong)';
-    return `<button class="lg" type="button" data-k="${esc(k)}" aria-pressed="${on}">
-       <span class="dot" style="background:${bg}"></span>${esc(k)}</button>`;
-  }).join('');
-  $$('#trendLegend .lg').forEach(b => b.onclick = () => {
-    const k = b.dataset.k;
-    if(slotOf.has(k)) slotOf.delete(k);
-    else if(!claimSlot(k)){ alert('最多同时显示 8 条曲线，请先取消一条'); return; }
-    buildTrendLegend(); drawTrend();
-  });
-}
-function drawTrend(){
-  const svg = $('#trendSvg'); svg.innerHTML = '';
-  const W = 760, H = 340, ML = 44, MR = 58, MT = 14, MB = 34;
-  const years = HIST.years;
-  const keys = trendOn();
-  const colorOf = k => cssv(varOf(k));
-  const vals = keys.flatMap(k => HIST.academic[k]).filter(v => v != null);
-  if(!keys.length || !vals.length){
-    svg.appendChild(mk('text',{x:W/2,y:H/2,'text-anchor':'middle',class:'axt'})).textContent = '请至少选择一个学科门类';
-    return;
-  }
-  let lo = Math.min(...vals), hi = Math.max(...vals);
-  const pad = Math.max(12, (hi-lo)*0.14); lo = Math.floor((lo-pad)/10)*10; hi = Math.ceil((hi+pad)/10)*10;
-  const X = i => ML + i*(W-ML-MR)/(years.length-1);
-  const Y = v => MT + (hi-v)/(hi-lo)*(H-MT-MB);
-
-  const step = Math.max(10, Math.ceil((hi-lo)/6/10)*10);
-  for(let v = lo; v <= hi; v += step){
-    svg.appendChild(mk('line',{x1:ML,x2:W-MR,y1:Y(v),y2:Y(v),class:'gl'}));
-    const t = mk('text',{x:ML-8,y:Y(v)+4,'text-anchor':'end',class:'axt'}); t.textContent = v; svg.appendChild(t);
-  }
-  years.forEach((y,i) => {
-    const t = mk('text',{x:X(i),y:H-12,'text-anchor':'middle',class:'axt b'}); t.textContent = y; svg.appendChild(t);
-  });
-
-  keys.forEach(k => {
-    const c = colorOf(k), d = HIST.academic[k];
-    let path = '', started = false;
-    d.forEach((v,i) => { if(v==null){ started=false; return; }
-      path += (started?' L':' M') + X(i) + ' ' + Y(v); started = true; });
-    svg.appendChild(mk('path',{d:path.trim(),fill:'none',stroke:c,'stroke-width':2,
-      'stroke-linecap':'round','stroke-linejoin':'round'}));
-    d.forEach((v,i) => { if(v==null) return;
-      svg.appendChild(mk('circle',{cx:X(i),cy:Y(v),r:4,fill:c,stroke:cssv('--surface-1'),'stroke-width':2})); });
-    // 末端直接标注（≤4 条时）
-    if(keys.length <= 4){
-      const last = d.length-1;
-      if(d[last] != null){
-        const t = mk('text',{x:X(last)+9,y:Y(d[last])+4,class:'axt',fill:c,'font-weight':600});
-        t.textContent = k; svg.appendChild(t);
-      }
-    }
-  });
-
-  const hair = mk('line',{x1:0,x2:0,y1:MT,y2:H-MB,stroke:cssv('--line-strong'),'stroke-width':1,opacity:0});
-  svg.appendChild(hair);
-  const hit = mk('rect',{x:0,y:0,width:W,height:H,fill:'transparent'});
-  svg.appendChild(hit);
-  function onMove(ev){
-    const p = ev.touches ? ev.touches[0] : ev;
-    const box = svg.getBoundingClientRect();
-    const sx = (p.clientX - box.left) / box.width * W;
-    let i = Math.round((sx - ML) / ((W-ML-MR)/(years.length-1)));
-    i = Math.max(0, Math.min(years.length-1, i));
-    hair.setAttribute('x1', X(i)); hair.setAttribute('x2', X(i)); hair.setAttribute('opacity', .8);
-    const rows = keys.map(k => ({k, v:HIST.academic[k][i], c:colorOf(k)}))
-                     .filter(r => r.v != null).sort((a,b) => b.v - a.v);
-    showTip(`<div class="tt">${years[i]} 年 · A 区总分线</div>` + rows.map(r =>
-      `<div class="tr"><span class="dot" style="background:${r.c}"></span><span class="nm">${esc(r.k)}</span><span class="vl">${r.v}</span></div>`
-    ).join(''), p.clientX, p.clientY);
-  }
-  hit.addEventListener('mousemove', onMove);
-  hit.addEventListener('touchmove', e => { onMove(e); }, {passive:true});
-  hit.addEventListener('mouseleave', () => { hideTip(); hair.setAttribute('opacity',0); });
-  hit.addEventListener('touchend',   () => { hideTip(); hair.setAttribute('opacity',0); });
-}
-
 /* ---- 横向条形图（通用） ---- */
 function drawBars(svgSel, items, opt){
   const svg = $(svgSel); svg.innerHTML = '';
@@ -1471,20 +1363,6 @@ function drawBars(svgSel, items, opt){
     hit.addEventListener('click', () => { if(opt.onClick) opt.onClick(d); });
     svg.appendChild(hit);
   });
-}
-
-function drawLineBars(){
-  const seq = ['#0d366b','#104281','#184f95','#1c5cab','#256abf','#2a78d6','#3987e5','#5598e7','#6da7ec','#86b6ef'];
-  const seqD = ['#cde2fb','#b7d3f6','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf','#1c5cab'];
-  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
-                 (document.documentElement.getAttribute('data-theme') !== 'light' && dark);
-  const ramp = isDark ? seqD : seq;
-  const items = LINES.academic.map(a => ({k:a.name, v:a.A[0], note:`单科线 ${a.A[1]} / ${a.A[2]}`}))
-                             .sort((a,b) => b.v - a.v);
-  const n = items.length;
-  items.forEach((d,i) => d.c = ramp[Math.min(ramp.length-1, Math.round(i/(n-1)*(ramp.length-1)))]);
-  drawBars('#barSvg', items, {labelW:190, rowH:26, maxLabel:13, unit:'A 区总分线'});
 }
 
 function drawRegionBars(){
@@ -1563,24 +1441,7 @@ function drawRatioBars(){
   drawBars('#ratioSvg', items, {labelW:215, rowH:26, maxLabel:16, unit:'复试录取比'});
 }
 
-function drawChgBars(){
-  const all = CHG_ALL.concat(CHG.extra);
-  const keys = [...new Set(all.map(c => `${c.year} · ${c.type}`))];
-  const items = keys.map(k => ({k, v: all.filter(c => `${c.year} · ${c.type}` === k).length}))
-                    .filter(d => d.v > 0).sort((a,b) => b.v - a.v).slice(0, 8);
-  const n = items.length;
-  const seqL = ['#0d366b','#184f95','#256abf','#2a78d6','#3987e5','#5598e7','#6da7ec','#86b6ef'];
-  const seqD = ['#cde2fb','#9ec5f4','#86b6ef','#6da7ec','#5598e7','#3987e5','#2a78d6','#256abf'];
-  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
-                 (document.documentElement.getAttribute('data-theme') !== 'light' && dark);
-  const ramp = isDark ? seqD : seqL;
-  items.forEach((d,i) => { d.c = ramp[Math.min(ramp.length-1, Math.round(i/Math.max(1,n-1)*(ramp.length-1)))];
-    d.note = '点击可跳到改考预警页'; });
-  drawBars('#chgSvg', items, {labelW:150, rowH:30, maxLabel:14, unit:'院校数',
-    onClick:() => go('changes')});
-}
-function drawAll(){ drawTrend(); drawLineBars(); drawCutBars(); drawRatioBars(); drawChgBars(); drawRegionBars(); }
+function drawAll(){ drawCutBars(); drawRatioBars(); drawRegionBars(); }
 
 
 /* ================= 导师名录 =================
@@ -1809,7 +1670,7 @@ function gsRender(){
   if(!gsHits.length){
     host.innerHTML = $('#gsQ').value.trim()
       ? '<div class="gsempty">没找到。试试学校名、专业代码、导师姓名或研究方向关键词。</div>'
-      : '<div class="gsempty">输入关键词开始搜索<br><span style="font-size:12px">院校 · 专业 · 导师 · 宿舍 · 改考预警，一次搜完</span></div>';
+      : '<div class="gsempty">输入关键词开始搜索<br><span style="font-size:12px">院校 · 专业 · 导师 · 宿舍，一次搜完</span></div>';
     return;
   }
   let html = '', last = '';
@@ -2033,7 +1894,7 @@ function renderNju(){
 /* ---------------- boot ---------------- */
 renderSchools();
 buildMajFilters(); renderMajors(); renderFresh();
-buildTrendLegend(); drawAll();
+drawAll();
 buildAdvFilters(); renderAdvisors(); renderSysu(); renderNju();
 {
   const L = DB.dataLevels || {};
