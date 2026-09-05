@@ -567,10 +567,7 @@ body.hasdock{padding-bottom:66px}
     <nav class="tabs" role="tablist">
       <button class="tab" role="tab" data-panel="schools" aria-selected="true">院校库</button>
       <button class="tab" role="tab" data-panel="majors" aria-selected="false">专业方向</button>
-      <button class="tab" role="tab" data-panel="changes" aria-selected="false">改考预警 <span id="chgN"></span></button>
-      <button class="tab" role="tab" data-panel="lines" aria-selected="false">国家线</button>
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
-      <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
       <button class="tab" role="tab" data-panel="sysu" aria-selected="false">中大专栏</button>
       <button class="tab" role="tab" data-panel="nju" aria-selected="false">南大控制</button>
       <button class="tab" role="tab" data-panel="advisors" aria-selected="false">导师名录</button>
@@ -645,51 +642,8 @@ body.hasdock{padding-bottom:66px}
   </section>
 
   <!-- ============ 改考预警 ============ -->
-  <section class="panel" id="p-changes">
-    <h2 class="sec">改考预警</h2>
-    <p class="sub" id="chgSub"></p>
-    <div class="notice" id="chgNote"></div>
-
-    <div class="filters">
-      <div class="frow" id="fChgYear"><span class="flabel">年度</span></div>
-      <div class="frow" id="fChgType"><span class="flabel">类型</span></div>
-      <div class="frow" id="fChgSrc"><span class="flabel">来源</span></div>
-    </div>
-
-    <div class="card cmpwrap" style="margin-bottom:20px"><table id="chgTable"></table></div>
-
-    <h2 class="sec" style="margin-top:26px">院校库之外的变动</h2>
-    <p class="sub">这些学校暂未收录进院校库，但同期也调整了初试科目，一并列出供参考。</p>
-    <div class="card cmpwrap"><table id="chgExtra"></table></div>
-  </section>
-
-  <!-- ============ 国家线 ============ -->
-  <section class="panel" id="p-lines">
-    <h2 class="sec">2026 年考研国家线</h2>
-    <p class="sub" id="lineSub"></p>
-
-    <div class="notice" id="lineNote"></div>
-
-    <div class="toolbar">
-      <div class="seg" id="zoneSeg">
-        <button data-z="A" aria-selected="true">A 区</button>
-        <button data-z="B" aria-selected="false">B 区</button>
-      </div>
-      <span class="muted" id="zoneHint"></span>
-    </div>
-
-    <div class="card cmpwrap" style="margin-bottom:20px">
-      <table id="lineTable"></table>
-    </div>
-
-    <h2 class="sec" style="margin-top:26px">专业学位对应哪条线？</h2>
-    <p class="sub">2024 年起学硕与专硕合并按学科门类划线，下表给出常见专业学位类别对应的门类线。</p>
-    <div class="card cmpwrap">
-      <table id="mapTable"></table>
-    </div>
-  </section>
-
-  <!-- ============ 图表 ============ -->
+    <!-- ============ 国家线 ============ -->
+    <!-- ============ 图表 ============ -->
   <section class="panel" id="p-charts">
     <h2 class="sec">数据图表</h2>
     <p class="sub">分数线只反映「进复试的最低门槛」，趋势比绝对值更有参考价值。</p>
@@ -748,14 +702,7 @@ body.hasdock{padding-bottom:66px}
   </section>
 
   <!-- ============ 对比 ============ -->
-  <section class="panel" id="p-compare">
-    <h2 class="sec">院校对比</h2>
-    <p class="sub">在「院校库」里点卡片右上角的 ＋ 选择院校，最多同时对比 4 所。</p>
-    <div id="cmpEmpty" class="empty">还没有选择院校<br><button class="btn" style="margin-top:14px" onclick="go('schools')">去院校库选择</button></div>
-    <div class="card cmpwrap" id="cmpWrap" hidden><table id="cmpTable"></table></div>
-  </section>
-
-  <!-- ============ 资料 ============ -->
+    <!-- ============ 资料 ============ -->
   <section class="panel" id="p-sysu">
     <h2 class="sec">中山大学专栏</h2>
     <p class="sub" id="sysuSub"></p>
@@ -801,12 +748,6 @@ body.hasdock{padding-bottom:66px}
   <div>数据来源：教育部、中国研究生招生信息网、教育部学位与研究生教育发展中心第四轮学科评估。本站为开源公益项目，所有数据仅供参考，报考请以目标院校当年官方招生简章为准。</div>
   <div style="margin-top:8px">数据更新：<span id="upd"></span> · <a href="__REPO_URL__" target="_blank" rel="noopener">在 GitHub 上贡献数据</a> · MIT License</div>
 </footer>
-
-<div class="dockbar" id="dock">
-  <span class="txt" id="dockTxt"></span>
-  <button class="btn ghost" onclick="clearPicks()">清空</button>
-  <button class="btn" onclick="go('compare')">对比</button>
-</div>
 
 <div class="tip" id="tip"></div>
 
@@ -928,7 +869,6 @@ const hideTip = () => tipEl.style.opacity = 0;
 const REGIONS = [...new Set(SCHOOLS.map(s => s.region))];
 const TIERS   = ['34所自划线','985','211','双一流','双非'];
 const state   = { q:'', region:new Set(), tier:new Set(), zone:new Set() };
-const picks   = [];
 
 function chipRow(host, items, key){
   items.forEach(v => {
@@ -976,15 +916,13 @@ function renderSchools(){
     const bars = Array.from({length:5}, (_,i) => `<i class="${i<filled?'f':''}"></i>`).join('');
     const ap = s.aPlus.slice(0,4).map(a => `<span class="ap">${esc(a)}</span>`).join('')
              + (s.aPlus.length>4 ? `<span class="ap">+${s.aPlus.length-4}</span>` : '');
-    const on = picks.includes(s.name);
     const cs = chgBy.get(s.name) || [], ps = progBy.get(s.name) || [];
     const newest = cs.length ? Math.max(...cs.map(c => c.year)) : null;
     const chgBadge = cs.length
       ? `<span class="badge ${newest >= 2027 ? 'chg' : 'chg2'}">⚠ ${newest} 改考</span>` : '';
-    return `<article class="card school${on?' picked':''}" data-n="${esc(s.name)}">
+    return `<article class="card school" data-n="${esc(s.name)}">
       <div class="stop">
         <div class="sname">${esc(s.name)}<span class="scity">${esc(s.city)}</span></div>
-        <button class="pick" type="button" aria-pressed="${on}" title="加入对比" data-pick="${esc(s.name)}">${on?'✓':'＋'}</button>
       </div>
       <div class="badges">${s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join('')}
         <span class="badge">${esc(s.zone)} 区</span>${chgBadge}</div>
@@ -1007,25 +945,7 @@ function renderSchools(){
       </div>
     </article>`;
   }).join('');
-  grid.querySelectorAll('[data-pick]').forEach(b => b.onclick = () => togglePick(b.dataset.pick));
   grid.querySelectorAll('[data-det]').forEach(b => b.onclick = () => openDetail(b.dataset.det));
-}
-
-function togglePick(name){
-  const i = picks.indexOf(name);
-  if(i >= 0) picks.splice(i,1);
-  else{
-    if(picks.length >= 4){ alert('最多同时对比 4 所院校'); return; }
-    picks.push(name);
-  }
-  renderSchools(); renderCompare(); renderDock();
-}
-function clearPicks(){ picks.length = 0; renderSchools(); renderCompare(); renderDock(); }
-function renderDock(){
-  $('#dock').classList.toggle('on', picks.length > 0);
-  document.body.classList.toggle('hasdock', picks.length > 0);
-  $('#dockTxt').textContent = `已选 ${picks.length}/4：${picks.join('、')}`;
-  $('#cmpN').textContent = picks.length ? `(${picks.length})` : '';
 }
 
 /* ================= 详情弹层 ================= */
@@ -1118,64 +1038,8 @@ function closeDetail(){ $('#mask').classList.remove('on'); }
 $('#mask').addEventListener('click', e => { if(e.target.id === 'mask') closeDetail(); });
 addEventListener('keydown', e => { if(e.key === 'Escape') closeDetail(); });
 
-/* ================= 改考预警 ================= */
+/* CHG 数据保留：院校卡片的改考角标与数据图表仍在用 */
 const CHG_ALL   = CHG.changes;
-const chgState  = { year:new Set(), type:new Set(), src:new Set() };
-const CHG_YEARS = [...new Set(CHG_ALL.concat(CHG.extra).map(c => c.year))].sort((a,b) => b - a);
-const CHG_TYPES = [...new Set(CHG_ALL.concat(CHG.extra).map(c => c.type))];
-function chgChips(host, items, key, fmt){
-  items.forEach(v => {
-    const b = document.createElement('button');
-    b.className = 'chip'; b.type = 'button'; b.textContent = fmt ? fmt(v) : v;
-    b.setAttribute('aria-pressed','false');
-    b.onclick = () => {
-      const on = b.getAttribute('aria-pressed') === 'true';
-      b.setAttribute('aria-pressed', String(!on));
-      on ? chgState[key].delete(v) : chgState[key].add(v);
-      renderChanges();
-    };
-    host.appendChild(b);
-  });
-}
-chgChips($('#fChgYear'), CHG_YEARS, 'year', y => y + ' 考研');
-chgChips($('#fChgType'), CHG_TYPES, 'type');
-chgChips($('#fChgSrc'),  ['官方来源','二手来源'], 'src');
-
-function chgMatch(c){
-  if(chgState.year.size && !chgState.year.has(c.year)) return false;
-  if(chgState.type.size && !chgState.type.has(c.type)) return false;
-  if(chgState.src.size  && !chgState.src.has(c.official ? '官方来源' : '二手来源')) return false;
-  return true;
-}
-function chgRows(list, clickable){
-  if(!list.length) return `<tr><td colspan="5" class="muted" style="padding:26px;text-align:center">没有匹配的记录</td></tr>`;
-  return list.map(c => `<tr class="chgrow">
-    <td><span class="yearpill">${c.year}</span></td>
-    <td><b>${esc(c.school)}</b><br><span class="muted">${esc(TRACK_LABEL[c.track] || '其他方向')}</span>
-      ${clickable ? `<br><button class="det" type="button" style="margin-top:5px" data-det2="${esc(c.school)}">院校详情</button>` : ''}</td>
-    <td><span class="badge ${c.type==='改回自命题'?'chg2':c.type==='其他变动'?'':'chg'}">${esc(c.type)}</span></td>
-    <td>${c.from && c.from!=='—'
-      ? `<span class="old">${esc(c.from)}</span><span class="arrow">→</span><span class="new">${esc(c.to)}</span>` : '<span class="muted">见说明</span>'}
-      <br><span class="muted">${esc(c.scope)}</span>${c.note?`<br><span class="muted">${esc(c.note)}</span>`:''}</td>
-    <td>${srcTag(c.official)}<br><a href="${esc(c.source)}" target="_blank" rel="noopener" style="font-size:12px">来源 ↗</a></td>
-  </tr>`).join('');
-}
-function renderChanges(){
-  const list = CHG_ALL.filter(chgMatch);
-  const off  = CHG_ALL.filter(c => c.official).length;
-  $('#chgSub').textContent =
-    `院校库内共 ${CHG_ALL.length} 条初试科目变动记录（其中 ${off} 条有官方来源），另有 ${CHG.extra.length} 条来自库外院校。当前显示 ${list.length} 条。`;
-  $('#chgNote').innerHTML = `<b>为什么这页最该先看：</b>${esc(CHG.note)}`;
-  const head = `<thead><tr><th>年度</th><th>院校</th><th>类型</th><th>科目变动与范围</th><th>来源</th></tr></thead>`;
-  $('#chgTable').innerHTML = head + `<tbody>${chgRows(list, true)}</tbody>`;
-  $('#chgExtra').innerHTML = head + `<tbody>${chgRows(CHG.extra.filter(chgMatch), false)}</tbody>`;
-  $('#chgTable').querySelectorAll('[data-det2]').forEach(b => b.onclick = () => openDetail(b.dataset.det2));
-  $('#chgN').textContent = `(${CHG_ALL.length})`;
-}
-
-
-
-
 /* ---- 表格里的名额小格 ---- */
 function quotaCell(r){
   const m = quotaOf(r.school, r.code, r.college);
@@ -1463,94 +1327,6 @@ function mdBold(str){
 }
 
 /* ================= 对比 ================= */
-function renderCompare(){
-  const rows = picks.map(n => SCHOOLS.find(s => s.name === n)).filter(Boolean);
-  $('#cmpEmpty').hidden = rows.length > 0;
-  $('#cmpWrap').hidden  = rows.length === 0;
-  if(!rows.length) return;
-  const fields = [
-    ['所在地',     s => `${esc(s.city)}（${esc(s.province)}）`],
-    ['地区',       s => esc(s.region)],
-    ['考区',       s => `${s.zone} 区${s.zone==='B'?'（国家线低 10 分）':''}`],
-    ['层次',       s => s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join(' ')],
-    ['A+ 学科',    s => s.aPlus.length ? s.aPlus.map(a=>`<span class="ap">${esc(a)}</span>`).join(' ') : '<span class="muted">无</span>'],
-    ['A+ 学科数',  s => `<span class="num">${s.aPlus.length}</span>`],
-    ['A 类学科数', s => `<span class="num">${s.aCount}</span>`],
-    ['学科实力',   s => s.dataLevel === 'roster'
-        ? '<span class="pend">待补</span>' : esc(s.strength)],
-    ['⚠ 改考提示', s => {
-      const cs = chgBy.get(s.name) || [];
-      if(!cs.length) return '<span class="muted">近三年未见变动记录</span>';
-      return cs.map(c => `<div style="margin-bottom:6px"><span class="yearpill">${c.year}</span>
-        <span class="badge ${c.type==='改回自命题'?'chg2':c.type==='其他变动'?'':'chg'}">${esc(c.type)}</span>
-        <br><span class="muted">${esc(c.scope)}</span></div>`).join('');
-    }],
-    ['收录专业',   s => {
-      const ps = progBy.get(s.name) || [];
-      return ps.length ? ps.map(p => `<div>${esc(p.code)} ${esc(p.name)}
-        <span class="muted">${esc(p.degree)}</span></div>`).join('') : '<span class="muted">未收录</span>';
-    }],
-    ['初试科目',   s => {
-      const ps = progBy.get(s.name) || [];
-      if(!ps.length) return '<span class="muted">未收录</span>';
-      return ps.map(p => `<div style="margin-bottom:6px"><b>${esc(p.name)}</b><br>
-        <span class="muted">${p.subjects.map(x => (x.code?x.code+' ':'') + x.name).join(' / ')}</span></div>`).join('');
-    }],
-    ['复试线',     s => {
-      const ps = (progBy.get(s.name) || []).filter(p => p.lines && p.lines.length);
-      if(!ps.length) return '<span class="muted">未收录</span>';
-      return ps.map(p => `<div style="margin-bottom:4px"><span class="muted">${esc(p.name)}</span><br>${lineText(p)}</div>`).join('');
-    }],
-    ['招录情况',   s => {
-      const ps = progBy.get(s.name) || [];
-      if(!ps.length) return '<span class="muted">未收录</span>';
-      return ps.map(p => `<div style="margin-bottom:4px"><span class="muted">${esc(p.name)}</span><br>${ratioText(p)}</div>`).join('');
-    }],
-    ['学费 / 学制', s => {
-      const ps = (progBy.get(s.name) || []).filter(p => p.tuition || p.years);
-      if(!ps.length) return '<span class="muted">未收录</span>';
-      return ps.map(p => `<div><span class="muted">${esc(p.name)}</span> ${esc(p.tuition||'—')}${p.years?` · ${p.years} 年`:''}</div>`).join('');
-    }],
-    ['研招网',     s => `<a href="${esc(s.gradSite)}" target="_blank" rel="noopener">官网 ↗</a>`],
-    ['',           s => `<button class="chip" onclick="openDetail('${esc(s.name)}')">查看详情</button>
-                         <button class="chip" onclick="togglePick('${esc(s.name)}')">移出对比</button>`],
-  ];
-  $('#cmpTable').innerHTML =
-    `<thead><tr><th class="rowh">对比项</th>${rows.map(s=>`<th>${esc(s.name)}</th>`).join('')}</tr></thead>` +
-    `<tbody>${fields.map(([k,fn]) =>
-      `<tr><td class="rowh">${k}</td>${rows.map(s=>`<td>${fn(s)}</td>`).join('')}</tr>`).join('')}</tbody>`;
-}
-
-/* ================= 国家线 ================= */
-let ZONE = 'A';
-$('#lineSub').textContent = LINES.note;
-$('#lineNote').innerHTML = `<b>B 区包括：</b>${LINES.regionB.join('、')}。其余省份为 A 区，国家线通常比 B 区高 10 分。`;
-$$('#zoneSeg button').forEach(b => b.onclick = () => {
-  ZONE = b.dataset.z;
-  $$('#zoneSeg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
-  renderLines();
-});
-function renderLines(){
-  $('#zoneHint').textContent = ZONE === 'A' ? '当前显示 A 区（一区）分数线' : '当前显示 B 区（二区）分数线';
-  const row = r => `<tr><td>${esc(r.name)}</td><td class="muted num">${esc(r.code)}</td>
-      <td class="num"><b>${r[ZONE][0]}</b></td><td class="num">${r[ZONE][1]}</td><td class="num">${r[ZONE][2]}</td></tr>`;
-  $('#lineTable').innerHTML =
-    `<thead><tr><th>学科门类 / 专业学位类别</th><th>代码</th><th>总分</th><th>单科(满分=100)</th><th>单科(满分&gt;100)</th></tr></thead>
-     <tbody>
-       <tr><td class="rowh" colspan="5">学术学位 · 学科门类（专业学位同门类者一并适用）</td></tr>
-       ${LINES.academic.map(row).join('')}
-       <tr><td class="rowh" colspan="5">单独划线的专业学位类别（管理类联考）</td></tr>
-       ${LINES.professionalSeparate.map(row).join('')}
-     </tbody>`;
-  $('#mapTable').innerHTML =
-    `<thead><tr><th>对应门类线</th><th>2026 A 区总分</th><th>包含的专业学位类别</th></tr></thead><tbody>` +
-    LINES.professionalMapping.map(g => {
-      const ref = LINES.academic.find(a => a.name === g.ref);
-      return `<tr><td class="rowh">${esc(g.group)}</td><td class="num"><b>${ref?ref.A[0]:'—'}</b></td>
-              <td>${g.items.map(i=>`<span class="badge">${esc(i)}</span>`).join(' ')}</td></tr>`;
-    }).join('') + '</tbody>';
-}
-
 /* ================= 资料 ================= */
 $('#resSub').textContent = RES.note;
 $('#resGroups').innerHTML = RES.groups.map(g => `
@@ -1999,12 +1775,14 @@ function gsBuild(){
     hay:[sc.school, c.name, r.building, r.facilities, r.beds+'人间'].join(' '),
     go:{panel:'advisors', q:sc.school}
   }))));
+  // 改考预警面板已移除；改考信息仍以角标形式挂在院校卡片上，
+  // 因此这里把命中导向院校库而不是已不存在的 changes 面板。
   (CHG.changes||[]).forEach(c => ix.push({
     k:'改考', t:`${c.school} ${c.type || ''}`.trim(),
     d:[c.year, c.scope, c.from && c.to ? `${c.from} → ${c.to}` : null]
         .filter(Boolean).join(' · '),
     hay:[c.school, c.type, c.scope, c.from, c.to, c.note, c.year].filter(Boolean).join(' '),
-    go:{panel:'changes', q:c.school}
+    go:{panel:'schools', q:c.school}
   }));
   ix.forEach(x => x.hay = x.hay.toLowerCase());
   GSIDX = ix;
@@ -2253,7 +2031,7 @@ function renderNju(){
 }
 
 /* ---------------- boot ---------------- */
-renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
+renderSchools();
 buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
 buildAdvFilters(); renderAdvisors(); renderSysu(); renderNju();
@@ -2275,7 +2053,7 @@ buildAdvFilters(); renderAdvisors(); renderSysu(); renderNju();
     `<span class="muted">标「待补」的是还没查，不是没有。</span>`;
 }
 addEventListener('resize', () => { hideTip(); });
-window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
+window.go = go;
 window.openDetail = openDetail; window.closeDetail = closeDetail;
 </script>
 </body>
