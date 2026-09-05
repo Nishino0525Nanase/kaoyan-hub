@@ -31,6 +31,7 @@ const files = {
   __DATA_ADV__:     'data/advisors.json',
   __DATA_DORM__:    'data/dorms.json',
   __DATA_SYSU__:    'data/sysu.json',
+  __DATA_NJU__:     'data/nju.json',
 };
 
 /* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */

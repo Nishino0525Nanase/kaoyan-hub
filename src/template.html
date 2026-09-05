@@ -89,6 +89,13 @@ h2.sec{font-size:19px;margin:0 0 4px;letter-spacing:-.2px}
 p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .muted{color:var(--text-3);font-size:12.5px}
 
+.srcl{display:flex;flex-direction:column;gap:8px}
+.srci{padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface-1);font-size:12.5px;line-height:1.6}
+.srci .w{color:var(--text-1);font-weight:600;font-size:13px}
+.srci .f{color:var(--text-2);margin-top:3px}
+.srci .m{color:var(--text-3);margin-top:3px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.srci .tg{font-size:11px;padding:1px 6px;border-radius:5px;background:var(--surface-2);border:1px solid var(--line)}
+.srci .cv{color:var(--warn);margin-top:4px}
 .sysec{margin:0 0 26px}
 .sysec h3{margin:0 0 4px;font-size:16px;letter-spacing:-.2px}
 .sysec>p.hint{margin:0 0 12px;color:var(--text-3);font-size:12.5px;line-height:1.6}
@@ -785,6 +792,7 @@ body.hasdock{padding-bottom:66px}
 <script id="data-adv" type="application/json">__DATA_ADV__</script>
 <script id="data-dorm" type="application/json">__DATA_DORM__</script>
 <script id="data-sysu" type="application/json">__DATA_SYSU__</script>
+<script id="data-nju" type="application/json">__DATA_NJU__</script>
 <script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
@@ -810,6 +818,7 @@ const QUOTA   = J('data-quota');
 const ADV     = J('data-adv');
 const DORM    = J('data-dorm');
 const SYSU    = J('data-sysu');
+const NJU     = J('data-nju');
 /* 名额与复试细则的匹配。
    注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
    （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
@@ -1846,10 +1855,10 @@ function dormBlock(school, campusId){
   if(!hit) return `<p class="advmeta">校区住宿：本库暂未录入 ${esc(school)} 的住宿数据。</p>`;
   const { sc, c } = hit;
   const meta = `<span class="muted">${esc(sc.sourceLabel)}　${esc(sc.dataYear)}　conf=${esc(sc.confidence)}</span>`;
-  const foot = `<p class="dormcav"><b>口径：</b>${esc(sc.audience)}<br>
-      <b>范围：</b>${esc(sc.scope)}<br>
-      ${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}<br>
-      来源：<a href="${esc(sc.source)}" target="_blank" rel="noopener">${esc(sc.sourceLabel)}</a></p>`;
+  const foot = `<p class="dormcav"><b>口径：</b>${esc(sc.audience)}　
+      来源：<a href="${esc(sc.source)}" target="_blank" rel="noopener">${esc(sc.sourceLabel)}</a>
+      <details style="margin-top:5px"><summary style="cursor:pointer;color:var(--text-3)">范围与提醒</summary>
+        ${esc(sc.scope)}<br>${DORM.caveats.map(x => '· ' + esc(x)).join('<br>')}</details></p>`;
 
   if(sc.granularity === 'policy'){
     return `<details class="dorm">
@@ -1907,7 +1916,7 @@ function renderAdvisors(){
         <span class="advcampus">${esc(col.campus)}</span>
         <span class="muted">${list.length} / ${col.count} 人</span>
       </div>
-      <p class="advmeta">${esc(col.scope)}　·　来源：<a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>（${esc(col.fetched)} 抓取）</p>
+      <p class="advmeta"><a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>　<span title="${esc(col.scope)}">${esc(col.scope.slice(0, 34))}${col.scope.length > 34 ? '…' : ''}</span></p>
       ${dormBlock(col.school, col.campusId)}
       <div class="advgrid">${list.map(a => advCard(a, q)).join('')}</div>
     </section>`;
@@ -1915,10 +1924,8 @@ function renderAdvisors(){
   host.innerHTML = html || `<div class="card advempty">没有匹配的导师。<br>试试换个关键词，或者清掉上面的筛选。</div>`;
   const ac = ADV.coverage, dc = DORM.coverage;
   $('#advSub').innerHTML =
-    `${ADV.colleges.length} 个学院、${ADV.total} 位导师，当前显示 ${shown} 位。` +
-    `<br><span class="muted">覆盖度：导师 ${ac.covered}/${ac.total} 所　·　` +
-    `住宿 ${dc.covered}/${dc.total} 所（${DORM.schools.map(x => esc(x.school)).join('、')}）　·　` +
-    `其余学校是还没查，不是查不到</span>`;
+    `${ADV.total} 位导师，显示 ${shown} 位　·　` +
+    `<span class="muted">导师 ${ac.covered}/${ac.total} 所、住宿 ${dc.covered}/${dc.total} 所</span>`;
   $('#advClr').hidden = !q;
 }
 
@@ -1929,8 +1936,7 @@ function buildAdvFilters(){
   advChips('#fAdvCol', ADV.colleges.map(c => c.name), 'col');
   const titles = [...new Set(ADV.colleges.flatMap(c => c.advisors.map(a => a.title || '未标注')))];
   advChips('#fAdvTitle', titles, 'title');
-  $('#advNote').innerHTML =
-    `${esc(ADV.note)}<br><b>${esc(ADV.disclaimer)}</b>`;
+  $('#advNote').innerHTML = `<b>${esc(ADV.disclaimer)}</b>`;
 }
 
 
@@ -2137,6 +2143,32 @@ function renderSysu(){
 
    <section class="sysec"><h3>校区 × 学院</h3><div class="cmpgrid">${camp}</div></section>
 
+   <section class="sysec"><h3>资料来源</h3>
+     <p class="hint">${esc(S.sources.note)}</p>
+     <div class="srcl">${S.sources.items.map(x => `<div class="srci">
+       <div class="w">${esc(x.what)}</div>
+       <div class="f">${esc(x.from)}</div>
+       <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
+         <span class="tg">${esc(x.year)}</span>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
+       ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></section>
+
+   <section class="sysec"><h3>南京大学 · 资料来源与核实状态</h3>
+     <p class="hint">${esc(NJU.note)}</p>
+     <div class="srcl">${NJU.sources.map(x => `<div class="srci">
+       <div class="w">${esc(x.what)}</div>
+       <div class="f">${esc(x.from)}</div>
+       <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
+         <span class="tg">${esc(x.year)}</span>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
+       ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div>
+     ${NJU.verifyNeeded.map(v => `<div class="warnbox" style="margin-top:11px">
+       <b>${esc(v.code)} ${esc(v.name)} — ${esc(v.status)}</b>
+       <ul style="margin:7px 0 0;padding-left:18px;font-size:12.5px;color:var(--text-2);line-height:1.65">
+         ${v.evidence.map(e => `<li>${esc(e)}</li>`).join('')}</ul>
+       <p style="margin:7px 0 0;font-size:12.5px;color:var(--text-2)"><b>核实：</b>${esc(v.howToVerify)}</p>
+     </div>`).join('')}</section>
+
    <section class="sysec"><h3>本库收录的中大数据</h3>
      <div class="idx">
        <div class="idxi"><b>${I.programs}</b>专业记录（${I.programsWithSubjects} 条有科目）</div>
@@ -2167,12 +2199,10 @@ buildAdvFilters(); renderAdvisors(); renderSysu();
         <b>核实方式：</b>${esc(v.howToVerify)}</p></div>`).join('');
   const BY = (PROG.completeness || {}).bySchool || {};
   if(L.roster) $('#lvNote').innerHTML =
-    `院校库共 <b>${DB.count}</b> 所：其中 <b>${L.full}</b> 所含第四轮学科评估数据与已验证的研招网址；` +
-    `另 <b>${L.roster}</b> 所目前只录了城市、分区与 985/211/双一流层次，` +
-    `标「学科数据待补」——是<b>还没查</b>，不是该校没有 A 类学科。<br>` +
-    `专业数据：共 <b>${T.records}</b> 条记录，其中 <b>${T.withSubjects}</b> 条填了初试科目、` +
-    `<b>${T.withLines}</b> 条填了复试线；<b>${DB.count - Object.keys(BY).length}</b> 所学校还没有任何专业记录。` +
-    `各校官方招生目录多为 JS 查询系统，抓不到，只能逐校手工补。`;
+    `院校 <b>${DB.count}</b> 所（<b>${L.full}</b> 所含学科评估数据）　·　` +
+    `专业 <b>${T.records}</b> 条（<b>${T.withSubjects}</b> 条有初试科目、<b>${T.withLines}</b> 条有复试线）　·　` +
+    `<b>${DB.count - Object.keys(BY).length}</b> 所暂无专业记录。` +
+    `<span class="muted">标「待补」的是还没查，不是没有。</span>`;
 }
 addEventListener('resize', () => { hideTip(); });
 window.go = go; window.togglePick = togglePick; window.clearPicks = clearPicks;
