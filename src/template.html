@@ -89,6 +89,22 @@ h2.sec{font-size:19px;margin:0 0 4px;letter-spacing:-.2px}
 p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .muted{color:var(--text-3);font-size:12.5px}
 
+.lyr{border-radius:11px;padding:14px 16px;margin:0 0 14px;border:1px solid var(--line)}
+.lyr.ok{border-left:4px solid var(--good)}
+.lyr.mid{border-left:4px solid var(--warn)}
+.lyr.bad{border-left:4px solid #e34948;background:var(--surface-2)}
+.lyr h4{margin:0 0 3px;font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lyr .badge2{font-size:11px;padding:1px 7px;border-radius:5px;border:1px solid currentColor}
+.lyr.ok h4,.lyr.ok .badge2{color:var(--good)}
+.lyr.mid h4,.lyr.mid .badge2{color:var(--warn)}
+.lyr.bad h4,.lyr.bad .badge2{color:#e34948}
+.lyr .sub2{font-size:12px;color:var(--text-3);margin:0 0 9px;line-height:1.55}
+.lyr dl{margin:0;font-size:13px;line-height:1.6}
+.lyr dt{color:var(--text-3);font-size:12px;margin-top:8px}
+.lyr dt:first-child{margin-top:0}
+.lyr dd{margin:1px 0 0;color:var(--text-1)}
+.lyr dd a{font-size:12px}
+.lyr ul{margin:0;padding-left:18px;font-size:12.5px;color:var(--text-2);line-height:1.7}
 .srcl{display:flex;flex-direction:column;gap:8px}
 .srci{padding:11px 13px;border:1px solid var(--line);border-radius:9px;background:var(--surface-1);font-size:12.5px;line-height:1.6}
 .srci .w{color:var(--text-1);font-weight:600;font-size:13px}
@@ -556,6 +572,7 @@ body.hasdock{padding-bottom:66px}
       <button class="tab" role="tab" data-panel="charts" aria-selected="false">数据图表</button>
       <button class="tab" role="tab" data-panel="compare" aria-selected="false">院校对比 <span id="cmpN"></span></button>
       <button class="tab" role="tab" data-panel="sysu" aria-selected="false">中大专栏</button>
+      <button class="tab" role="tab" data-panel="nju" aria-selected="false">南大控制</button>
       <button class="tab" role="tab" data-panel="advisors" aria-selected="false">导师名录</button>
       <button class="tab" role="tab" data-panel="res" aria-selected="false">资料链接</button>
     </nav>
@@ -744,6 +761,12 @@ body.hasdock{padding-bottom:66px}
     <p class="sub" id="sysuSub"></p>
     <div class="notice" id="sysuNote"></div>
     <div id="sysuBody"></div>
+  </section>
+
+  <section class="panel" id="p-nju">
+    <h2 class="sec">南京大学 085406 控制工程（专硕）</h2>
+    <p class="sub" id="njuSub"></p>
+    <div id="njuBody"></div>
   </section>
 
   <section class="panel" id="p-advisors">
@@ -2190,11 +2213,50 @@ function renderSysu(){
   $('#sysuNote').textContent = S.note;
 }
 
+
+/* ================= 南大 085406 专栏 =================
+   这个专业本库判断出过错（曾误判停招），所以刻意把「官方核实过的」
+   「二手的」「无佐证的」三层分开显示，而不是混成一张表。 */
+function renderNju(){
+  const H = NJU.hub; if(!H) return;
+  const dl = items => `<dl>${items.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.v)}${
+      x.src ? ` <a href="${esc(x.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}${
+      x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a>` : ''}</dd>`).join('')}</dl>`;
+
+  $('#njuBody').innerHTML = `
+   <div class="lyr ok"><h4>${esc(H.official.label)}<span class="badge2">official</span></h4>
+     <p class="sub2">${esc(H.college)} · ${esc(H.campus)} · ${esc(H.addr)}</p>
+     ${dl(H.official.items)}</div>
+
+   <div class="lyr mid"><h4>${esc(H.secondary.label)}<span class="badge2">secondary</span></h4>
+     <p class="sub2">来源：${esc(H.secondary.from)}　
+       <a href="${esc(H.secondary.src)}" target="_blank" rel="noopener">研招网简章目录 &rarr;</a></p>
+     ${dl(H.secondary.items)}</div>
+
+   <div class="lyr bad"><h4>${esc(H.unverified.label)}<span class="badge2">unverified</span></h4>
+     <p class="sub2">${esc(H.unverified.why)}</p>
+     <ul>${H.unverified.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+
+   <div class="lyr"><h4>${esc(H.verifyPath.label)}</h4>${dl(H.verifyPath.items)}</div>
+
+   <div class="lyr"><h4>提醒</h4>
+     <ul>${H.notes.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+
+   ${NJU.correction ? `<div class="lyr mid"><h4>数据订正记录（${esc(NJU.correction.date)}）</h4>
+     <ul><li>${esc(NJU.correction.what)}</li>
+         <li><b>原因：</b>${esc(NJU.correction.why)}</li>
+         <li><b>教训：</b>${esc(NJU.correction.lesson)}</li></ul></div>` : ''}`;
+
+  $('#njuSub').innerHTML = `${esc(H.college)}　·　${esc(H.campus)}　·　` +
+    `<span class="muted">按来源分三层展示：官方核实 ${H.official.items.length} 条、` +
+    `二手 ${H.secondary.items.length} 条、无佐证 ${H.unverified.items.length} 条</span>`;
+}
+
 /* ---------------- boot ---------------- */
 renderSchools(); renderCompare(); renderDock(); renderLines(); renderChanges();
 buildMajFilters(); renderMajors(); renderFresh();
 buildTrendLegend(); drawAll();
-buildAdvFilters(); renderAdvisors(); renderSysu();
+buildAdvFilters(); renderAdvisors(); renderSysu(); renderNju();
 {
   const L = DB.dataLevels || {};
   const T = (PROG.completeness || {}).totals || {};
