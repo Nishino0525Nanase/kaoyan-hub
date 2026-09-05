@@ -34990,6 +34990,141 @@
    "note": "目录明确标注「仅招收推免生」，统考生无法报考——这是确实不招，不是数据缺失",
    "tuimianOnly": true,
    "campus": null
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "873",
+     "name": "自动控制理论"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "微机原理与接口技术",
+   "note": "全日制 01 不区分研究方向；非全日制 F1 方向可接收单独考试考生；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": null,
+   "code": "085801",
+   "name": "电气工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "837",
+     "name": "电路"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电力电子技术",
+   "note": "全日制 01 不区分研究方向；含非全日制 F1；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": null,
+   "code": "086100",
+   "name": "交通运输",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "873",
+     "name": "自动控制理论"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "智能交通控制",
+   "note": "全日制 01 不区分研究方向；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
   }
  ],
  "notEligible": [
@@ -35263,8 +35398,8 @@
     "line": 6
    },
    "南京理工大学": {
-    "n": 2,
-    "sub": 2,
+    "n": 5,
+    "sub": 5,
     "line": 0
    },
    "南京航空航天大学": {
@@ -35499,11 +35634,11 @@
    }
   },
   "totals": {
-   "records": 652,
-   "withSubjects": 380,
+   "records": 655,
+   "withSubjects": 383,
    "withLines": 509,
    "withRetestBooks": 9,
-   "withRetestSubjects": 56,
+   "withRetestSubjects": 59,
    "tuimianOnly": 4
   },
   "sourceAccess": {
@@ -35513,15 +35648,32 @@
     "合肥工业大学：PDF 在 yjszs.hfut.edu.cn/_upload/ 下，含科目与招生计划",
     "南京大学电科院：网页正文是图片，但附件 PDF 可取（复试参考书目）",
     "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下",
-    "中山大学：全校目录 PDF 在 graduate.sysu.edu.cn/zsw/sites/default/files/ 下，含初试+复试+招生数"
+    "中山大学：全校目录 PDF 在 graduate.sysu.edu.cn/zsw/sites/default/files/ 下，含初试+复试+招生数",
+    "南京理工大学：目录 PDF 在 gs.njust.edu.cn/_upload/ 下，含初试与复试科目"
    ],
    "blocked": [
     "西北工业大学：目录页正文只写「见附件」，附件链接提取不到",
     "西南交通大学：整站为 vatuu 查询系统，表格由 JS 填充",
     "北京科技大学：逐专业页面把目录做成 image.png，无文字层",
-    "华南理工大学：研招网 robots 禁止自动访问，招生目录为 yanzhao.scut.edu.cn 查询系统，两条路都不通"
+    "华南理工大学：研招网 robots 禁止自动访问，招生目录为 yanzhao.scut.edu.cn 查询系统，两条路都不通",
+    "南京大学：招生目录页正文为空、附件未渲染，只能靠各学院自己发的 PDF 补"
    ]
   },
-  "campusNote": "中大 campus 字段只填了从各学院官网核实过办学地点的学院（电信院=广州东校园、电通院与集成电路学院=深圳、微电子科学与技术学院=珠海）；其余学院留空待核实，不按印象填。"
+  "campusNote": "中大 campus 字段只填了从各学院官网核实过办学地点的学院（电信院=广州东校园、电通院与集成电路学院=深圳、微电子科学与技术学院=珠海）；其余学院留空待核实，不按印象填。",
+  "verifyNeeded": [
+   {
+    "school": "南京大学",
+    "code": "085406",
+    "name": "控制工程",
+    "status": "存疑——很可能已停招，勿据此备考",
+    "evidence": [
+     "南大电子科学与工程学院 2026 年复试笔试参考书目（官方 PDF）列出的 7 个专业中没有 085406",
+     "唯一提及南大 085406 的是聚合站，标注为 2020 年、开设单位「工程管理学院」，该学院此后已重组",
+     "南大 2026 年硕士招生目录页（yzb.nju.edu.cn/19/b1/c47862a793009/pagem.htm）正文为空，附件未渲染，无法核实"
+    ],
+    "howToVerify": "以研招网 yz.chsi.com.cn/zsml 按「南京大学 + 085406」查当年目录，或直接致电南大研招办",
+    "note": "本库不为无法确认存在的专业建立记录——错误的专业课方向会直接浪费一整年复习"
+   }
+  ]
  }
 }

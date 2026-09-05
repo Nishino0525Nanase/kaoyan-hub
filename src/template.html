@@ -577,6 +577,7 @@ body.hasdock{padding-bottom:66px}
     <div class="freshbar" id="freshBar"></div>
 
     <p class="lvnote" id="lvNote"></p>
+    <div id="vfNote"></div>
     <div class="filters">
       <div class="searchbox">
         <span class="mag">⌕</span>
@@ -2157,6 +2158,13 @@ buildAdvFilters(); renderAdvisors(); renderSysu();
 {
   const L = DB.dataLevels || {};
   const T = (PROG.completeness || {}).totals || {};
+  const VF = (PROG.completeness || {}).verifyNeeded || [];
+  if(VF.length) $('#vfNote').innerHTML = VF.map(v => `<div class="warnbox">
+      <b>存疑：${esc(v.school)} ${esc(v.code)} ${esc(v.name)} — ${esc(v.status)}</b>
+      <ul style="margin:7px 0 0;padding-left:18px;font-size:12.5px;color:var(--text-2);line-height:1.65">
+        ${v.evidence.map(e => `<li>${esc(e)}</li>`).join('')}</ul>
+      <p style="margin:7px 0 0;font-size:12.5px;color:var(--text-2)">
+        <b>核实方式：</b>${esc(v.howToVerify)}</p></div>`).join('');
   const BY = (PROG.completeness || {}).bySchool || {};
   if(L.roster) $('#lvNote').innerHTML =
     `院校库共 <b>${DB.count}</b> 所：其中 <b>${L.full}</b> 所含第四轮学科评估数据与已验证的研招网址；` +
