@@ -2792,9 +2792,775 @@
     }
    ],
    "count": 25
+  },
+  {
+   "id": "sysu-ise",
+   "school": "中山大学",
+   "name": "智能工程学院",
+   "campus": "深圳校区",
+   "campusId": "shenzhen",
+   "site": "https://ise.sysu.edu.cn/",
+   "source": "https://ise.sysu.edu.cn/teacher",
+   "sourceLabel": "教师名录",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "专任教师中的教授与副教授；博士后、专职科研、实验技术人员未收录",
+   "advisors": [
+    {
+     "name": "郑跃",
+     "title": "教授",
+     "email": null,
+     "areas": "铁电/铁磁/多铁功能结构特性与应用；巨电阻、巨力阻及巨磁阻效应可控性机理及应用；功能结构光电效应可控性及应用；生物物理及生物力学",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhengYue",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "蔡铭",
+     "title": "教授",
+     "email": "caiming@mail.sysu.edu.cn",
+     "areas": "智能交通系统、低空经济、交通环境工程和交通大数据",
+     "url": "https://ise.sysu.edu.cn/teacher/CaiMing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "高陈强",
+     "title": "教授",
+     "email": "gaochq6@mail.sysu.edu.cn",
+     "areas": "多模态场景感知、图像与音频扩散生成、具身智能、音频信号处理",
+     "url": "https://ise.sysu.edu.cn/teacher/GaoChenqiang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "高殿策",
+     "title": "教授",
+     "email": "gaodc@mail.sysu.edu.cn",
+     "areas": "智慧城市复杂能源系统的智能优化控制及数据挖掘与分析",
+     "url": "https://ise.sysu.edu.cn/teacher/GaoDiance",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "龚世民",
+     "title": "教授",
+     "email": "gongshm5@mail.sysu.edu.cn",
+     "areas": "移动网络与边缘计算、认知通信与智能网络、无人机辅助通信网络、低功耗物联网及无源通信技术、面向新一代移动通信的机器学习与人工智能",
+     "url": "https://ise.sysu.edu.cn/teacher/GongShimin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "古博",
+     "title": "教授",
+     "email": "gubo@mail.sysu.edu.cn",
+     "areas": "时空序列预测、多模态场景理解、特种车辆无人驾驶",
+     "url": "https://ise.sysu.edu.cn/teacher/GuBo",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "韩瑜",
+     "title": "教授",
+     "email": "hanyu25@mail.sysu.edu.cn",
+     "areas": "机器人控制、多信息融合、机器视觉、图像处理、进化计算",
+     "url": "https://ise.sysu.edu.cn/teacher/156",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "何兆成",
+     "title": "教授",
+     "email": "hezhch@mail.sysu.edu.cn",
+     "areas": "多网融合交通系统建模与仿真、交通时空大模型、车路云一体化协同、智能交通系统",
+     "url": "https://ise.sysu.edu.cn/teacher/HeZhaocheng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄玮",
+     "title": "教授",
+     "email": "huangwei5@mail.sysu.edu.cn",
+     "areas": "交通系统控制，智能网联与车路协同，智能交通系统，交通系统建模与优化，交通大数据，交通规划与设计",
+     "url": "https://ise.sysu.edu.cn/teacher/HuangWei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "姬艳丽",
+     "title": "教授",
+     "email": "jiyli@mail.sysu.edu.cn",
+     "areas": "多模态智能理解、多模态大模型、具身智能、AI4S",
+     "url": "https://ise.sysu.edu.cn/teacher/JiYanli",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "金枝",
+     "title": "教授",
+     "email": "jinzh26@mail.sysu.edu.cn",
+     "areas": "视觉感知增强、空间智能以及大模型优化",
+     "url": "https://ise.sysu.edu.cn/teacher/JinZhi",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李廷勋",
+     "title": "教授",
+     "email": "Litx@mail.sysu.edu.cn",
+     "areas": "基于深度学习的人体舒适性表达及应用、智慧家居、智能家电仿真；航天设备热管理、高热流密度器件散热与群控；热力系统优化，环保制冷剂替代",
+     "url": "https://ise.sysu.edu.cn/teacher/LiTingxun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李晓东",
+     "title": "教授",
+     "email": "lixd@mail.sysu.edu.cn",
+     "areas": "智能控制、二维线性系统理论与应用、智能信息处理",
+     "url": "https://ise.sysu.edu.cn/teacher/LiXiaodong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李熙莹",
+     "title": "教授",
+     "email": "stslxy@mail.sysu.edu.cn",
+     "areas": "视频大数据、视频图像处理、交通信息获取分析、视觉测量及行为分析、智能交通系统",
+     "url": "https://ise.sysu.edu.cn/teacher/LiXiying",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李雪芳",
+     "title": "教授",
+     "email": "lixuef25@mail.sysu.edu.cn",
+     "areas": "智能学习控制、数据驱动控制、新能源汽车控制与优化、智能车辆与自动驾驶、多智能体协同",
+     "url": "https://ise.sysu.edu.cn/teacher/LiXuefang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "梁小丹",
+     "title": "教授",
+     "email": "liangxd9@mail.sysu.edu.cn",
+     "areas": "多模态理解与生成大模型，具身智能，多模态高阶推理，AI for Math",
+     "url": "https://ise.sysu.edu.cn/teacher/LiangXiaodan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘强",
+     "title": "教授",
+     "email": "liuq32@mail.sysu.edu.cn",
+     "areas": "汽车与交通安全、智能网联汽车与自动驾驶、汽车轻量化与双碳影响、低空经济安全",
+     "url": "https://ise.sysu.edu.cn/teacher/LiuQiang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘万泉",
+     "title": "教授",
+     "email": "liuwq63@mail.sysu.edu.cn",
+     "areas": "图像处理，机器学习、基于神经网络的智能控制系统",
+     "url": "https://ise.sysu.edu.cn/teacher/LiuWanquan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘永红",
+     "title": "教授",
+     "email": "liuyh3@mail.sysu.edu.cn",
+     "areas": "时空计算大模型、交通-能源-环境系统耦合建模、车-路-环-云一体化感知、交通环境工程",
+     "url": "https://ise.sysu.edu.cn/teacher/LiuYonghong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谭光",
+     "title": "教授",
+     "email": "tanguang@mail.sysu.edu.cn",
+     "areas": "智能感知和机器学习：空间智能，机器人定位与导航，视觉感知；分布式计算和网络控制：车联网，边缘计算",
+     "url": "https://ise.sysu.edu.cn/teacher/TanGuang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谭晓军",
+     "title": "教授",
+     "email": "tanxj@mail.sysu.edu.cn",
+     "areas": "基于视觉与智能控制的电动汽车技术；无人机集群控制与机载图像识别技术；智能技术在大健康产业中的应用",
+     "url": "https://ise.sysu.edu.cn/teacher/TanXiaojun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王军波",
+     "title": "教授",
+     "email": "wangjb33@mail.sysu.edu.cn",
+     "areas": "人工智能安全与鲁棒性；大数据与智慧应急；机器人与多智能体系统",
+     "url": "https://ise.sysu.edu.cn/teacher/WangJunbo",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王涛",
+     "title": "教授",
+     "email": "wangt339@mail.sysu.edu.cn",
+     "areas": "智能自主无人系统、先进制导与控制、认知智能机器人、高端装备智能运维与健康管理、多飞行器任务协同规划与智能决策",
+     "url": "https://ise.sysu.edu.cn/teacher/WangTao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吴元清",
+     "title": "教授",
+     "email": "wuyuanqing@mail.sysu.edu.cn",
+     "areas": "多机器人系统（智能机器人、智能无人车、智能机械臂、多机器人协同全域感知与智能决策）、人工智能、工业软件；自主研制移动机器人与仿生机器人平台，覆盖机械设计、加工制造、电路设计、集成组装全流程",
+     "url": "https://ise.sysu.edu.cn/teacher/1493",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "熊会元",
+     "title": "教授",
+     "email": "xionghy@mail.sysu.edu.cn",
+     "areas": "自动驾驶、智能机器人、电动汽车、数字孪生",
+     "url": "https://ise.sysu.edu.cn/teacher/XiongHuiyuan",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "由林麟",
+     "title": "教授",
+     "email": "youllin@mail.sysu.edu.cn",
+     "areas": "智慧城市、AI4S、联邦大模型、隐私安全",
+     "url": "https://ise.sysu.edu.cn/teacher/YouLinlin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张雨浓",
+     "title": "教授",
+     "email": "zhynong@mail.sysu.edu.cn",
+     "areas": "控制理论、算法与工程，神经动力学/神经网络/人工智能，机器人/机械臂，数值计算方法与优化",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhangYunong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "钟任新",
+     "title": "教授",
+     "email": "zhrenxin@mail.sysu.edu.cn",
+     "areas": "城市低空交通控制、空地协同预警与应急系统、城市交通系统建模、智慧高速、垂直AI智能体、语义视觉导航、三维建模及数字孪生",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhongRenxin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈俊周",
+     "title": "副教授",
+     "email": "chenjunzhou@mail.sysu.edu.cn",
+     "areas": "计算机视觉、机器学习、多模态大模型、智慧交通、智慧医疗、NLP",
+     "url": "https://ise.sysu.edu.cn/teacher/ChenJunzhou",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "邓院昌",
+     "title": "副教授",
+     "email": "dengych@mail.sysu.edu.cn",
+     "areas": "交通心理与行为分析",
+     "url": "https://ise.sysu.edu.cn/teacher/DengYuanchang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "范正平",
+     "title": "副教授",
+     "email": "fanzhp@mail.sysu.edu.cn",
+     "areas": "智能学习、系统控制、网络信息传播及应用",
+     "url": "https://ise.sysu.edu.cn/teacher/FanZhengping",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "冯国栋",
+     "title": "副教授",
+     "email": "fenggd6@mail.sysu.edu.cn",
+     "areas": "智能控制、故障诊断与容错、智能感知、电机系统与电力电子驱动、新能源汽车、无人机、机器人",
+     "url": "https://ise.sysu.edu.cn/teacher/FengGuodong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "苟超",
+     "title": "副教授",
+     "email": "gouchao@mail.sysu.edu.cn",
+     "areas": "计算机视觉、模式识别、强化学习控制、多模态大模型，及其在自动驾驶、智能交通、移动机器人、无人机等领域的感知与决策应用",
+     "url": "https://ise.sysu.edu.cn/teacher/GouChao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "官权学",
+     "title": "副教授",
+     "email": "guanqx3@mail.sysu.edu.cn",
+     "areas": "人工智能和先进控制算法在新型电力系统、电力电子变换器、电化学系统中的应用；锂/钠离子电池快速充电策略及状态估计，充电电源装置设计及控制，充电网络运营优化",
+     "url": "https://ise.sysu.edu.cn/teacher/GuanQuanxue",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "何涛",
+     "title": "副教授",
+     "email": "hetao29@mail.sysu.edu.cn",
+     "areas": "失效分析与智能优化、智能机器人技术与系统、机器学习与深度学习",
+     "url": "https://ise.sysu.edu.cn/teacher/HeTao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "胡伟鹏",
+     "title": "副教授",
+     "email": "huwp7@mail.sysu.edu.cn",
+     "areas": "人工智能、计算机视觉、智能交通、低空智能感知、数字人认知、视觉可控生成、多模态信息处理、世界模型",
+     "url": "https://ise.sysu.edu.cn/teacher/1492",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄敏",
+     "title": "副教授",
+     "email": "Huangm7@mail.sysu.edu.cn",
+     "areas": "可计算路网建模，基于身份检测的交通系统建模",
+     "url": "https://ise.sysu.edu.cn/teacher/HuangMin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "蒋格格",
+     "title": "副教授",
+     "email": "jianggg@mail.sysu.edu.cn",
+     "areas": "动态交通网络分析、交通流建模与仿真、低空经济选址建模；随机交通网络下的交通行为分析、交通流量预测、交通管控",
+     "url": "https://ise.sysu.edu.cn/teacher/JiangGege",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "江锦成",
+     "title": "副教授",
+     "email": "jiangjch28@mail.sysu.edu.cn",
+     "areas": "时空智能体、智能交通、灾害应急、低空经济、GeoAI",
+     "url": "https://ise.sysu.edu.cn/teacher/JiangJincheng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "姜善成",
+     "title": "副教授",
+     "email": "jiangshch3@mail.sysu.edu.cn",
+     "areas": "可信人工智能+大模型+医疗决策优化+健康管理；强化学习+运筹优化",
+     "url": "https://ise.sysu.edu.cn/teacher/JiangShancheng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "金恺",
+     "title": "副教授",
+     "email": "jink8@mail.sysu.edu.cn",
+     "areas": "计算几何、博弈论、算法设计、组合学、离散和凸几何",
+     "url": "https://ise.sysu.edu.cn/teacher/JinKai",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李军",
+     "title": "副教授",
+     "email": "stslijun@mail.sysu.edu.cn",
+     "areas": "交通运输工程、运输经济",
+     "url": "https://ise.sysu.edu.cn/teacher/lijun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李孟棠",
+     "title": "副教授",
+     "email": "limt29@mail.sysu.edu.cn",
+     "areas": "微创手术腹腔镜机器人；核磁兼容气驱动手术机器人；人机交互控制",
+     "url": "https://ise.sysu.edu.cn/teacher/LiMengtang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李中华",
+     "title": "副教授",
+     "email": "lizhongh@mail.sysu.edu.cn",
+     "areas": "智能物联网与边缘计算：RFID技术与应用系统开发、边缘计算卸载；大数据与区块链应用；人工智能与机器视觉",
+     "url": "https://ise.sysu.edu.cn/teacher/LiZhonghua",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "卢俊文",
+     "title": "副教授",
+     "email": "lujw56@mail.sysu.edu.cn",
+     "areas": "时空行为大数据，个体交通行为，交通出行暴露与健康，城市网约出行",
+     "url": "https://ise.sysu.edu.cn/teacher/LuJunwen",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "卢庆龙",
+     "title": "副教授",
+     "email": "luqlong@mail.sysu.edu.cn",
+     "areas": "交通系统优化，仿真驱动的优化，数据驱动的控制，出行行为建模，统计学习与交通数据分析",
+     "url": "https://ise.sysu.edu.cn/teacher/LuQinglong",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "罗健文",
+     "title": "副教授",
+     "email": "luojw76@mail.sysu.edu.cn",
+     "areas": "机器人动力学与控制、数据驱动与模型的智能控制算法、多任务优先级分解；人形机器人、灵巧手、触觉传感器、足式机器人、机器人核心零部件关键技术",
+     "url": "https://ise.sysu.edu.cn/teacher/LuoJianwen",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吕熙敏",
+     "title": "副教授",
+     "email": "lvxm6@mail.sysu.edu.cn",
+     "areas": "空中与地面移动机器人硬件与智能算法；空中具身智能算法；高性能无人机规划与控制算法；新型无人机平台；轮足式机器人平台、规划与控制算法",
+     "url": "https://ise.sysu.edu.cn/teacher/LvXimin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "马倩",
+     "title": "副教授",
+     "email": "maqian25@mail.sysu.edu.cn",
+     "areas": "边缘智能：大小模型协同、分布式推理、隐私保护；智能网络：算力网络、边缘计算、电算协同；群体智能：多智能体协同、LLM agent协作",
+     "url": "https://ise.sysu.edu.cn/teacher/MaQian",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "彭键清",
+     "title": "副教授",
+     "email": "pengjq7@mail.sysu.edu.cn",
+     "areas": "特种机器人的感知与控制",
+     "url": "https://ise.sysu.edu.cn/teacher/PengJianqing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "彭卫文",
+     "title": "副教授",
+     "email": "pengww3@mail.sysu.edu.cn",
+     "areas": "统计学习与复杂工业系统的可靠性建模与评估",
+     "url": "https://ise.sysu.edu.cn/teacher/PengWeiwen",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "邱斌斌",
+     "title": "副教授",
+     "email": "qiubb6@mail.sysu.edu.cn",
+     "areas": "机器人/机械臂控制、神经网络/神经动力学、智能控制、智能计算与优化、多智能体系统",
+     "url": "https://ise.sysu.edu.cn/teacher/QiuBinbin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王本斐",
+     "title": "副教授",
+     "email": "wangbf8@mail.sysu.edu.cn",
+     "areas": "电气自动化、储能系统控制、智能传感技术",
+     "url": "https://ise.sysu.edu.cn/teacher/WangBenfei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王萍",
+     "title": "副教授",
+     "email": "wangp358@mail.sysu.edu.cn",
+     "areas": "人机协同、智能控制、智慧应急处置",
+     "url": "https://ise.sysu.edu.cn/teacher/WangPing",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王帅",
+     "title": "副教授",
+     "email": "wangsh368@mail.sysu.edu.cn",
+     "areas": "复杂网络、计算智能、集群控制与多智能体系统",
+     "url": "https://ise.sysu.edu.cn/teacher/WangShuai",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "魏亮亮",
+     "title": "副教授",
+     "email": "weilliang@mail.sysu.edu.cn",
+     "areas": "面向新能源汽车、低空飞行器及储能：先进电机驱动控制；电池智能管理与寿命预测；人工智能在电网应用",
+     "url": "https://ise.sysu.edu.cn/teacher/WeiLiangliang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吴福亮",
+     "title": "副教授",
+     "email": "wufliang@mail.sysu.edu.cn",
+     "areas": "运筹优化在智能交通和物流系统中的应用",
+     "url": "https://ise.sysu.edu.cn/teacher/1514",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "肖腾飞",
+     "title": "副教授",
+     "email": "xiaotf3@mail.sysu.edu.cn",
+     "areas": "智能控制与先进制造；学习控制、非线性控制、量子控制、偏微分方程动态系统、半导体制造系统",
+     "url": "https://ise.sysu.edu.cn/teacher/XiaoTengfei",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "肖尧",
+     "title": "副教授",
+     "email": "xiaoyao9@mail.sysu.edu.cn",
+     "areas": "混合异质交通流、自动驾驶与自主式交通系统、大模型技术及其交通应用",
+     "url": "https://ise.sysu.edu.cn/teacher/XiaoYao",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谢洁旻",
+     "title": "副教授",
+     "email": "xiejm28@mail.sysu.edu.cn",
+     "areas": "轨道交通规划，运输优化，乘客行为仿真，智能交通",
+     "url": "https://ise.sysu.edu.cn/teacher/XieJiemin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "熊宸",
+     "title": "副教授",
+     "email": "xiongch8@mail.sysu.edu.cn",
+     "areas": "自动驾驶场景生成",
+     "url": "https://ise.sysu.edu.cn/teacher/XiongChen",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "熊永阳",
+     "title": "副教授",
+     "email": "xiongyy25@mail.sysu.edu.cn",
+     "areas": "分布式协同控制与决策优化、大规模机器学习、多机器人协同",
+     "url": "https://ise.sysu.edu.cn/teacher/XiongYongyang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "薛烨",
+     "title": "副教授",
+     "email": "xuey57@mail.sysu.edu.cn",
+     "areas": "无线世界模型、稀疏/高效人工智能、可解释人工智能、学习优化（L2O）",
+     "url": "https://ise.sysu.edu.cn/teacher/Xueye",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨芳芳",
+     "title": "副教授",
+     "email": "yangff7@mail.sysu.edu.cn",
+     "areas": "新能源汽车动力电池电量估计、退化建模、寿命预测；统计建模、数据挖掘、深度学习算法及应用",
+     "url": "https://ise.sysu.edu.cn/teacher/YangFangfang",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "余晨韵",
+     "title": "副教授",
+     "email": "yuchy35@mail.sysu.edu.cn",
+     "areas": "多模态数据挖掘；智能推荐系统；大模型推理与优化",
+     "url": "https://ise.sysu.edu.cn/teacher/YuChenyun",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "曾海鹏",
+     "title": "副教授",
+     "email": "zenghp5@mail.sysu.edu.cn",
+     "areas": "数据可视化，多媒体数据智能可视分析，智能交通，城市交通大数据可视分析，机器学习，可解释性人工智能",
+     "url": "https://ise.sysu.edu.cn/teacher/ZengHaipeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张辉",
+     "title": "副教授",
+     "email": "zhanghui@mail.sysu.edu.cn",
+     "areas": "智能车联网技术研究与应用；车辆智能监控技术与设备；交通参数提取技术与设备",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhangHui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张荣辉",
+     "title": "副教授",
+     "email": "zhangrh25@mail.sysu.edu.cn",
+     "areas": "自动驾驶与人工智能、智能车辆与辅助驾驶、交通信息与安全、车路协同与安全控制、新能源汽车与电气自动化控制、物联网技术、光机电一体化",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhangRonghui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张迪",
+     "title": "副教授",
+     "email": "zhangd263@mail.sysu.edu.cn",
+     "areas": "智能网络通信，无线网络通信",
+     "url": "https://ise.sysu.edu.cn/teacher/1507",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "赵屾",
+     "title": "副教授",
+     "email": "zhaosh35@mail.sysu.edu.cn",
+     "areas": "AI+多模态智慧医疗，多模态拟人化可解释脊柱疾病诊断",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhaoShen",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "赵杨",
+     "title": "副教授",
+     "email": "zhaoy393@mail.sysu.edu.cn",
+     "areas": "医学健康人工智能、多模态传感信号融合分析与建模、高维时空数据机器学习",
+     "url": "https://ise.sysu.edu.cn/teacher/1736",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "周檬",
+     "title": "副教授",
+     "email": "zhoum89@mail.sysu.edu.cn",
+     "areas": "交通地理，城市信息学，地理信息科学，时空数据挖掘，出行行为分析",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhouMeng",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "周少锐",
+     "title": "副教授",
+     "email": "zhoushr5@mail.sysu.edu.cn",
+     "areas": "大规模优化；不确定性优化；数据驱动决策；机器学习；智慧港口和航运系统、低空经济、地空协同交通",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhouShaorui",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "朱彬",
+     "title": "副教授",
+     "email": "zhub26@mail.sysu.edu.cn",
+     "areas": "系统辨识、信号处理、机器学习",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhuBin",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "朱依婷",
+     "title": "副教授",
+     "email": "zhuyt25@mail.sysu.edu.cn",
+     "areas": "车路协同交通控制、交通大模型、混合自动驾驶交通流优化、交通大数据分析",
+     "url": "https://ise.sysu.edu.cn/teacher/ZhuYiting",
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 75
   }
  ],
- "total": 227,
+ "total": 302,
  "schoolsCovered": 2,
  "gaps": [
   "上海交通大学",
