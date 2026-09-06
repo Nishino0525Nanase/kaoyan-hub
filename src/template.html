@@ -1765,10 +1765,6 @@ function renderSysu(){
     <span>${esc(k.d)}</span>
     ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
 
-  const tr = T.example.accepts.map(a => `<div class="kv">
-      <span class="k">${esc(a.code)} ${esc(a.name)}</span>
-      <span class="v">拟调剂 ${a.plan} 人 / 复试 ${a.retestSlots} 人 · ${esc(a.line)}</span></div>`).join('');
-
   $('#sysuBody').innerHTML = `
    <section class="sysec"><h3>085403 集成电路工程 · 三校区对比</h3>
      <p class="hint">${esc(C.sameInitial)}</p>
@@ -1837,12 +1833,18 @@ function renderSysu(){
 
    <section class="sysec"><h3>调剂政策</h3>
      <div class="warnbox"><b>${esc(T.keyFact)}</b></div>
-     <p class="hint">以 ${esc(T.example.college)} ${T.year} 年公告为例，可看出校内调剂的口径：</p>
-     <div class="card cmpcard">${tr}
-       <div class="kv"><span class="k">科目要求</span><span class="v">${esc(T.example.require)}</span></div>
-       <div class="kv"><span class="k">窗口</span><span class="v">${esc(T.example.window)}</span></div>
-     </div>
-     <p class="hint" style="margin-top:8px"><a href="${esc(T.source)}" target="_blank" rel="noopener">调剂公告原文 &rarr;</a></p></section>
+     ${T.readForYou ? `<p class="hint">${esc(T.readForYou)}</p>` : ''}
+     <div class="cmpgrid">${(T.examples || []).map(ex => `<div class="card cmpcard">
+       <h4>${esc(ex.college)}<span class="col">${ex.year} 年公告</span></h4>
+       ${ex.accepts.map(a => `<div class="kv">
+         <span class="k">${esc(a.code)} ${esc(a.name)}</span>
+         <span class="v">${a.plan ? `拟调剂 ${a.plan} 人 · ` : ''}${esc(a.line)}</span></div>`).join('')}
+       <div class="kv"><span class="k">科目要求</span><span class="v">${esc(ex.require)}</span></div>
+       <div class="kv"><span class="k">窗口</span><span class="v">${esc(ex.window)}</span></div>
+       ${ex.priority ? `<div class="kv"><span class="k">优先</span><span class="v">${esc(ex.priority)}</span></div>` : ''}
+       ${ex.note ? `<p class="hint" style="margin:2px 0 0">${esc(ex.note)}</p>` : ''}
+       <div class="advsrc">来源 <a href="${esc(ex.src || T.source)}" target="_blank" rel="noopener">调剂公告原文</a></div>
+     </div>`).join('')}</div></section>
 
    <section class="sysec"><h3>时间线</h3><div class="tl">${tl}</div></section>
 
