@@ -1873,6 +1873,22 @@ function renderSysu(){
            <div class="advsrc">来源 <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(T.srcLabel)}</a></div></div>`;
        })()}
        ${blk(F.keyWarning, 'mid')}
+       ${(() => { const A = F.amounts; if(!A) return '';
+         return `<div class="lyr mid"><h4>${esc(A.t)}<span class="badge2">转引</span></h4>
+           <div class="warnbox" style="margin:0 0 10px">${esc(A.warn)}</div>
+           <p class="sub2">${esc(A.table.caption)}</p>
+           <table class="dormt">
+             <tr>${A.table.cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr>
+             ${A.table.rows.map(r => `<tr>${r.map((c, i) =>
+               i === 0 ? `<td class="b">${esc(c)}</td>`
+               : i >= 2 ? `<td class="fee">${esc(c)}</td>` : `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}
+           </table>
+           <ul style="margin-top:8px">${A.table.notes.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+           <p class="sub2" style="margin-top:8px"><b>换算：</b>${esc(A.read)}</p>
+           <p class="sub2"><b>对专硕的意义：</b>${esc(A.forYou)}</p>
+           <div class="cv" style="margin-top:6px">注意：${esc(A.caveat)}</div>
+           <div class="advsrc">来源 <a href="${esc(A.src)}" target="_blank" rel="noopener">${esc(A.srcLabel)}</a></div></div>`;
+       })()}
        ${blk(F.structure, '')}
        ${blk(F.newStudent, 'ok')}
        ${blk(F.national, 'ok')}
