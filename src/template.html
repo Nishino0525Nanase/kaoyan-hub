@@ -1772,6 +1772,28 @@ function renderSysu(){
      <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
 
    ${(() => {
+     const H = S.history; if(!H) return '';
+     const tr = H.rows.map(r => r.years.map((y, i) => `<tr>
+       ${i === 0 ? `<td class="b" rowspan="${r.years.length}">${esc(r.college)}<br>
+           <span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span>
+           <span class="muted"> ${esc(r.name)}</span></td>` : ''}
+       <td><b>${y.year}</b></td>
+       <td>${y.total ?? '—'}</td>
+       <td>${y.tuimian ?? '—'}</td>
+       <td><b style="color:var(--good)">${y.exam ?? '—'}</b></td>
+       <td class="fee">${y.line ?? '—'}</td>
+       <td><a href="${esc(y.src)}" target="_blank" rel="noopener">${esc(y.srcLabel)}</a></td>
+     </tr>`).join('')).join('');
+     return `<section class="sysec"><h3>${esc(H.title)}</h3>
+       <p class="hint">${esc(H.intro)}</p>
+       <div style="overflow-x:auto"><table class="dormt">
+         <tr><th>学院 / 专业</th><th>年份</th><th>总计划</th><th>推免</th><th>统考</th><th>院线</th><th>来源</th></tr>
+         ${tr}</table></div>
+       <div class="warnbox" style="margin-top:11px"><b>趋势：</b>${esc(H.read)}</div>
+       <p class="hint" style="margin-top:9px">${esc(H.note)}</p></section>`;
+   })()}
+
+   ${(() => {
      const QT = S.quotaTable; if(!QT) return '';
      const tr = QT.rows.map(r => `<tr>
        <td class="b">${esc(r.college)}${r.campus ? `<br><span class="cmp">${esc(r.campus)}</span>` : ''}</td>

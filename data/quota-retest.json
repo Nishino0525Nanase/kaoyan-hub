@@ -580,6 +580,129 @@
     }
    ],
    "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085402",
+   "name": "通信工程（含宽带网络、移动通信等）",
+   "college": "电子与信息工程学院（微电子学院）",
+   "campus": "广州·东校园",
+   "quota": {
+    "year": 2024,
+    "planTotal": 20,
+    "tuimian": 11,
+    "exam": 9,
+    "tuimianRatio": 0.55,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划。另有士兵计划、少干计划各 1-2 人未计入"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试总分 500，占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试 100（闭卷，科目同招生目录的复试专业课）+ 外语应用能力 100 + 专业能力及综合素质 300",
+    "passLine": "复试成绩低于满分 60%（即 300 分）为不合格",
+    "tieBreak": "总成绩同分比初试，再同分比复试专业课笔试"
+   },
+   "line": {
+    "year": 2024,
+    "total": 330,
+    "politics": 50,
+    "english": 50,
+    "course1": 60,
+    "course2": 60,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://seit.sysu.edu.cn/article/2544",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085403",
+   "name": "集成电路工程",
+   "college": "电子与信息工程学院（微电子学院）",
+   "campus": "广州·东校园",
+   "quota": {
+    "year": 2024,
+    "planTotal": 96,
+    "tuimian": 33,
+    "exam": 63,
+    "tuimianRatio": 0.344,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划。另有士兵计划、少干计划各 1-2 人未计入"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试总分 500，占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试 100（闭卷，科目同招生目录的复试专业课）+ 外语应用能力 100 + 专业能力及综合素质 300",
+    "passLine": "复试成绩低于满分 60%（即 300 分）为不合格",
+    "tieBreak": "总成绩同分比初试，再同分比复试专业课笔试"
+   },
+   "line": {
+    "year": 2024,
+    "total": 330,
+    "politics": 50,
+    "english": 50,
+    "course1": 60,
+    "course2": 60,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://seit.sysu.edu.cn/article/2544",
+     "official": true
+    }
+   ],
+   "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085408",
+   "name": "光电信息工程",
+   "college": "电子与信息工程学院（微电子学院）",
+   "campus": "广州·东校园",
+   "quota": {
+    "year": 2024,
+    "planTotal": 21,
+    "tuimian": 10,
+    "exam": 11,
+    "tuimianRatio": 0.476,
+    "note": "细则原文三列：总计划／已招推免生／公开招考计划。另有士兵计划、少干计划各 1-2 人未计入"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试总分 500，占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试 100（闭卷，科目同招生目录的复试专业课）+ 外语应用能力 100 + 专业能力及综合素质 300",
+    "passLine": "复试成绩低于满分 60%（即 300 分）为不合格",
+    "tieBreak": "总成绩同分比初试，再同分比复试专业课笔试"
+   },
+   "line": {
+    "year": 2024,
+    "total": 335,
+    "politics": 50,
+    "english": 50,
+    "course1": 60,
+    "course2": 60,
+    "note": "院线，不分方向"
+   },
+   "sources": [
+    {
+     "url": "https://seit.sysu.edu.cn/article/2544",
+     "official": true
+    }
+   ],
+   "confidence": "official"
   }
  ]
 }
