@@ -162,6 +162,8 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .advdir{font-size:11.5px;padding:2px 7px;border-radius:5px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-2)}
 .advfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:7px;margin-top:auto;font-size:12px}
 .advfoot a{font-size:12px}
+.advsrc{font-size:11.5px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:6px;margin-top:2px}
+.advsrc a{font-size:11.5px}
 .advnull{color:var(--text-3);font-size:12.5px;font-style:normal}
 .advempty{padding:30px;text-align:center;color:var(--text-3);font-size:13.5px}
 mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 1px}
@@ -1486,7 +1488,7 @@ function advMatch(a, col){
   return hay.includes(q);
 }
 
-function advCard(a, q){
+function advCard(a, q, col){
   const t = a.title ? `<span class="advtitle t${esc(a.title)}">${esc(a.title)}</span>` : '';
   const adv = a.advises ? `<span class="advtitle">${a.advises.join(' / ')}导</span>` : '';
   const note = a.note ? `<span class="advtitle">${esc(a.note)}</span>` : '';
@@ -1499,10 +1501,13 @@ function advCard(a, q){
     ? `<a href="mailto:${esc(a.email)}">${esc(a.email)}</a>`
     : `<span class="advnull">官网未列邮箱</span>`;
   const home = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">个人主页 &rarr;</a>` : '';
+  const src = col ? `<span class="advsrc">来源 <a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>${
+      col.site ? ` · <a href="${esc(col.site)}" target="_blank" rel="noopener">学院官网</a>` : ''}</span>` : '';
   return `<div class="card adv">
       <div class="advtop"><span class="advname">${hl(a.name,q)}</span>${t}${adv}${note}</div>
       ${areas}${dirs}
       <div class="advfoot">${mail}${home}</div>
+      ${src}
     </div>`;
 }
 
@@ -1580,7 +1585,7 @@ function renderAdvisors(){
       </div>
       <p class="advmeta"><a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>　<span title="${esc(col.scope)}">${esc(col.scope.slice(0, 34))}${col.scope.length > 34 ? '…' : ''}</span></p>
       ${dormBlock(col.school, col.campusId)}
-      <div class="advgrid">${list.map(a => advCard(a, q)).join('')}</div>
+      <div class="advgrid">${list.map(a => advCard(a, q, col)).join('')}</div>
     </section>`;
   });
   host.innerHTML = html || `<div class="card advempty">没有匹配的导师。<br>试试换个关键词，或者清掉上面的筛选。</div>`;
@@ -1747,6 +1752,7 @@ function renderSysu(){
     <div class="kv"><span class="k">复试形式</span><span class="v">${esc(r.retestForm)}</span></div>
     <div class="kv"><span class="k">本库导师</span><span class="v">${r.advisors} 人</span></div>
     <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p>
+    ${r.src ? `<div class="advsrc">来源 <a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.srcLabel || '原文')}</a></div>` : ''}
   </div>`).join('');
 
   const tl = S.timeline.map(t => `<div class="tli">
@@ -1778,11 +1784,12 @@ function renderSysu(){
        <td>${esc(r.en)}<br>${esc(r.math)}</td>
        <td class="fee">${r.plan ?? '—'}</td>
        <td>${r.advisors ? r.advisors + ' 人' : '<span class="advnull">未采集</span>'}</td>
+       <td>${r.src ? `<a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.srcLabel || '原文')}</a>` : '<span class="advnull">—</span>'}</td>
      </tr>`).join('');
      return `<section class="sysec"><h3>${esc(C8.title)}</h3>
        <p class="hint">${esc(C8.intro)}</p>
        <div style="overflow-x:auto"><table class="dormt">
-         <tr><th>学院</th><th>专业</th><th>英语/数学</th><th>拟招</th><th>本库导师</th></tr>
+         <tr><th>学院</th><th>专业</th><th>英语/数学</th><th>拟招</th><th>本库导师</th><th>来源</th></tr>
          ${tr}</table></div>
        <p class="hint" style="margin-top:9px">${esc(C8.note)}</p></section>`;
    })()}
@@ -1796,7 +1803,8 @@ function renderSysu(){
        <div class="kv"><span class="k">2025 推免占用</span><span class="v">${r.tuimian2025} / ${r.plan2025}</span></div>
        <div class="kv"><span class="k">2025 院线</span><span class="v">${esc(r.lineDetail)}</span></div>
        <div class="kv"><span class="k">复试形式</span><span class="v">${esc(r.retestForm)}</span></div>
-       <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p></div>`).join('');
+       <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p>
+       ${r.src ? `<div class="advsrc">来源 <a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.srcLabel || '原文')}</a></div>` : ''}</div>`).join('');
      return `<section class="sysec"><h3>${esc(C4.title)}</h3>
        <p class="hint">${esc(C4.sameInitial)}</p>
        <div class="cmpgrid">${cards}</div>
@@ -1821,7 +1829,7 @@ function renderSysu(){
      <div class="cmpgrid">${S.campuses.map(c => `<div class="card cmpcard">
        <h4>${esc(c.name)}${c.dorm ? `<span class="col">${esc(c.dorm)}</span>` : ''}</h4>
        ${c.colleges.map(x => `<div class="kv">
-         <span class="k">${esc(x.name)}${x.has884 ? ' <span class="cmp">884</span>' : ''}</span>
+         <span class="k">${x.site ? `<a href="${esc(x.site)}" target="_blank" rel="noopener">${esc(x.name)}</a>` : esc(x.name)}${x.has884 ? ' <span class="cmp">884</span>' : ''}</span>
          <span class="v">${x.programs} 个专业${x.advisors ? ` · ${x.advisors} 导师` : ''}</span></div>`).join('')}
      </div>`).join('')}</div></section>
 
@@ -1868,7 +1876,8 @@ function renderSysu(){
      </div>
      <p class="hint" style="margin-top:9px">在「专业方向」「导师名录」「资料链接」各页搜「中山大学」可看到明细。</p></section>`;
 
-  $('#sysuSub').textContent = `${S.school} · 数据更新于 ${S.updated}`;
+  $('#sysuSub').innerHTML = `${esc(S.school)} · 数据更新于 ${esc(S.updated)}` +
+    (S.scope ? `<br><span class="muted">${esc(S.scope)}</span>` : '');
   $('#sysuNote').textContent = S.note;
 }
 
