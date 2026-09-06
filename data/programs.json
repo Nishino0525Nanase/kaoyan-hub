@@ -33421,104 +33421,6 @@
    "school": "中山大学",
    "track": "ee",
    "scale": null,
-   "code": "085403",
-   "name": "集成电路工程",
-   "degree": "专硕",
-   "college": "集成电路学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "885",
-     "name": "电子技术（数字和模拟）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 20,
-    "note": "院系代码 754；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7545001 专业基础综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "深圳校区"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085403",
-   "name": "集成电路工程",
-   "degree": "专硕",
-   "college": "微电子科学与技术学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "885",
-     "name": "电子技术（数字和模拟）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 34,
-    "note": "院系代码 772；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7725001 电子工程基础综合 / 7725002 半导体器件物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "珠海校区"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
    "code": "085400",
    "name": "电子信息",
    "degree": "专硕",
@@ -33561,104 +33463,6 @@
    "admitted": null,
    "applied": null,
    "retestSubjects": "7665001 智能技术综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085401",
-   "name": "新一代电子信息技术（含量子技术等）",
-   "degree": "专硕",
-   "college": "柔性电子学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 4,
-    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7585002 电路与信号综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085408",
-   "name": "光电信息工程",
-   "degree": "专硕",
-   "college": "柔性电子学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "882",
-     "name": "光学原理"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 3,
-    "note": "院系代码 758；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7585001 半导体器件物理",
    "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
    "campus": null
   },
@@ -34003,206 +33807,6 @@
    "applied": null,
    "retestSubjects": "7255001 程序设计",
    "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085409",
-   "name": "生物医学工程（01 生物医学材料）",
-   "degree": "专硕",
-   "college": "生物医学工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "894",
-     "name": "生物化学（A）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 7,
-    "note": "院系代码 769；2026 年目录拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7695001 电路原理、数字电路与模拟电路综合 / 7695006 生物医学电子与传感器 / 7695005 数据结构与算法设计 / 7695004 细胞生物学 / 7695002 高分子化学与物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年招生专业目录原文",
-   "tuimianOnly": false,
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085409",
-   "name": "生物医学工程（02 生物医学传感）",
-   "degree": "专硕",
-   "college": "生物医学工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 6,
-    "note": "院系代码 769；2026 年目录拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7695001 电路原理、数字电路与模拟电路综合 / 7695006 生物医学电子与传感器 / 7695005 数据结构与算法设计 / 7695004 细胞生物学 / 7695002 高分子化学与物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年招生专业目录原文",
-   "tuimianOnly": false,
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085409",
-   "name": "生物医学工程（03 医疗仪器）",
-   "degree": "专硕",
-   "college": "生物医学工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "894",
-     "name": "生物化学（A）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 9,
-    "note": "院系代码 769；2026 年目录拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7695001 电路原理、数字电路与模拟电路综合 / 7695006 生物医学电子与传感器 / 7695005 数据结构与算法设计 / 7695004 细胞生物学 / 7695002 高分子化学与物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年招生专业目录原文",
-   "tuimianOnly": false,
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "086001",
-   "name": "生物技术与工程",
-   "degree": "专硕",
-   "college": "生物医学工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "894",
-     "name": "生物化学（A）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 28,
-    "note": "院系代码 769；2026 年目录拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7695001 电路原理、数字电路与模拟电路综合 / 7695006 生物医学电子与传感器 / 7695005 数据结构与算法设计 / 7695004 细胞生物学 / 7695002 高分子化学与物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年招生专业目录原文",
-   "tuimianOnly": false,
    "campus": null
   },
   {
@@ -34582,8 +34186,8 @@
     "line": 8
    },
    "中山大学": {
-    "n": 25,
-    "sub": 25,
+    "n": 17,
+    "sub": 17,
     "line": 5
    },
    "云南大学": {
@@ -34913,11 +34517,11 @@
    }
   },
   "totals": {
-   "records": 639,
-   "withSubjects": 371,
+   "records": 631,
+   "withSubjects": 363,
    "withLines": 509,
    "withRetestBooks": 9,
-   "withRetestSubjects": 46,
+   "withRetestSubjects": 38,
    "tuimianOnly": 0
   },
   "sourceAccess": {
@@ -34957,6 +34561,6 @@
     "howToVerify": "以 yzb.nju.edu.cn 简章目录当年的招生目录附件为准，或致电机器人与自动化学院研究生教务"
    }
   ],
-  "scopeNote": "中山大学只收录专硕。学硕（081000/080900/140100 等）已按需求移除，其余学校未做此过滤。"
+  "scopeNote": "中山大学只收录专硕，且只保留电信院、电通院、智工院、海工院、系统院及计算机口相关学院；微电子科学与技术学院、集成电路学院、柔性电子学院、生物医学工程学院已按需求移除。其余学校未做此过滤。"
  }
 }

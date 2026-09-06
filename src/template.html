@@ -1776,6 +1776,28 @@ function renderSysu(){
      <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
 
    ${(() => {
+     const QT = S.quotaTable; if(!QT) return '';
+     const tr = QT.rows.map(r => `<tr>
+       <td class="b">${esc(r.college)}${r.campus ? `<br><span class="cmp">${esc(r.campus)}</span>` : ''}</td>
+       <td><span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span></td>
+       <td class="fee">${r.plan2026 ?? '—'}</td>
+       <td>${r.planTotal2025 ?? '<span class="advnull">—</span>'}</td>
+       <td>${r.tuimian2025 ?? '<span class="advnull">—</span>'}</td>
+       <td>${r.exam2025 != null ? `<b style="color:var(--good)">${r.exam2025}</b>` : '<span class="advnull">—</span>'}</td>
+       <td>${r.line2025 ?? '<span class="advnull">—</span>'}</td>
+       <td><a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.srcLabel)}</a>${
+         r.blocked ? `<br><span class="cv" style="font-size:11px">${esc(r.blocked)}</span>` : ''}</td>
+     </tr>`).join('');
+     return `<section class="sysec"><h3>${esc(QT.title)}</h3>
+       <p class="hint">${esc(QT.intro)}</p>
+       <div style="overflow-x:auto"><table class="dormt">
+         <tr><th>学院</th><th>专业</th><th>2026<br>拟招</th><th>2025<br>总计划</th>
+             <th>2025<br>推免</th><th>2025<br>统考</th><th>2025<br>院线</th><th>来源</th></tr>
+         ${tr}</table></div>
+       <div class="warnbox" style="margin-top:11px">${esc(QT.gapNote)}</div></section>`;
+   })()}
+
+   ${(() => {
      const C8 = S.compare884; if(!C8) return '';
      const tr = C8.rows.map(r => `<tr>
        <td class="b">${esc(r.college)}${r.campus ? `<br><span class="cmp">${esc(r.campus)}</span>` : ''}</td>
