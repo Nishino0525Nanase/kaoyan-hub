@@ -1759,14 +1759,6 @@ function renderSysu(){
     <span>${esc(k.d)}</span>
     ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
 
-  const camp = S.campuses.map(c => `<div class="card cmpcard">
-    <h4>${esc(c.name)}</h4>
-    <p class="hint" style="margin:0">${esc(c.addr)}</p>
-    ${c.colleges.map(x => `<div class="kv"><span class="k">${esc(x.name)}</span>
-        <span class="v">${x.advisors} 位导师 · <a href="${esc(x.retestRule)}" target="_blank" rel="noopener">复试细则</a></span></div>`).join('')}
-    <div class="kv"><span class="k">宿舍</span><span class="v">${c.dormRooms} 种房型 · ${esc(c.dormFee)}</span></div>
-  </div>`).join('');
-
   const tr = T.example.accepts.map(a => `<div class="kv">
       <span class="k">${esc(a.code)} ${esc(a.name)}</span>
       <span class="v">拟调剂 ${a.plan} 人 / 复试 ${a.retestSlots} 人 · ${esc(a.line)}</span></div>`).join('');
@@ -1776,6 +1768,24 @@ function renderSysu(){
      <p class="hint">${esc(C.sameInitial)}</p>
      <div class="cmpgrid">${cmp}</div>
      <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
+
+   ${(() => {
+     const C8 = S.compare884; if(!C8) return '';
+     const tr = C8.rows.map(r => `<tr>
+       <td class="b">${esc(r.college)}${r.campus ? `<br><span class="cmp">${esc(r.campus)}</span>` : ''}</td>
+       <td><span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span><br>
+           <span class="muted">${esc(r.name)}</span></td>
+       <td>${esc(r.en)}<br>${esc(r.math)}</td>
+       <td class="fee">${r.plan ?? '—'}</td>
+       <td>${r.advisors ? r.advisors + ' 人' : '<span class="advnull">未采集</span>'}</td>
+     </tr>`).join('');
+     return `<section class="sysec"><h3>${esc(C8.title)}</h3>
+       <p class="hint">${esc(C8.intro)}</p>
+       <div style="overflow-x:auto"><table class="dormt">
+         <tr><th>学院</th><th>专业</th><th>英语/数学</th><th>拟招</th><th>本库导师</th></tr>
+         ${tr}</table></div>
+       <p class="hint" style="margin-top:9px">${esc(C8.note)}</p></section>`;
+   })()}
 
    ${(() => {
      const C4 = S.compare085400; if(!C4) return '';
@@ -1806,7 +1816,14 @@ function renderSysu(){
 
    <section class="sysec"><h3>时间线</h3><div class="tl">${tl}</div></section>
 
-   <section class="sysec"><h3>校区 × 学院</h3><div class="cmpgrid">${camp}</div></section>
+   <section class="sysec"><h3>校区 × 学院</h3>
+     <p class="hint">${esc(S.campusNote)}</p>
+     <div class="cmpgrid">${S.campuses.map(c => `<div class="card cmpcard">
+       <h4>${esc(c.name)}${c.dorm ? `<span class="col">${esc(c.dorm)}</span>` : ''}</h4>
+       ${c.colleges.map(x => `<div class="kv">
+         <span class="k">${esc(x.name)}${x.has884 ? ' <span class="cmp">884</span>' : ''}</span>
+         <span class="v">${x.programs} 个专业${x.advisors ? ` · ${x.advisors} 导师` : ''}</span></div>`).join('')}
+     </div>`).join('')}</div></section>
 
    <section class="sysec"><h3>资料来源</h3>
      <p class="hint">${esc(S.sources.note)}</p>
