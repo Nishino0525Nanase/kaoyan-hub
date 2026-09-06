@@ -3558,9 +3558,515 @@
     }
    ],
    "count": 75
+  },
+  {
+   "id": "sysu-soet",
+   "school": "中山大学",
+   "name": "海洋工程与技术学院",
+   "campus": "珠海校区",
+   "campusId": "zhuhai",
+   "site": "https://soet.sysu.edu.cn/zh-hans",
+   "source": "https://soet.sysu.edu.cn/zh-hans/faculty",
+   "sourceLabel": "全体教师",
+   "confidence": "official",
+   "fetched": "2026-09-01",
+   "scope": "教研岗教师（教授、副教授、助理教授、讲师）；博士后与专职科研人员未收录",
+   "advisors": [
+    {
+     "name": "蔡华阳",
+     "title": "教授",
+     "email": "caihy7@mail.sysu.edu.cn",
+     "areas": "海洋环境监测与大数据应用",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/102",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "邓锐",
+     "title": "教授",
+     "email": "dengr23@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/170",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "郭志群",
+     "title": "教授",
+     "email": "guozhq5@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/172",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "黄硕",
+     "title": "教授",
+     "email": "huangsh97@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/174",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "胡青",
+     "title": "教授",
+     "email": "huqing3@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/94",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "贾良文",
+     "title": "教授",
+     "email": "jialw@mail.sysu.edu.cn",
+     "areas": "海洋环境监测与大数据应用",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/99",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李整林",
+     "title": "教授",
+     "email": "lizhlin29@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/700",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "苗建明",
+     "title": "教授",
+     "email": "miaojm@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/298",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "马勇",
+     "title": "教授",
+     "email": "mayong3@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/35",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "孙鹏楠",
+     "title": "教授",
+     "email": "sunpn@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/133",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "文洪涛",
+     "title": "教授",
+     "email": "wenht6@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/1246",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王凯",
+     "title": "教授",
+     "email": "wangkai25@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/333",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "徐灵基",
+     "title": "教授",
+     "email": "xulj26@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/336",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "许亮斌",
+     "title": "教授",
+     "email": "xulb3@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/650",
+     "note": "学科带头人",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "谢鹏",
+     "title": "教授",
+     "email": "xiep9@mail.sysu.edu.cn",
+     "areas": "海洋工程结构安全与监测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/78",
+     "note": "国家重点研发计划首席科学家",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨清书",
+     "title": "教授",
+     "email": "yangqsh@mail.sysu.edu.cn",
+     "areas": "海洋动力过程与海岸工程",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/89",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张铁栋",
+     "title": "教授",
+     "email": "zhangtd5@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术；海洋机器人技术、水下环境感知、水下航行器控制、新概念海洋无人系统",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/651",
+     "note": "招生专业含自动控制、计算机、机器人",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈顺华",
+     "title": "副教授",
+     "email": "chenshh73@mail.sysu.edu.cn",
+     "areas": "海洋工程结构安全与监测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/136",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杜现平",
+     "title": "副教授",
+     "email": "duxp3@mail.sysu.edu.cn",
+     "areas": "海洋工程结构安全与监测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/171",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "冯帆",
+     "title": "副教授",
+     "email": "fengf35@mail.sysu.edu.cn",
+     "areas": "新能源（储能）电力变换；水下无线充电；智能微网建模与控制",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/343",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "侯正瑜",
+     "title": "副教授",
+     "email": "houzhy7@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/730",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "姜大鹏",
+     "title": "副教授",
+     "email": "jiangdp5@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/176",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "蒋运华",
+     "title": "副教授",
+     "email": "jiangyh35@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/178",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘念念",
+     "title": "副教授",
+     "email": "liunn23@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/181",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘一宁",
+     "title": "副教授",
+     "email": "liuyn223@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/1135",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李倩倩",
+     "title": "副教授",
+     "email": "liqq@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/1180",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘涛",
+     "title": "副教授",
+     "email": "liutao55@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/352",
+     "note": "招生专业含电子信息",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "李晓天",
+     "title": "副教授",
+     "email": "lixiaot5@mail.sysu.edu.cn",
+     "areas": "海洋工程结构安全与监测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/179",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "刘锋",
+     "title": "副教授",
+     "email": "liuf53@mail.sysu.edu.cn",
+     "areas": "海洋环境监测与大数据应用",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/180",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "倪问池",
+     "title": "副教授",
+     "email": "niwch@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/313",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "牛丽霞",
+     "title": "副教授",
+     "email": "niulixia@mail.sysu.edu.cn",
+     "areas": "海洋环境监测与大数据应用",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/315",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "彭超",
+     "title": "副教授",
+     "email": "pengch85@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/318",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "彭玉祥",
+     "title": "副教授",
+     "email": "pengyx55@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/323",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "钱国伟",
+     "title": "副教授",
+     "email": "qiangw3@mail.sysu.edu.cn",
+     "areas": "海洋工程结构与安全监测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/673",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "任磊",
+     "title": "副教授",
+     "email": "renlei7@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术；人工智能海洋学、海洋多尺度动力过程、海洋数值模拟与资料同化",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/325",
+     "note": "招生专业含电子信息",
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "苏焱",
+     "title": "副教授",
+     "email": "suyan23@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/327",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吴铁成",
+     "title": "副教授",
+     "email": "wutch7@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/370",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "吴晓笛",
+     "title": "副教授",
+     "email": "wuxd23@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/353",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王立国",
+     "title": "副教授",
+     "email": "wanglg7@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/328",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "魏稳",
+     "title": "副教授",
+     "email": "weiw95@mail.sysu.edu.cn",
+     "areas": "河口沉积动力学，海岸生物地貌，生态海堤工程",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/334",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "肖鹏",
+     "title": "副教授",
+     "email": "xiaop36@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/335",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "杨健敏",
+     "title": "副教授",
+     "email": "yangjm33@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术；水声通信组网与跨介质信息高效传输",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/339",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "赵波",
+     "title": "副教授",
+     "email": "zhaob59@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/649",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张淏酥",
+     "title": "副教授",
+     "email": "zhanghs7@mail.sysu.edu.cn",
+     "areas": "水下智能控制与无人观测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/340",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "查若思",
+     "title": "副教授",
+     "email": "zhars@mail.sysu.edu.cn",
+     "areas": "水声信息感知与目标探测技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/355",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张晓鹤",
+     "title": "副教授",
+     "email": "zhangxh258@mail.sysu.edu.cn",
+     "areas": "海洋动力过程与海岸工程",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/750",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "张旭",
+     "title": "副教授",
+     "email": "zhangx798@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/358",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "陈嘉豪",
+     "title": "助理教授",
+     "email": "chenjh598@mail.sysu.edu.cn",
+     "areas": "船海流固耦合与资源开发技术",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/870",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "欧素英",
+     "title": "讲师",
+     "email": "ousuying@mail.sysu.edu.cn",
+     "areas": "海洋动力过程与海岸工程",
+     "url": "https://soet.sysu.edu.cn/zh-hans/teacher/361",
+     "note": null,
+     "advises": null,
+     "directions": null
+    }
+   ],
+   "count": 49
   }
  ],
- "total": 302,
+ "total": 351,
  "schoolsCovered": 2,
  "gaps": [
   "上海交通大学",
