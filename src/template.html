@@ -1851,6 +1851,29 @@ function renderSysu(){
        <div class="warnbox" style="margin-top:11px">${esc(C4.caveat)}</div></section>`;
    })()}
 
+   ${(() => {
+     const F = S.funding; if(!F) return '';
+     const blk = (o, cls) => `<div class="lyr ${cls}"><h4>${esc(o.t)}</h4>
+       ${o.d ? `<p class="sub2">${esc(o.d)}</p>` : ''}
+       ${o.items ? `<ul>${o.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+       ${o.note ? `<p class="sub2" style="margin-top:7px">${esc(o.note)}</p>` : ''}
+       ${o.src ? `<div class="advsrc">来源 <a href="${esc(o.src)}" target="_blank" rel="noopener">制度原文</a></div>` : ''}</div>`;
+     return `<section class="sysec"><h3>${esc(F.title)}</h3>
+       <p class="hint">${esc(F.intro)}</p>
+       ${blk(F.keyWarning, 'mid')}
+       ${blk(F.structure, '')}
+       ${blk(F.newStudent, 'ok')}
+       ${blk(F.national, 'ok')}
+       ${blk(F.eligibility, '')}
+       <div class="warnbox">${esc(F.gap)}</div>
+       <div class="srcl" style="margin-top:11px">${F.sources.map(x => `<div class="srci">
+         <div class="w">${esc(x.name)}</div>
+         <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
+           <span class="tg">${esc(x.year)}</span>
+           <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div></div>`).join('')}</div>
+     </section>`;
+   })()}
+
    <section class="sysec"><h3>报考要点</h3><div class="kp">${kp}</div></section>
 
    <section class="sysec"><h3>调剂政策</h3>
