@@ -1860,6 +1860,18 @@ function renderSysu(){
        ${o.src ? `<div class="advsrc">来源 <a href="${esc(o.src)}" target="_blank" rel="noopener">制度原文</a></div>` : ''}</div>`;
      return `<section class="sysec"><h3>${esc(F.title)}</h3>
        <p class="hint">${esc(F.intro)}</p>
+       ${(() => { const T = F.tuition; if(!T) return '';
+         return `<div class="lyr ok"><h4>${esc(T.t)}<span class="badge2">official</span></h4>
+           <p class="sub2" style="font-size:14px;color:var(--accent);font-weight:600">${esc(T.headline)}</p>
+           <table class="dormt" style="margin-top:4px">
+             <tr><th>类别</th><th>标准</th><th>说明</th></tr>
+             ${T.rows.map(r => `<tr><td class="b">${esc(r.k)}</td>
+               <td class="fee">${esc(r.v)}</td><td>${esc(r.note)}</td></tr>`).join('')}
+           </table>
+           <p class="sub2" style="margin-top:8px"><b>另计：</b>${T.extra.map(esc).join('　·　')}</p>
+           <p class="sub2"><b>粗算：</b>${esc(T.total)}</p>
+           <div class="advsrc">来源 <a href="${esc(T.src)}" target="_blank" rel="noopener">${esc(T.srcLabel)}</a></div></div>`;
+       })()}
        ${blk(F.keyWarning, 'mid')}
        ${blk(F.structure, '')}
        ${blk(F.newStudent, 'ok')}
@@ -1912,30 +1924,6 @@ function renderSysu(){
          <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
        ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></section>
 
-   <section class="sysec"><h3>南京大学 · 资料来源与核实状态</h3>
-     <p class="hint">${esc(NJU.note)}</p>
-     <div class="srcl">${NJU.sources.map(x => `<div class="srci">
-       <div class="w">${esc(x.what)}</div>
-       <div class="f">${esc(x.from)}</div>
-       <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
-         <span class="tg">${esc(x.year)}</span>
-         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
-       ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div>
-     ${NJU.correction ? `<div class="kpi" style="margin-top:11px;border-left-color:var(--warn)">
-       <b>数据订正（${esc(NJU.correction.date)}）</b>
-       <span>${esc(NJU.correction.what)}<br>
-       <b style="display:inline">原因：</b>${esc(NJU.correction.why)}<br>
-       <b style="display:inline">教训：</b>${esc(NJU.correction.lesson)}</span></div>` : ''}
-     ${NJU.verifyNeeded.map(v => `<div class="warnbox" style="margin-top:11px">
-       <b>${esc(v.code)} ${esc(v.name)} — ${esc(v.status)}</b>
-       <ul style="margin:7px 0 0;padding-left:18px;font-size:12.5px;color:var(--text-2);line-height:1.65">
-         ${v.evidence.map(e => `<li>${esc(e)}</li>`).join('')}</ul>
-       ${(v.stillUnverified || []).length ? `<p style="margin:8px 0 3px;font-size:12.5px"><b>仍待核实：</b></p>
-         <ul style="margin:0;padding-left:18px;font-size:12.5px;color:var(--warn);line-height:1.65">
-           ${v.stillUnverified.map(e => `<li>${esc(e)}</li>`).join('')}</ul>` : ''}
-       <p style="margin:7px 0 0;font-size:12.5px;color:var(--text-2)"><b>核实：</b>${esc(v.howToVerify)}</p>
-     </div>`).join('')}</section>
-
    <section class="sysec"><h3>本库收录的中大数据</h3>
      <div class="idx">
        <div class="idxi"><b>${I.programs}</b>专业记录（${I.programsWithSubjects} 条有科目）</div>
@@ -1987,6 +1975,16 @@ function renderNju(){
 
    <div class="lyr"><h4>提醒</h4>
      <ul>${H.notes.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+
+   <div class="lyr"><h4>资料来源与核实状态</h4>
+     <p class="sub2">${esc(NJU.note)}</p>
+     <div class="srcl">${NJU.sources.map(x => `<div class="srci">
+       <div class="w">${esc(x.what)}</div>
+       <div class="f">${esc(x.from)}</div>
+       <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
+         <span class="tg">${esc(x.year)}</span>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
+       ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></div>
 
    ${NJU.correction ? `<div class="lyr mid"><h4>数据订正记录（${esc(NJU.correction.date)}）</h4>
      <ul><li>${esc(NJU.correction.what)}</li>
