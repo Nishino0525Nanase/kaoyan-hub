@@ -2006,6 +2006,18 @@ function renderNju(){
          <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div></div>`).join('')}</div>
    </div>` : ''}
 
+   ${NJU.housing ? `<div class="lyr mid"><h4>${esc(NJU.housing.t)}<span class="badge2">部分</span></h4>
+     <table class="dormt"><tr><th>项目</th><th>情况</th><th>说明</th></tr>
+       ${NJU.housing.confirmed.map(c => `<tr><td class="b">${esc(c.k)}</td>
+         <td>${esc(c.v)}</td><td>${esc(c.d)}
+         <a href="${esc(c.src)}" target="_blank" rel="noopener">打开</a></td></tr>`).join('')}</table>
+     <div class="warnbox" style="margin-top:10px"><b>金额未取到：</b>${esc(NJU.housing.blocked)}</div>
+     <p class="sub2" style="margin-top:8px"><b>与中大对比：</b>${esc(NJU.housing.compare)}</p>
+     <p class="sub2"><b>未经核实的说法：</b>${esc(NJU.housing.unverified)}</p>
+     <p class="sub2"><b>怎么查：</b>${esc(NJU.housing.howTo)}</p>
+     <div class="advsrc">来源 <a href="${esc(NJU.housing.src)}" target="_blank" rel="noopener">${esc(NJU.housing.srcLabel)}</a></div>
+   </div>` : ''}
+
    ${NJU.gapList ? `<div class="lyr bad"><h4>本专栏尚缺的数据<span class="badge2">缺口</span></h4>
      <ul>${NJU.gapList.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
 
