@@ -461,46 +461,6 @@
   {
    "school": "中山大学",
    "track": "ee",
-   "code": "085403",
-   "name": "集成电路工程",
-   "college": "电子与信息工程学院（微电子学院）",
-   "quota": {
-    "year": 2025,
-    "planTotal": 82,
-    "tuimian": 28,
-    "exam": 54,
-    "tuimianRatio": 0.341,
-    "note": "复试细则原文直接给出「总计划 / 已招推免生 / 公开招考计划」三列，统考数为官方公布值，非推算。原文注明最终以实际录取人数为准"
-   },
-   "retest": {
-    "ratio": null,
-    "weight": "总成绩 = 初试成绩 + 复试成绩，两者各占 50%（初试满分 500，复试满分 500）",
-    "hasMachineTest": false,
-    "subjects": "专业课笔试 100 分（科目见招生专业目录的复试专业课，闭卷） + 外语应用能力测试 100 分 + 专业能力及综合素质考核 300 分（与外语测试合并为现场面试，每人不少于 20 分钟）",
-    "passLine": "复试成绩低于满分 60%（即低于 300 分）为不合格，不予录取",
-    "tieBreak": "总成绩同分先比初试成绩；初试再同分则比复试专业课笔试成绩",
-    "form": "现场复试，笔试 + 面试"
-   },
-   "line": {
-    "year": 2025,
-    "total": 340,
-    "politics": 50,
-    "english": 50,
-    "course1": 60,
-    "course2": 60,
-    "note": "学院复试分数线（院线），不分方向"
-   },
-   "sources": [
-    {
-     "url": "https://seit.sysu.edu.cn/article/2746",
-     "official": true
-    }
-   ],
-   "confidence": "official"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
    "code": "085408",
    "name": "光电信息工程",
    "college": "电子与信息工程学院（微电子学院）",
@@ -594,47 +554,6 @@
     "tuimian": 11,
     "exam": 9,
     "tuimianRatio": 0.55,
-    "note": "细则原文三列：总计划／已招推免生／公开招考计划。另有士兵计划、少干计划各 1-2 人未计入"
-   },
-   "retest": {
-    "ratio": null,
-    "weight": "复试总分 500，占入学总成绩的 50%",
-    "form": "现场复试，笔试 + 面试",
-    "hasMachineTest": false,
-    "subjects": "专业课笔试 100（闭卷，科目同招生目录的复试专业课）+ 外语应用能力 100 + 专业能力及综合素质 300",
-    "passLine": "复试成绩低于满分 60%（即 300 分）为不合格",
-    "tieBreak": "总成绩同分比初试，再同分比复试专业课笔试"
-   },
-   "line": {
-    "year": 2024,
-    "total": 330,
-    "politics": 50,
-    "english": 50,
-    "course1": 60,
-    "course2": 60,
-    "note": "院线，不分方向"
-   },
-   "sources": [
-    {
-     "url": "https://seit.sysu.edu.cn/article/2544",
-     "official": true
-    }
-   ],
-   "confidence": "official"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "code": "085403",
-   "name": "集成电路工程",
-   "college": "电子与信息工程学院（微电子学院）",
-   "campus": "广州·东校园",
-   "quota": {
-    "year": 2024,
-    "planTotal": 96,
-    "tuimian": 33,
-    "exam": 63,
-    "tuimianRatio": 0.344,
     "note": "细则原文三列：总计划／已招推免生／公开招考计划。另有士兵计划、少干计划各 1-2 人未计入"
    },
    "retest": {

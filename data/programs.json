@@ -33274,55 +33274,6 @@
    "school": "中山大学",
    "track": "ee",
    "scale": null,
-   "code": "085403",
-   "name": "集成电路工程",
-   "degree": "专硕",
-   "college": "电子与信息工程学院（微电子学院）",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "885",
-     "name": "电子技术（数字和模拟）"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 81,
-    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7625002 半导体器件物理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "广州·东校园"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
    "code": "085408",
    "name": "光电信息工程",
    "degree": "专硕",
@@ -34186,8 +34137,8 @@
     "line": 8
    },
    "中山大学": {
-    "n": 17,
-    "sub": 17,
+    "n": 16,
+    "sub": 16,
     "line": 5
    },
    "云南大学": {
@@ -34517,11 +34468,11 @@
    }
   },
   "totals": {
-   "records": 631,
-   "withSubjects": 363,
+   "records": 630,
+   "withSubjects": 362,
    "withLines": 509,
    "withRetestBooks": 9,
-   "withRetestSubjects": 38,
+   "withRetestSubjects": 37,
    "tuimianOnly": 0
   },
   "sourceAccess": {
@@ -34561,6 +34512,6 @@
     "howToVerify": "以 yzb.nju.edu.cn 简章目录当年的招生目录附件为准，或致电机器人与自动化学院研究生教务"
    }
   ],
-  "scopeNote": "中山大学只收录专硕，且只保留电信院、电通院、智工院、海工院、系统院及计算机口相关学院；微电子科学与技术学院、集成电路学院、柔性电子学院、生物医学工程学院已按需求移除。其余学校未做此过滤。"
+  "scopeNote": "中山大学只收录专硕，且不收 085403 集成电路工程方向，以及微电子科学与技术学院、集成电路学院、柔性电子学院、生物医学工程学院四个招生单位。其余学校不做此过滤——085403 在他校仍有 24 条记录。"
  }
 }

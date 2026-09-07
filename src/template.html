@@ -1738,22 +1738,8 @@ document.addEventListener('keydown', e => {
    本库其余部分是横向比 147 所学校，这个专栏是纵向把一所挖透。
    数据全部来自 sysu.json，不在这里重新计算，避免和其他面板对不上。 */
 function renderSysu(){
-  const S = SYSU, C = S.compare085403, T = S.transfer, I = S.index;
+  const S = SYSU, T = S.transfer, I = S.index;
   const na = v => v == null ? '<span class="v na">未查到</span>' : `<span class="v">${v}</span>`;
-
-  const cmp = C.rows.map(r => `<div class="card cmpcard">
-    <h4>${esc(r.campus)}<span class="col">${esc(r.college)}</span></h4>
-    <div class="kv"><span class="k">2026 拟招</span><span class="v big">${r.plan2026} 人</span></div>
-    <div class="kv"><span class="k">2025 总计划</span>${na(r.plan2025 && r.plan2025 + ' 人')}</div>
-    <div class="kv"><span class="k">2025 推免占用</span>${na(r.tuimian2025 && r.tuimian2025 + ' 人')}</div>
-    <div class="kv"><span class="k">2025 统考名额</span>${r.exam2025 != null
-        ? `<span class="v big">${r.exam2025} 人</span>` : na(null)}</div>
-    <div class="kv"><span class="k">2025 院线</span>${na(r.line2025)}</div>
-    <div class="kv"><span class="k">复试形式</span><span class="v">${esc(r.retestForm)}</span></div>
-    <div class="kv"><span class="k">本库导师</span><span class="v">${r.advisors} 人</span></div>
-    <p class="hint" style="margin:2px 0 0">${esc(r.retestSubject)}</p>
-    ${r.src ? `<div class="advsrc">来源 <a href="${esc(r.src)}" target="_blank" rel="noopener">${esc(r.srcLabel || '原文')}</a></div>` : ''}
-  </div>`).join('');
 
   const tl = S.timeline.map(t => `<div class="tli">
     <div class="when">${esc(t.when)}</div>
@@ -1766,11 +1752,6 @@ function renderSysu(){
     ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
 
   $('#sysuBody').innerHTML = `
-   <section class="sysec"><h3>085403 集成电路工程 · 三校区对比</h3>
-     <p class="hint">${esc(C.sameInitial)}</p>
-     <div class="cmpgrid">${cmp}</div>
-     <p class="hint" style="margin-top:10px">${esc(C.caveat)}</p></section>
-
    ${(() => {
      const H = S.history; if(!H) return '';
      const tr = H.rows.map(r => r.years.map((y, i) => `<tr>
