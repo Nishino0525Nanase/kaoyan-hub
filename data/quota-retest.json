@@ -622,6 +622,48 @@
     }
    ],
    "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息",
+   "college": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2024,
+    "planTotal": 75,
+    "tuimian": 36,
+    "exam": 39,
+    "tuimianRatio": 0.48,
+    "note": "细则原文三列。另有退役大学生士兵专项计划 1 人（统考 1）未计入"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "专业课笔试占复试成绩 20% + 外语应用能力测试 20%（面试）+ 专业能力及综合素质考核 60%（面试）",
+    "duration": "面试总时间（含外语考核）不少于 20 分钟",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格",
+    "tieBreak": "总成绩同分先比初试，再同分比面试成绩"
+   },
+   "line": {
+    "year": 2024,
+    "total": 315,
+    "politics": 55,
+    "english": 55,
+    "course1": 70,
+    "course2": 70,
+    "note": "院线，不分方向。退役士兵专项计划同为 315/55/55/70/70"
+   },
+   "sources": [
+    {
+     "url": "https://sece.sysu.edu.cn/zs/zs01/1414431.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official"
   }
  ]
 }
