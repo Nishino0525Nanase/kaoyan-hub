@@ -664,6 +664,48 @@
     }
    ],
    "confidence": "official"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息",
+   "college": "电子与通信工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2023,
+    "planTotal": 90,
+    "tuimian": 46,
+    "exam": 44,
+    "tuimianRatio": 0.511,
+    "note": "已接收免试生含广州生益科技专项 2 名、中国联通专项 1 名"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "复试成绩与初试成绩各占入学总成绩的 50%",
+    "form": "现场复试，笔试 + 面试",
+    "hasMachineTest": false,
+    "subjects": "综合评价（专业课笔试，闭卷）20% + 外语应用能力测试 20% + 专业能力及综合素质考核 60%",
+    "passLine": "复试成绩低于复试满分值的 60% 为不合格",
+    "tieBreak": "总成绩同分按初试成绩排序"
+   },
+   "line": {
+    "year": 2023,
+    "total": 350,
+    "politics": 55,
+    "english": 55,
+    "course1": 75,
+    "course2": 75,
+    "note": "院线。同年 081000 为 310/55/55/80/80；140100 无上线生源，指标转入 081000"
+   },
+   "sources": [
+    {
+     "url": "https://m.juyingonline.com/school/351025.html",
+     "official": false
+    }
+   ],
+   "confidence": "secondary",
+   "note": "数据来自聚创考研网转载的学院方案全文，学院官网原文未检索到。该转载含完整表格与咨询电话，内容自洽，但未经官方页面核实——confidence 标为 secondary，与 2024/2025 的 official 数据区分。"
   }
  ]
 }

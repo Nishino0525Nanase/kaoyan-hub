@@ -1758,7 +1758,8 @@ function renderSysu(){
        ${i === 0 ? `<td class="b" rowspan="${r.years.length}">${esc(r.college)}<br>
            <span class="num" style="color:var(--accent);font-weight:600">${esc(r.code)}</span>
            <span class="muted"> ${esc(r.name)}</span></td>` : ''}
-       <td><b>${y.year}</b></td>
+       <td><b>${y.year}</b>${y.conf && y.conf !== 'official'
+           ? `<br><span class="tmonly" style="font-size:10px">二手</span>` : ''}</td>
        <td>${y.total ?? '—'}</td>
        <td>${y.tuimian ?? '—'}</td>
        <td><b style="color:var(--good)">${y.exam ?? '—'}</b></td>
@@ -1776,7 +1777,7 @@ function renderSysu(){
            <td class="b">${esc(r.college)}<br><span class="num" style="color:var(--accent)">${esc(r.code)}</span></td>
            <td class="fee">${x.exam > 0 ? '+' : ''}${x.exam} 人<br>
              <span class="muted">${x.examPct > 0 ? '+' : ''}${x.examPct}%</span></td>
-           <td>${x.tuimianRatio24}% → <b style="color:var(--good)">${x.tuimianRatio25}%</b></td>
+           <td><span class="muted">${esc(x.span)}</span><br>${x.tuimianRatio24}% → <b style="color:var(--good)">${x.tuimianRatio25}%</b></td>
            <td><b style="color:${x.line > 0 ? 'var(--warn)' : 'var(--good)'}">${x.line > 0 ? '+' : ''}${x.line} 分</b></td>
          </tr>`; }).join('')}</table></div>` : ''}
        <div class="warnbox" style="margin-top:11px"><b>趋势：</b>${esc(H.read)}</div>
