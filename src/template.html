@@ -1988,6 +1988,24 @@ function renderNju(){
      <div class="cv" style="margin-top:6px">注意：${esc(NJU.tuition.caveat)}</div>
      <div class="advsrc">来源 <a href="${esc(NJU.tuition.src)}" target="_blank" rel="noopener">${esc(NJU.tuition.srcLabel)}</a></div></div>` : ''}
 
+   ${NJU.funding ? `<div class="lyr ok"><h4>${esc(NJU.funding.t)}<span class="badge2">official</span></h4>
+     <p class="sub2">${esc(NJU.funding.intro)}</p>
+     <table class="dormt"><tr><th>项目</th><th>标准</th><th>说明</th></tr>
+       ${NJU.funding.confirmed.map(c => `<tr><td class="b">${esc(c.k)}</td>
+         <td class="fee">${esc(c.v)}</td><td>${esc(c.d)}
+         <a href="${esc(c.src)}" target="_blank" rel="noopener">原文</a></td></tr>`).join('')}</table>
+     <p class="sub2" style="margin-top:9px"><b>${esc(NJU.funding.stopRules.t)}：</b></p>
+     <ul>${NJU.funding.stopRules.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+     <p class="sub2" style="margin-top:9px"><b>${esc(NJU.funding.compare.t)}：</b></p>
+     <ul>${NJU.funding.compare.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+     <div class="warnbox" style="margin-top:10px">${esc(NJU.funding.gap)}</div>
+     <div class="srcl" style="margin-top:10px">${NJU.funding.sources.map(x => `<div class="srci">
+       <div class="w">${esc(x.name)}</div>
+       <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
+         <span class="tg">${esc(x.year)}</span>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div></div>`).join('')}</div>
+   </div>` : ''}
+
    ${NJU.gapList ? `<div class="lyr bad"><h4>本专栏尚缺的数据<span class="badge2">缺口</span></h4>
      <ul>${NJU.gapList.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
 
