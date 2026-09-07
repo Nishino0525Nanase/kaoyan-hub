@@ -1770,7 +1770,18 @@ function renderSysu(){
        <div style="overflow-x:auto"><table class="dormt">
          <tr><th>学院 / 专业</th><th>年份</th><th>总计划</th><th>推免</th><th>统考</th><th>院线</th><th>来源</th></tr>
          ${tr}</table></div>
+       ${H.rows.some(r => r.delta) ? `<div style="overflow-x:auto;margin-top:12px">
+         <table class="dormt"><tr><th>专业</th><th>统考变化</th><th>推免占比</th><th>院线变化</th></tr>
+         ${H.rows.filter(r => r.delta).map(r => { const x = r.delta; return `<tr>
+           <td class="b">${esc(r.college)}<br><span class="num" style="color:var(--accent)">${esc(r.code)}</span></td>
+           <td class="fee">${x.exam > 0 ? '+' : ''}${x.exam} 人<br>
+             <span class="muted">${x.examPct > 0 ? '+' : ''}${x.examPct}%</span></td>
+           <td>${x.tuimianRatio24}% → <b style="color:var(--good)">${x.tuimianRatio25}%</b></td>
+           <td><b style="color:${x.line > 0 ? 'var(--warn)' : 'var(--good)'}">${x.line > 0 ? '+' : ''}${x.line} 分</b></td>
+         </tr>`; }).join('')}</table></div>` : ''}
        <div class="warnbox" style="margin-top:11px"><b>趋势：</b>${esc(H.read)}</div>
+       ${(H.analysis || []).map(a => `<div class="kpi" style="margin-top:9px">
+         <b>${esc(a.t)}</b><span>${esc(a.d)}</span></div>`).join('')}
        <p class="hint" style="margin-top:9px">${esc(H.note)}</p></section>`;
    })()}
 
