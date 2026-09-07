@@ -1979,6 +1979,18 @@ function renderNju(){
      <ul>${NJU.faculty.highlights.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
      <p class="sub2" style="margin-top:8px"><b>整体判断：</b>${esc(NJU.faculty.read)}</p></div>` : ''}
 
+   ${NJU.tuition ? `<div class="lyr ok"><h4>${esc(NJU.tuition.t)}<span class="badge2">official</span></h4>
+     <p class="sub2" style="font-size:14px;color:var(--accent);font-weight:600">${esc(NJU.tuition.headline)}</p>
+     <table class="dormt"><tr><th>类别</th><th>标准</th><th>说明</th></tr>
+       ${NJU.tuition.rows.map(r => `<tr><td class="b">${esc(r.k)}</td>
+         <td class="fee">${esc(r.v)}</td><td>${esc(r.note)}</td></tr>`).join('')}</table>
+     <p class="sub2" style="margin-top:8px"><b>与中大对比：</b>${esc(NJU.tuition.compare)}</p>
+     <div class="cv" style="margin-top:6px">注意：${esc(NJU.tuition.caveat)}</div>
+     <div class="advsrc">来源 <a href="${esc(NJU.tuition.src)}" target="_blank" rel="noopener">${esc(NJU.tuition.srcLabel)}</a></div></div>` : ''}
+
+   ${NJU.gapList ? `<div class="lyr bad"><h4>本专栏尚缺的数据<span class="badge2">缺口</span></h4>
+     <ul>${NJU.gapList.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+
    <div class="lyr"><h4>${esc(H.verifyPath.label)}</h4>${dl(H.verifyPath.items)}</div>
 
    <div class="lyr"><h4>提醒</h4>
