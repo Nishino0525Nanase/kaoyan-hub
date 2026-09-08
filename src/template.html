@@ -1895,6 +1895,21 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const E = S.advisorEval; if(!E) return '';
+     return `<section class="sysec"><h3>${esc(E.t)}</h3>
+       <div class="warnbox">${esc(E.why)}</div>
+       <table class="dormt" style="margin-top:11px">
+         <tr><th>可核验信号</th><th>说明</th><th>权重</th><th>去哪查</th></tr>
+         ${E.hardSignals.map(h => `<tr><td class="b">${esc(h.k)}</td><td>${esc(h.d)}</td>
+           <td><span class="${h.w === '高' ? 'tmonly' : 'cmp'}">${esc(h.w)}</span></td>
+           <td>${esc(h.how)}</td></tr>`).join('')}</table>
+       <div class="kpi" style="margin-top:11px"><b>${esc(E.softChannels.t)}</b>
+         <span>${esc(E.softChannels.d)}</span>
+         <ul style="margin:7px 0 0;padding-left:18px;line-height:1.7">
+           ${E.softChannels.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+       <p class="hint" style="margin-top:9px">${esc(E.note)}</p></section>`;
+   })()}
+
    <section class="sysec"><h3>报考要点</h3><div class="kp">${kp}</div></section>
 
    <section class="sysec"><h3>调剂政策</h3>
