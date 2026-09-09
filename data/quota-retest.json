@@ -706,6 +706,48 @@
    ],
    "confidence": "secondary",
    "note": "数据来自聚创考研网转载的学院方案全文，学院官网原文未检索到。该转载含完整表格与咨询电话，内容自洽，但未经官方页面核实——confidence 标为 secondary，与 2024/2025 的 official 数据区分。"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "code": "085400",
+   "name": "电子信息",
+   "college": "智能工程学院",
+   "campus": "深圳校区",
+   "quota": {
+    "year": 2026,
+    "planTotal": 58,
+    "tuimian": 34,
+    "exam": 24,
+    "tuimianRatio": 0.586,
+    "note": "统考 24 为学院 2025-09-30 公告《2026年硕士研究生各专业统考招生计划》公布的「免试生录取后的统考剩余计划」；推免 34 由 2026 拟招 58 减 24 推算，非官方直接公布。公告原文注明「免试生以实际接收人数为准，总计划以复试录取前学校下达的为准」"
+   },
+   "retest": {
+    "ratio": null,
+    "weight": "待查——该院复试录取实施细则以附件发布，正文无数字",
+    "form": null,
+    "hasMachineTest": false,
+    "subjects": null,
+    "passLine": null,
+    "tieBreak": null
+   },
+   "line": {
+    "year": 2026,
+    "total": null,
+    "politics": null,
+    "english": null,
+    "course1": null,
+    "course2": null,
+    "note": "该院分数线在复试细则附件中，未取到"
+   },
+   "sources": [
+    {
+     "url": "https://ise.sysu.edu.cn/article/1585",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "note": "同批公告另公布：控制科学与工程 10 名、交通运输工程 4 名、交通运输 10 名"
   }
  ]
 }
