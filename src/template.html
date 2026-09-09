@@ -1895,6 +1895,24 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const EM = S.employment; if(!EM) return '';
+     return `<section class="sysec"><h3>${esc(EM.t)}</h3>
+       <p class="hint">${esc(EM.intro)}</p>
+       ${EM.colleges.map(c => `<div class="card cmpcard">
+         <h4>${esc(c.college)}<span class="col">${esc(c.campus)} · ${esc(c.year)}</span></h4>
+         <div class="kv"><span class="k">规模</span><span class="v">${esc(c.scale)}</span></div>
+         <div class="kv"><span class="k">就业率</span><span class="v">${esc(c.rate)}</span></div>
+         ${c.breakdown.map(b => `<div class="kv"><span class="k">${esc(b.k)}</span>
+           <span class="v big">${esc(b.v)}</span></div>
+           <p class="hint" style="margin:0 0 4px">${esc(b.d)}</p>`).join('')}
+         <p class="sub2" style="margin-top:6px"><b>怎么看：</b>${esc(c.read)}</p>
+         <div class="cv">${esc(c.caveat)}</div>
+         <div class="advsrc">来源 <a href="${esc(c.src)}" target="_blank" rel="noopener">${esc(c.srcLabel)}</a></div>
+       </div>`).join('')}
+       <div class="warnbox" style="margin-top:11px"><b>其余学院暂缺：</b>${esc(EM.gap)}</div>
+       <p class="hint" style="margin-top:8px"><b>自己怎么查：</b>${esc(EM.howTo)}</p></section>`;
+   })()}
+
    ${(() => { const E = S.advisorEval; if(!E) return '';
      return `<section class="sysec"><h3>${esc(E.t)}</h3>
        <div class="warnbox">${esc(E.why)}</div>
