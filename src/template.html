@@ -1895,6 +1895,22 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const SY = S.syllabus; if(!SY) return '';
+     return `<section class="sysec"><h3>${esc(SY.t)}</h3>
+       <p class="hint">${esc(SY.intro)}</p>
+       ${SY.items.map(i => `<div class="lyr ${i.forYou ? 'ok' : ''}" style="margin-bottom:10px">
+         <h4><span class="num" style="color:var(--accent)">${esc(i.code)}</span> ${esc(i.name)}
+           ${i.forYou ? '<span class="badge2">主线专业课</span>' : ''}</h4>
+         <p class="sub2">用于：${esc(i.used)}</p>
+         ${i.books.length ? `<p class="sub2"><b>参考书：</b></p>
+           <ul>${i.books.map(b => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
+         <p class="sub2" style="margin-top:6px"><b>考试范围：</b>${esc(i.scope)}</p></div>`).join('')}
+       <div class="kpi"><b>怎么读这份考纲</b><span>${esc(SY.read)}</span></div>
+       <div class="warnbox" style="margin-top:9px">${esc(SY.caveat)}<br>${esc(SY.note)}</div>
+       <div class="advsrc">来源 <a href="${esc(SY.src)}" target="_blank" rel="noopener">${esc(SY.srcLabel)}</a></div>
+     </section>`;
+   })()}
+
    ${(() => { const EM = S.employment; if(!EM) return '';
      return `<section class="sysec"><h3>${esc(EM.t)}</h3>
        <p class="hint">${esc(EM.intro)}</p>
