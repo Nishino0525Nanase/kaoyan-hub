@@ -1943,8 +1943,22 @@ function renderSysu(){
            <p class="hint" style="margin:0 0 4px">${esc(b.d)}</p>`).join('')}
          <p class="sub2" style="margin-top:6px"><b>怎么看：</b>${esc(c.read)}</p>
          <div class="cv">${esc(c.caveat)}</div>
+         ${c.upstream ? `<div class="kv"><span class="k">${esc(c.upstream.t)}</span>
+           <span class="v">${esc(c.upstream.v)}</span></div>` : ''}
+         ${c.detail ? `<details class="rbook" style="margin-top:8px">
+           <summary>${esc(c.detail.t)}</summary>
+           <ul>${c.detail.items.map(x => `<li><b>${esc(x.k)}：</b>${esc(x.v)}</li>`).join('')}</ul>
+           <p class="hint" style="margin-top:6px">${esc(c.detail.note)}　
+             <a href="${esc(c.detail.src)}" target="_blank" rel="noopener">${esc(c.detail.srcLabel)}</a></p>
+         </details>` : ''}
          <div class="advsrc">来源 <a href="${esc(c.src)}" target="_blank" rel="noopener">${esc(c.srcLabel)}</a></div>
        </div>`).join('')}
+       ${EM.advisorLevel ? `<div class="lyr bad" style="margin-top:12px">
+         <h4>${esc(EM.advisorLevel.t)}<span class="badge2">核查结论</span></h4>
+         <p class="sub2"><b>${esc(EM.advisorLevel.found)}</b></p>
+         <p class="sub2">${esc(EM.advisorLevel.detail)}</p>
+         <p class="sub2">${esc(EM.advisorLevel.exception)}</p>
+         <p class="sub2"><b>怎么问：</b>${esc(EM.advisorLevel.howTo)}</p></div>` : ''}
        <div class="warnbox" style="margin-top:11px"><b>其余学院暂缺：</b>${esc(EM.gap)}</div>
        <p class="hint" style="margin-top:8px"><b>自己怎么查：</b>${esc(EM.howTo)}</p></section>`;
    })()}
