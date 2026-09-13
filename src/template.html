@@ -1895,6 +1895,26 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const R = S.ratios; if(!R) return '';
+     return `<section class="sysec"><h3>${esc(R.t)}</h3>
+       <p class="hint">${esc(R.intro)}</p>
+       <div class="lyr ok"><h4>${esc(R.derived.t)}<span class="badge2">可推出</span></h4>
+         <table class="dormt"><tr><th>专业</th><th>目录数</th><th>细则实际数</th><th>差</th></tr>
+           ${R.derived.rows.map(x => `<tr><td class="b">${esc(x.k)}</td><td>${esc(x['目录'])}</td>
+             <td class="fee">${esc(x['细则'])}</td><td><b style="color:var(--warn)">${esc(x.delta)}</b></td></tr>`).join('')}</table>
+         ${R.derived.rows.map(x => `<p class="sub2" style="margin-top:5px">${esc(x.k)}：${esc(x.d)}</p>`).join('')}
+         <div class="warnbox" style="margin-top:8px">${esc(R.derived.note)}</div></div>
+       <div class="lyr"><h4>${esc(R.expansion.t)}</h4>
+         <ul>${R.expansion.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+         <p class="sub2" style="margin-top:7px"><b>${esc(R.expansion.read)}</b></p></div>
+       <div class="lyr bad"><h4>${esc(R.cannotGet.t)}<span class="badge2">拿不到</span></h4>
+         ${R.cannotGet.items.map(x => `<p class="sub2"><b>${esc(x.k)}：</b>${esc(x.why)}</p>`).join('')}
+         <div class="warnbox" style="margin:8px 0">${esc(R.cannotGet.warn)}</div>
+         <p class="sub2"><b>怎么自己拿到：</b></p>
+         <ul>${R.cannotGet.howTo.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+     </section>`;
+   })()}
+
    ${(() => { const SY = S.syllabus; if(!SY) return '';
      return `<section class="sysec"><h3>${esc(SY.t)}</h3>
        <p class="hint">${esc(SY.intro)}</p>
