@@ -3450,17 +3450,17 @@
    "campus": "广州·南校园",
    "campusId": null,
    "site": "https://ssse.sysu.edu.cn/",
-   "source": "https://ssse.sysu.edu.cn/teachers",
-   "sourceLabel": "教师队伍",
+   "source": "https://ssse.sysu.edu.cn/cat/64",
+   "sourceLabel": "教授 / 副教授分类页",
    "confidence": "official",
    "fetched": "2026-09-01",
-   "scope": "仅本院导师 27 人。该页另列联培导师（院士 3、博导 66、硕导 26，多为校外单位）与双聘导师（本职在数学/电信/电通/计算机等学院，已在各自学院统计），均未收录以免重复计数。该页不含研究方向与邮箱",
+   "scope": "仅本院导师（联培与双聘导师未收录以免重复计数）。研究方向与邮箱取自学院教授页 cat/64 与副教授页 cat/65 的第一页——此前本库抓的 teachers 页只有姓名职称、方向为空。两个分类页均有第二页，尚未录入；页面本身也有部分教师未填研究方向。",
    "advisors": [
     {
      "name": "伍蔡伦",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "wuclun@mail.sysu.edu.cn",
+     "areas": "综合时空体系理论与方法，包括卫星导航、通导融合、时空智能等",
      "url": "https://ssse.sysu.edu.cn/teacher/1240",
      "note": null,
      "advises": null,
@@ -3469,28 +3469,28 @@
     {
      "name": "庄学彬",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "zhuangxb@mail.sysu.edu.cn",
+     "areas": "主要从事智能导航对抗、卫星互联网系统和通导融合、弹性 PNT 体系、无人系统智能自主导航等研究",
      "url": "https://ssse.sysu.edu.cn/teacher/91",
-     "note": null,
+     "note": "副院长",
      "advises": null,
      "directions": null
     },
     {
      "name": "陈洪波",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "chenhongbo@mail.sysu.edu.cn",
+     "areas": "复杂系统建模、仿真与分析，航空航天飞行器总体设计，故障预测与健康管理技术",
      "url": "https://ssse.sysu.edu.cn/teacher/75",
-     "note": null,
+     "note": "院长",
      "advises": null,
      "directions": null
     },
     {
      "name": "李雄",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "lixiong6@mail.sysu.edu.cn",
+     "areas": "主要从事复杂信息系统管理领域研究工作，具体包括复杂系统智能行为建模、能力评估及组织优化，复杂信息系统分析、集成及应用，信息管理及大数据智能决策，管理系统工程等",
      "url": "https://ssse.sysu.edu.cn/teacher/667",
      "note": null,
      "advises": null,
@@ -3499,17 +3499,17 @@
     {
      "name": "肖绍球",
      "title": "教授",
-     "email": null,
+     "email": "xiaoshq8@mail.sysu.edu.cn",
      "areas": null,
      "url": "https://ssse.sysu.edu.cn/teacher/1014",
-     "note": null,
+     "note": "副院长",
      "advises": null,
      "directions": null
     },
     {
      "name": "张涛",
      "title": "教授",
-     "email": null,
+     "email": "zhangt358@mail.sysu.edu.cn",
      "areas": null,
      "url": "https://ssse.sysu.edu.cn/teacher/241",
      "note": null,
@@ -3519,8 +3519,8 @@
     {
      "name": "易卿武",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "yiqw@mail.sysu.edu.cn",
+     "areas": "智能时空体系与工程。主要包括智能时空系统、智能时空装备、智能时空服务、可信导航及监测评估等前沿技术研究与应用",
      "url": "https://ssse.sysu.edu.cn/teacher/1523",
      "note": null,
      "advises": null,
@@ -3539,8 +3539,8 @@
     {
      "name": "黄寒砚",
      "title": "教授",
-     "email": null,
-     "areas": null,
+     "email": "huanghy99@mail.sysu.edu.cn",
+     "areas": "试验设计与不确定性量化、复杂系统建模与评估、体系架构设计",
      "url": "https://ssse.sysu.edu.cn/teacher/138",
      "note": null,
      "advises": null,
@@ -3549,8 +3549,8 @@
     {
      "name": "王劲博",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "wangjinbo@mail.sysu.edu.cn",
+     "areas": "主要从事飞行器系统工程，飞行器轨迹优化与制导，无人机技术，最优控制等。隶属陈洪波教授领衔的空天智能无人系统研究团队，具备计算机科学与技术和电子信息专业硕士生导师资格",
      "url": "https://ssse.sysu.edu.cn/teacher/89",
      "note": null,
      "advises": null,
@@ -3559,7 +3559,7 @@
     {
      "name": "冯展祥",
      "title": "副教授",
-     "email": null,
+     "email": "fengzhx7@mail.sysu.edu.cn",
      "areas": null,
      "url": "https://ssse.sysu.edu.cn/teacher/1075",
      "note": null,
@@ -3569,8 +3569,8 @@
     {
      "name": "朱永利",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "zhuyli5@mail.sysu.edu.cn",
+     "areas": "人工智能在 CPS 韧性系统（如电网）中的应用；电网可靠性及稳定性并行计算/在线计算算法研发；智能无人系统/无人机在电网安稳控制中的应用",
      "url": "https://ssse.sysu.edu.cn/teacher/897",
      "note": null,
      "advises": null,
@@ -3589,8 +3589,8 @@
     {
      "name": "孙蕾",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "sunlei8@mail.sysu.edu.cn",
+     "areas": "小波分析理论及其在图像处理中的应用",
      "url": "https://ssse.sysu.edu.cn/teacher/88",
      "note": null,
      "advises": null,
@@ -3639,8 +3639,8 @@
     {
      "name": "张传富",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "zhangchf9@mail.sysu.edu.cn",
+     "areas": "主要从事信息安全系统工程、现代密码应用技术、信息安全建模仿真理论与技术等方面的研究工作",
      "url": "https://ssse.sysu.edu.cn/teacher/311",
      "note": null,
      "advises": null,
@@ -3659,8 +3659,8 @@
     {
      "name": "罗宗富",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "luozf@mail.sysu.edu.cn",
+     "areas": "航天动力学与控制",
      "url": "https://ssse.sysu.edu.cn/teacher/280",
      "note": null,
      "advises": null,
@@ -3669,8 +3669,8 @@
     {
      "name": "段焰辉",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "duanyh7@mail.sysu.edu.cn",
+     "areas": "多学科优化设计、新概念飞行器设计",
      "url": "https://ssse.sysu.edu.cn/teacher/86",
      "note": null,
      "advises": null,
@@ -3689,8 +3689,8 @@
     {
      "name": "侯燕青",
      "title": "副教授",
-     "email": null,
-     "areas": null,
+     "email": "houyq9@mail.sysu.edu.cn",
+     "areas": "北斗精密定位及多源融合导航",
      "url": "https://ssse.sysu.edu.cn/teacher/252",
      "note": null,
      "advises": null,
@@ -3709,7 +3709,7 @@
     {
      "name": "戚煜华",
      "title": "副教授",
-     "email": null,
+     "email": "qiyh8@mail.sysu.edu.cn",
      "areas": null,
      "url": "https://ssse.sysu.edu.cn/teacher/1016",
      "note": null,
@@ -3725,12 +3725,32 @@
      "note": null,
      "advises": null,
      "directions": null
+    },
+    {
+     "name": "马啸",
+     "title": "教授",
+     "email": null,
+     "areas": null,
+     "url": "https://ssse.sysu.edu.cn/teacher/244",
+     "note": null,
+     "advises": null,
+     "directions": null
+    },
+    {
+     "name": "王甲海",
+     "title": "教授",
+     "email": null,
+     "areas": null,
+     "url": "https://ssse.sysu.edu.cn/teacher/245",
+     "note": null,
+     "advises": null,
+     "directions": null
     }
    ],
-   "count": 27
+   "count": 29
   }
  ],
- "total": 319,
+ "total": 321,
  "schoolsCovered": 2,
  "gaps": [
   "上海交通大学",
