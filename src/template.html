@@ -1584,6 +1584,8 @@ function renderAdvisors(){
         <span class="muted">${list.length} / ${col.count} 人</span>
       </div>
       <p class="advmeta"><a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>　<span title="${esc(col.scope)}">${esc(col.scope.slice(0, 34))}${col.scope.length > 34 ? '…' : ''}</span></p>
+      ${col.pending ? `<p class="advmeta"><span class="tmonly">${col.pending.count} 人方向待补</span>
+        <span class="muted">${esc(col.pending.names.join('、'))}　·　${esc(col.pending.howTo)}</span></p>` : ''}
       ${dormBlock(col.school, col.campusId)}
       <div class="advgrid">${list.map(a => advCard(a, q, col)).join('')}</div>
     </section>`;
