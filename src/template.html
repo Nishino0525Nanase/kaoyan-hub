@@ -1494,7 +1494,8 @@ function advCard(a, q, col){
   const note = a.note ? `<span class="advtitle">${esc(a.note)}</span>` : '';
   const areas = a.areas
     ? `<p class="advareas">${hl(a.areas, q)}</p>`
-    : (a.directions ? '' : `<p class="advareas advnull">官网师资页未列出研究领域</p>`);
+    : (a.directions ? '' : `<p class="advareas advnull">${a.areaStatus
+        ? esc(a.areaStatus) : '官网师资页未列出研究领域'}</p>`);
   const dirs = a.directions
     ? `<div class="advdirs">${a.directions.map(d => `<span class="advdir">${hl(d,q)}</span>`).join('')}</div>` : '';
   const mail = a.email
@@ -1590,7 +1591,10 @@ function renderAdvisors(){
       </div>
       <p class="advmeta"><a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>　<span title="${esc(col.scope)}">${esc(col.scope.slice(0, 34))}${col.scope.length > 34 ? '…' : ''}</span></p>
       ${col.pending ? `<p class="advmeta"><span class="tmonly">${col.pending.count} 人方向待补</span>
-        <span class="muted">${esc(col.pending.names.join('、'))}　·　${esc(col.pending.howTo)}</span></p>` : ''}
+        ${(col.pending.byReason || []).map(r => `<br><span class="muted"><b>${esc(r.reason)}：</b>
+          ${esc(r.names.join('、'))}　—— ${esc(r.note)}</span>`).join('')}
+        ${col.pending.byReason ? '' : `<span class="muted">${esc((col.pending.names||[]).join('、'))}</span>`}
+        <br><span class="muted">${esc(col.pending.howTo)}</span></p>` : ''}
       ${dormBlock(col.school, col.campusId)}
       <div class="advgrid">${list.map(a => advCard(a, q, col)).join('')}</div>
     </section>`;
