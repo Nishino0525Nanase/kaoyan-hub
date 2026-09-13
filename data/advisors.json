@@ -876,18 +876,18 @@
    "campus": "深圳校区",
    "campusId": "shenzhen",
    "site": "https://sece.sysu.edu.cn/",
-   "source": "https://sece.sysu.edu.cn/zs/zs01/1419224.htm",
-   "sourceLabel": "研究生导师招生专业方向情况表",
+   "source": "https://sece.sysu.edu.cn/szll/js/index.htm",
+   "sourceLabel": "专任教师（按学科方向分类）",
    "confidence": "official",
    "fetched": "2026-09-01",
-   "scope": "来源是招生方向表而非师资页，因此有硕导/博导之分和招生方向，但没有邮箱、职称和研究领域简介",
+   "scope": "来源为学院研究生导师招生专业方向情况表（硕导/博导之分与招生方向）与专任教师页（按智能感知/认知通信/空间电子三个学科方向分类）。学院官网不提供逐人的研究领域简介，只到学科方向这一层——本库如实录到这一层，更细的方向需点开各教师个人页。",
    "advisors": [
     {
      "name": "丛玉来",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -899,10 +899,10 @@
     },
     {
      "name": "刘京京",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -915,10 +915,10 @@
     },
     {
      "name": "吴亿锋",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -931,10 +931,10 @@
     },
     {
      "name": "吴建新",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -947,10 +947,10 @@
     },
     {
      "name": "周炳朋",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -963,10 +963,10 @@
     },
     {
      "name": "周颖",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -979,10 +979,10 @@
     },
     {
      "name": "唐燕群",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -995,10 +995,10 @@
     },
     {
      "name": "姜园",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1011,10 +1011,10 @@
     },
     {
      "name": "孙仕海",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1027,10 +1027,10 @@
     },
     {
      "name": "孙兴华",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1043,10 +1043,10 @@
     },
     {
      "name": "岁江伟",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1058,10 +1058,10 @@
     },
     {
      "name": "庄宏成",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1074,10 +1074,10 @@
     },
     {
      "name": "张云",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1090,10 +1090,10 @@
     },
     {
      "name": "张志勇",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1106,10 +1106,10 @@
     },
     {
      "name": "张月",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1122,10 +1122,10 @@
     },
     {
      "name": "张瑞茂",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1138,10 +1138,10 @@
     },
     {
      "name": "张磊",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1154,10 +1154,10 @@
     },
     {
      "name": "张艳",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1170,10 +1170,10 @@
     },
     {
      "name": "张金钡",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1186,10 +1186,10 @@
     },
     {
      "name": "张鹏",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1201,10 +1201,10 @@
     },
     {
      "name": "徐世友",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1217,10 +1217,10 @@
     },
     {
      "name": "戴志强",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1233,10 +1233,10 @@
     },
     {
      "name": "朱祥维",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1249,10 +1249,10 @@
     },
     {
      "name": "李杜",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1264,10 +1264,10 @@
     },
     {
      "name": "李聪端",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1280,10 +1280,10 @@
     },
     {
      "name": "段佳",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1295,10 +1295,10 @@
     },
     {
      "name": "段克清",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1311,10 +1311,10 @@
     },
     {
      "name": "焦中兴",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1326,10 +1326,10 @@
     },
     {
      "name": "王亮",
-     "title": null,
+     "title": "讲师",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1341,10 +1341,10 @@
     },
     {
      "name": "王伟",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1357,10 +1357,10 @@
     },
     {
      "name": "王小青",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1373,10 +1373,10 @@
     },
     {
      "name": "王涛",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1389,10 +1389,10 @@
     },
     {
      "name": "王青松",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1405,10 +1405,10 @@
     },
     {
      "name": "王鲁平",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1421,10 +1421,10 @@
     },
     {
      "name": "田彪",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1437,10 +1437,10 @@
     },
     {
      "name": "罗志勇",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1453,10 +1453,10 @@
     },
     {
      "name": "罗锴",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1469,10 +1469,10 @@
     },
     {
      "name": "肖钰",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1485,10 +1485,10 @@
     },
     {
      "name": "胡俊",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1500,10 +1500,10 @@
     },
     {
      "name": "胡豪涛",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1516,10 +1516,10 @@
     },
     {
      "name": "蔡科超",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1531,10 +1531,10 @@
     },
     {
      "name": "袁雪林",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1547,10 +1547,10 @@
     },
     {
      "name": "詹文",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1562,10 +1562,10 @@
     },
     {
      "name": "谢恺",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1578,10 +1578,10 @@
     },
     {
      "name": "谢洪途",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1593,10 +1593,10 @@
     },
     {
      "name": "赖涛",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1609,10 +1609,10 @@
     },
     {
      "name": "赵磊",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1640,10 +1640,10 @@
     },
     {
      "name": "邓振淼",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1656,10 +1656,10 @@
     },
     {
      "name": "郭瑞",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1672,10 +1672,10 @@
     },
     {
      "name": "郭裕兰",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1688,10 +1688,10 @@
     },
     {
      "name": "陈曾平",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1704,10 +1704,10 @@
     },
     {
      "name": "饶彬",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1720,10 +1720,10 @@
     },
     {
      "name": "高庆",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1735,10 +1735,10 @@
     },
     {
      "name": "魏玺章",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1751,10 +1751,10 @@
     },
     {
      "name": "黄小红",
-     "title": null,
+     "title": "副教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：智能感知（雷达探测与信号处理、目标识别、成像与图像处理）",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
      "note": null,
      "advises": [
       "硕士"
@@ -1766,10 +1766,10 @@
     },
     {
      "name": "黄晓霞",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：认知通信（通信系统与信号处理、无线通信、集成电路）",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1782,10 +1782,10 @@
     },
     {
      "name": "黄海风",
-     "title": null,
+     "title": "教授",
      "email": null,
-     "areas": null,
-     "url": null,
+     "areas": "学科方向：空间电子（卫星导航、空间信息获取、遥感与雷达成像）",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
      "note": null,
      "advises": [
       "硕士",
@@ -1903,7 +1903,27 @@
      "shuoshi": 0
     }
    ],
-   "count": 58
+   "count": 58,
+   "researchGroups": [
+    {
+     "name": "智能感知",
+     "desc": "雷达探测与信号处理、目标识别、成像与图像处理",
+     "url": "https://sece.sysu.edu.cn/szll/js/zngz/index.htm",
+     "count": 28
+    },
+    {
+     "name": "认知通信",
+     "desc": "通信系统与信号处理、无线通信、集成电路",
+     "url": "https://sece.sysu.edu.cn/szll/js/rztx/index.htm",
+     "count": 13
+    },
+    {
+     "name": "空间电子",
+     "desc": "卫星导航、空间信息获取、遥感与雷达成像",
+     "url": "https://sece.sysu.edu.cn/szll/js/kjdz/index.htm",
+     "count": 17
+    }
+   ]
   },
   {
    "id": "nju-ra",
