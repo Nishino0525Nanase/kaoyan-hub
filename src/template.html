@@ -1501,11 +1501,16 @@ function advCard(a, q, col){
     ? `<a href="mailto:${esc(a.email)}">${esc(a.email)}</a>`
     : `<span class="advnull">官网未列邮箱</span>`;
   const home = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">个人主页 &rarr;</a>` : '';
+  const sig = a.signal ? `<p class="advareas" style="color:var(--good);font-size:12.5px">
+      <b>可核验信号：</b>${hl(a.signal, q)}</p>` : '';
+  const asrc = a.areaSrc ? `<span class="advnull" style="font-size:11px">方向来源：
+      <a href="${esc(a.areaSrc.url)}" target="_blank" rel="noopener">${esc(a.areaSrc.label)}</a>
+      —— ${esc(a.areaSrc.note)}</span>` : '';
   const src = col ? `<span class="advsrc">来源 <a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>${
       col.site ? ` · <a href="${esc(col.site)}" target="_blank" rel="noopener">学院官网</a>` : ''}</span>` : '';
   return `<div class="card adv">
       <div class="advtop"><span class="advname">${hl(a.name,q)}</span>${t}${adv}${note}</div>
-      ${areas}${dirs}
+      ${areas}${sig}${asrc}${dirs}
       <div class="advfoot">${mail}${home}</div>
       ${src}
     </div>`;
