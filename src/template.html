@@ -1906,6 +1906,24 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const L = S.schoolLine; if(!L) return '';
+     return `<section class="sysec"><h3>${esc(L.t)}</h3>
+       <p class="hint">${esc(L.intro)}</p>
+       <div class="warnbox"><b>2025 校线基准：</b>${esc(L.base.cat)}　总分 <b>${L.base.total}</b>　
+         单科(满分100) ${L.base.single100}　单科(满分>100) ${L.base.singleOver100}
+         <br><span class="muted">${esc(L.base.note)}</span></div>
+       <table class="dormt" style="margin-top:11px">
+         <tr><th>学院</th><th>专业</th><th>院线</th><th>高出校线</th><th>说明</th></tr>
+         ${L.rows.map(r => `<tr><td class="b">${esc(r.college)}</td><td>${esc(r.code)}</td>
+           <td class="fee">${r.line ?? '<span class="advnull">未公布</span>'}</td>
+           <td>${r.delta != null ? `<b style="color:${r.delta >= 90 ? '#e34948' : r.delta >= 40 ? 'var(--warn)' : 'var(--good)'}">+${r.delta}</b>` : '—'}</td>
+           <td>${esc(r.d)}</td></tr>`).join('')}</table>
+       <div class="kpi" style="margin-top:11px"><b>怎么读</b><span>${esc(L.read)}</span></div>
+       <div class="cv" style="margin-top:8px">${esc(L.caveat)}</div>
+       <div class="advsrc">来源 <a href="${esc(L.src)}" target="_blank" rel="noopener">${esc(L.srcLabel)}</a></div>
+     </section>`;
+   })()}
+
    ${(() => { const R = S.ratios; if(!R) return '';
      return `<section class="sysec"><h3>${esc(R.t)}</h3>
        <p class="hint">${esc(R.intro)}</p>
