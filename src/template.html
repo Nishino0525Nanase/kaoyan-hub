@@ -2230,15 +2230,22 @@ function renderNju(){
      <div class="advsrc">来源 <a href="${esc(NJU.housing.src)}" target="_blank" rel="noopener">${esc(NJU.housing.srcLabel)}</a></div>
    </div>` : ''}
 
-   ${NJU.gapList ? `<div class="lyr bad"><h4>本专栏尚缺的数据<span class="badge2">缺口</span></h4>
-     <ul>${NJU.gapList.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+   ${H.gaps ? `<div class="lyr bad"><h4>${esc(H.gaps.t)}<span class="badge2">缺口</span></h4>
+     <ul>${H.gaps.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+     ${(H.gaps.verify || []).map(v => `<p class="sub2" style="margin-top:8px">
+       <b>${esc(v.code)} ${esc(v.name)} — ${esc(v.status)}</b></p>
+       <ul>${v.evidence.map(e => `<li>${esc(e)}</li>`).join('')}</ul>
+       ${(v.stillUnverified || []).length ? `<p class="sub2" style="margin:6px 0 2px"><b>仍待核实：</b></p>
+         <ul style="color:var(--warn)">${v.stillUnverified.map(e => `<li>${esc(e)}</li>`).join('')}</ul>` : ''}
+       <p class="sub2"><b>核实：</b>${esc(v.howToVerify)}</p>`).join('')}</div>` : ''}
 
-   <div class="lyr"><h4>${esc(H.verifyPath.label)}</h4>${dl(H.verifyPath.items)}</div>
+   <div class="lyr"><h4>${esc(H.verifyPath.label)}</h4>${dl(H.verifyPath.items)}
+     ${H.notes ? `<p class="sub2" style="margin-top:9px"><b>提醒：</b></p>
+       <ul>${H.notes.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>
 
-   <div class="lyr"><h4>提醒</h4>
-     <ul>${H.notes.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
 
-   <div class="lyr"><h4>资料来源与核实状态</h4>
+
+   <div class="lyr"><h4>资料来源</h4>
      <p class="sub2">${esc(NJU.note)}</p>
      <div class="srcl">${NJU.sources.map(x => `<div class="srci">
        <div class="w">${esc(x.what)}</div>
@@ -2248,10 +2255,15 @@ function renderNju(){
          <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
        ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></div>
 
-   ${NJU.correction ? `<div class="lyr mid"><h4>数据订正记录（${esc(NJU.correction.date)}）</h4>
-     <ul><li>${esc(NJU.correction.what)}</li>
-         <li><b>原因：</b>${esc(NJU.correction.why)}</li>
-         <li><b>教训：</b>${esc(NJU.correction.lesson)}</li></ul></div>` : ''}`;
+   ${(NJU.correction || NJU.correction2) ? `<div class="lyr mid"><h4>数据订正记录</h4>
+     ${NJU.correction ? `<p class="sub2"><b>${esc(NJU.correction.date)}　${esc(NJU.correction.what)}</b></p>
+       <ul><li><b>原因：</b>${esc(NJU.correction.why)}</li>
+           <li><b>教训：</b>${esc(NJU.correction.lesson)}</li></ul>` : ''}
+     ${NJU.correction2 ? `<p class="sub2" style="margin-top:9px"><b>${esc(NJU.correction2.date)}　${esc(NJU.correction2.what)}</b></p>
+       <ul><li><b>依据：</b>${esc(NJU.correction2.why)}</li>
+           <li><b>现状：</b>${esc(NJU.correction2.now)}</li></ul>
+       <div class="advsrc">来源 <a href="${esc(NJU.correction2.src)}" target="_blank" rel="noopener">该院 2026 复试录取工作细则</a></div>` : ''}
+   </div>` : ''}`;
 
   requestAnimationFrame(() => {
     const host = $('#njuBody');
