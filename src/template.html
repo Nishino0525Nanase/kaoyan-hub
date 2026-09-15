@@ -1994,6 +1994,24 @@ function renderSysu(){
      </section>`;
    })()}
 
+   ${(() => { const RP = S.reputation; if(!RP) return '';
+     return `<section class="sysec"><h3>${esc(RP.t)}</h3>
+       <p class="hint">${esc(RP.intro)}</p>
+       <table class="dormt"><tr><th>依据</th><th>结论</th><th>权重</th><th>说明</th></tr>
+         ${RP.hard.map(h => `<tr><td class="b">${esc(h.k)}</td>
+           <td class="fee">${esc(h.v)}</td>
+           <td><span class="${h.w === '高' ? 'tmonly' : 'cmp'}">${esc(h.w)}</span></td>
+           <td>${esc(h.d)}${h.forYou ? `<br><b style="color:var(--good)">对你：</b>${esc(h.forYou)}` : ''}</td></tr>`).join('')}
+       </table>
+       <div class="kpi" style="margin-top:11px"><b>怎么读</b><span>${esc(RP.howToRead)}</span></div>
+       <div class="lyr bad" style="margin-top:11px"><h4>${esc(RP.whyNoForum.t)}</h4>
+         <ul>${RP.whyNoForum.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+         <p class="sub2" style="margin-top:7px"><b>${esc(RP.whyNoForum.note)}</b></p></div>
+       <div class="cv" style="margin-top:8px">${esc(RP.caveat)}</div>
+       <div class="advsrc">来源 <a href="${esc(RP.src)}" target="_blank" rel="noopener">${esc(RP.srcLabel)}</a></div>
+     </section>`;
+   })()}
+
    ${(() => { const EM = S.employment; if(!EM) return '';
      return `<section class="sysec"><h3>${esc(EM.t)}</h3>
        <p class="hint">${esc(EM.intro)}</p>
@@ -2110,11 +2128,11 @@ function renderSysu(){
       '884':'决策','085400':'决策','招生人数':'决策','历年招生':'决策',
       '校线':'决策','复录比':'决策',
       '报考要点':'备考','考纲':'备考','时间线':'备考','2027':'备考','调剂':'备考',
-      '就业':'参考','导师':'参考','奖助':'参考','校区':'参考','资料来源':'参考','本库':'参考'
+      '学科实力':'参考','就业':'参考','导师':'参考','奖助':'参考','校区':'参考','资料来源':'参考','本库':'参考'
     };
     const ORDER = ['884','085400','招生人数','历年招生','校线','复录比',
                    '报考要点','考纲','时间线','2027','调剂',
-                   '就业','导师','奖助','校区','资料来源','本库'];
+                   '学科实力','就业','导师','奖助','校区','资料来源','本库'];
     const DESC = {
       '决策':'报哪个学院——名额、分数线、趋势',
       '备考':'怎么准备——科目、时间节点、政策',
