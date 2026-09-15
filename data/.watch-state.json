@@ -22,27 +22,25 @@
   ]
  },
  "school:北京航空航天大学": {
-  "hash": "ef6e3d486a4c446f",
-  "seenAt": "2026-09-08",
+  "hash": "501f1e8191e2f3bd",
+  "seenAt": "2026-09-15",
   "hits": [
    "初试科目"
   ]
  },
  "school:北京理工大学": {
-  "hash": "fbf4863048940fdc",
-  "seenAt": "2026-09-08",
+  "hash": "1fb771b4fbe1956c",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:北京科技大学": {
-  "hash": "b1a5c93c39082b0b",
-  "seenAt": "2026-09-08",
-  "hits": [
-   "调整初试"
-  ]
+  "hash": "67de5a54b32b8a31",
+  "seenAt": "2026-09-15",
+  "hits": []
  },
  "school:天津大学": {
-  "hash": "9a39ccf472c63532",
-  "seenAt": "2026-09-08",
+  "hash": "be0140e270383af4",
+  "seenAt": "2026-09-15",
   "hits": [
    "初试科目"
   ]
@@ -60,8 +58,8 @@
   "hits": []
  },
  "school:哈尔滨工业大学": {
-  "hash": "2f7949f285213769",
-  "seenAt": "2026-09-08",
+  "hash": "e2a86663e3547a2c",
+  "seenAt": "2026-09-15",
   "hits": [
    "科目调整"
   ]
@@ -79,8 +77,8 @@
   "hits": []
  },
  "school:东北师范大学": {
-  "hash": "1c5286520221073e",
-  "seenAt": "2026-09-08",
+  "hash": "feb9eee8e1927e95",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:同济大学": {
@@ -94,28 +92,28 @@
   "hits": []
  },
  "school:南京大学": {
-  "hash": "b0ea2651de83b8cf",
-  "seenAt": "2026-09-08",
+  "hash": "d085a8fc4ca387ca",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:华东师范大学": {
-  "hash": "67a1694347ade201",
-  "seenAt": "2026-08-24",
+  "hash": "60a33a68d6d18df3",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:杭州电子科技大学": {
-  "hash": "43da7f24ee90f4d6",
-  "seenAt": "2026-09-08",
+  "hash": "03f2753367e7f0bd",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:中国科学技术大学": {
-  "hash": "47c6ad5bd3b3bfda",
-  "seenAt": "2026-09-08",
+  "hash": "b124bd12ce6d5e57",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:山东大学": {
-  "hash": "29e2811933633811",
-  "seenAt": "2026-09-08",
+  "hash": "00fc681b50c19377",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:华中科技大学": {
@@ -129,30 +127,28 @@
   "hits": []
  },
  "school:中南大学": {
-  "hash": "6f8c4eea7e4628ab",
-  "seenAt": "2026-09-01",
+  "hash": "6319a27ede1aedb8",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:四川大学": {
-  "hash": "68b2406d84d51af5",
-  "seenAt": "2026-09-08",
+  "hash": "cd4ead19dcf2a82e",
+  "seenAt": "2026-09-15",
   "hits": [
    "招生专业目录"
   ]
  },
  "school:电子科技大学": {
-  "hash": "061c914db4def6e1",
-  "seenAt": "2026-09-08",
+  "hash": "de67a4c33abcab79",
+  "seenAt": "2026-09-15",
   "hits": [
    "参考书目"
   ]
  },
  "school:西安交通大学": {
-  "hash": "fdbd392c73962322",
-  "seenAt": "2026-09-08",
-  "hits": [
-   "招生专业目录"
-  ]
+  "hash": "f936b637c1c0bb30",
+  "seenAt": "2026-09-15",
+  "hits": []
  },
  "school:西北工业大学": {
   "hash": "19e9716f3a7fc970",
@@ -160,13 +156,13 @@
   "hits": []
  },
  "school:西安电子科技大学": {
-  "hash": "0a92dc7042b59082",
-  "seenAt": "2026-09-08",
+  "hash": "0647b1eb905fecd9",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:中央财经大学": {
-  "hash": "c3645fe7900b44da",
-  "seenAt": "2026-09-08",
+  "hash": "9672180a9e37c201",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:上海财经大学": {
@@ -185,21 +181,18 @@
   "hits": []
  },
  "school:东南大学": {
-  "hash": "c5e6e088a2f3b9e8",
-  "seenAt": "2026-09-08",
-  "hits": [
-   "初试科目",
-   "参考书目"
-  ]
+  "hash": "db69c1a7bb592bd0",
+  "seenAt": "2026-09-15",
+  "hits": []
  },
  "school:南京航空航天大学": {
-  "hash": "799215d5d447fb5d",
-  "seenAt": "2026-09-08",
+  "hash": "6eaf2b03cb197fb5",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:南京理工大学": {
-  "hash": "ef0374142035c8e3",
-  "seenAt": "2026-09-08",
+  "hash": "884afa97fbc4a1cc",
+  "seenAt": "2026-09-15",
   "hits": [
    "参考书目"
   ]
@@ -212,20 +205,20 @@
   ]
  },
  "school:湖南大学": {
-  "hash": "44c4f2579bcb0958",
-  "seenAt": "2026-09-08",
+  "hash": "858b15df62e13915",
+  "seenAt": "2026-09-15",
   "hits": []
  },
  "school:中山大学": {
-  "hash": "f2a6affa3e0a033a",
-  "seenAt": "2026-09-08",
+  "hash": "f9ee35a4b6109331",
+  "seenAt": "2026-09-15",
   "hits": [
    "招生专业目录"
   ]
  },
  "school:华南理工大学": {
-  "hash": "ac7628ed55e83de2",
-  "seenAt": "2026-09-08",
+  "hash": "f2475e8ff1f8f4af",
+  "seenAt": "2026-09-15",
   "hits": [
    "科目调整"
   ]
