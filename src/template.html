@@ -1961,6 +1961,33 @@ function renderSysu(){
    ${(() => { const R = S.ratios; if(!R) return '';
      return `<section class="sysec"><h3>${esc(R.t)}</h3>
        <p class="hint">${esc(R.intro)}</p>
+       ${R.real ? `<div class="lyr ok"><h4>${esc(R.real.t)}<span class="badge2">official 实测</span></h4>
+         <p class="sub2">${esc(R.real.from)}</p>
+         ${R.real.rows.map(x => `<div style="margin:10px 0">
+           <p class="sub2"><b><span class="num" style="color:var(--accent)">${esc(x.code)}</span> ${esc(x.name)}</b></p>
+           <table class="dormt">
+             <tr><th>复试人数</th><th>拟录取</th><th>复录比</th><th>刷人</th><th>最高/中位/最低</th><th>第 ${x.plan} 名分数</th></tr>
+             <tr><td class="fee">${x.retestN}</td><td>${x.plan}</td>
+                 <td><b style="color:var(--warn)">${x.ratio}:1</b></td>
+                 <td><b style="color:#e34948">${x.cut}</b></td>
+                 <td>${x.max} / ${x.median} / ${x.min}</td>
+                 <td class="fee">${x.atPlan}</td></tr>
+           </table>
+           <table class="dormt" style="margin-top:6px">
+             <tr><th>分段</th>${x.bands.map(b => `<th>${esc(b.r)}</th>`).join('')}</tr>
+             <tr><td class="b">人数</td>${x.bands.map(b => `<td>${b.n}</td>`).join('')}</tr>
+           </table>
+           <table class="dormt" style="margin-top:6px">
+             <tr><th>单科</th><th>最高</th><th>平均</th><th>中位</th><th>最低</th></tr>
+             ${['政治','外语','业务课1(数二)','业务课2(884)'].map(k => `<tr>
+               <td class="b">${esc(k)}</td><td>${x[k].max}</td>
+               <td class="fee">${x[k].mean}</td><td>${x[k].median}</td><td>${x[k].min}</td></tr>`).join('')}
+           </table></div>`).join('')}
+         <div class="kpi" style="margin-top:9px"><b>怎么读</b>
+           <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
+             ${R.real.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`).join('')}</ul></div>
+         <div class="advsrc">来源 <a href="${esc(R.real.src)}" target="_blank" rel="noopener">电通院招生栏目 · 2025 复试名单</a></div>
+       </div>` : ''}
        <div class="lyr ok"><h4>${esc(R.derived.t)}<span class="badge2">可推出</span></h4>
          <table class="dormt"><tr><th>专业</th><th>目录数</th><th>细则实际数</th><th>差</th></tr>
            ${R.derived.rows.map(x => `<tr><td class="b">${esc(x.k)}</td><td>${esc(x['目录'])}</td>
