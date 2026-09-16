@@ -2968,7 +2968,7 @@
    "sourceLabel": "全体教师",
    "confidence": "official",
    "fetched": "2026-09-01",
-   "scope": "教研岗教师（教授、副教授、助理教授、讲师）；博士后与专职科研人员未收录",
+   "scope": "教研岗教师（教授、副教授、助理教授、讲师）；博士后与专职科研人员未收录。其中 22 位在学院导师招生专业方向表中标明「硕士招生专业=电子信息」，已在卡片上标注 recruits 字段与所属研究部。",
    "advisors": [
     {
      "name": "蔡华阳",
@@ -2994,11 +2994,16 @@
      "name": "郭志群",
      "title": "教授",
      "email": "guozhq5@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "多栖无人艇设计与性能分析，气垫船运动控制，海面与近岸目标探测识别，波浪与柔弹性结构体相互作用，波浪能开发",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/172",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "黄硕",
@@ -3014,11 +3019,16 @@
      "name": "胡青",
      "title": "教授",
      "email": "huqing3@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "水声换能器，水声通信组网，水声信号处理，声纳总体",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/94",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "贾良文",
@@ -3034,21 +3044,31 @@
      "name": "李整林",
      "title": "教授",
      "email": "lizhlin29@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "声纳系统，水声物理，水声信号处理",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/700",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "苗建明",
      "title": "教授",
      "email": "miaojm@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "海洋机器人总体设计，智能感知与运动控制",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/298",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "马勇",
@@ -3092,13 +3112,18 @@
     },
     {
      "name": "徐灵基",
-     "title": "教授",
+     "title": "副教授",
      "email": "xulj26@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "声纳系统，多维信号分析，智能信息处理",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/336",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "许亮斌",
@@ -3134,11 +3159,16 @@
      "name": "张铁栋",
      "title": "教授",
      "email": "zhangtd5@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术；海洋机器人技术、水下环境感知、水下航行器控制、新概念海洋无人系统",
+     "areas": "海洋智能机器人技术，海洋目标智能认知技术，海洋航行器操纵与智能控制技术",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/651",
      "note": "招生专业含自动控制、计算机、机器人",
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "陈顺华",
@@ -3164,41 +3194,57 @@
      "name": "冯帆",
      "title": "副教授",
      "email": "fengf35@mail.sysu.edu.cn",
-     "areas": "新能源（储能）电力变换；水下无线充电；智能微网建模与控制",
+     "areas": "电力电子系统及其控制技术、水下无线充电、新能源电力变换",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/343",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "侯正瑜",
      "title": "副教授",
      "email": "houzhy7@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "海底底质声学，海洋地质，水声物理，声学反演，机器学习",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/730",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "姜大鹏",
      "title": "副教授",
      "email": "jiangdp5@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "海洋无人航行器智能决策，海洋无人航行器动力学分析与控制，多海洋航行器协同控制",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/176",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "蒋运华",
      "title": "副教授",
      "email": "jiangyh35@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "智能跨域航行多相流、航行感知、规划、决策与协同",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/178",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "刘念念",
@@ -3214,31 +3260,44 @@
      "name": "刘一宁",
      "title": "副教授",
      "email": "liuyn223@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "水声信号处理，水声探测与识别，机器学习",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/1135",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "李倩倩",
      "title": "副教授",
      "email": "liqq@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "水声信号处理，海洋环境声学反演，水声探测与识别，机器学习",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/1180",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "刘涛",
      "title": "副教授",
      "email": "liutao55@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "水下机器人总体设计与系统集成，机器人智能控制，机电一体化技术",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/352",
      "note": "招生专业含电子信息",
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "李晓天",
@@ -3284,11 +3343,15 @@
      "name": "彭超",
      "title": "副教授",
      "email": "pengch85@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "重载海洋工程装备设计，智能流体动力学与机电系统仿真，高端密封数字孪生技术",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/318",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "彭玉祥",
@@ -3314,11 +3377,16 @@
      "name": "任磊",
      "title": "副教授",
      "email": "renlei7@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术；人工智能海洋学、海洋多尺度动力过程、海洋数值模拟与资料同化",
+     "areas": "海岸-岛礁多尺度动力过程与机制，海洋动力遥感观测与资料同化，人工智能海洋学",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/325",
      "note": "招生专业含电子信息",
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "苏焱",
@@ -3344,21 +3412,29 @@
      "name": "吴晓笛",
      "title": "副教授",
      "email": "wuxd23@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "计算水动力学，海上新能源，先进流固耦合数值方法研究",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/353",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "王立国",
      "title": "副教授",
      "email": "wanglg7@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "海洋无人航行器",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/328",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "魏稳",
@@ -3372,53 +3448,74 @@
     },
     {
      "name": "肖鹏",
-     "title": "副教授",
+     "title": "教授",
      "email": "xiaop36@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "水声物理，信号与信息处理，机器学习与大数据应用",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/335",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士",
+      "博士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "杨健敏",
      "title": "副教授",
      "email": "yangjm33@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术；水声通信组网与跨介质信息高效传输",
+     "areas": "水声通信与组网、多智能体集群协同博弈决策、跨介质信息传输、水声定位、强化学习、机器学习",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/339",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "赵波",
      "title": "副教授",
      "email": "zhaob59@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "海洋智能监测装备、海洋摩擦学、人工智能",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/649",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "张淏酥",
      "title": "副教授",
      "email": "zhanghs7@mail.sysu.edu.cn",
-     "areas": "水下智能控制与无人观测技术",
+     "areas": "水下组合导航，水下机器人协同导航，水下偏振光导航，水下图像处理与地形匹配导航",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/340",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水下智能控制与无人观测技术"
     },
     {
      "name": "查若思",
-     "title": "副教授",
+     "title": "助理教授",
      "email": "zhars@mail.sysu.edu.cn",
-     "areas": "水声信息感知与目标探测技术",
+     "areas": "计算水动力学，先进数值算法，流固耦合，浮式风电",
      "url": "https://soet.sysu.edu.cn/zh-hans/teacher/355",
      "note": null,
-     "advises": null,
-     "directions": null
+     "advises": [
+      "硕士"
+     ],
+     "directions": null,
+     "recruits": "电子信息",
+     "group": "水声信息感知与目标探测技术"
     },
     {
      "name": "张晓鹤",
@@ -3461,7 +3558,15 @@
      "directions": null
     }
    ],
-   "count": 49
+   "count": 49,
+   "eeAdvisors": {
+    "count": 22,
+    "note": "学院导师招生专业方向表中「硕士招生专业=电子信息」的导师，来自用户提供的官方表格",
+    "groups": {
+     "水声信息感知与目标探测技术": 14,
+     "水下智能控制与无人观测技术": 8
+    }
+   }
   },
   {
    "id": "sysu-ssse",

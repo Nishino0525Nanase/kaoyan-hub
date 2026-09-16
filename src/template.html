@@ -1525,6 +1525,8 @@ function advMatch(a, col){
 function advCard(a, q, col){
   const t = a.title ? `<span class="advtitle t${esc(a.title)}">${esc(a.title)}</span>` : '';
   const adv = a.advises ? `<span class="advtitle">${a.advises.join(' / ')}导</span>` : '';
+  const rec = a.recruits ? `<span class="cmp">招 ${esc(a.recruits)}</span>` : '';
+  const grp = a.group ? `<span class="advtitle">${esc(a.group)}</span>` : '';
   const note = a.note ? `<span class="advtitle">${esc(a.note)}</span>` : '';
   const areas = a.areas
     ? `<p class="advareas">${hl(a.areas, q)}</p>`
@@ -1544,7 +1546,8 @@ function advCard(a, q, col){
   const src = col ? `<span class="advsrc">来源 <a href="${esc(col.source)}" target="_blank" rel="noopener">${esc(col.sourceLabel)}</a>${
       col.site ? ` · <a href="${esc(col.site)}" target="_blank" rel="noopener">学院官网</a>` : ''}</span>` : '';
   return `<div class="card adv">
-      <div class="advtop"><span class="advname">${hl(a.name,q)}</span>${t}${adv}${note}</div>
+      <div class="advtop"><span class="advname">${hl(a.name,q)}</span>${t}${adv}${rec}${note}</div>
+      ${grp ? `<div>${grp}</div>` : ''}
       ${areas}${sig}${asrc}${dirs}
       <div class="advfoot">${mail}${home}</div>
       ${src}
@@ -1988,6 +1991,16 @@ function renderSysu(){
          <div class="kpi" style="margin-top:9px"><b>怎么读</b>
            <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
              ${R.real.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`).join('')}</ul></div>
+         ${R.real.soetTrend ? `<div class="lyr mid" style="margin-top:12px">
+           <h4>${esc(R.real.soetTrend.t)}</h4>
+           <table class="dormt"><tr><th>年份</th><th>复试</th><th>录取</th><th>复录比</th><th>说明</th></tr>
+             ${R.real.soetTrend.rows.map(x => `<tr><td class="b">${x.year}</td>
+               <td>${x.retest ?? '—'}</td><td class="fee">${x.admit}</td>
+               <td>${x.ratio ? `<b style="color:var(--warn)">${x.ratio}:1</b>` : '—'}</td>
+               <td>${esc(x.d)}</td></tr>`).join('')}</table>
+           <ul style="margin:9px 0 0;padding-left:18px;font-size:12.5px;line-height:1.75">
+             ${R.real.soetTrend.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}</li>`).join('')}</ul>
+         </div>` : ''}
          ${R.real.ssseTrend ? `<div class="lyr mid" style="margin-top:12px">
            <h4>${esc(R.real.ssseTrend.t)}</h4>
            <table class="dormt"><tr><th>年份</th><th>代码</th><th>复试</th><th>录取</th><th>复录比</th><th>学院计划</th><th>特征</th></tr>
