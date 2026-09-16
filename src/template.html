@@ -1964,7 +1964,9 @@ function renderSysu(){
        ${R.real ? `<div class="lyr ok"><h4>${esc(R.real.t)}<span class="badge2">official 实测</span></h4>
          <p class="sub2">${esc(R.real.from)}</p>
          ${R.real.rows.map(x => `<div style="margin:10px 0">
-           <p class="sub2"><b><span class="num" style="color:var(--accent)">${esc(x.code)}</span> ${esc(x.name)}</b></p>
+           <p class="sub2"><b><span class="num" style="color:var(--accent)">${esc(x.code)}</span> ${esc(x.name)}</b>
+             ${x.college ? `<span class="cmp">${esc(x.college)}</span>` : ''}
+             ${x.year ? `<span class="muted"> ${x.year}</span>` : ''}</p>
            <table class="dormt">
              <tr><th>复试人数</th><th>拟录取</th><th>复录比</th><th>刷人</th><th>最高/中位/最低</th><th>第 ${x.plan} 名分数</th></tr>
              <tr><td class="fee">${x.retestN}</td><td>${x.plan}</td>
@@ -1986,7 +1988,14 @@ function renderSysu(){
          <div class="kpi" style="margin-top:9px"><b>怎么读</b>
            <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
              ${R.real.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`).join('')}</ul></div>
-         <div class="advsrc">来源 <a href="${esc(R.real.src)}" target="_blank" rel="noopener">电通院招生栏目 · 2025 复试名单</a></div>
+         ${R.real.soet ? `<div class="warnbox" style="margin-top:10px">
+           <b>${esc(R.real.soet.college)} ${esc(R.real.soet.year)}：复试 ${R.real.soet.retestN} → 拟录取 ${R.real.soet.admitted}，
+             复录比 ${R.real.soet.ratio}:1，刷 ${R.real.soet.cut} 人</b>
+           <p style="margin:5px 0;font-size:12.5px">录取者初试 ${R.real.soet.okMin}–${R.real.soet.okMax}（中位 ${R.real.soet.okMedian}）；
+             落榜者初试 ${R.real.soet.noMin}–${R.real.soet.noMax}　·　${esc(R.real.soet.note)}</p>
+           <ul style="margin:5px 0 0;padding-left:18px;font-size:12.5px;line-height:1.7">
+             ${R.real.soet.cases.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+         <div class="advsrc">来源 <a href="${esc(R.real.src)}" target="_blank" rel="noopener">各学院招生栏目公示名单</a></div>
        </div>` : ''}
        <div class="lyr ok"><h4>${esc(R.derived.t)}<span class="badge2">可推出</span></h4>
          <table class="dormt"><tr><th>专业</th><th>目录数</th><th>细则实际数</th><th>差</th></tr>
