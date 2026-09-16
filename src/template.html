@@ -1988,6 +1988,12 @@ function renderSysu(){
          <div class="kpi" style="margin-top:9px"><b>怎么读</b>
            <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
              ${R.real.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`).join('')}</ul></div>
+         ${R.real.ssse2024 ? `<div class="warnbox" style="margin-top:10px">
+           <b>${esc(R.real.ssse2024.college)} ${R.real.ssse2024.year}（代码 ${esc(R.real.ssse2024.code)}）</b>
+           <p style="margin:5px 0;font-size:12.5px">${esc(R.real.ssse2024.b1)}　·　${esc(R.real.ssse2024.b2)}
+             <br>${esc(R.real.ssse2024.plan)}</p>
+           <ul style="margin:5px 0 0;padding-left:18px;font-size:12.5px;line-height:1.7">
+             ${R.real.ssse2024.cases.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
          ${R.real.ssse ? `<div class="warnbox" style="margin-top:10px">
            <b>${esc(R.real.ssse.college)} ${R.real.ssse.year}：复试 ${R.real.ssse.retestN} → 录取 ${R.real.ssse.admitted}，
              复录比 ${R.real.ssse.ratio}:1，刷 ${R.real.ssse.cut} 人</b>
