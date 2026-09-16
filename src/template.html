@@ -1991,6 +1991,18 @@ function renderSysu(){
          <div class="kpi" style="margin-top:9px"><b>怎么读</b>
            <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
              ${R.real.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`).join('')}</ul></div>
+         ${R.real.seceTrend ? `<div class="lyr bad" style="margin-top:12px">
+           <h4>${esc(R.real.seceTrend.t)}</h4>
+           <table class="dormt"><tr><th>年份</th><th>拟招计划</th><th>进复试</th><th>复录比</th>
+             <th>实际拟录取</th><th>进复试最低分</th><th>中位</th><th>说明</th></tr>
+             ${R.real.seceTrend.rows.map(x => `<tr><td class="b">${x.year}</td>
+               <td class="fee">${x.plan}</td><td>${x.retest}</td>
+               <td><b style="color:var(--warn)">${x.ratio}:1</b></td>
+               <td>${x.admit ?? '—'}</td><td class="fee">${x.minScore}</td><td>${x.median}</td>
+               <td>${esc(x.d)}</td></tr>`).join('')}</table>
+           <ul style="margin:9px 0 0;padding-left:18px;font-size:12.5px;line-height:1.75">
+             ${R.real.seceTrend.read.map(x => `<li>${esc(x).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}</li>`).join('')}</ul>
+         </div>` : ''}
          ${R.real.soetTrend ? `<div class="lyr mid" style="margin-top:12px">
            <h4>${esc(R.real.soetTrend.t)}</h4>
            <table class="dormt"><tr><th>年份</th><th>复试</th><th>录取</th><th>复录比</th><th>说明</th></tr>
