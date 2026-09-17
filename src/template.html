@@ -1930,7 +1930,7 @@ function renderSysu(){
 
    ${(() => {
      const F = S.funding; if(!F) return '';
-     const blk = (o, cls) => `<div class="lyr ${cls}"><h4>${esc(o.t)}</h4>
+     const blk = (o, cls) => !o ? '' : `<div class="lyr ${cls}"><h4>${esc(o.t)}</h4>
        ${o.d ? `<p class="sub2">${esc(o.d)}</p>` : ''}
        ${o.items ? `<ul>${o.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
        ${o.note ? `<p class="sub2" style="margin-top:7px">${esc(o.note)}</p>` : ''}
@@ -1969,7 +1969,7 @@ function renderSysu(){
        ${blk(F.structure, '')}
        ${blk(F.newStudent, 'ok')}
        ${blk(F.national, 'ok')}
-       ${blk(F.eligibility, '')}
+       ${blk(F.eligibility, '')}${blk(F.stopRules, '')}
        <div class="warnbox">${esc(F.gap)}</div>
        <div class="srcl" style="margin-top:11px">${F.sources.map(x => `<div class="srci">
          <div class="w">${esc(x.name)}</div>
@@ -2075,19 +2075,9 @@ function renderSysu(){
          ${R.real.nullNote ? `<div class="cv" style="margin-top:9px">${esc(R.real.nullNote)}</div>` : ''}
          <div class="advsrc">来源 <a href="${esc(R.real.src)}" target="_blank" rel="noopener">各学院招生栏目公示名单</a></div>
        </div>` : ''}
-       <div class="lyr ok"><h4>${esc(R.derived.t)}<span class="badge2">可推出</span></h4>
-         <table class="dormt"><tr><th>专业</th><th>目录数</th><th>细则实际数</th><th>差</th></tr>
-           ${R.derived.rows.map(x => `<tr><td class="b">${esc(x.k)}</td><td>${esc(x['目录'])}</td>
-             <td class="fee">${esc(x['细则'])}</td><td><b style="color:var(--warn)">${esc(x.delta)}</b></td></tr>`).join('')}</table>
-         ${R.derived.rows.map(x => `<p class="sub2" style="margin-top:5px">${esc(x.k)}：${esc(x.d)}</p>`).join('')}
-         <div class="warnbox" style="margin-top:8px">${esc(R.derived.note)}</div></div>
-       <div class="lyr"><h4>${esc(R.expansion.t)}</h4>
-         <ul>${R.expansion.items.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-         <p class="sub2" style="margin-top:7px"><b>${esc(R.expansion.read)}</b></p></div>
        <div class="lyr bad"><h4>${esc(R.cannotGet.t)}<span class="badge2">拿不到</span></h4>
          ${R.cannotGet.items.map(x => `<p class="sub2"><b>${esc(x.k)}：</b>${esc(x.why)}</p>`).join('')}
-         <div class="warnbox" style="margin:8px 0">${esc(R.cannotGet.warn)}</div>
-         <p class="sub2"><b>怎么自己拿到：</b></p>
+         <p class="sub2" style="color:var(--warn)">${esc(R.cannotGet.warn)}</p>
          <ul>${R.cannotGet.howTo.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
      </section>`;
    })()}
@@ -2263,21 +2253,7 @@ function renderSysu(){
     secs.forEach((sec, i) => {
       const h = sec.querySelector('h3'); if(!h) return;
       sec.id = 'sy-' + i;
-      // 长区块自动折叠，避免一屏全是字
-      const len = sec.textContent.replace(/\s+/g,'').length;
-      if(len > 700 && !sec.classList.contains('verdict') && !sec.dataset.fold){
-        sec.dataset.fold = 1;
-        const body = document.createElement('div');
-        while(h.nextSibling) body.appendChild(h.nextSibling);
-        const det = document.createElement('details');
-        det.className = 'secfold';
-        const sm = document.createElement('summary');
-        sm.innerHTML = `展开 <span class="muted">${len} 字</span>`;
-        det.appendChild(sm); det.appendChild(body);
-        sec.appendChild(det);
-      }
-      const t = h.textContent.trim();
-      if(sec.classList.contains('verdict')){ sec.dataset.grp = '常驻'; return; }
+      const t = h.textContent;
       const k = Object.keys(MAP).find(x => t.includes(x));
       sec.dataset.grp = k ? MAP[k] : '参考';
       sec.dataset.rank = rank(t);
