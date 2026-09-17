@@ -2003,7 +2003,8 @@ function renderSysu(){
                  <td><b style="color:var(--warn)">${x.ratio}:1</b></td>
                  <td><b style="color:#e34948">${x.cut}</b></td>
                  <td>${x.max} / ${x.median} / ${x.min}</td>
-                 <td class="fee">${x.atPlan}</td></tr>
+                 <td class="fee">${x.atPlan ?? (x.atPlanBand
+                   ? `<span class="muted">落在 ${esc(x.atPlanBand)} 段</span>` : '—')}</td></tr>
            </table>
            <table class="dormt" style="margin-top:6px">
              <tr><th>分段</th>${x.bands.map(b => `<th>${esc(b.r)}</th>`).join('')}</tr>
@@ -2011,9 +2012,11 @@ function renderSysu(){
            </table>
            <table class="dormt" style="margin-top:6px">
              <tr><th>单科</th><th>最高</th><th>平均</th><th>中位</th><th>最低</th></tr>
-             ${['政治','外语','业务课1(数二)','业务课2(884)'].map(k => `<tr>
+             ${['政治','外语','业务课1(数二)','业务课2(884)'].map(k => x[k] ? `<tr>
                <td class="b">${esc(k)}</td><td>${x[k].max}</td>
-               <td class="fee">${x[k].mean}</td><td>${x[k].median}</td><td>${x[k].min}</td></tr>`).join('')}
+               <td class="fee">${x[k].mean}</td><td>${x[k].median}</td><td>${x[k].min}</td></tr>`
+               : '').join('')}
+             ${!x['政治'] && x.note ? `<tr><td colspan="5" class="advnull">${esc(x.note)}</td></tr>` : ''}
            </table></div>`).join('')}
          <div class="kpi" style="margin-top:9px"><b>怎么读</b>
            <ul style="margin:5px 0 0;padding-left:18px;line-height:1.75">
@@ -2040,6 +2043,7 @@ function renderSysu(){
              落榜者初试 ${R.real.soet.noMin}–${R.real.soet.noMax}　·　${esc(R.real.soet.note)}</p>
            <ul style="margin:5px 0 0;padding-left:18px;font-size:12.5px;line-height:1.7">
              ${R.real.soet.cases.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+         ${R.real.nullNote ? `<div class="cv" style="margin-top:9px">${esc(R.real.nullNote)}</div>` : ''}
          <div class="advsrc">来源 <a href="${esc(R.real.src)}" target="_blank" rel="noopener">各学院招生栏目公示名单</a></div>
        </div>` : ''}
        <div class="lyr ok"><h4>${esc(R.derived.t)}<span class="badge2">可推出</span></h4>
@@ -2477,11 +2481,13 @@ function trendBlock(T, cls){
   const S2 = [
     {n:'进复试中位分', c:'#8e3ad0', v:T.rows.map(r => r.median ?? null)},
     {n:'进复试最低分', c:'#e34948', v:T.rows.map(r => r.minScore ?? null)}];
+  const na = v => v ?? '<span class="advnull" title="见行末说明">—</span>';
   const rows = T.rows.map(r => `<tr><td class="b">${r.year}</td>
-      <td class="fee">${r.plan ?? '—'}</td><td>${r.retest ?? '—'}</td>
-      <td><b style="color:var(--warn)">${r.ratio ? r.ratio + ':1' : '—'}</b></td>
-      <td>${r.admit ?? '—'}</td><td class="fee">${r.minScore ?? '—'}</td>
-      <td>${r.median ?? '—'}</td><td>${esc(r.d || '')}</td></tr>`).join('');
+      <td class="fee">${na(r.plan)}</td><td>${na(r.retest)}</td>
+      <td><b style="color:var(--warn)">${r.ratio ? r.ratio + ':1' : na(null)}</b></td>
+      <td>${na(r.admit)}</td><td class="fee">${na(r.minScore)}</td>
+      <td>${na(r.median)}</td><td>${esc(r.d || '')}${
+        r.why ? `<br><span class="cv" style="font-size:11px">「—」原因：${esc(r.why)}</span>` : ''}</td></tr>`).join('');
   setTimeout(() => {
     const a = $('#' + id + 'a'), b = $('#' + id + 'b');
     if(a && !a.dataset.done){ a.dataset.done = 1;
