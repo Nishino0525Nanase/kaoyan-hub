@@ -124,7 +124,7 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
 .sgd{font-size:12.5px;color:var(--text-3);margin-left:4px;flex:1;min-width:140px}
 details.secfold>summary{cursor:pointer;color:var(--accent);font-size:13px;padding:7px 0;list-style:none}
 details.secfold>summary::-webkit-details-marker{display:none}
-details.secfold>summary::before{content:"\25B8 ";transition:transform .15s;display:inline-block}
+details.secfold>summary::before{content:"▸ ";transition:transform .15s;display:inline-block}
 details.secfold[open]>summary::before{transform:rotate(90deg)}
 .verdict{border:1px solid var(--accent);border-radius:13px;padding:14px 16px;background:var(--surface-1)}
 .verdict>h3{border-bottom:0;margin-bottom:2px}
@@ -225,7 +225,7 @@ mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding
 details.rbook{margin-top:7px;font-size:12.5px}
 details.rbook>summary{cursor:pointer;color:var(--accent);list-style:none}
 details.rbook>summary::-webkit-details-marker{display:none}
-details.rbook>summary::before{content:"\25B8 ";transition:transform .15s;display:inline-block}
+details.rbook>summary::before{content:"▸ ";transition:transform .15s;display:inline-block}
 details.rbook[open]>summary::before{transform:rotate(90deg)}
 details.rbook ul{margin:6px 0 0;padding-left:18px;color:var(--text-2);line-height:1.65}
 .dgap{font-size:11.5px;padding:1px 7px;border-radius:5px;border:1px solid var(--line);color:var(--text-3);white-space:nowrap}
@@ -240,7 +240,7 @@ details.rbook ul{margin:6px 0 0;padding-left:18px;color:var(--text-2);line-heigh
 details.dorm{border:1px solid var(--line);border-radius:10px;background:var(--surface-1);margin:0 0 12px;overflow:hidden}
 details.dorm>summary{cursor:pointer;padding:10px 14px;font-size:13.5px;color:var(--text-2);list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 details.dorm>summary::-webkit-details-marker{display:none}
-details.dorm>summary::before{content:"\25B8";color:var(--text-3);transition:transform .15s;display:inline-block}
+details.dorm>summary::before{content:"▸";color:var(--text-3);transition:transform .15s;display:inline-block}
 details.dorm[open]>summary::before{transform:rotate(90deg)}
 details.dorm>summary:hover{color:var(--text-1);background:var(--surface-2)}
 .dormrange{color:var(--accent);font-weight:600}
@@ -627,7 +627,7 @@ body.hasdock{padding-bottom:66px}
     </nav>
   </div>
 </header>
-<button class="backtop" id="backTop" title="回到顶部" aria-label="回到顶部">&#8593;</button>
+<button class="backtop" id="backTop" title="回到顶部" aria-label="回到顶部">↑</button>
 
 <div class="gsmask" id="gsMask" hidden>
   <div class="gspanel" role="dialog" aria-label="全局搜索">
@@ -751,9 +751,9 @@ body.hasdock{padding-bottom:66px}
 
     <div class="filters">
       <div class="searchbox">
-        <span class="mag">&#128269;</span>
+        <span class="mag">🔍</span>
         <input id="advQ" type="search" placeholder="搜研究方向，比如 FPGA / PCB / 功率器件 / 天线 / 存算一体" autocomplete="off">
-        <button class="clr" id="advClr" hidden aria-label="清空">&times;</button>
+        <button class="clr" id="advClr" hidden aria-label="清空">×</button>
       </div>
       <div class="frow" id="fAdvSch"><span class="flabel">学校</span></div>
       <div class="frow" id="fAdvCol"><span class="flabel">学院</span></div>
@@ -1317,7 +1317,7 @@ function renderMajors(){
     if(r.retestSubjects)
       out += `<div class="rsub"><b>复试</b> ${esc(r.retestSubjects)}</div>`;
     if((r.retestBooks || []).length)
-      out += `<details class="rbook"><summary>复试参考书 ${r.retestBooks.length} 本</summary>
+      out += `<details class="rbook"><summary>参考书 ${r.retestBooks.length} 本</summary>
         <ul>${r.retestBooks.map(b => `<li>${esc(b)}</li>`).join('')}</ul></details>`;
     return out;
   };
@@ -1556,7 +1556,7 @@ function advCard(a, q, col){
   const mail = a.email
     ? `<a href="mailto:${esc(a.email)}">${esc(a.email)}</a>`
     : `<span class="advnull">官网未列邮箱</span>`;
-  const home = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">个人主页 &rarr;</a>` : '';
+  const home = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">个人主页 →</a>` : '';
   const sig = a.signal ? `<p class="advareas" style="color:var(--good);font-size:12.5px">
       <b>可核验信号：</b>${hl(a.signal, q)}</p>` : '';
   const asrc = a.areaSrc ? `<span class="advnull" style="font-size:11px">方向来源：
@@ -1658,7 +1658,7 @@ function renderAdvisors(){
   host.innerHTML = html || `<div class="card advempty">没有匹配的导师。<br>试试换个关键词，或者清掉上面的筛选。</div>`;
   const ac = ADV.coverage, dc = DORM.coverage;
   $('#advSub').innerHTML =
-    `${ADV.total} 位导师，显示 ${shown} 位　·　` +
+    `导师 ${shown}/${ADV.total}　·　` +
     `<span class="muted">导师 ${ac.covered}/${ac.total} 所、住宿 ${dc.covered}/${dc.total} 所</span>`;
   $('#advClr').hidden = !q;
 }
@@ -1745,7 +1745,7 @@ function gsRender(){
   if(!gsHits.length){
     host.innerHTML = $('#gsQ').value.trim()
       ? '<div class="gsempty">没找到。试试学校名、专业代码、导师姓名或研究方向关键词。</div>'
-      : '<div class="gsempty">输入关键词开始搜索<br><span style="font-size:12px">院校 · 专业 · 导师 · 宿舍，一次搜完</span></div>';
+      : '<div class="gsempty">输入关键词开始搜索<br><span style="font-size:12px">院校·专业·导师·宿舍</span></div>';
     return;
   }
   let html = '', last = '';
@@ -1816,7 +1816,7 @@ function renderSysu(){
 
   const kp = S.keyPoints.map(k => `<div class="kpi"><b>${esc(k.t)}</b>
     <span>${esc(k.d)}</span>
-    ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
+    ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 →</a>` : ''}</div>`).join('');
 
   $('#sysuBody').innerHTML = `
    ${(() => { const V = S.verdict; if(!V) return '';
@@ -1975,7 +1975,7 @@ function renderSysu(){
          <div class="w">${esc(x.name)}</div>
          <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
            <span class="tg">${esc(x.year)}</span>
-           <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div></div>`).join('')}</div>
+           <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a></div></div>`).join('')}</div>
      </section>`;
    })()}
 
@@ -2019,8 +2019,7 @@ function renderSysu(){
                const sv = mk('svg', {class:'tchart'}); sv.id = id + 's'; el.appendChild(sv);
                drawBars('#' + id + 's', items, {labelW:150, rowH:30, maxLabel:12, unit:'884 平均分'}); }
            }, 0);
-           return `<div class="chartbox"><h5>884 信号与系统 · 各院平均分</h5>
-             <p class="cb">取各院最新一年数据。同一门课在不同学院的得分中枢差异显著</p>
+           return `<div class="chartbox"><h5>884 各院均分</h5><p class="cb">同一门课，各院差 35 分</p>
              <div id="${id}"></div></div>`;
          })()}
          ${R.real.rows.map(x => `<div style="margin:10px 0">
@@ -2223,7 +2222,7 @@ function renderSysu(){
        <div class="f">${esc(x.from)}</div>
        <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
          <span class="tg">${esc(x.year)}</span>
-         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a></div>
        ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></section>
 
    ${(S.corrections || []).length ? `<section class="sysec"><h3>数据订正记录</h3>
@@ -2255,9 +2254,9 @@ function renderSysu(){
                    '报考要点','考纲','时间线','2027','调剂',
                    '学科实力','就业','导师','奖助','校区','资料来源','订正','本库'];
     const DESC = {
-      '决策':'报哪个学院——名额、分数线、趋势',
-      '备考':'怎么准备——科目、时间节点、政策',
-      '参考':'背景信息——就业、导师、奖助、来源'
+      '决策':'名额·分数线·趋势',
+      '备考':'科目·节点·政策',
+      '参考':'就业·导师·奖助'
     };
     const rank = t => { const i = ORDER.findIndex(k => t.includes(k)); return i < 0 ? 99 : i; };
 
@@ -2273,7 +2272,7 @@ function renderSysu(){
         const det = document.createElement('details');
         det.className = 'secfold';
         const sm = document.createElement('summary');
-        sm.innerHTML = `展开全文 <span class="muted">约 ${len} 字</span>`;
+        sm.innerHTML = `展开 <span class="muted">${len} 字</span>`;
         det.appendChild(sm); det.appendChild(body);
         sec.appendChild(det);
       }
@@ -2322,8 +2321,8 @@ function renderSysu(){
 function renderNju(){
   const H = NJU.hub; if(!H) return;
   const dl = items => `<dl>${items.map(x => `<dt>${esc(x.k)}</dt><dd>${esc(x.v)}${
-      x.src ? ` <a href="${esc(x.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}${
-      x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a>` : ''}</dd>`).join('')}</dl>`;
+      x.src ? ` <a href="${esc(x.src)}" target="_blank" rel="noopener">原文 →</a>` : ''}${
+      x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a>` : ''}</dd>`).join('')}</dl>`;
 
   $('#njuBody').innerHTML = `
    <div class="lyr ok"><h4>${esc(H.official.label)}<span class="badge2">official</span></h4>
@@ -2332,7 +2331,7 @@ function renderNju(){
 
    <div class="lyr mid"><h4>${esc(H.secondary.label)}<span class="badge2">secondary</span></h4>
      <p class="sub2">来源：${esc(H.secondary.from)}　
-       <a href="${esc(H.secondary.src)}" target="_blank" rel="noopener">研招网简章目录 &rarr;</a></p>
+       <a href="${esc(H.secondary.src)}" target="_blank" rel="noopener">研招网简章目录 →</a></p>
      ${dl(H.secondary.items)}</div>
 
    <div class="lyr bad"><h4>${esc(H.unverified.label)}<span class="badge2">unverified</span></h4>
@@ -2341,10 +2340,10 @@ function renderNju(){
 
    ${NJU.faculty ? `<div class="lyr ok"><h4>师资队伍<span class="badge2">official</span></h4>
      <p class="sub2">${esc(NJU.faculty.note)}　
-       <a href="${esc(NJU.faculty.source)}" target="_blank" rel="noopener">${esc(NJU.faculty.sourceLabel)} &rarr;</a></p>
+       <a href="${esc(NJU.faculty.source)}" target="_blank" rel="noopener">${esc(NJU.faculty.sourceLabel)} →</a></p>
      <p style="margin:0 0 8px;font-size:13px">共 <b>${NJU.faculty.count}</b> 位：${
        Object.entries(NJU.faculty.byTitle).map(([k,v]) => `${esc(k)} ${v}`).join('　·　')}
-       　<a href="#" onclick="go('advisors');return false;">在导师名录中查看 &rarr;</a></p>
+       　<a href="#" onclick="go('advisors');return false;">在导师名录中查看 →</a></p>
      <ul>${NJU.faculty.highlights.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
      <p class="sub2" style="margin-top:8px"><b>整体判断：</b>${esc(NJU.faculty.read)}</p></div>` : ''}
 
@@ -2372,7 +2371,7 @@ function renderNju(){
        <div class="w">${esc(x.name)}</div>
        <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
          <span class="tg">${esc(x.year)}</span>
-         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div></div>`).join('')}</div>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a></div></div>`).join('')}</div>
    </div>` : ''}
 
    ${NJU.housing ? `<div class="lyr mid"><h4>${esc(NJU.housing.t)}<span class="badge2">部分</span></h4>
@@ -2409,7 +2408,7 @@ function renderNju(){
        <div class="f">${esc(x.from)}</div>
        <div class="m"><span class="tg">${esc(x.org)}</span><span class="tg">${esc(x.type)}</span>
          <span class="tg">${esc(x.year)}</span>
-         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 &rarr;</a></div>
+         <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a></div>
        ${x.caveat ? `<div class="cv">注意：${esc(x.caveat)}</div>` : ''}</div>`).join('')}</div></div>
 
    ${(NJU.correction || NJU.correction2) ? `<div class="lyr mid"><h4>数据订正记录</h4>
@@ -2430,7 +2429,7 @@ function renderNju(){
       '二手':'待核对','住宿':'待核对','单一来源':'待核对','尚缺':'待核对','订正':'待核对',
       '核实的三个入口':'怎么查','提醒':'怎么查','资料来源':'怎么查'
     };
-    const DESC = {'已核实':'官网原文，可直接用','待核对':'二手或缺口，报考前必须自己核','怎么查':'自行核实的入口与注意事项'};
+    const DESC = {'已核实':'可直接用','待核对':'需自己核','怎么查':'核实入口'};
     secs.forEach((sec, i) => {
       const h = sec.querySelector('h4'); if(!h) return;
       sec.id = 'nj-' + i;
@@ -2544,10 +2543,9 @@ function trendBlock(T, cls){
       b.appendChild(legendFor(S2)); b.appendChild(trendChart(S2, {xs, h:190})); }
   }, 0);
   return `<div class="lyr ${cls}" style="margin-top:12px"><h4>${esc(T.t)}</h4>
-    <div class="chartbox"><h5>招生规模</h5><p class="cb">计划 / 进复试 / 实际录取</p><div id="${id}a"></div></div>
-    ${S2.some(x => x.v.some(v => v != null)) ? `<div class="chartbox"><h5>分数门槛</h5>
-      <p class="cb">进复试的中位分与最低分</p><div id="${id}b"></div></div>` : ''}
-    <details class="rbook"><summary>明细表格</summary>
+    <div class="chartbox"><h5>招生规模</h5><div id="${id}a"></div></div>
+    ${S2.some(x => x.v.some(v => v != null)) ? `<div class="chartbox"><h5>分数门槛</h5><div id="${id}b"></div></div>` : ''}
+    <details class="rbook"><summary>明细</summary>
       <div style="overflow-x:auto"><table class="dormt">
         <tr><th>年份</th><th>计划</th><th>进复试</th><th>复录比</th><th>实录</th>
             <th>最低分</th><th>中位</th><th>说明</th></tr>${rows}</table></div></details>
@@ -2572,10 +2570,10 @@ buildAdvFilters(); renderAdvisors(); renderSysu(); renderNju();
         <b>核实方式：</b>${esc(v.howToVerify)}</p></div>`).join('');
   const BY = (PROG.completeness || {}).bySchool || {};
   if(L.roster) $('#lvNote').innerHTML =
-    `院校 <b>${DB.count}</b> 所（<b>${L.full}</b> 所含学科评估数据）　·　` +
-    `专业 <b>${T.records}</b> 条（<b>${T.withSubjects}</b> 条有初试科目、<b>${T.withLines}</b> 条有复试线）　·　` +
-    `<b>${DB.count - Object.keys(BY).length}</b> 所暂无专业记录。` +
-    `<span class="muted">标「待补」的是还没查，不是没有。</span>`;
+    `院校 <b>${DB.count}</b>　·　` +
+    `专业 <b>${T.records}</b>（科目 ${T.withSubjects}／线 ${T.withLines}）　·　` +
+    `${DB.count - Object.keys(BY).length} 所无记录。` +
+    ``;
 }
 addEventListener('resize', () => { hideTip(); });
 window.go = go;
