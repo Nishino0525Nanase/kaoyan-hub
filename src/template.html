@@ -122,6 +122,19 @@ p.sub{margin:0 0 16px;color:var(--text-2);font-size:13.5px}
   border:1px solid rgba(255,255,255,.25)}
 .sgrp:not(.on) .n{background:var(--surface-2);border-color:var(--line);color:var(--text-3)}
 .sgd{font-size:12.5px;color:var(--text-3);margin-left:4px;flex:1;min-width:140px}
+details.secfold>summary{cursor:pointer;color:var(--accent);font-size:13px;padding:7px 0;list-style:none}
+details.secfold>summary::-webkit-details-marker{display:none}
+details.secfold>summary::before{content:"\25B8 ";transition:transform .15s;display:inline-block}
+details.secfold[open]>summary::before{transform:rotate(90deg)}
+.verdict{border:1px solid var(--accent);border-radius:13px;padding:14px 16px;background:var(--surface-1)}
+.verdict>h3{border-bottom:0;margin-bottom:2px}
+.verdict>h3::after{display:none}
+.vtab td{padding:8px 8px 8px 0}
+.pickgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin-top:12px}
+.pick{padding:10px 12px;border-radius:9px;background:var(--surface-2);border-left:3px solid var(--accent)}
+.pick b{display:block;font-size:12px;color:var(--text-3)}
+.pick .pv{display:block;font-size:14px;font-weight:650;color:var(--accent);margin:2px 0 3px}
+.pick .pd{font-size:12px;color:var(--text-2);line-height:1.55}
 .tchart{width:100%;height:auto;display:block;margin:6px 0}
 .tleg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-2);margin:2px 0 8px}
 .tleg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
@@ -1806,6 +1819,23 @@ function renderSysu(){
     ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 &rarr;</a>` : ''}</div>`).join('');
 
   $('#sysuBody').innerHTML = `
+   ${(() => { const V = S.verdict; if(!V) return '';
+     return `<section class="sysec verdict"><h3>${esc(V.t)}</h3>
+       <p class="hint">${esc(V.sub)}</p>
+       <div style="overflow-x:auto"><table class="dormt vtab">
+         <tr><th>学院</th><th>校区</th><th>统考录取</th><th>复录比</th><th>院线</th><th>884 均分</th><th>一句话</th></tr>
+         ${V.rows.map(r => `<tr>
+           <td class="b">${esc(r.college)}</td><td><span class="cmp">${esc(r.campus)}</span></td>
+           <td class="fee" style="font-size:16px">${r.admit ?? '—'}</td>
+           <td><b style="color:var(--warn)">${r.ratio ? r.ratio + ':1' : '—'}</b></td>
+           <td>${r.line ?? '—'}</td>
+           <td class="fee">${r.c884 ?? '—'}${r.c884y ? `<span class="muted"> ${r.c884y}</span>` : ''}</td>
+           <td>${esc(r.note)}</td></tr>`).join('')}</table></div>
+       <div class="pickgrid">${V.pick.map(p => `<div class="pick">
+         <b>${esc(p.k)}</b><span class="pv">${esc(p.v)}</span>
+         <span class="pd">${esc(p.d)}</span></div>`).join('')}</div>
+     </section>`;
+   })()}
    ${(() => {
      const H = S.history; if(!H) return '';
      const tr = H.rows.map(r => r.years.map((y, i) => `<tr>
@@ -2234,16 +2264,34 @@ function renderSysu(){
     secs.forEach((sec, i) => {
       const h = sec.querySelector('h3'); if(!h) return;
       sec.id = 'sy-' + i;
+      // 长区块自动折叠，避免一屏全是字
+      const len = sec.textContent.replace(/\s+/g,'').length;
+      if(len > 700 && !sec.classList.contains('verdict') && !sec.dataset.fold){
+        sec.dataset.fold = 1;
+        const body = document.createElement('div');
+        while(h.nextSibling) body.appendChild(h.nextSibling);
+        const det = document.createElement('details');
+        det.className = 'secfold';
+        const sm = document.createElement('summary');
+        sm.innerHTML = `展开全文 <span class="muted">约 ${len} 字</span>`;
+        det.appendChild(sm); det.appendChild(body);
+        sec.appendChild(det);
+      }
       const t = h.textContent.trim();
+      if(sec.classList.contains('verdict')){ sec.dataset.grp = '常驻'; return; }
       const k = Object.keys(MAP).find(x => t.includes(x));
       sec.dataset.grp = k ? MAP[k] : '参考';
       sec.dataset.rank = rank(t);
     });
     // 按 ORDER 重排 DOM，不再依赖录入顺序
-    secs.slice().sort((a, b) => a.dataset.rank - b.dataset.rank).forEach(x => host.appendChild(x));
+    secs.slice().sort((a, b) => {
+      const av = a.classList.contains('verdict') ? -1 : +a.dataset.rank;
+      const bv = b.classList.contains('verdict') ? -1 : +b.dataset.rank;
+      return av - bv;
+    }).forEach(x => host.appendChild(x));
 
     const counts = {};
-    secs.forEach(x => counts[x.dataset.grp] = (counts[x.dataset.grp] || 0) + 1);
+    secs.forEach(x => { if(x.dataset.grp !== '常驻') counts[x.dataset.grp] = (counts[x.dataset.grp] || 0) + 1; });
     const grps = ['决策','备考','参考'].filter(g => counts[g]);
     $('#sysuToc').innerHTML = grps.map((g, i) =>
       `<button class="sgrp${i === 0 ? ' on' : ''}" data-g="${g}">${g}
@@ -2252,7 +2300,7 @@ function renderSysu(){
        <span class="sgd" id="sysuGd">${esc(DESC[grps[0]] || '')}</span>`;
 
     const show = g => {
-      secs.forEach(x => { x.hidden = !(g === '全部' || x.dataset.grp === g); });
+      secs.forEach(x => { x.hidden = !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g); });
       $('#sysuToc').querySelectorAll('.sgrp').forEach(b =>
         b.classList.toggle('on', b.dataset.g === g));
       $('#sysuGd').textContent = DESC[g] || '全部 ' + secs.length + ' 个区块';
@@ -2400,7 +2448,7 @@ function renderNju(){
       `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>
        <span class="sgd" id="njuGd">${esc(DESC[grps[0]] || '')}</span>`;
     const show = g => {
-      secs.forEach(x => { x.hidden = !(g === '全部' || x.dataset.grp === g); });
+      secs.forEach(x => { x.hidden = !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g); });
       $('#njuToc').querySelectorAll('.sgrp').forEach(b => b.classList.toggle('on', b.dataset.g === g));
       $('#njuGd').textContent = DESC[g] || '全部 ' + secs.length + ' 个区块';
       window.scrollTo({top: $('#p-nju').offsetTop - 60, behavior: 'smooth'});
