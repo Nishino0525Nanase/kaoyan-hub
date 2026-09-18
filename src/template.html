@@ -1822,15 +1822,15 @@ function renderSysu(){
    ${(() => { const V = S.verdict; if(!V) return '';
      return `<section class="sysec verdict"><h3>${esc(V.t)}</h3>
        <p class="hint">${esc(V.sub)}</p>
-       <div style="overflow-x:auto"><table class="dormt vtab">
-         <tr><th>学院</th><th>校区</th><th>统考录取</th><th>复录比</th><th>院线</th><th>884 均分</th><th>一句话</th></tr>
-         ${V.rows.map(r => `<tr>
-           <td class="b">${esc(r.college)}</td><td><span class="cmp">${esc(r.campus)}</span></td>
-           <td class="fee" style="font-size:16px">${r.admit ?? '—'}</td>
-           <td><b style="color:var(--warn)">${r.ratio ? r.ratio + ':1' : '—'}</b></td>
-           <td>${r.line ?? '—'}</td>
-           <td class="fee">${r.c884 ?? '—'}${r.c884y ? `<span class="muted"> ${r.c884y}</span>` : ''}</td>
-           <td>${esc(r.note)}</td></tr>`).join('')}</table></div>
+       <div class="vlist">${V.rows.map(r => `<div class="vrow">
+         <div class="vhead"><b>${esc(r.college)}</b><span class="cmp">${esc(r.campus)}</span></div>
+         <div class="vnums">
+           <span><i>录取</i><b>${r.admit ?? '—'}</b></span>
+           <span><i>884</i><b>${r.c884 ?? '—'}</b></span>
+           <span><i>复录比</i><b>${esc(r.ratio2)}</b></span>
+           <span><i>院线</i><b>${r.line ?? '—'}</b></span>
+         </div>
+         <p class="vnote">${esc(r.note)}</p></div>`).join('')}</div>
        <div class="pickgrid">${V.pick.map(p => `<div class="pick">
          <b>${esc(p.k)}</b><span class="pv">${esc(p.v)}</span>
          <span class="pd">${esc(p.d)}</span></div>`).join('')}</div>
@@ -2254,6 +2254,7 @@ function renderSysu(){
       const h = sec.querySelector('h3'); if(!h) return;
       sec.id = 'sy-' + i;
       const t = h.textContent;
+      if(sec.classList.contains('verdict')){ sec.dataset.grp = '常驻'; sec.dataset.rank = -1; return; }
       const k = Object.keys(MAP).find(x => t.includes(x));
       sec.dataset.grp = k ? MAP[k] : '参考';
       sec.dataset.rank = rank(t);
@@ -2268,21 +2269,22 @@ function renderSysu(){
     const counts = {};
     secs.forEach(x => { if(x.dataset.grp !== '常驻') counts[x.dataset.grp] = (counts[x.dataset.grp] || 0) + 1; });
     const grps = ['决策','备考','参考'].filter(g => counts[g]);
-    $('#sysuToc').innerHTML = grps.map((g, i) =>
-      `<button class="sgrp${i === 0 ? ' on' : ''}" data-g="${g}">${g}
-        <span class="n">${counts[g]}</span></button>`).join('') +
-      `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>
-       <span class="sgd" id="sysuGd">${esc(DESC[grps[0]] || '')}</span>`;
+    $('#sysuToc').innerHTML =
+      `<button class="sgrp on" data-g="结论">结论</button>` +
+      grps.map(g => `<button class="sgrp" data-g="${g}">${g}<span class="n">${counts[g]}</span></button>`).join('') +
+      `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>`;
 
     const show = g => {
-      secs.forEach(x => { x.hidden = !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g); });
+      secs.forEach(x => {
+        x.hidden = g === '结论' ? x.dataset.grp !== '常驻'
+                 : !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g);
+      });
       $('#sysuToc').querySelectorAll('.sgrp').forEach(b =>
         b.classList.toggle('on', b.dataset.g === g));
-      $('#sysuGd').textContent = DESC[g] || '全部 ' + secs.length + ' 个区块';
       window.scrollTo({top: $('#p-sysu').offsetTop - 60, behavior: 'smooth'});
     };
     $('#sysuToc').querySelectorAll('.sgrp').forEach(b => b.onclick = () => show(b.dataset.g));
-    show(grps[0]);
+    show('结论');
   });
 
   $('#sysuSub').innerHTML = `${esc(S.school)} · 数据更新于 ${esc(S.updated)}` +
@@ -2423,13 +2425,16 @@ function renderNju(){
       `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>
        <span class="sgd" id="njuGd">${esc(DESC[grps[0]] || '')}</span>`;
     const show = g => {
-      secs.forEach(x => { x.hidden = !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g); });
+      secs.forEach(x => {
+        x.hidden = g === '结论' ? x.dataset.grp !== '常驻'
+                 : !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g);
+      });
       $('#njuToc').querySelectorAll('.sgrp').forEach(b => b.classList.toggle('on', b.dataset.g === g));
       $('#njuGd').textContent = DESC[g] || '全部 ' + secs.length + ' 个区块';
       window.scrollTo({top: $('#p-nju').offsetTop - 60, behavior: 'smooth'});
     };
     $('#njuToc').querySelectorAll('.sgrp').forEach(b => b.onclick = () => show(b.dataset.g));
-    show(grps[0]);
+    show('结论');
   });
 
   $('#njuSub').innerHTML = `${esc(H.college)}　·　${esc(H.campus)}　·　` +
