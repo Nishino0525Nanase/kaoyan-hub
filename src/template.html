@@ -2303,6 +2303,15 @@ function renderNju(){
       x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a>` : ''}</dd>`).join('')}</dl>`;
 
   $('#njuBody').innerHTML = `
+   ${(() => { const V = NJU.verdict; if(!V) return '';
+     return `<div class="lyr verdict"><h4>${esc(V.t)}</h4>
+       <div class="vlist">${V.rows.map(r => `<div class="vrow">
+         <div class="vhead"><b>${esc(r.k)}</b></div>
+         <div class="vnums"><span><b style="font-size:15px">${esc(r.v)}</b></span></div>
+         <p class="vnote">${esc(r.note)}</p></div>`).join('')}</div>
+       <div class="warnbox" style="margin-top:10px">${esc(V.warn)}</div>
+       <p class="sub2" style="margin-top:7px">${esc(V.verified)}</p></div>`;
+   })()}
    <div class="lyr ok"><h4>${esc(H.official.label)}<span class="badge2">official</span></h4>
      <p class="sub2">${esc(H.college)} · ${esc(H.campus)} · ${esc(H.addr)}</p>
      ${dl(H.official.items)}</div>
@@ -2413,24 +2422,23 @@ function renderNju(){
       sec.id = 'nj-' + i;
       sec.style.scrollMarginTop = '70px';
       const t = h.textContent;
+      if(sec.classList.contains('verdict')){ sec.dataset.grp = '常驻'; return; }
       const k = Object.keys(MAP).find(x => t.includes(x));
       sec.dataset.grp = k ? MAP[k] : '已核实';
     });
     const counts = {};
-    secs.forEach(x => counts[x.dataset.grp] = (counts[x.dataset.grp] || 0) + 1);
+    secs.forEach(x => { if(x.dataset.grp !== '常驻') counts[x.dataset.grp] = (counts[x.dataset.grp] || 0) + 1; });
     const grps = ['已核实','待核对','怎么查'].filter(g => counts[g]);
-    $('#njuToc').innerHTML = grps.map((g, i) =>
-      `<button class="sgrp${i === 0 ? ' on' : ''}" data-g="${g}">${g}
-        <span class="n">${counts[g]}</span></button>`).join('') +
-      `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>
-       <span class="sgd" id="njuGd">${esc(DESC[grps[0]] || '')}</span>`;
+    $('#njuToc').innerHTML =
+      `<button class="sgrp on" data-g="结论">结论</button>` +
+      grps.map(g => `<button class="sgrp" data-g="${g}">${g}<span class="n">${counts[g]}</span></button>`).join('') +
+      `<button class="sgrp" data-g="全部">全部 <span class="n">${secs.length}</span></button>`;
     const show = g => {
       secs.forEach(x => {
         x.hidden = g === '结论' ? x.dataset.grp !== '常驻'
                  : !(x.dataset.grp === '常驻' || g === '全部' || x.dataset.grp === g);
       });
       $('#njuToc').querySelectorAll('.sgrp').forEach(b => b.classList.toggle('on', b.dataset.g === g));
-      $('#njuGd').textContent = DESC[g] || '全部 ' + secs.length + ' 个区块';
       window.scrollTo({top: $('#p-nju').offsetTop - 60, behavior: 'smooth'});
     };
     $('#njuToc').querySelectorAll('.sgrp').forEach(b => b.onclick = () => show(b.dataset.g));
