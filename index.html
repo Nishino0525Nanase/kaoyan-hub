@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="build" content="202609191152">
 <title>考研择校资料库 · KaoyanHub</title>
 <meta name="description" content="开源的考研择校资料库：中山大学与南京大学控制工程专栏、147 所院校档案、逐校初试复试科目、导师名录与校区住宿。数据均标注来源与可信度，欢迎 PR 补充。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127891;</text></svg>">
@@ -130,12 +131,13 @@ details.secfold[open]>summary::before{transform:rotate(90deg)}
 .verdict>h3{border-bottom:0;margin-bottom:2px}
 .verdict>h3::after{display:none}
 .vtab td{padding:8px 8px 8px 0}
-.pickgrid{display:flex;flex-direction:column;gap:7px;margin-top:12px}
-@media(min-width:760px){.pickgrid{flex-direction:row;flex-wrap:wrap}.pick{flex:1 1 220px}}
-.pick{padding:9px 12px;border-radius:9px;background:var(--surface-2);border-left:3px solid var(--accent);min-width:0}
-.pick b{font-size:12px;color:var(--text-3);margin-right:8px}
-.pick .pv{font-size:14px;font-weight:650;color:var(--accent)}
-.pick .pd{display:block;font-size:12px;color:var(--text-2);line-height:1.5;margin-top:3px}
+.pickgrid{margin-top:12px}
+.pick{display:block;padding:9px 12px;margin:0 0 7px;border-radius:9px;
+  background:var(--surface-2);border-left:3px solid var(--accent);
+  font-size:13px;line-height:1.55;word-break:break-word}
+.pick b{font-size:12px;color:var(--text-3);font-weight:400}
+.pick strong{font-size:14px;color:var(--accent)}
+.pick .pd{font-size:12px;color:var(--text-2)}
 .tchart{width:100%;height:auto;display:block;margin:6px 0}
 .tleg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-2);margin:2px 0 8px}
 .tleg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
@@ -1832,9 +1834,9 @@ function renderSysu(){
            <span><i>院线</i><b>${r.line ?? '—'}</b></span>
          </div>
          <p class="vnote">${esc(r.note)}</p></div>`).join('')}</div>
-       <div class="pickgrid">${V.pick.map(p => `<div class="pick">
-         <b>${esc(p.k)}</b><span class="pv">${esc(p.v)}</span>
-         <span class="pd">${esc(p.d)}</span></div>`).join('')}</div>
+       <div class="pickgrid">${V.pick.map(p => `<p class="pick">
+         <b>${esc(p.k)}</b> <strong>${esc(p.v)}</strong><br>
+         <span class="pd">${esc(p.d)}</span></p>`).join('')}</div>
      </section>`;
    })()}
    ${(() => {
