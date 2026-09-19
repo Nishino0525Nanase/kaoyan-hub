@@ -130,11 +130,12 @@ details.secfold[open]>summary::before{transform:rotate(90deg)}
 .verdict>h3{border-bottom:0;margin-bottom:2px}
 .verdict>h3::after{display:none}
 .vtab td{padding:8px 8px 8px 0}
-.pickgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:9px;margin-top:12px}
-.pick{padding:10px 12px;border-radius:9px;background:var(--surface-2);border-left:3px solid var(--accent)}
-.pick b{display:block;font-size:12px;color:var(--text-3)}
-.pick .pv{display:block;font-size:14px;font-weight:650;color:var(--accent);margin:2px 0 3px}
-.pick .pd{font-size:12px;color:var(--text-2);line-height:1.55}
+.pickgrid{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+@media(min-width:760px){.pickgrid{flex-direction:row;flex-wrap:wrap}.pick{flex:1 1 220px}}
+.pick{padding:9px 12px;border-radius:9px;background:var(--surface-2);border-left:3px solid var(--accent);min-width:0}
+.pick b{font-size:12px;color:var(--text-3);margin-right:8px}
+.pick .pv{font-size:14px;font-weight:650;color:var(--accent)}
+.pick .pd{display:block;font-size:12px;color:var(--text-2);line-height:1.5;margin-top:3px}
 .tchart{width:100%;height:auto;display:block;margin:6px 0}
 .tleg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-2);margin:2px 0 8px}
 .tleg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
