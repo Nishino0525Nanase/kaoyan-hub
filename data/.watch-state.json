@@ -8,15 +8,15 @@
   ]
  },
  "school:清华大学": {
-  "hash": "08da92d46895c939",
-  "seenAt": "2026-08-24",
+  "hash": "64676e2c42629980",
+  "seenAt": "2026-09-22",
   "hits": [
    "招生专业目录"
   ]
  },
  "school:北京大学": {
-  "hash": "40370fa0d5d75bec",
-  "seenAt": "2026-09-01",
+  "hash": "97bf5e82aa09845e",
+  "seenAt": "2026-09-22",
   "hits": [
    "招生专业目录"
   ]
@@ -29,13 +29,13 @@
   ]
  },
  "school:北京理工大学": {
-  "hash": "1fb771b4fbe1956c",
-  "seenAt": "2026-09-15",
+  "hash": "8e8471959e491ecb",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:北京科技大学": {
-  "hash": "67de5a54b32b8a31",
-  "seenAt": "2026-09-15",
+  "hash": "aa5f3494062ab6dd",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:天津大学": {
@@ -46,8 +46,8 @@
   ]
  },
  "school:南开大学": {
-  "hash": "91a8f3d34683eebb",
-  "seenAt": "2026-08-24",
+  "hash": "0542e86d9acc89f8",
+  "seenAt": "2026-09-22",
   "hits": [
    "招生专业目录"
   ]
@@ -58,8 +58,8 @@
   "hits": []
  },
  "school:哈尔滨工业大学": {
-  "hash": "e2a86663e3547a2c",
-  "seenAt": "2026-09-15",
+  "hash": "be7a47b0552c92f1",
+  "seenAt": "2026-09-22",
   "hits": [
    "科目调整"
   ]
@@ -77,78 +77,84 @@
   "hits": []
  },
  "school:东北师范大学": {
-  "hash": "feb9eee8e1927e95",
-  "seenAt": "2026-09-15",
-  "hits": []
+  "hash": "cfc1ea080d7276ba",
+  "seenAt": "2026-09-22",
+  "hits": [
+   "招生专业目录"
+  ]
  },
  "school:同济大学": {
-  "hash": "9190b979a794a40e",
-  "seenAt": "2026-09-08",
+  "hash": "58873be1989c11a7",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:上海交通大学": {
-  "hash": "4a08f61005ad2a9a",
-  "seenAt": "2026-09-08",
-  "hits": []
+  "hash": "a6b941fe84b4ea80",
+  "seenAt": "2026-09-22",
+  "hits": [
+   "招生专业目录"
+  ]
  },
  "school:南京大学": {
-  "hash": "d085a8fc4ca387ca",
-  "seenAt": "2026-09-15",
+  "hash": "b3b97d0a0688782b",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:华东师范大学": {
-  "hash": "60a33a68d6d18df3",
-  "seenAt": "2026-09-15",
+  "hash": "4449941d8bd5fce9",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:杭州电子科技大学": {
-  "hash": "03f2753367e7f0bd",
-  "seenAt": "2026-09-15",
+  "hash": "cfeb3b02b213f19a",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:中国科学技术大学": {
-  "hash": "b124bd12ce6d5e57",
-  "seenAt": "2026-09-15",
+  "hash": "47c6ad5bd3b3bfda",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:山东大学": {
-  "hash": "00fc681b50c19377",
-  "seenAt": "2026-09-15",
+  "hash": "8e1b397d448ad298",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:华中科技大学": {
-  "hash": "a2983e425d23f907",
-  "seenAt": "2026-08-24",
+  "hash": "389c61db5c9bd120",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:武汉大学": {
-  "hash": "bc78ad0b332ceab1",
-  "seenAt": "2026-08-24",
+  "hash": "2633da9a1a2ff371",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:中南大学": {
-  "hash": "6319a27ede1aedb8",
-  "seenAt": "2026-09-15",
+  "hash": "162b441d65199166",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:四川大学": {
-  "hash": "cd4ead19dcf2a82e",
-  "seenAt": "2026-09-15",
+  "hash": "7adc2b226562b0fb",
+  "seenAt": "2026-09-22",
   "hits": [
    "招生专业目录"
   ]
  },
  "school:电子科技大学": {
-  "hash": "de67a4c33abcab79",
-  "seenAt": "2026-09-15",
+  "hash": "dcff74f7fddc6c20",
+  "seenAt": "2026-09-22",
   "hits": [
    "参考书目"
   ]
  },
  "school:西安交通大学": {
-  "hash": "f936b637c1c0bb30",
-  "seenAt": "2026-09-15",
-  "hits": []
+  "hash": "3ace919058d182fa",
+  "seenAt": "2026-09-22",
+  "hits": [
+   "招生专业目录"
+  ]
  },
  "school:西北工业大学": {
   "hash": "19e9716f3a7fc970",
@@ -161,18 +167,18 @@
   "hits": []
  },
  "school:中央财经大学": {
-  "hash": "9672180a9e37c201",
-  "seenAt": "2026-09-15",
+  "hash": "660aa8071ec5d5ea",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:上海财经大学": {
-  "hash": "75194174d0be90db",
-  "seenAt": "2026-08-24",
+  "hash": "29abc31e8922f77d",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:西南财经大学": {
-  "hash": "a6b1028eb6f35e5a",
-  "seenAt": "2026-09-08",
+  "hash": "f39b05965ffb5a60",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:复旦大学": {
@@ -181,13 +187,13 @@
   "hits": []
  },
  "school:东南大学": {
-  "hash": "db69c1a7bb592bd0",
-  "seenAt": "2026-09-15",
+  "hash": "babd518eb3986f41",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:南京航空航天大学": {
-  "hash": "6eaf2b03cb197fb5",
-  "seenAt": "2026-09-15",
+  "hash": "7042b449557f7429",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:南京理工大学": {
@@ -205,8 +211,8 @@
   ]
  },
  "school:湖南大学": {
-  "hash": "858b15df62e13915",
-  "seenAt": "2026-09-15",
+  "hash": "52fd19a5b1f7b014",
+  "seenAt": "2026-09-22",
   "hits": []
  },
  "school:中山大学": {
@@ -229,8 +235,8 @@
   "hits": []
  },
  "school:中国人民大学": {
-  "hash": "3ef4e606c9f747aa",
-  "seenAt": "2026-09-08",
+  "hash": "ca6b31991b0d0ad3",
+  "seenAt": "2026-09-22",
   "hits": [
    "招生专业目录"
   ]
