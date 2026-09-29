@@ -1,7 +1,7 @@
 {
  "chsi-zsml": {
-  "hash": "6994d4ddddfc60ed",
-  "seenAt": "2026-08-24",
+  "hash": "a7803b13b04e2706",
+  "seenAt": "2026-09-29",
   "hits": [
    "专业目录",
    "招生"
@@ -22,8 +22,8 @@
   ]
  },
  "school:北京航空航天大学": {
-  "hash": "501f1e8191e2f3bd",
-  "seenAt": "2026-09-15",
+  "hash": "eaa683e655dd7469",
+  "seenAt": "2026-09-29",
   "hits": [
    "初试科目"
   ]
@@ -34,13 +34,13 @@
   "hits": []
  },
  "school:北京科技大学": {
-  "hash": "aa5f3494062ab6dd",
-  "seenAt": "2026-09-22",
+  "hash": "48772f59007e6c38",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:天津大学": {
-  "hash": "be0140e270383af4",
-  "seenAt": "2026-09-15",
+  "hash": "aeb751b2be47f43d",
+  "seenAt": "2026-09-29",
   "hits": [
    "初试科目"
   ]
@@ -72,13 +72,13 @@
   ]
  },
  "school:哈尔滨工程大学": {
-  "hash": "444982fd23f2e0c6",
-  "seenAt": "2026-09-08",
+  "hash": "090f66d73698f7de",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:东北师范大学": {
-  "hash": "cfc1ea080d7276ba",
-  "seenAt": "2026-09-22",
+  "hash": "b234d9d0992e63a5",
+  "seenAt": "2026-09-29",
   "hits": [
    "招生专业目录"
   ]
@@ -89,8 +89,8 @@
   "hits": []
  },
  "school:上海交通大学": {
-  "hash": "a6b941fe84b4ea80",
-  "seenAt": "2026-09-22",
+  "hash": "cd2ef5789f8d6eca",
+  "seenAt": "2026-09-29",
   "hits": [
    "招生专业目录"
   ]
@@ -106,13 +106,13 @@
   "hits": []
  },
  "school:杭州电子科技大学": {
-  "hash": "cfeb3b02b213f19a",
-  "seenAt": "2026-09-22",
+  "hash": "7d1f472b9e175aa3",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:中国科学技术大学": {
-  "hash": "47c6ad5bd3b3bfda",
-  "seenAt": "2026-09-22",
+  "hash": "770938b9c77ed62e",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:山东大学": {
@@ -157,18 +157,18 @@
   ]
  },
  "school:西北工业大学": {
-  "hash": "19e9716f3a7fc970",
-  "seenAt": "2026-09-08",
+  "hash": "cfe42d4188313e01",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:西安电子科技大学": {
-  "hash": "0647b1eb905fecd9",
-  "seenAt": "2026-09-15",
+  "hash": "2ba607dde508685f",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:中央财经大学": {
-  "hash": "660aa8071ec5d5ea",
-  "seenAt": "2026-09-22",
+  "hash": "c28bcd2f7b1c2279",
+  "seenAt": "2026-09-29",
   "hits": []
  },
  "school:上海财经大学": {
