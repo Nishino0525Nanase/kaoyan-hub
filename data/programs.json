@@ -5617,6 +5617,545 @@
    "campus": null
   },
   {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": 500,
+   "code": "085404",
+   "name": "计算机技术",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 210,
+    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "6705001 复试专业课",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": 500,
+   "code": "085405",
+   "name": "软件工程",
+   "degree": "专硕",
+   "college": "软件工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 37,
+    "note": "院系代码 725；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7255001 程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": 500,
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "人工智能学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 28,
+    "note": "院系代码 724；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7245001 离散数学与C程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": 500,
+   "code": "085411",
+   "name": "大数据技术与工程",
+   "degree": "专硕",
+   "college": "计算机学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 40,
+    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "6705001 复试专业课",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "cs",
+   "scale": 500,
+   "code": "085412",
+   "name": "网络与信息安全",
+   "degree": "专硕",
+   "college": "网络空间安全学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "408",
+     "name": "计算机学科专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 23,
+    "note": "院系代码 757；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7575001 离散数学与C/C++程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子与通信工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 80,
+    "note": "院系代码 765；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7655001 电路与信号综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": "深圳校区"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "智能工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 58,
+    "note": "院系代码 766；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7665001 智能技术综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "系统科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 8,
+    "note": "院系代码 771；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7715003 离散数学与C程序设计",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文；订正：本库原记为 085401，但学院 2024 复试录取方案中该院实际招生代码为 085400 电子信息",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "海洋工程与技术学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 27,
+    "note": "院系代码 767；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7675004 数字信号处理",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": null
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085402",
+   "name": "通信工程（含宽带网络、移动通信等）",
+   "degree": "专硕",
+   "college": "电子与信息工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "884",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 22,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625003 电子工程基础综合",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": "广州·东校园"
+  },
+  {
+   "school": "中山大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "电子与信息工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "882",
+     "name": "光学原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 22,
+    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "7625004 光学工程综合考试B",
+   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
+   "campus": "广州·东校园"
+  },
+  {
    "school": "云南大学",
    "track": "cs",
    "code": "081200",
@@ -6574,6 +7113,106 @@
    "tuition": null,
    "years": null,
    "scale": 500
+  },
+  {
+   "school": "北京信息科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "803",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 94,
+    "exam": 92,
+    "tuimian": 2,
+    "note": "拟招 94，其中统考 92、推免 2"
+   },
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析",
+   "note": "研究方向 00 不区分研究方向；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "北京信息科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "803",
+     "name": "自动控制原理"
+    }
+   ],
+   "lines": [],
+   "seats": {
+    "plan": 20,
+    "exam": 18,
+    "tuimian": 2,
+    "note": "拟招 20，其中统考 18、推免 2"
+   },
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路与电子技术",
+   "note": "研究方向 01 自主智能控制；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
   },
   {
    "school": "北京大学",
@@ -10904,6 +11543,386 @@
    "scale": 500
   },
   {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "070208",
+   "name": "无线电物理",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《电磁场理论与微波技术》(第二版) 伍瑞新、冯一军等，南京大学出版社",
+    "《大学物理学》(电磁学、光学部分) 张三慧主编，清华大学出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "080901",
+   "name": "物理电子学",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
+    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "080902",
+   "name": "电路与系统",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《数字图像处理》(原书第3版) Gonzalez & Woods，阮秋琦、阮宇智译，电子工业出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "080903",
+   "name": "微电子学与固体电子学",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
+    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "080904",
+   "name": "电磁场与微波技术",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《电磁场理论与微波技术》(第二版) 伍瑞新、冯一军等，南京大学出版社",
+    "《大学物理学》(电磁学、光学部分) 张三慧主编，清华大学出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "081001",
+   "name": "通信与信息系统",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《通信原理》樊昌信、曹丽娜，国防工业出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "081002",
+   "name": "信号与信息处理",
+   "degree": "学硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《电路》(第六版) 邱关源、罗先觉，高等教育出版社",
+    "《数字逻辑基础与Verilog设计》(原书第3版) Brown & Vranesic，机械工业出版社",
+    "《数字电子技术基础》(第三版) 阎石主编，高等教育出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085402",
+   "name": "通信工程（含宽带网络、移动通信等）",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《数字逻辑基础与Verilog设计》(原书第3版) Brown & Vranesic，机械工业出版社",
+    "《数字电子技术基础》(第五版) 阎石主编，高等教育出版社",
+    "《模拟电子技术基础》(第七版) 康华光主编，高等教育出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085403",
+   "name": "集成电路工程",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": null,
+   "tuition": null,
+   "years": null,
+   "changes": [],
+   "sources": [
+    {
+     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
+     "official": true
+    },
+    {
+     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestBooks": [
+    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
+    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
+   ],
+   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
+  },
+  {
+   "school": "南京大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "机器人与自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语（二）"
+    },
+    {
+     "code": "302",
+     "name": "数学（二）"
+    },
+    {
+     "code": "865",
+     "name": "自动控制原理（经典 60%、现代 40%）"
+    }
+   ],
+   "lines": [
+    {
+     "year": 2026,
+     "score": 320,
+     "kind": "待核实",
+     "note": "来源为第三方 App 展示，未见官方原文"
+    }
+   ],
+   "seats": {
+    "plan": 38,
+    "note": "38 为专业招生总数，非单个方向人数；含推免，实际统考数需减去推免"
+   },
+   "dataYear": "2026",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://ra.nju.edu.cn/",
+     "official": true,
+     "what": "学院存在性与办学校区"
+    },
+    {
+     "url": "https://yzb.nju.edu.cn/47862/listm.htm",
+     "official": true,
+     "what": "南大研招网简章目录入口（该 App 注明数据引自此处）"
+    }
+   ],
+   "confidence": "secondary",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "campus": "苏州校区",
+   "directions": [
+    "01 智能控制工程",
+    "02 机器人工程"
+   ],
+   "note": "开设单位为机器人与自动化学院（苏州校区），学院成立较新，2026 年 9 月迎首批本科生。初试科目、分数线 320、招生 38 人来自掌上考研 App 展示页（该页注明引自南大研招网），属二手来源，尚未在官方招生目录中核对原文——报考前务必以 yzb.nju.edu.cn 当年目录为准。"
+  },
+  {
    "school": "南京师范大学",
    "track": "ee",
    "code": "085400",
@@ -11295,6 +12314,141 @@
    "retest": null,
    "dataYear": null,
    "scale": 500
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "873",
+     "name": "自动控制理论"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "微机原理与接口技术",
+   "note": "全日制 01 不区分研究方向；非全日制 F1 方向可接收单独考试考生；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085801",
+   "name": "电气工程",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "837",
+     "name": "电路"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电力电子技术",
+   "note": "全日制 01 不区分研究方向；含非全日制 F1；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "南京理工大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "086100",
+   "name": "交通运输",
+   "degree": "专硕",
+   "college": "自动化学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "204",
+     "name": "英语二"
+    },
+    {
+     "code": "302",
+     "name": "数学二"
+    },
+    {
+     "code": "873",
+     "name": "自动控制理论"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "智能交通控制",
+   "note": "全日制 01 不区分研究方向；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
   },
   {
    "school": "南京航空航天大学",
@@ -26070,6 +27224,456 @@
   {
    "school": "电子科技大学",
    "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "信息与通信工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "813/858",
+     "name": "01方向 电磁场与电磁波 / 02方向 信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "01方向 微波技术基础；02方向 电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "机械与电气工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "815",
+     "name": "电路分析基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "自动控制原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "光电科学与工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "840/813",
+     "name": "01方向 物理光学 / 02方向 电磁场与电磁波"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析基础",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "航空航天学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字逻辑设计",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "物理学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "电路分析与电子线路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "电子科学技术研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "01方向 数字逻辑设计；02方向 计算机专业综合；03方向 模拟电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "通信抗干扰全国重点实验室",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "通信原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "深圳高等研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "通信原理",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085400",
+   "name": "电子信息",
+   "degree": "专硕",
+   "college": "基础与前沿研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "866/840/820",
+     "name": "01方向 固体电子学基础 / 02方向 物理光学 / 03方向 计算机专业基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "专业英语",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
    "code": "085401",
    "name": "新一代电子信息技术",
    "degree": "专硕",
@@ -26552,6 +28156,96 @@
    "years": null,
    "scale": 500,
    "retestSubjects": "数字电路与嵌入式系统",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "深圳高等研究院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "858",
+     "name": "信号与系统"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "数字电路",
+   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
+  },
+  {
+   "school": "电子科技大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085407",
+   "name": "仪器仪表工程",
+   "degree": "专硕",
+   "college": "自动化工程学院",
+   "subjects": [
+    {
+     "code": "101",
+     "name": "思想政治理论"
+    },
+    {
+     "code": "201",
+     "name": "英语（一）"
+    },
+    {
+     "code": "301",
+     "name": "数学（一）"
+    },
+    {
+     "code": "861",
+     "name": "信号系统与测量基础"
+    }
+   ],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2024",
+   "tuition": null,
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "retestSubjects": "微机原理和数字电路",
    "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
   },
   {
@@ -28275,6 +29969,33 @@
   {
    "school": "西北工业大学",
    "track": "ee",
+   "scale": 500,
+   "code": "085401",
+   "name": "新一代电子信息技术（含量子技术等）",
+   "degree": "专硕",
+   "college": "柔性电子研究院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
    "code": "085401",
    "name": "新一代电子信息技术（航海学院）",
    "degree": "专硕",
@@ -28367,6 +30088,33 @@
    "years": null,
    "scale": 500,
    "note": "学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085402",
+   "name": "通信工程（含宽带网络、移动通信等）",
+   "degree": "专硕",
+   "college": "民航学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
   },
   {
    "school": "西北工业大学",
@@ -28654,6 +30402,141 @@
   {
    "school": "西北工业大学",
    "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "航空学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "航天学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "动力与能源学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "民航学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085406",
+   "name": "控制工程",
+   "degree": "专硕",
+   "college": "无人系统技术研究院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
    "code": "085406",
    "name": "控制工程（航海学院）",
    "degree": "专硕",
@@ -28740,6 +30623,87 @@
    "years": null,
    "scale": 500,
    "note": "学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "物理科学与技术学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085408",
+   "name": "光电信息工程",
+   "degree": "专硕",
+   "college": "柔性电子研究院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
+  },
+  {
+   "school": "西北工业大学",
+   "track": "ee",
+   "scale": 500,
+   "code": "085410",
+   "name": "人工智能",
+   "degree": "专硕",
+   "college": "航空学院",
+   "subjects": [],
+   "lines": [],
+   "seats": null,
+   "dataYear": "2025",
+   "tuition": "8000 元/生·年（全日制硕士）",
+   "years": null,
+   "changes": null,
+   "sources": [
+    {
+     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
+     "official": true
+    }
+   ],
+   "confidence": "official",
+   "retest": null,
+   "admitted": null,
+   "applied": null,
+   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
   },
   {
    "school": "西北工业大学",
@@ -31995,1972 +33959,528 @@
    "tuition": null,
    "years": null,
    "scale": 500
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "070208",
-   "name": "无线电物理",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《电磁场理论与微波技术》(第二版) 伍瑞新、冯一军等，南京大学出版社",
-    "《大学物理学》(电磁学、光学部分) 张三慧主编，清华大学出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "080904",
-   "name": "电磁场与微波技术",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《电磁场理论与微波技术》(第二版) 伍瑞新、冯一军等，南京大学出版社",
-    "《大学物理学》(电磁学、光学部分) 张三慧主编，清华大学出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "080901",
-   "name": "物理电子学",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
-    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "080903",
-   "name": "微电子学与固体电子学",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
-    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "080902",
-   "name": "电路与系统",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《数字图像处理》(原书第3版) Gonzalez & Woods，阮秋琦、阮宇智译，电子工业出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "081001",
-   "name": "通信与信息系统",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《通信原理》樊昌信、曹丽娜，国防工业出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "081002",
-   "name": "信号与信息处理",
-   "degree": "学硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《电路》(第六版) 邱关源、罗先觉，高等教育出版社",
-    "《数字逻辑基础与Verilog设计》(原书第3版) Brown & Vranesic，机械工业出版社",
-    "《数字电子技术基础》(第三版) 阎石主编，高等教育出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085403",
-   "name": "集成电路工程",
-   "degree": "专硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《半导体物理学》刘恩科、朱秉升、罗晋生等，国防工业出版社",
-    "《半导体器件物理》施敏著，赵鹤鸣等译，苏州大学出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085402",
-   "name": "通信工程（含宽带网络、移动通信等）",
-   "degree": "专硕",
-   "college": "电子科学与工程学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": null,
-   "tuition": null,
-   "years": null,
-   "changes": [],
-   "sources": [
-    {
-     "url": "https://ese.nju.edu.cn/9e/34/c22673a826932/page.htm",
-     "official": true
-    },
-    {
-     "url": "https://ese.nju.edu.cn/_upload/article/files/30/c3/d5d8b0354ec989b506083ccbef81/4c0167ff-9f5c-46e1-9ad5-d12b868dd6a9.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestBooks": [
-    "《数字逻辑基础与Verilog设计》(原书第3版) Brown & Vranesic，机械工业出版社",
-    "《数字电子技术基础》(第五版) 阎石主编，高等教育出版社",
-    "《模拟电子技术基础》(第七版) 康华光主编，高等教育出版社"
-   ],
-   "note": "来源为学院《2026年硕士研究生复试笔试参考书目》，含专业清单与复试参考书；初试科目该文件未列出，待单独核实"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "信息与通信工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "数字逻辑设计",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "电子科学与工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "813/858",
-     "name": "01方向 电磁场与电磁波 / 02方向 信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "01方向 微波技术基础；02方向 电路分析与电子线路",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "机械与电气工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "815",
-     "name": "电路分析基础"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "自动控制原理",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "光电科学与工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "840/813",
-     "name": "01方向 物理光学 / 02方向 电磁场与电磁波"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "电路分析基础",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "航空航天学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "数字逻辑设计",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "物理学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "电路分析与电子线路",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "电子科学技术研究院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "01方向 数字逻辑设计；02方向 计算机专业综合；03方向 模拟电路",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "通信抗干扰全国重点实验室",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "通信原理",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "深圳高等研究院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "通信原理",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "基础与前沿研究院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "866/840/820",
-     "name": "01方向 固体电子学基础 / 02方向 物理光学 / 03方向 计算机专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "专业英语",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085407",
-   "name": "仪器仪表工程",
-   "degree": "专硕",
-   "college": "深圳高等研究院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "858",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "数字电路",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "电子科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085407",
-   "name": "仪器仪表工程",
-   "degree": "专硕",
-   "college": "自动化工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "201",
-     "name": "英语（一）"
-    },
-    {
-     "code": "301",
-     "name": "数学（一）"
-    },
-    {
-     "code": "861",
-     "name": "信号系统与测量基础"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2024",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://xxgkw.uestc.edu.cn/__local/6/27/77/19A9CC5D5E069F11DAA327CD654_57577346_A4C7C.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "微机原理和数字电路",
-   "note": "初试与复试科目取自学校 2024 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "航空学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "航天学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "动力与能源学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "民航学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "无人系统技术研究院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085410",
-   "name": "人工智能",
-   "degree": "专硕",
-   "college": "航空学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085402",
-   "name": "通信工程（含宽带网络、移动通信等）",
-   "degree": "专硕",
-   "college": "民航学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085408",
-   "name": "光电信息工程",
-   "degree": "专硕",
-   "college": "物理科学与技术学院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085401",
-   "name": "新一代电子信息技术（含量子技术等）",
-   "degree": "专硕",
-   "college": "柔性电子研究院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
-  },
-  {
-   "school": "西北工业大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085408",
-   "name": "光电信息工程",
-   "degree": "专硕",
-   "college": "柔性电子研究院",
-   "subjects": [],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": "8000 元/生·年（全日制硕士）",
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yzb.nwpu.edu.cn/info/1174/9308.htm",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "note": "学院开设情况取自学校 2025 年招生简章的学科专业一览表；学校招生专业目录正文仅写「见附件」，附件 PDF 链接未取到，初试科目待核实——空缺是还没查到，不是不招；⚠ 该学院已列入学校 2027 年初试自命题科目变更公告，报考前必须核对学院页面"
-  },
-  {
-   "school": "北京信息科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "803",
-     "name": "自动控制原理"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 94,
-    "exam": 92,
-    "tuimian": 2,
-    "note": "拟招 94，其中统考 92、推免 2"
-   },
-   "dataYear": "2025",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "电路分析",
-   "note": "研究方向 00 不区分研究方向；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "北京信息科技大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085410",
-   "name": "人工智能",
-   "degree": "专硕",
-   "college": "自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "803",
-     "name": "自动控制原理"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 20,
-    "exam": 18,
-    "tuimian": 2,
-    "note": "拟招 20，其中统考 18、推免 2"
-   },
-   "dataYear": "2025",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://yanjiusheng.bistu.edu.cn/docs/2024-10/3ef3cb5f9e3f47fab3473440b6e662e4.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "电路与电子技术",
-   "note": "研究方向 01 自主智能控制；初试、复试科目与招生数取自学校 2025 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085402",
-   "name": "通信工程（含宽带网络、移动通信等）",
-   "degree": "专硕",
-   "college": "电子与信息工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 22,
-    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7625003 电子工程基础综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "广州·东校园"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085408",
-   "name": "光电信息工程",
-   "degree": "专硕",
-   "college": "电子与信息工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "882",
-     "name": "光学原理"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 22,
-    "note": "院系代码 762；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7625004 光学工程综合考试B",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "广州·东校园"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "电子与通信工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 80,
-    "note": "院系代码 765；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7655001 电路与信号综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": "深圳校区"
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "智能工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 58,
-    "note": "院系代码 766；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7665001 智能技术综合",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "系统科学与工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 8,
-    "note": "院系代码 771；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7715003 离散数学与C程序设计",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文；订正：本库原记为 085401，但学院 2024 复试录取方案中该院实际招生代码为 085400 电子信息",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085400",
-   "name": "电子信息",
-   "degree": "专硕",
-   "college": "海洋工程与技术学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "884",
-     "name": "信号与系统"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 27,
-    "note": "院系代码 767；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7675004 数字信号处理",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "cs",
-   "scale": null,
-   "code": "085410",
-   "name": "人工智能",
-   "degree": "专硕",
-   "college": "人工智能学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "408",
-     "name": "计算机学科专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 28,
-    "note": "院系代码 724；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7245001 离散数学与C程序设计",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "cs",
-   "scale": null,
-   "code": "085404",
-   "name": "计算机技术",
-   "degree": "专硕",
-   "college": "计算机学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "408",
-     "name": "计算机学科专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 210,
-    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "6705001 复试专业课",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "cs",
-   "scale": null,
-   "code": "085411",
-   "name": "大数据技术与工程",
-   "degree": "专硕",
-   "college": "计算机学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "408",
-     "name": "计算机学科专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 40,
-    "note": "院系代码 670；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "6705001 复试专业课",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "cs",
-   "scale": null,
-   "code": "085412",
-   "name": "网络与信息安全",
-   "degree": "专硕",
-   "college": "网络空间安全学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "408",
-     "name": "计算机学科专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 23,
-    "note": "院系代码 757；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7575001 离散数学与C/C++程序设计",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "中山大学",
-   "track": "cs",
-   "scale": null,
-   "code": "085405",
-   "name": "软件工程",
-   "degree": "专硕",
-   "college": "软件工程学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "408",
-     "name": "计算机学科专业基础"
-    }
-   ],
-   "lines": [],
-   "seats": {
-    "plan": 37,
-    "note": "院系代码 725；2026 年招生专业目录公布的拟招生人数"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2025-09/2%E3%80%81%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62026%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "7255001 程序设计",
-   "note": "初试科目、复试专业课与招生人数取自中山大学2026年硕士研究生招生学科专业目录原文",
-   "campus": null
-  },
-  {
-   "school": "南京理工大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语二"
-    },
-    {
-     "code": "302",
-     "name": "数学二"
-    },
-    {
-     "code": "873",
-     "name": "自动控制理论"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "微机原理与接口技术",
-   "note": "全日制 01 不区分研究方向；非全日制 F1 方向可接收单独考试考生；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "南京理工大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085801",
-   "name": "电气工程",
-   "degree": "专硕",
-   "college": "自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语二"
-    },
-    {
-     "code": "302",
-     "name": "数学二"
-    },
-    {
-     "code": "837",
-     "name": "电路"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "电力电子技术",
-   "note": "全日制 01 不区分研究方向；含非全日制 F1；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "南京理工大学",
-   "track": "ee",
-   "scale": null,
-   "code": "086100",
-   "name": "交通运输",
-   "degree": "专硕",
-   "college": "自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语二"
-    },
-    {
-     "code": "302",
-     "name": "数学二"
-    },
-    {
-     "code": "873",
-     "name": "自动控制理论"
-    }
-   ],
-   "lines": [],
-   "seats": null,
-   "dataYear": "2025",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://gs.njust.edu.cn/_upload/article/files/71/53/7b332b0d44d18a118926c218e057/f3928315-cf11-4ed7-8910-9c5939ca1857.pdf",
-     "official": true
-    }
-   ],
-   "confidence": "official",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "retestSubjects": "智能交通控制",
-   "note": "全日制 01 不区分研究方向；初试与复试科目取自学校 2025 年招生专业目录 PDF 原文"
-  },
-  {
-   "school": "南京大学",
-   "track": "ee",
-   "scale": null,
-   "code": "085406",
-   "name": "控制工程",
-   "degree": "专硕",
-   "college": "机器人与自动化学院",
-   "subjects": [
-    {
-     "code": "101",
-     "name": "思想政治理论"
-    },
-    {
-     "code": "204",
-     "name": "英语（二）"
-    },
-    {
-     "code": "302",
-     "name": "数学（二）"
-    },
-    {
-     "code": "865",
-     "name": "自动控制原理（经典 60%、现代 40%）"
-    }
-   ],
-   "lines": [
-    {
-     "year": 2026,
-     "score": 320,
-     "kind": "待核实",
-     "note": "来源为第三方 App 展示，未见官方原文"
-    }
-   ],
-   "seats": {
-    "plan": 38,
-    "note": "38 为专业招生总数，非单个方向人数；含推免，实际统考数需减去推免"
-   },
-   "dataYear": "2026",
-   "tuition": null,
-   "years": null,
-   "changes": null,
-   "sources": [
-    {
-     "url": "https://ra.nju.edu.cn/",
-     "official": true,
-     "what": "学院存在性与办学校区"
-    },
-    {
-     "url": "https://yzb.nju.edu.cn/47862/listm.htm",
-     "official": true,
-     "what": "南大研招网简章目录入口（该 App 注明数据引自此处）"
-    }
-   ],
-   "confidence": "secondary",
-   "retest": null,
-   "admitted": null,
-   "applied": null,
-   "campus": "苏州校区",
-   "directions": [
-    "01 智能控制工程",
-    "02 机器人工程"
-   ],
-   "note": "开设单位为机器人与自动化学院（苏州校区），学院成立较新，2026 年 9 月迎首批本科生。初试科目、分数线 320、招生 38 人来自掌上考研 App 展示页（该页注明引自南大研招网），属二手来源，尚未在官方招生目录中核对原文——报考前务必以 yzb.nju.edu.cn 当年目录为准。"
   }
  ],
+ "completeness": {
+  "note": "n=专业记录数；sub=有任意初试科目；fullSub=科目结构完整（会计2科、其他4科，代码和名称齐全且无待核实占位）；line=有历史复试线。结构完整不等于当年官方原文已核实。2027招生材料另存 admissions-2027.json，不能与本表重复计数。",
+  "bySchool": {
+   "上海交通大学": {
+    "n": 10,
+    "sub": 8,
+    "fullSub": 8,
+    "line": 8
+   },
+   "上海大学": {
+    "n": 12,
+    "sub": 1,
+    "fullSub": 1,
+    "line": 10
+   },
+   "上海财经大学": {
+    "n": 7,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 7
+   },
+   "东北大学": {
+    "n": 9,
+    "sub": 9,
+    "fullSub": 9,
+    "line": 2
+   },
+   "东北师范大学": {
+    "n": 1,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 0
+   },
+   "东南大学": {
+    "n": 11,
+    "sub": 8,
+    "fullSub": 8,
+    "line": 10
+   },
+   "中南大学": {
+    "n": 3,
+    "sub": 3,
+    "fullSub": 3,
+    "line": 3
+   },
+   "中国人民大学": {
+    "n": 10,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 8
+   },
+   "中国农业大学": {
+    "n": 2,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 0
+   },
+   "中国海洋大学": {
+    "n": 19,
+    "sub": 19,
+    "fullSub": 19,
+    "line": 19
+   },
+   "中国科学技术大学": {
+    "n": 6,
+    "sub": 6,
+    "fullSub": 5,
+    "line": 6
+   },
+   "中央财经大学": {
+    "n": 9,
+    "sub": 4,
+    "fullSub": 4,
+    "line": 8
+   },
+   "中山大学": {
+    "n": 16,
+    "sub": 16,
+    "fullSub": 16,
+    "line": 5
+   },
+   "云南大学": {
+    "n": 2,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 0
+   },
+   "兰州大学": {
+    "n": 2,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 0
+   },
+   "北京交通大学": {
+    "n": 12,
+    "sub": 7,
+    "fullSub": 7,
+    "line": 12
+   },
+   "北京信息科技大学": {
+    "n": 2,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 0
+   },
+   "北京大学": {
+    "n": 3,
+    "sub": 3,
+    "fullSub": 3,
+    "line": 2
+   },
+   "北京师范大学": {
+    "n": 1,
+    "sub": 1,
+    "fullSub": 1,
+    "line": 0
+   },
+   "北京理工大学": {
+    "n": 8,
+    "sub": 5,
+    "fullSub": 4,
+    "line": 8
+   },
+   "北京科技大学": {
+    "n": 13,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 11
+   },
+   "北京航空航天大学": {
+    "n": 5,
+    "sub": 4,
+    "fullSub": 4,
+    "line": 5
+   },
+   "北京邮电大学": {
+    "n": 1,
+    "sub": 1,
+    "fullSub": 0,
+    "line": 1
+   },
+   "华东师范大学": {
+    "n": 9,
+    "sub": 1,
+    "fullSub": 1,
+    "line": 8
+   },
+   "华东理工大学": {
+    "n": 8,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 5
+   },
+   "华中师范大学": {
+    "n": 8,
+    "sub": 8,
+    "fullSub": 8,
+    "line": 6
+   },
+   "华中科技大学": {
+    "n": 8,
+    "sub": 6,
+    "fullSub": 5,
+    "line": 8
+   },
+   "华南师范大学": {
+    "n": 12,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 12
+   },
+   "华南理工大学": {
+    "n": 1,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 0
+   },
+   "南京大学": {
+    "n": 17,
+    "sub": 8,
+    "fullSub": 4,
+    "line": 8
+   },
+   "南京师范大学": {
+    "n": 6,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 6
+   },
+   "南京理工大学": {
+    "n": 5,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 0
+   },
+   "南京航空航天大学": {
+    "n": 5,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 5
+   },
+   "南京邮电大学": {
+    "n": 4,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 4
+   },
+   "南开大学": {
+    "n": 11,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 11
+   },
+   "厦门大学": {
+    "n": 13,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 13
+   },
+   "合肥工业大学": {
+    "n": 18,
+    "sub": 13,
+    "fullSub": 13,
+    "line": 11
+   },
+   "吉林大学": {
+    "n": 7,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 7
+   },
+   "同济大学": {
+    "n": 3,
+    "sub": 3,
+    "fullSub": 3,
+    "line": 3
+   },
+   "哈尔滨工业大学": {
+    "n": 6,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 6
+   },
+   "哈尔滨工程大学": {
+    "n": 2,
+    "sub": 2,
+    "fullSub": 1,
+    "line": 0
+   },
+   "四川大学": {
+    "n": 6,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 6
+   },
+   "复旦大学": {
+    "n": 10,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 9
+   },
+   "大连理工大学": {
+    "n": 7,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 7
+   },
+   "天津大学": {
+    "n": 5,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 5
+   },
+   "太原理工大学": {
+    "n": 12,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 12
+   },
+   "对外经济贸易大学": {
+    "n": 7,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 7
+   },
+   "山东大学": {
+    "n": 6,
+    "sub": 4,
+    "fullSub": 4,
+    "line": 0
+   },
+   "广西大学": {
+    "n": 5,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 5
+   },
+   "扬州大学": {
+    "n": 9,
+    "sub": 2,
+    "fullSub": 1,
+    "line": 8
+   },
+   "昆明理工大学": {
+    "n": 9,
+    "sub": 9,
+    "fullSub": 9,
+    "line": 9
+   },
+   "暨南大学": {
+    "n": 10,
+    "sub": 9,
+    "fullSub": 9,
+    "line": 6
+   },
+   "杭州电子科技大学": {
+    "n": 5,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 5
+   },
+   "武汉大学": {
+    "n": 12,
+    "sub": 7,
+    "fullSub": 7,
+    "line": 11
+   },
+   "武汉理工大学": {
+    "n": 10,
+    "sub": 8,
+    "fullSub": 8,
+    "line": 10
+   },
+   "江苏大学": {
+    "n": 11,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 11
+   },
+   "河海大学": {
+    "n": 9,
+    "sub": 7,
+    "fullSub": 7,
+    "line": 9
+   },
+   "浙江大学": {
+    "n": 9,
+    "sub": 9,
+    "fullSub": 9,
+    "line": 9
+   },
+   "浙江工业大学": {
+    "n": 11,
+    "sub": 11,
+    "fullSub": 11,
+    "line": 9
+   },
+   "深圳大学": {
+    "n": 11,
+    "sub": 2,
+    "fullSub": 2,
+    "line": 9
+   },
+   "清华大学": {
+    "n": 9,
+    "sub": 8,
+    "fullSub": 8,
+    "line": 9
+   },
+   "湖南大学": {
+    "n": 5,
+    "sub": 2,
+    "fullSub": 1,
+    "line": 5
+   },
+   "湖南师范大学": {
+    "n": 7,
+    "sub": 4,
+    "fullSub": 4,
+    "line": 7
+   },
+   "湘潭大学": {
+    "n": 6,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 6
+   },
+   "燕山大学": {
+    "n": 6,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 6
+   },
+   "电子科技大学": {
+    "n": 21,
+    "sub": 21,
+    "fullSub": 21,
+    "line": 9
+   },
+   "福州大学": {
+    "n": 9,
+    "sub": 1,
+    "fullSub": 1,
+    "line": 9
+   },
+   "苏州大学": {
+    "n": 13,
+    "sub": 13,
+    "fullSub": 13,
+    "line": 9
+   },
+   "西北大学": {
+    "n": 2,
+    "sub": 2,
+    "fullSub": 1,
+    "line": 2
+   },
+   "西北工业大学": {
+    "n": 27,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 16
+   },
+   "西南交通大学": {
+    "n": 16,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 16
+   },
+   "西南财经大学": {
+    "n": 7,
+    "sub": 7,
+    "fullSub": 7,
+    "line": 5
+   },
+   "西安交通大学": {
+    "n": 4,
+    "sub": 3,
+    "fullSub": 3,
+    "line": 4
+   },
+   "西安电子科技大学": {
+    "n": 4,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 4
+   },
+   "辽宁大学": {
+    "n": 3,
+    "sub": 3,
+    "fullSub": 3,
+    "line": 3
+   },
+   "郑州大学": {
+    "n": 13,
+    "sub": 5,
+    "fullSub": 5,
+    "line": 9
+   },
+   "重庆大学": {
+    "n": 6,
+    "sub": 6,
+    "fullSub": 6,
+    "line": 4
+   },
+   "首都师范大学": {
+    "n": 1,
+    "sub": 0,
+    "fullSub": 0,
+    "line": 1
+   }
+  },
+  "totals": {
+   "records": 630,
+   "withSubjects": 362,
+   "withCompleteSubjects": 350,
+   "withLines": 509,
+   "withRetestBooks": 9,
+   "withRetestSubjects": 37,
+   "tuimianOnly": 0
+  },
+  "sourceAccess": {
+   "note": "各校招生目录的可达性差异很大，逐所试出来的结论：",
+   "ok": [
+    "电子科技大学：目录 PDF 挂在 xxgkw.uestc.edu.cn/__local/ 下，可直接取",
+    "合肥工业大学：PDF 在 yjszs.hfut.edu.cn/_upload/ 下，含科目与招生计划",
+    "南京大学电科院：网页正文是图片，但附件 PDF 可取（复试参考书目）",
+    "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下",
+    "中山大学：全校目录 PDF 在 graduate.sysu.edu.cn/zsw/sites/default/files/ 下，含初试+复试+招生数",
+    "南京理工大学：目录 PDF 在 gs.njust.edu.cn/_upload/ 下，含初试与复试科目"
+   ],
+   "blocked": [
+    "西北工业大学：目录页正文只写「见附件」，附件链接提取不到",
+    "西南交通大学：整站为 vatuu 查询系统，表格由 JS 填充",
+    "北京科技大学：逐专业页面把目录做成 image.png，无文字层",
+    "华南理工大学：研招网 robots 禁止自动访问，招生目录为 yanzhao.scut.edu.cn 查询系统，两条路都不通",
+    "南京大学：招生目录页正文为空、附件未渲染，只能靠各学院自己发的 PDF 补"
+   ]
+  },
+  "campusNote": "中大 campus 字段只填了从各学院官网核实过办学地点的学院（电信院=广州东校园、电通院与集成电路学院=深圳、微电子科学与技术学院=珠海）；其余学院留空待核实，不按印象填。",
+  "verifyNeeded": [
+   {
+    "school": "南京大学",
+    "code": "085406",
+    "name": "控制工程",
+    "status": "已确认开设（此前本库误判为停招，已订正）",
+    "evidence": [
+     "开设单位为机器人与自动化学院（苏州校区），学院官网 ra.nju.edu.cn 可访问，2026 年 9 月迎首批本科生",
+     "此前误判原因：把电子科学与工程学院的专业清单当成了全校 0854 的全集，未检索新设学院",
+     "初试 101 + 204 英语二 + 302 数学二 + 865 自动控制原理（经典 60%、现代 40%），两个方向：01 智能控制工程、02 机器人工程"
+    ],
+    "stillUnverified": [
+     "分数线 320 与招生 38 人：来自第三方 App 展示页，未见官方原文",
+     "另有单一聚合站称工程管理学院同样招 085406（2025 复试线 360、拟招 27、复试考微机原理与接口技术），未获官方佐证，本库暂不建记录"
+    ],
+    "howToVerify": "以 yzb.nju.edu.cn 简章目录当年的招生目录附件为准，或致电机器人与自动化学院研究生教务"
+   }
+  ],
+  "scopeNote": "中山大学只收录专硕，且不收 085403 集成电路工程方向，以及微电子科学与技术学院、集成电路学院、柔性电子学院、生物医学工程学院四个招生单位。其余学校不做此过滤——085403 在他校仍有 24 条记录。"
+ },
  "notEligible": [
   {
    "school": "上海财经大学",
@@ -34058,460 +34578,19 @@
   "acc": "会计 MPAcc"
  },
  "stats": {
-  "programs": 583,
-  "schools": 77,
+  "programs": 630,
+  "schools": 78,
   "withLines": 509,
-  "withRetestRatio": 110,
-  "withLineKind": 273,
+  "withRetestRatio": 109,
+  "withLineKind": 274,
   "withSubjectLines": 208,
   "withApplied": 2,
   "notEligible": 4,
   "byTrack": {
    "acc": 29,
-   "cs": 117,
-   "ee": 379,
+   "cs": 121,
+   "ee": 422,
    "fin": 58
   }
- },
- "completeness": {
-  "note": "逐校统计：n=专业记录数，sub=其中填了初试科目的条数，line=填了复试线的条数。院校库里没出现在这里的学校表示一条专业记录都还没有。各校官方招生专业目录多为 JS 查询系统，无法批量抓取，这些空缺只能逐校手工补，欢迎 PR。",
-  "bySchool": {
-   "上海交通大学": {
-    "n": 10,
-    "sub": 8,
-    "line": 8
-   },
-   "上海大学": {
-    "n": 12,
-    "sub": 1,
-    "line": 10
-   },
-   "上海财经大学": {
-    "n": 7,
-    "sub": 5,
-    "line": 7
-   },
-   "东北大学": {
-    "n": 9,
-    "sub": 9,
-    "line": 2
-   },
-   "东北师范大学": {
-    "n": 1,
-    "sub": 0,
-    "line": 0
-   },
-   "东南大学": {
-    "n": 11,
-    "sub": 8,
-    "line": 10
-   },
-   "中南大学": {
-    "n": 3,
-    "sub": 3,
-    "line": 3
-   },
-   "中国人民大学": {
-    "n": 10,
-    "sub": 5,
-    "line": 8
-   },
-   "中国农业大学": {
-    "n": 2,
-    "sub": 0,
-    "line": 0
-   },
-   "中国海洋大学": {
-    "n": 19,
-    "sub": 19,
-    "line": 19
-   },
-   "中国科学技术大学": {
-    "n": 6,
-    "sub": 6,
-    "line": 6
-   },
-   "中央财经大学": {
-    "n": 9,
-    "sub": 4,
-    "line": 8
-   },
-   "中山大学": {
-    "n": 16,
-    "sub": 16,
-    "line": 5
-   },
-   "云南大学": {
-    "n": 2,
-    "sub": 2,
-    "line": 0
-   },
-   "兰州大学": {
-    "n": 2,
-    "sub": 2,
-    "line": 0
-   },
-   "北京交通大学": {
-    "n": 12,
-    "sub": 7,
-    "line": 12
-   },
-   "北京信息科技大学": {
-    "n": 2,
-    "sub": 2,
-    "line": 0
-   },
-   "北京大学": {
-    "n": 3,
-    "sub": 3,
-    "line": 2
-   },
-   "北京师范大学": {
-    "n": 1,
-    "sub": 1,
-    "line": 0
-   },
-   "北京理工大学": {
-    "n": 8,
-    "sub": 5,
-    "line": 8
-   },
-   "北京科技大学": {
-    "n": 13,
-    "sub": 0,
-    "line": 11
-   },
-   "北京航空航天大学": {
-    "n": 5,
-    "sub": 4,
-    "line": 5
-   },
-   "北京邮电大学": {
-    "n": 1,
-    "sub": 1,
-    "line": 1
-   },
-   "华东师范大学": {
-    "n": 9,
-    "sub": 1,
-    "line": 8
-   },
-   "华东理工大学": {
-    "n": 8,
-    "sub": 6,
-    "line": 5
-   },
-   "华中师范大学": {
-    "n": 8,
-    "sub": 8,
-    "line": 6
-   },
-   "华中科技大学": {
-    "n": 8,
-    "sub": 6,
-    "line": 8
-   },
-   "华南师范大学": {
-    "n": 12,
-    "sub": 0,
-    "line": 12
-   },
-   "华南理工大学": {
-    "n": 1,
-    "sub": 0,
-    "line": 0
-   },
-   "南京大学": {
-    "n": 17,
-    "sub": 8,
-    "line": 8
-   },
-   "南京师范大学": {
-    "n": 6,
-    "sub": 2,
-    "line": 6
-   },
-   "南京理工大学": {
-    "n": 5,
-    "sub": 5,
-    "line": 0
-   },
-   "南京航空航天大学": {
-    "n": 5,
-    "sub": 0,
-    "line": 5
-   },
-   "南京邮电大学": {
-    "n": 4,
-    "sub": 0,
-    "line": 4
-   },
-   "南开大学": {
-    "n": 11,
-    "sub": 5,
-    "line": 11
-   },
-   "厦门大学": {
-    "n": 13,
-    "sub": 2,
-    "line": 13
-   },
-   "合肥工业大学": {
-    "n": 18,
-    "sub": 13,
-    "line": 11
-   },
-   "吉林大学": {
-    "n": 7,
-    "sub": 0,
-    "line": 7
-   },
-   "同济大学": {
-    "n": 3,
-    "sub": 3,
-    "line": 3
-   },
-   "哈尔滨工业大学": {
-    "n": 6,
-    "sub": 5,
-    "line": 6
-   },
-   "哈尔滨工程大学": {
-    "n": 2,
-    "sub": 2,
-    "line": 0
-   },
-   "四川大学": {
-    "n": 6,
-    "sub": 6,
-    "line": 6
-   },
-   "复旦大学": {
-    "n": 10,
-    "sub": 6,
-    "line": 9
-   },
-   "大连理工大学": {
-    "n": 7,
-    "sub": 0,
-    "line": 7
-   },
-   "天津大学": {
-    "n": 5,
-    "sub": 5,
-    "line": 5
-   },
-   "太原理工大学": {
-    "n": 12,
-    "sub": 6,
-    "line": 12
-   },
-   "对外经济贸易大学": {
-    "n": 7,
-    "sub": 0,
-    "line": 7
-   },
-   "山东大学": {
-    "n": 6,
-    "sub": 4,
-    "line": 0
-   },
-   "广西大学": {
-    "n": 5,
-    "sub": 5,
-    "line": 5
-   },
-   "扬州大学": {
-    "n": 9,
-    "sub": 2,
-    "line": 8
-   },
-   "昆明理工大学": {
-    "n": 9,
-    "sub": 9,
-    "line": 9
-   },
-   "暨南大学": {
-    "n": 10,
-    "sub": 9,
-    "line": 6
-   },
-   "杭州电子科技大学": {
-    "n": 5,
-    "sub": 0,
-    "line": 5
-   },
-   "武汉大学": {
-    "n": 12,
-    "sub": 7,
-    "line": 11
-   },
-   "武汉理工大学": {
-    "n": 10,
-    "sub": 8,
-    "line": 10
-   },
-   "江苏大学": {
-    "n": 11,
-    "sub": 2,
-    "line": 11
-   },
-   "河海大学": {
-    "n": 9,
-    "sub": 7,
-    "line": 9
-   },
-   "浙江大学": {
-    "n": 9,
-    "sub": 9,
-    "line": 9
-   },
-   "浙江工业大学": {
-    "n": 11,
-    "sub": 11,
-    "line": 9
-   },
-   "深圳大学": {
-    "n": 11,
-    "sub": 2,
-    "line": 9
-   },
-   "清华大学": {
-    "n": 9,
-    "sub": 8,
-    "line": 9
-   },
-   "湖南大学": {
-    "n": 5,
-    "sub": 2,
-    "line": 5
-   },
-   "湖南师范大学": {
-    "n": 7,
-    "sub": 4,
-    "line": 7
-   },
-   "湘潭大学": {
-    "n": 6,
-    "sub": 6,
-    "line": 6
-   },
-   "燕山大学": {
-    "n": 6,
-    "sub": 6,
-    "line": 6
-   },
-   "电子科技大学": {
-    "n": 21,
-    "sub": 21,
-    "line": 9
-   },
-   "福州大学": {
-    "n": 9,
-    "sub": 1,
-    "line": 9
-   },
-   "苏州大学": {
-    "n": 13,
-    "sub": 13,
-    "line": 9
-   },
-   "西北大学": {
-    "n": 2,
-    "sub": 2,
-    "line": 2
-   },
-   "西北工业大学": {
-    "n": 27,
-    "sub": 0,
-    "line": 16
-   },
-   "西南交通大学": {
-    "n": 16,
-    "sub": 0,
-    "line": 16
-   },
-   "西南财经大学": {
-    "n": 7,
-    "sub": 7,
-    "line": 5
-   },
-   "西安交通大学": {
-    "n": 4,
-    "sub": 3,
-    "line": 4
-   },
-   "西安电子科技大学": {
-    "n": 4,
-    "sub": 0,
-    "line": 4
-   },
-   "辽宁大学": {
-    "n": 3,
-    "sub": 3,
-    "line": 3
-   },
-   "郑州大学": {
-    "n": 13,
-    "sub": 5,
-    "line": 9
-   },
-   "重庆大学": {
-    "n": 6,
-    "sub": 6,
-    "line": 4
-   },
-   "首都师范大学": {
-    "n": 1,
-    "sub": 0,
-    "line": 1
-   }
-  },
-  "totals": {
-   "records": 630,
-   "withSubjects": 362,
-   "withLines": 509,
-   "withRetestBooks": 9,
-   "withRetestSubjects": 37,
-   "tuimianOnly": 0
-  },
-  "sourceAccess": {
-   "note": "各校招生目录的可达性差异很大，逐所试出来的结论：",
-   "ok": [
-    "电子科技大学：目录 PDF 挂在 xxgkw.uestc.edu.cn/__local/ 下，可直接取",
-    "合肥工业大学：PDF 在 yjszs.hfut.edu.cn/_upload/ 下，含科目与招生计划",
-    "南京大学电科院：网页正文是图片，但附件 PDF 可取（复试参考书目）",
-    "北京信息科技大学：PDF 在 yanjiusheng.bistu.edu.cn/docs/ 下",
-    "中山大学：全校目录 PDF 在 graduate.sysu.edu.cn/zsw/sites/default/files/ 下，含初试+复试+招生数",
-    "南京理工大学：目录 PDF 在 gs.njust.edu.cn/_upload/ 下，含初试与复试科目"
-   ],
-   "blocked": [
-    "西北工业大学：目录页正文只写「见附件」，附件链接提取不到",
-    "西南交通大学：整站为 vatuu 查询系统，表格由 JS 填充",
-    "北京科技大学：逐专业页面把目录做成 image.png，无文字层",
-    "华南理工大学：研招网 robots 禁止自动访问，招生目录为 yanzhao.scut.edu.cn 查询系统，两条路都不通",
-    "南京大学：招生目录页正文为空、附件未渲染，只能靠各学院自己发的 PDF 补"
-   ]
-  },
-  "campusNote": "中大 campus 字段只填了从各学院官网核实过办学地点的学院（电信院=广州东校园、电通院与集成电路学院=深圳、微电子科学与技术学院=珠海）；其余学院留空待核实，不按印象填。",
-  "verifyNeeded": [
-   {
-    "school": "南京大学",
-    "code": "085406",
-    "name": "控制工程",
-    "status": "已确认开设（此前本库误判为停招，已订正）",
-    "evidence": [
-     "开设单位为机器人与自动化学院（苏州校区），学院官网 ra.nju.edu.cn 可访问，2026 年 9 月迎首批本科生",
-     "此前误判原因：把电子科学与工程学院的专业清单当成了全校 0854 的全集，未检索新设学院",
-     "初试 101 + 204 英语二 + 302 数学二 + 865 自动控制原理（经典 60%、现代 40%），两个方向：01 智能控制工程、02 机器人工程"
-    ],
-    "stillUnverified": [
-     "分数线 320 与招生 38 人：来自第三方 App 展示页，未见官方原文",
-     "另有单一聚合站称工程管理学院同样招 085406（2025 复试线 360、拟招 27、复试考微机原理与接口技术），未获官方佐证，本库暂不建记录"
-    ],
-    "howToVerify": "以 yzb.nju.edu.cn 简章目录当年的招生目录附件为准，或致电机器人与自动化学院研究生教务"
-   }
-  ],
-  "scopeNote": "中山大学只收录专硕，且不收 085403 集成电路工程方向，以及微电子科学与技术学院、集成电路学院、柔性电子学院、生物医学工程学院四个招生单位。其余学校不做此过滤——085403 在他校仍有 24 条记录。"
  }
 }

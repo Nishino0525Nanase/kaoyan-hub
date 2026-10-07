@@ -403,7 +403,7 @@ header{
 .badge.bsy{border-color:var(--s3);color:var(--s3)}
 .aplus{display:flex;flex-wrap:wrap;gap:5px}
 .ap{font-size:11.5px;padding:2px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
-.sfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:9px;margin-top:auto}
+.sfoot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:9px;margin-top:auto}
 .meter{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-2)}
 .bars{display:flex;gap:2px}
 .bars i{width:5px;height:11px;border-radius:2px;background:var(--line-strong)}
@@ -610,6 +610,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 34px;colo
     <p class="sub" id="schoolSub"></p>
     <div class="season" id="seasonHint2" hidden></div>
     <div class="freshbar" id="freshBar"></div>
+    <div id="admissionOverview"></div>
 
     <p class="lvnote" id="lvNote"></p>
     <div id="vfNote"></div>
@@ -633,6 +634,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 34px;colo
   <section class="panel" id="p-majors">
     <h2 class="sec">专业方向</h2>
     <p class="sub" id="majSub"></p>
+    <p class="notice">此表保留历史聚合数据。2027 招生目录、科目和学费请打开院校详情中的「2027 招生资料」；旧复试线不代表 2027 年要求。<button class="det" type="button" onclick="go('schools')">查看本次更新的院校 →</button></p>
 
     <div class="filters">
       <div class="frow" style="gap:8px">
@@ -747,6 +749,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 34px;colo
 <script id="data-dorm" type="application/json">__DATA_DORM__</script>
 <script id="data-sysu" type="application/json">__DATA_SYSU__</script>
 <script id="data-nju" type="application/json">__DATA_NJU__</script>
+<script id="data-admissions" type="application/json">__DATA_ADMISSIONS__</script>
 <script id="data-quota" type="application/json">__DATA_QUOTA__</script>
 <script id="data-fresh" type="application/json">__DATA_FRESH__</script>
 <script id="data-tracks" type="application/json">__DATA_TRACKS__</script>
@@ -773,6 +776,9 @@ const ADV     = J('data-adv');
 const DORM    = J('data-dorm');
 const SYSU    = J('data-sysu');
 const NJU     = J('data-nju');
+const ADMISSIONS = J('data-admissions');
+const admissionBy = new Map(ADMISSIONS.schools.map(s => [s.school, s]));
+const admissionSourceBy = new Map(ADMISSIONS.sources.map(s => [s.id, s]));
 /* 名额与复试细则的匹配。
    注意：一条名额记录常常是「学院 + 专业代码」级别的，而一个代码下可能有多个方向
    （上交 085400 底下就有计算机、AI、软件工程等好几个）。若不加区分地按 school+code 匹配，
@@ -814,6 +820,51 @@ const TRACK_LABEL = PROG.tracks;
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* 年度招生快照：不与旧年复试、录取记录拼成同一年的项目。 */
+const admissionStatus = s => s.status === 'not_found' ? '本次未检索到' : s.status === 'partial' ? '部分材料' : '已收录资料';
+const verificationLabel = {content_verified:'已核对所列内容',link_verified:'仅核验入口',access_blocked:'详情访问受阻'};
+function admissionLink(id, label){
+  const s = admissionSourceBy.get(id);
+  if(!s) return '';
+  return `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(label || s.title)} ↗</a>`;
+}
+function admissionFee(f){
+  return f.amount == null ? '金额未确认' : `${f.amount.toLocaleString('zh-CN')} ${esc(f.unit)}`;
+}
+function admissionBlock(name){
+  const s = admissionBy.get(name);
+  if(!s) return '';
+  const rows = ADMISSIONS.programs.filter(p => p.school === name);
+  return `<section class="sysec annual-admissions" data-admission-school="${esc(name)}">
+    <h3>2027 招生资料 <span class="badge">${admissionStatus(s)}</span></h3>
+    <p>${esc(s.summary)}</p>
+    <ul style="padding-left:20px;line-height:1.8">${s.sourceIds.map(id => {const d=admissionSourceBy.get(id); return `<li>${admissionLink(id)} <span class="muted">${d.publishedAt ? `发布 ${esc(d.publishedAt)} · ` : ''}${esc(verificationLabel[d.verification])} · 检查 ${esc(d.checkedAt)}</span></li>`;}).join('')}</ul>
+    ${s.policies.map(p => `<p class="hint">${esc(p.text)} ${admissionLink(p.sourceId,'依据')} · ${esc(p.locator)}</p>`).join('')}
+    ${s.feeRules.length ? `<details><summary>已核实的学费与学制适用范围</summary><ul style="padding-left:20px;line-height:1.8">${s.feeRules.map(f => `<li><b>${esc(f.scope)}</b>：${admissionFee(f)}；学制 ${f.years == null ? '本次未核实' : f.years+' 年'}。${f.exceptions ? esc(f.exceptions) : ''} ${admissionLink(f.sourceId,'原表')} · ${esc(f.locator)}</li>`).join('')}</ul></details>` : ''}
+    ${rows.length ? `<p class="hint"><b>本次已核实 ${rows.length} 条年度专业/方向记录。</b>目录拟招人数与统考剩余计划分开；2027 复试线、报考/复试/拟录取人数仍未收录。金额须按学习方式和适用范围读取。</p>
+      <div style="overflow-x:auto" tabindex="0" aria-label="2027 专业资料表，可横向滚动"><table class="dormt" style="min-width:950px">
+        <thead><tr><th>学院 / 专业</th><th>2027 初试科目</th><th>目录复试科目 / 范围</th><th>目录拟招 / 统考</th><th>学费 / 学制</th><th>核对位置</th></tr></thead>
+        <tbody>${rows.map(p => `<tr data-annual-id="${esc(p.id)}"><td><b>${esc(p.college)}</b><br>${esc(p.code)} ${esc(p.name)}<br><span class="badge">${esc(p.studyMode)}</span>${p.direction ? `<br>${esc(p.direction)}` : ''}</td>
+          <td>${(p.subjects || []).map(x=>`${esc(x.code)} ${esc(x.name)}`).join('<br>') || '未确认'}</td>
+          <td>${p.retestSubjects ? p.retestSubjects.map(x=>`${x.code ? esc(x.code)+' ' : ''}${esc(x.name)}`).join('<br>') : '本次未确认'}</td>
+          <td><b>${p.seats.plan ?? '未拆分'}</b>${p.seats.plan == null ? '' : ' 人'}<br>统考：${p.seats.exam ?? '未确认'}<br>推免：${p.seats.tuimian ?? '未确认'}<details><summary>人数口径</summary>${esc(p.seats.basis)}</details></td>
+          <td>${admissionFee(p.tuition)}<br>${p.years == null ? '学制未确认' : p.years+' 年'}<details><summary>适用范围 / 待核事项</summary>${esc(p.tuition.scope)}${p.tuition.exceptions ? '<br>'+esc(p.tuition.exceptions) : ''}<ul style="padding-left:16px">${Object.values(p.unknownReasons).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details></td>
+          <td>${p.evidence.map(e=>`${admissionLink(e.sourceId,'官方依据')}<br><span class="muted">${esc(e.locator)}</span>`).join('<br>')}</td></tr>`).join('')}</tbody>
+      </table></div>` : ''}
+    <div class="warnbox">${s.gaps.map(x=>esc(x)).join('<br>')}</div>
+  </section>`;
+}
+function renderAdmissionOverview(){
+  const published=ADMISSIONS.schools.filter(s=>s.status!=='not_found');
+  $('#admissionOverview').innerHTML=`<details class="sysec" open><summary><b>2027 招生资料更新</b> · ${published.length} 所院校材料入口 · ${ADMISSIONS.programs.length} 条年度记录</summary>
+    <p class="hint">核查区间 ${esc(ADMISSIONS.checkedRange.join(' — '))}（北京时间）。${esc(ADMISSIONS.scope)}点击院校查看已核对内容和待核事项。</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">${ADMISSIONS.schools.map(s=>`<button type="button" class="det" data-admission-det="${esc(s.school)}">${esc(s.school)} · ${admissionStatus(s)}</button>`).join('')}</div></details>`;
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-admission-det]');
+  if(b) openDetail(b.dataset.admissionDet);
+});
 const SERIES = ['--s1','--s2','--s3','--s4','--s5','--s6','--s7','--s8'];
 const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 
@@ -915,7 +966,7 @@ function renderSchools(){
         <div class="sname">${esc(s.name)}<span class="scity">${esc(s.city)}</span></div>
       </div>
       <div class="badges">${s.tier.map(t=>`<span class="badge ${badgeCls(t)}">${esc(t)}</span>`).join('')}
-        <span class="badge">${esc(s.zone)} 区</span>${chgBadge}</div>
+        <span class="badge">${esc(s.zone)} 区</span>${chgBadge}${admissionBy.has(s.name) ? `<span class="badge">2027 · ${admissionStatus(admissionBy.get(s.name))}</span>` : ''}</div>
       ${s.aPlus.length ? `<div class="aplus">${ap}</div>`
         : `<div class="muted">第四轮评估 A 类学科 ${s.aCount} 个${s.aCount?'':'（无）'}</div>`}
       <div class="sfoot">
@@ -925,8 +976,8 @@ function renderSchools(){
         ${(() => {
           const c = (PROG.completeness && PROG.completeness.bySchool || {})[s.name];
           if(!c) return '<span class="dgap none">暂无专业记录</span>';
-          if(c.sub === c.n) return `<span class="dgap full">${c.n} 个专业 · 科目齐</span>`;
-          return `<span class="dgap part">${c.n} 个专业 · 科目缺 ${c.n - c.sub}</span>`;
+          if(c.fullSub === c.n) return `<span class="dgap full">${c.n} 条历史记录 · 科目结构齐</span>`;
+          return `<span class="dgap part">${c.n} 条历史记录 · 科目结构待补 ${c.n - (c.fullSub || 0)}</span>`;
         })()}
         <span style="display:flex;gap:6px;align-items:center">
           <button class="det" type="button" data-det="${esc(s.name)}">详情${ps.length?` · ${ps.length} 专业`:''}</button>
@@ -989,6 +1040,8 @@ function openDetail(name){
     <div class="kv"><span>第四轮 A 类学科 <b>${s.aCount}</b> 个</span>
       <span><a href="${esc(s.gradSite)}" target="_blank" rel="noopener">研招网官网 ↗</a></span></div>
 
+    ${admissionBlock(name)}
+
     ${cs.length ? `<h4 style="margin:18px 0 0;font-size:14.5px">⚠ 初试科目变动</h4>` +
       cs.map(c => `<div class="warnbox">
         <span class="yearpill">${c.year} 考研</span> <b>${esc(c.type)}</b> ${srcTag(c.official)}<br>
@@ -998,7 +1051,7 @@ function openDetail(name){
         <br><a href="${esc(c.source)}" target="_blank" rel="noopener">查看来源 ↗</a>
       </div>`).join('') : ''}
 
-    <h4 style="margin:20px 0 0;font-size:14.5px">专业详情</h4>
+    <h4 style="margin:20px 0 0;font-size:14.5px">历史专业详情（按各条年份参考）</h4>
     ${ps.length ? ps.map(p => `<div class="prog">
         <h4>${esc(p.code)} ${esc(p.name)}
           <span class="badge" style="margin-left:6px">${esc(p.degree)}</span>
@@ -1780,6 +1833,8 @@ function renderSysu(){
     ${k.src ? `<br><a href="${esc(k.src)}" target="_blank" rel="noopener">原文 →</a>` : ''}</div>`).join('');
 
   $('#sysuBody').innerHTML = `
+   ${admissionBlock('中山大学')}
+   <div class="warnbox"><b>下方为 2024–2026 历史资料。</b>历年复试线、录取统计和名额分析不能作为 2027 统考剩余名额或分数要求；2027 科目以本页上方目录为准。</div>
    ${(() => { const V = S.verdict; if(!V) return '';
      return `<section class="sysec verdict"><h3>${esc(V.t)}</h3>
        <p class="hint">${esc(V.sub)}</p>
@@ -2194,7 +2249,8 @@ function renderSysu(){
   // 分组切换：一次只显示一组，避免 17 个区块堆在一页
   requestAnimationFrame(() => {
     const host = $('#sysuBody');
-    const secs = [...host.querySelectorAll('section.sysec')];
+    // 最新年度资料始终放在顶部，不受历史专题的分类和重排影响。
+    const secs = [...host.querySelectorAll('section.sysec:not(.annual-admissions)')];
     const MAP = {
       '884':'决策','085400':'决策','招生人数':'决策','历年招生':'决策',
       '校线':'决策','复录比':'决策',
@@ -2248,7 +2304,7 @@ function renderSysu(){
     show('结论');
   });
 
-  $('#sysuSub').innerHTML = `${esc(S.school)} · 数据更新于 ${esc(S.updated)}` +
+  $('#sysuSub').innerHTML = `${esc(S.school)} · 2027 招生材料检查至 ${esc(ADMISSIONS.updated)} · 历史专题更新于 ${esc(S.updated)}` +
     (S.scope ? `<br><span class="muted">${esc(S.scope)}</span>` : '');
   $('#sysuNote').textContent = S.note;
 }
@@ -2264,6 +2320,7 @@ function renderNju(){
       x.url ? ` <a href="${esc(x.url)}" target="_blank" rel="noopener">打开 →</a>` : ''}</dd>`).join('')}</dl>`;
 
   $('#njuBody').innerHTML = `
+   ${admissionBlock('南京大学')}
    ${(() => { const V = NJU.verdict; if(!V) return '';
      return `<div class="lyr verdict"><h4>${esc(V.t)}</h4>
        <div class="vlist">${V.rows.map(r => `<div class="vrow">
@@ -2504,6 +2561,7 @@ function trendBlock(T, cls){
 }
 
 /* ---------------- boot ---------------- */
+renderAdmissionOverview();
 renderSchools();
 buildMajFilters(); renderMajors(); renderFresh();
 drawAll();

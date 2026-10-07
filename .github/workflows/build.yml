@@ -29,6 +29,9 @@ jobs:
       - name: 重新合并逐专业数据
         run: python3 src/merge_programs.py
 
+      - name: 校验年度招生资料口径
+        run: python3 scripts/validate_admissions.py
+
       - name: 检查 programs.json 是否与各批次一致
         run: |
           git diff --quiet data/programs.json || {

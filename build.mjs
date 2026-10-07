@@ -32,6 +32,7 @@ const files = {
   __DATA_DORM__:    'data/dorms.json',
   __DATA_SYSU__:    'data/sysu.json',
   __DATA_NJU__:     'data/nju.json',
+  __DATA_ADMISSIONS__: 'data/admissions-2027.json',
 };
 
 /* ---- 数据新鲜度：构建时算一次，页面直接显示「这块数据多久没动了」---- */
@@ -64,6 +65,7 @@ function freshness() {
     { key: '导师名录',      file: 'advisors.json',               updated: rd('advisors.json').updated, note: '各学院官网师资页，随学院更新而变动' },
     { key: '校区住宿',      file: 'dorms.json',                  updated: rd('dorms.json').updated, note: '学校信息公开网每年 7 月前后公示新学年标准' },
     { key: '中大专栏',      file: 'sysu.json',                   updated: rd('sysu.json').updated, note: '聚合本库中大数据 + 校级政策，随学校发布更新' },
+    { key: '2027 招生资料', file: 'admissions-2027.json', updated: rd('admissions-2027.json').updated, note: '年度简章、目录、学费；与历史分数线分别展示' },
   ].map(x => {
     const mo = monthsSince(x.updated);
     return { ...x, monthsAgo: mo, grade: grade(mo) };

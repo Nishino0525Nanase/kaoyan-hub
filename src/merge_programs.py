@@ -104,6 +104,38 @@ base['stats'] = {
     "notEligible": len(base['notEligible']),
     "byTrack": dict(Counter(r['track'] for r in out)),
 }
+
+# 完整度随源数据重算；保留人工维护的来源可达性、范围与待核实说明。
+# sub 是“有任意初试科目”，fullSub 才是科目结构完整，不能混用。
+def subjects_complete(r):
+    subjects = r.get('subjects') or []
+    expected = 2 if r['track'] == 'acc' else 4
+    return len(subjects) == expected and all(
+        str(s.get('code') or '').strip() and str(s.get('name') or '').strip()
+        and not any(word in str(s.get('name')) for word in ('待核实', '待查', '未知'))
+        for s in subjects
+    )
+
+completeness = base.setdefault('completeness', {})
+completeness['note'] = ('n=专业记录数；sub=有任意初试科目；fullSub=科目结构完整（会计2科、其他4科，代码和名称齐全且无待核实占位）；'
+                        'line=有历史复试线。结构完整不等于当年官方原文已核实。2027招生材料另存 admissions-2027.json，不能与本表重复计数。')
+completeness['bySchool'] = {
+    school: {
+        'n': sum(r['school'] == school for r in out),
+        'sub': sum(r['school'] == school and bool(r['subjects']) for r in out),
+        'fullSub': sum(r['school'] == school and subjects_complete(r) for r in out),
+        'line': sum(r['school'] == school and bool(r['lines']) for r in out),
+    } for school in schools
+}
+completeness['totals'] = {
+    'records': len(out),
+    'withSubjects': sum(bool(r['subjects']) for r in out),
+    'withCompleteSubjects': sum(subjects_complete(r) for r in out),
+    'withLines': with_lines,
+    'withRetestBooks': sum(bool(r.get('retestBooks')) for r in out),
+    'withRetestSubjects': sum(bool(r.get('retestSubjects')) for r in out),
+    'tuimianOnly': sum(bool(r.get('tuimianOnly')) for r in out),
+}
 base['note'] = (
     "逐校逐专业的初试科目、复试线、招录数据。confidence 说明可信度："
     "official=来自学校官网/研招网；secondary=来自考研平台汇总，未经官方核实；partial=部分核实。"
