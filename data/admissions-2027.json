@@ -1,0 +1,4134 @@
+{
+  "schemaVersion": 1,
+  "year": 2027,
+  "updated": "2026-10-07",
+  "checkedRange": [
+    "2026-10-05",
+    "2026-10-07"
+  ],
+  "timezone": "Asia/Shanghai",
+  "scope": "本次优先中大既定 0854 专硕范围、杭电四方向普通项目和上交控制相关方向；其他院校收录本次定位到的官方材料及已核实条款。不是全国院校全量审计。",
+  "definitions": {
+    "programKey": "year + school + collegeCode + code + studyMode + direction；目录按专业汇总且方向共用人数时只计一条。",
+    "seats.plan": "该目录行拟招生人数，非最终统考名额。",
+    "seats.exam": "仅填官方明确的统考计划；禁止用估算推免人数相减。",
+    "null": "未知值保留 JSON null，原因见 unknownReasons；无适用例外可用 null，不用 0 或占位文字冒充数据。",
+    "verification": "content_verified 仅覆盖 verificationScope/evidence 所列字段；link_verified 仅入口；access_blocked 为访问异常，不表示数据虚假。",
+    "coverage": "本文件年度记录与 programs.json 历史聚合记录分别统计，不能相加宣称专业覆盖增长。"
+  },
+  "sources": [
+    {
+      "id": "sysu-charter",
+      "school": "中山大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "https://graduate.sysu.edu.cn/zsw/article/541",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-05",
+      "verification": "content_verified",
+      "verificationScope": "已读简章正文与附件；逐专业字段限本次收录的 12 条 0854 记录。"
+    },
+    {
+      "id": "sysu-catalog",
+      "school": "中山大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士招生学科专业目录（PDF）",
+      "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2026-09/2.%20%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A62027%E5%B9%B4%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E5%AD%A6%E7%A7%91%E4%B8%93%E4%B8%9A%E7%9B%AE%E5%BD%95.pdf",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "PDF 第 21、22、24、26、28、29、30、32 页逐行核对并渲染查看。 2026-10-07 重新下载，与 10-05 文件 SHA-256 相同。",
+      "retrievedAt": "2026-10-07"
+    },
+    {
+      "id": "sysu-fees",
+      "school": "中山大学",
+      "year": 2027,
+      "kind": "tuition",
+      "title": "硕士研究生学费标准（2026-09-30 版）",
+      "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2026-09/7.%20%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A6%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E8%B4%B9%E6%A0%87%E5%87%86.pdf",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "PDF 第 1–3 页；全日制非定向电子信息、校企专项例外及非全日制定向电子信息。 2026-10-07 重新下载，与 10-05 文件 SHA-256 相同。",
+      "retrievedAt": "2026-10-07"
+    },
+    {
+      "id": "hdu-charter",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生章程",
+      "url": "https://grs.hdu.edu.cn/2026/0928/c13497a300811/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-29",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "正文第十二、十三、十五节：学费、住宿与学制；原文明示中外合作项目另行规定。"
+    },
+    {
+      "id": "hdu-catalog-page",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士招生专业目录及附件",
+      "url": "https://grs.hdu.edu.cn/2026/0929/c13497a301001/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-29",
+      "checkedAt": "2026-10-05",
+      "verification": "content_verified",
+      "verificationScope": "核对附件归属与目录年份；附带的 2026 报录数据没有当作 2027 数据。"
+    },
+    {
+      "id": "hdu-catalog",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录（XLS）",
+      "url": "https://grs.hdu.edu.cn/_upload/article/files/5c/06/383e4fad40fb80292f0632927165/0c6dd461-06e5-485e-a8cb-aea791618009.xls",
+      "official": true,
+      "publishedAt": "2026-09-29",
+      "checkedAt": "2026-10-05",
+      "verification": "content_verified",
+      "verificationScope": "工作表 rep_print_kskm3；逐行读取本次收录的四方向记录，保留行号。"
+    },
+    {
+      "id": "sjtu-catalog",
+      "school": "上海交通大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录（校本部）",
+      "url": "https://yzb.sjtu.edu.cn/post/3772",
+      "official": true,
+      "publishedAt": "2026-09-21",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "032 自动化与感知学院；本次只提取控制学硕及 01、08、09 三个电子信息方向。"
+    },
+    {
+      "id": "ustb-fees",
+      "school": "北京科技大学",
+      "year": 2027,
+      "kind": "tuition",
+      "title": "2027 年硕士招生专业学制、学费一览表",
+      "url": "https://yzxc.ustb.edu.cn/sssbkzn/ssxzxf/f51c8a1a9d9144e4a7d2d36a111c9c47.htm",
+      "official": true,
+      "publishedAt": "2026-09-25",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "已查看公告内完整学费表图片；仅摘录 050 自动化学院 085406 与 060 计算机与通信工程学院 085404。"
+    },
+    {
+      "id": "ustb-fees-image",
+      "school": "北京科技大学",
+      "year": 2027,
+      "kind": "tuition",
+      "title": "2027 学制学费表原图",
+      "url": "https://yzxc.ustb.edu.cn/images/2026-09/897d514402a34966b7ce13de533bfd51.png",
+      "official": true,
+      "publishedAt": "2026-09-25",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "原图行：050 自动化学院 / 085406；060 计算机与通信工程学院 / 085404；单位万元/学年已换算为元。"
+    },
+    {
+      "id": "bjtu-charter",
+      "school": "北京交通大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "https://gs.bjtu.edu.cn/tzgg/qb/5f9b7b7e45ae494189f586f1a383ca62.htm",
+      "official": true,
+      "publishedAt": "2026-10-03",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "第六节学费学制及培养地点；逐专业目录未完整提取。"
+    },
+    {
+      "id": "bjtu-catalog",
+      "school": "北京交通大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录",
+      "url": "https://gs.bjtu.edu.cn/tzgg/qb/abfc77ee4c1b44d9bc8c18dc38cbb16b.htm",
+      "official": true,
+      "publishedAt": "2026-09-25",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "公告年份与入口已核验；附件内逐专业字段未核验。"
+    },
+    {
+      "id": "neu-charter",
+      "school": "东北大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年全国硕士研究生招生章程",
+      "url": "https://yz.neu.edu.cn/2026/0930/c5933a480167/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "核对公告正文的年份与本次摘录条款；未核对全部专业。"
+    },
+    {
+      "id": "neu-catalog",
+      "school": "东北大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录",
+      "url": "https://yz.neu.edu.cn/2026/0930/c5933a480171/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "已核验目录页面，未完成专业字段逐行提取。"
+    },
+    {
+      "id": "hfut-charter",
+      "school": "合肥工业大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "https://yjszs.hfut.edu.cn/2026/0930/c13524a323534/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "核对公告正文的年份与本次摘录条款；未核对全部专业。"
+    },
+    {
+      "id": "fzu-charter",
+      "school": "福州大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "https://yjsy.fzu.edu.cn/info/1071/6201.htm",
+      "official": true,
+      "publishedAt": "2026-09-29",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "核对公告正文的年份与本次摘录条款；未核对全部专业。"
+    },
+    {
+      "id": "zjut-charter",
+      "school": "浙江工业大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "http://www.yz.zjut.edu.cn/2026/0929/c4270a346399/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "直接获取官方正文，核对第十三、十四节；目录附件尚未逐行核验。"
+    },
+    {
+      "id": "zjut-attachment-9",
+      "school": "浙江工业大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "附件2：浙江工业大学2027年硕士研究生考试招生专业目录（全日制专业学位硕士）.pdf",
+      "url": "http://www.yz.zjut.edu.cn/_upload/article/files/4a/1c/3e345c4b46689217aa5a4d5800be/b61f9052-b57f-4c29-9429-7cc2974a8fca.pdf",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "附件链接与归属已核对，内容未逐项提取。"
+    },
+    {
+      "id": "zjut-attachment-11",
+      "school": "浙江工业大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "附件4：浙江工业大学2027年硕士研究生分专业拟招生人数 .pdf",
+      "url": "http://www.yz.zjut.edu.cn/_upload/article/files/4a/1c/3e345c4b46689217aa5a4d5800be/87c2730b-c7db-4944-bbfa-8846221306b5.pdf",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "附件链接与归属已核对，内容未逐项提取。"
+    },
+    {
+      "id": "zjut-attachment-12",
+      "school": "浙江工业大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "附件5：浙江工业大学2027年硕士研究生考试招生复试、加试科目.pdf",
+      "url": "http://www.yz.zjut.edu.cn/_upload/article/files/4a/1c/3e345c4b46689217aa5a4d5800be/1464f9e4-dd18-4022-b299-840d41354fee.pdf",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "附件链接与归属已核对，内容未逐项提取。"
+    },
+    {
+      "id": "njupt-charter",
+      "school": "南京邮电大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生章程",
+      "url": "https://yzb.njupt.edu.cn/2026/0929/c7795a309242/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "直接获取官方正文，核对第三、七章；收费金额未在本条款明列。"
+    },
+    {
+      "id": "njupt-catalog",
+      "school": "南京邮电大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录",
+      "url": "https://yzb.njupt.edu.cn/2026/0930/c7795a309245/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "access_blocked",
+      "verificationScope": "官方列表已显示目录发布；本次详情获取失败，未提取字段。"
+    },
+    {
+      "id": "zzu-charter",
+      "school": "郑州大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生章程",
+      "url": "https://yz.zzu.edu.cn/info/1092/2432.htm",
+      "official": true,
+      "publishedAt": "2026-10-01",
+      "checkedAt": "2026-10-07",
+      "verification": "content_verified",
+      "verificationScope": "核对公告正文的年份与本次摘录条款；未核对全部专业。"
+    },
+    {
+      "id": "nuaa-charter",
+      "school": "南京航空航天大学",
+      "year": 2027,
+      "kind": "charter",
+      "title": "2027 年硕士研究生招生简章",
+      "url": "https://www.graduate.nuaa.edu.cn/2026/0928/c2145a411934/page.htm",
+      "official": true,
+      "publishedAt": "2026-09-30",
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "官方公告标题与发布日期已确认；正文未成功提取，未填专业字段。"
+    },
+    {
+      "id": "zju-catalog",
+      "school": "浙江大学",
+      "year": 2027,
+      "kind": "catalog",
+      "title": "2027 年硕士研究生招生专业目录（统考生）",
+      "url": "https://yjsy.zju.edu.cn/open/zsss/ZsssTksList?zsnf=2027",
+      "official": true,
+      "publishedAt": "2026-09-26",
+      "checkedAt": "2026-10-07",
+      "verification": "access_blocked",
+      "verificationScope": "官方列表确认入口；动态详情获取失败，未核验具体专业。"
+    },
+    {
+      "id": "nju-index",
+      "school": "南京大学",
+      "year": 2027,
+      "kind": "index",
+      "title": "研究生招生简章目录栏目",
+      "url": "https://yzb.nju.edu.cn/47831/listm.htm",
+      "official": true,
+      "publishedAt": null,
+      "checkedAt": "2026-10-07",
+      "verification": "link_verified",
+      "verificationScope": "2026-10-07 复查该栏目，未检索到 2027 统考章程或目录；不据此断言学校尚未发布。"
+    }
+  ],
+  "schools": [
+    {
+      "school": "中山大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "sysu-charter",
+        "sysu-catalog",
+        "sysu-fees"
+      ],
+      "summary": "2027 简章、目录与学费已核对；收录现有关注范围内 12 条 0854 专硕记录，其中 5 条使用 884 信号与系统。",
+      "gaps": [
+        "目录人数未确认为统考剩余计划，推免/统考拆分保持未知。",
+        "仅收录既定专硕范围；不含 085403，以及微电子、集成电路、柔性电子、生物医学工程学院。",
+        "2027 复试线和录取结果尚未收录，下面的旧数据只作历史参考。"
+      ],
+      "policies": [
+        {
+          "text": "电通院 085400 拟招 90 人、智工院 59 人、海工院 50 人，均为目录该专业合计；不能重复分配到每个研究方向。",
+          "sourceId": "sysu-catalog",
+          "locator": "第 29–30 页"
+        },
+        {
+          "text": "系统科学与工程学院分别列 085401 新一代电子信息技术 12 人（884）与 085404 计算机技术 13 人（408）。",
+          "sourceId": "sysu-catalog",
+          "locator": "第 32 页"
+        }
+      ],
+      "feeRules": [
+        {
+          "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+          "amount": 16000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 3,
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+        },
+        {
+          "scope": "非全日制定向电子信息专业学位硕士",
+          "amount": 40000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 3,
+          "sourceId": "sysu-fees",
+          "locator": "第 3 页，工程硕士 C 项",
+          "exceptions": null
+        }
+      ]
+    },
+    {
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "hdu-charter",
+        "hdu-catalog-page",
+        "hdu-catalog"
+      ],
+      "summary": "2027 章程和目录已核对；按学习方式分别收录计算机、电子信息、金融和会计相关项目。",
+      "gaps": [
+        "目录人数含推免，不能当作统考名额。",
+        "本次不收录中外合作项目；非全日制人工智能学费官方待定。"
+      ],
+      "policies": [
+        {
+          "text": "普通项目：学硕和工程类专硕学制 3 年；其他专硕 2.5 年。全日制非定向安排住宿，其他类型不安排。",
+          "sourceId": "hdu-charter",
+          "locator": "第十三、十五节"
+        },
+        {
+          "text": "校区须依学院、导师团队与方向核定，不能将全部电子信息项目统一写成下沙校区。",
+          "sourceId": "hdu-charter",
+          "locator": "第十四节"
+        }
+      ],
+      "feeRules": []
+    },
+    {
+      "school": "上海交通大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "sjtu-catalog"
+      ],
+      "summary": "已核对 2027 校本部目录，新增自动化与感知学院 4 条专业/方向记录。",
+      "gaps": [
+        "全院 266 人、专硕 196 人、全日制推免 126 人均是学院口径，不是每个方向人数。",
+        "未完成其余学院逐专业核验；本次不填未经核实的学费、学制和复试科目。"
+      ],
+      "policies": [],
+      "feeRules": []
+    },
+    {
+      "school": "北京科技大学",
+      "year": 2027,
+      "status": "partial",
+      "sourceIds": [
+        "ustb-fees",
+        "ustb-fees-image"
+      ],
+      "summary": "2027 学制学费表已发布并核对所列重点专业；此次没有将其标为已核实招生简章。",
+      "gaps": [
+        "专业目录、科目及计划数本次未核实。"
+      ],
+      "policies": [],
+      "feeRules": [
+        {
+          "scope": "050 自动化学院 085406 控制工程，全日制",
+          "amount": 8000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 3,
+          "sourceId": "ustb-fees-image",
+          "locator": "050 / 085406 行",
+          "exceptions": null
+        },
+        {
+          "scope": "060 计算机与通信工程学院 085404 计算机技术，全日制",
+          "amount": 8000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 3,
+          "sourceId": "ustb-fees-image",
+          "locator": "060 / 085404 行",
+          "exceptions": null
+        }
+      ]
+    },
+    {
+      "school": "北京交通大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "bjtu-charter",
+        "bjtu-catalog"
+      ],
+      "summary": "2027 简章已核对学费、学制和培养地点，目录保留官方入口。",
+      "gaps": [
+        "专业/方向计划和科目待逐项提取，不沿用旧目录。"
+      ],
+      "policies": [
+        {
+          "text": "2027 级电子信息工程、计算机、自动化与智能、网安等学院全日制新生第一学年在唐山研究院，原则上第二、三学年在雄安校区；软件学院在雄安校区。具体按原文学院划分。",
+          "sourceId": "bjtu-charter",
+          "locator": "第六节（三）后“培养地点和住宿安排”"
+        },
+        {
+          "text": "软件工程、金融、会计全日制基本学制 2 年；多数其他全日制项目 3 年。中外合作项目另列，不能套用普通项目标准。",
+          "sourceId": "bjtu-charter",
+          "locator": "第六节（一）"
+        }
+      ],
+      "feeRules": [
+        {
+          "scope": "全日制软件工程 085405",
+          "amount": 20000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 2,
+          "sourceId": "bjtu-charter",
+          "locator": "第六节表一",
+          "exceptions": null
+        },
+        {
+          "scope": "全日制金融 025100",
+          "amount": 40000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 2,
+          "sourceId": "bjtu-charter",
+          "locator": "第六节表一",
+          "exceptions": null
+        }
+      ]
+    },
+    {
+      "school": "东北大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "neu-charter",
+        "neu-catalog"
+      ],
+      "summary": "2027 章程与目录入口已更新。",
+      "gaps": [
+        "复试方式、分数要求与具体办法由后续通知确定；本次未将历史值带入 2027。"
+      ],
+      "policies": [
+        {
+          "text": "复试时间、内容、方式与初试成绩要求另行发布；专业学制需按当年学制汇总表核对。",
+          "sourceId": "neu-charter",
+          "locator": "第十六、三十四条"
+        }
+      ],
+      "feeRules": []
+    },
+    {
+      "school": "合肥工业大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "hfut-charter"
+      ],
+      "summary": "2027 简章已核对学制、费用与新学院培养安排。",
+      "gaps": [
+        "目录总计划含推免，不能直接写为统考名额；科目和逐专业计划尚未提取。"
+      ],
+      "policies": [
+        {
+          "text": "全日制与非全日制学制均为 3 年；智能软件工程学院自 2027 年招生，培养依托宣城校区。",
+          "sourceId": "hfut-charter",
+          "locator": "第三节；第六节第 9 项"
+        }
+      ],
+      "feeRules": [
+        {
+          "scope": "全日制电子信息类专业学位（一般标准）",
+          "amount": 11000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": 3,
+          "sourceId": "hfut-charter",
+          "locator": "第五节第 1 项",
+          "exceptions": null
+        },
+        {
+          "scope": "全日制金融 025100",
+          "amount": 108000,
+          "currency": "CNY",
+          "unit": "元/生（原文口径）",
+          "years": 3,
+          "sourceId": "hfut-charter",
+          "locator": "第五节第 1 项",
+          "exceptions": "简章未在该条金额后标注按学年，本库保留原文单位，不另行计算每年金额。"
+        }
+      ]
+    },
+    {
+      "school": "福州大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "fzu-charter"
+      ],
+      "summary": "2027 简章已核对普通全日制学费与计划口径。",
+      "gaps": [
+        "各学院计划及推免人数是预计值，最终计划需结合国家下达与实际接收情况。"
+      ],
+      "policies": [
+        {
+          "text": "本简章明确不开展“退役大学生士兵”专项及单独考试招生；推免实际接收情况拟于 10 月下旬发布。",
+          "sourceId": "fzu-charter",
+          "locator": "第一、二、四节"
+        }
+      ],
+      "feeRules": [
+        {
+          "scope": "全日制学术学位、专业学位硕士",
+          "amount": 8000,
+          "currency": "CNY",
+          "unit": "元/生·学年",
+          "years": null,
+          "sourceId": "fzu-charter",
+          "locator": "第二节（二）；学制本次未核实",
+          "exceptions": null
+        }
+      ]
+    },
+    {
+      "school": "浙江工业大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "zjut-charter",
+        "zjut-attachment-9",
+        "zjut-attachment-11",
+        "zjut-attachment-12"
+      ],
+      "summary": "2027 简章及专业目录、拟招人数、复试科目附件入口已补充。",
+      "gaps": [
+        "专业学费存在例外，不能将一般标准覆盖所有项目；具体学制须查专业目录。"
+      ],
+      "policies": [
+        {
+          "text": "学制为 2–3 年，具体到专业按目录；简章列有学费例外清单，须按学院、专业和学习方式对照。",
+          "sourceId": "zjut-charter",
+          "locator": "第十三、十四节"
+        }
+      ],
+      "feeRules": []
+    },
+    {
+      "school": "南京邮电大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "njupt-charter",
+        "njupt-catalog"
+      ],
+      "summary": "2027 章程已核对；目录详情本次访问受阻。",
+      "gaps": [
+        "学费按核定标准执行，本次不填金额；目录人数含推免。"
+      ],
+      "policies": [
+        {
+          "text": "学硕学制 3 年；专硕除翻译 2 年外均为 3 年。",
+          "sourceId": "njupt-charter",
+          "locator": "第七章第二十九条"
+        }
+      ],
+      "feeRules": []
+    },
+    {
+      "school": "郑州大学",
+      "year": 2027,
+      "status": "published",
+      "sourceIds": [
+        "zzu-charter"
+      ],
+      "summary": "2027 章程已核对；学制、住宿与计划调整规则已更新。",
+      "gaps": [
+        "专业学位学制应另查附件 2；学费需要进一步打开收费公告核对，本次不填金额。"
+      ],
+      "policies": [
+        {
+          "text": "学硕均为全日制，学制 3 年；全日制定向与非全日制不安排住宿。公开招考人数会随最终计划、实际推免和报考情况调整。",
+          "sourceId": "zzu-charter",
+          "locator": "第二、七、九节"
+        }
+      ],
+      "feeRules": []
+    },
+    {
+      "school": "南京航空航天大学",
+      "year": 2027,
+      "status": "partial",
+      "sourceIds": [
+        "nuaa-charter"
+      ],
+      "summary": "官方已发布 2027 简章，本次仅核验公告入口与日期。",
+      "gaps": [
+        "正文提取不完整，科目、名额和费用保持未核实。"
+      ],
+      "policies": [],
+      "feeRules": []
+    },
+    {
+      "school": "浙江大学",
+      "year": 2027,
+      "status": "partial",
+      "sourceIds": [
+        "zju-catalog"
+      ],
+      "summary": "已补充官方 2027 统考目录入口；动态详情本次未获取。",
+      "gaps": [
+        "未填具体专业科目、计划与学费。"
+      ],
+      "policies": [],
+      "feeRules": []
+    },
+    {
+      "school": "南京大学",
+      "year": 2027,
+      "status": "not_found",
+      "sourceIds": [
+        "nju-index"
+      ],
+      "summary": "本次在官方简章目录栏目未检索到 2027 统考材料。",
+      "gaps": [
+        "推免通知不能代替统考目录；南大控制的旧年分数线、名额不迁移到 2027。"
+      ],
+      "policies": [],
+      "feeRules": []
+    }
+  ],
+  "programs": [
+    {
+      "id": "2027|中山大学|670|085404|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "670",
+      "college": "计算机学院",
+      "code": "085404",
+      "name": "计算机技术",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "6705003",
+          "name": "计算机综合能力考核"
+        }
+      ],
+      "seats": {
+        "plan": 210,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 21 页，670 计算机学院 / 085404",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|670|085410|非全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "670",
+      "college": "计算机学院",
+      "code": "085410",
+      "name": "人工智能",
+      "track": "cs",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "6705003",
+          "name": "计算机综合能力考核"
+        }
+      ],
+      "seats": {
+        "plan": 40,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "非全日制定向电子信息专业学位硕士",
+        "amount": 40000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 3 页，工程硕士 C 项",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 22 页，670 计算机学院 / 085410",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 3 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|724|085410|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "724",
+      "college": "人工智能学院",
+      "code": "085410",
+      "name": "人工智能",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7245001",
+          "name": "离散数学与C程序设计"
+        }
+      ],
+      "seats": {
+        "plan": 33,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 24 页，724 人工智能学院 / 085410",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|725|085405|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "725",
+      "college": "软件工程学院",
+      "code": "085405",
+      "name": "软件工程",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7255001",
+          "name": "程序设计"
+        }
+      ],
+      "seats": {
+        "plan": 38,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 24 页，725 软件工程学院 / 085405",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|757|085412|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "757",
+      "college": "网络空间安全学院",
+      "code": "085412",
+      "name": "网络与信息安全",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7575001",
+          "name": "离散数学与C/C++程序设计"
+        }
+      ],
+      "seats": {
+        "plan": 28,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 26 页，757 网络空间安全学院 / 085412",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|762|085402|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "762",
+      "college": "电子与信息工程学院",
+      "code": "085402",
+      "name": "通信工程（含宽带网络、移动通信等）",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "884",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7625003",
+          "name": "电子工程基础综合"
+        }
+      ],
+      "seats": {
+        "plan": 25,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 28 页，762 电子与信息工程学院 / 085402",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|762|085408|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "762",
+      "college": "电子与信息工程学院",
+      "code": "085408",
+      "name": "光电信息工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "882",
+          "name": "光学原理"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7625004",
+          "name": "光学工程综合考试B"
+        }
+      ],
+      "seats": {
+        "plan": 25,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 28 页，762 电子与信息工程学院 / 085408",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|765|085400|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "765",
+      "college": "电子与通信工程学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "884",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7655001",
+          "name": "电路与信号综合"
+        }
+      ],
+      "seats": {
+        "plan": 90,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 29 页，765 电子与通信工程学院 / 085400",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|766|085400|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "766",
+      "college": "智能工程学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "884",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7665001",
+          "name": "智能技术综合"
+        }
+      ],
+      "seats": {
+        "plan": 59,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 29 页，766 智能工程学院 / 085400",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|767|085400|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "767",
+      "college": "海洋工程与技术学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "884",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7675008",
+          "name": "海洋技术基础"
+        }
+      ],
+      "seats": {
+        "plan": 50,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 30 页，767 海洋工程与技术学院 / 085400",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|771|085401|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "771",
+      "college": "系统科学与工程学院",
+      "code": "085401",
+      "name": "新一代电子信息技术（含量子技术等）",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "884",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7715003",
+          "name": "离散数学与C程序设计"
+        }
+      ],
+      "seats": {
+        "plan": 12,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 32 页，771 系统科学与工程学院 / 085401",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|中山大学|771|085404|全日制|all",
+      "school": "中山大学",
+      "year": 2027,
+      "collegeCode": "771",
+      "college": "系统科学与工程学院",
+      "code": "085404",
+      "name": "计算机技术",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": "7715003",
+          "name": "离散数学与C程序设计"
+        }
+      ],
+      "seats": {
+        "plan": 13,
+        "tuimian": null,
+        "exam": null,
+        "basis": "2027 招生目录该学院该专业人数；未明确为统考剩余名额。"
+      },
+      "tuition": {
+        "scope": "全日制非定向电子信息专业学位硕士（不含校企联合工程硕博士专项）",
+        "amount": 16000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "sysu-fees",
+        "locator": "第 2 页，工程硕士 C 项",
+        "exceptions": "校企联合工程硕博士专项按第 1 页 8000 元/生·学年执行，不能统一套用。"
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sysu-catalog",
+          "locator": "PDF 第 32 页，771 系统科学与工程学院 / 085404",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "sysu-fees",
+          "locator": "第 2 页，工程硕士 C 项",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|020|080900|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "020",
+      "college": "电子信息学院",
+      "code": "080900",
+      "name": "电子科学与技术",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "数字电路,电磁场与电磁波,模拟电路"
+        }
+      ],
+      "seats": {
+        "plan": 87,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 080900（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 6 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|020|085401|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "020",
+      "college": "电子信息学院",
+      "code": "085401",
+      "name": "新一代电子信息技术（含量子技术等）",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "数字电路,电磁场与电磁波,模拟电路"
+        }
+      ],
+      "seats": {
+        "plan": 217,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085401（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 7 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|020|085403|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "020",
+      "college": "电子信息学院",
+      "code": "085403",
+      "name": "集成电路工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "数字电路,电磁场与电磁波,模拟电路"
+        }
+      ],
+      "seats": {
+        "plan": 118,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085403（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 8 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|022|085403|非全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "022",
+      "college": "集成电路工程教育中心",
+      "code": "085403",
+      "name": "集成电路工程",
+      "track": "ee",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "数字电路,电磁场与电磁波,模拟电路"
+        }
+      ],
+      "seats": {
+        "plan": 18,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "非全日制 专业学位 085403（不含中外合作项目）",
+        "amount": 69000,
+        "currency": "CNY",
+        "unit": "元/生·全程",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 12 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|030|081000|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "030",
+      "college": "通信工程学院",
+      "code": "081000",
+      "name": "信息与通信工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "通信原理,电路分析"
+        }
+      ],
+      "seats": {
+        "plan": 63,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 081000（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 13 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|030|085402|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "030",
+      "college": "通信工程学院",
+      "code": "085402",
+      "name": "通信工程（含宽带网络、移动通信等）",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "843",
+          "name": "信号与系统"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "通信原理,电路分析"
+        }
+      ],
+      "seats": {
+        "plan": 168,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085402（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 14 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|040|081100|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "040",
+      "college": "自动化学院",
+      "code": "081100",
+      "name": "控制科学与工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "861",
+          "name": "自动控制原理"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "信号分析与处理，（参考书目：信号分析与处理 第4版，齐冬莲 赵光宙 主编，机械工业出版社，2024，第一至四章）"
+        }
+      ],
+      "seats": {
+        "plan": 95,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 081100（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 16 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|040|085406|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "040",
+      "college": "自动化学院",
+      "code": "085406",
+      "name": "控制工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "861",
+          "name": "自动控制原理"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "信号分析与处理，（参考书目：信号分析与处理 第4版，齐冬莲 赵光宙 主编，机械工业出版社，2024，第一至四章）"
+        }
+      ],
+      "seats": {
+        "plan": 216,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085406（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 18 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|040|085410|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "040",
+      "college": "自动化学院",
+      "code": "085410",
+      "name": "人工智能",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "861",
+          "name": "自动控制原理"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "信号分析与处理，（参考书目：信号分析与处理 第4版，齐冬莲 赵光宙 主编，机械工业出版社，2024，第一至四章）"
+        }
+      ],
+      "seats": {
+        "plan": 47,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085410（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 19 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|040|085410|非全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "040",
+      "college": "自动化学院",
+      "code": "085410",
+      "name": "人工智能",
+      "track": "ee",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "861",
+          "name": "自动控制原理"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "信号分析与处理，（参考书目：信号分析与处理 第4版，齐冬莲 赵光宙 主编，机械工业出版社，2024，第一至四章）"
+        }
+      ],
+      "seats": {
+        "plan": 10,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "非全日制 专业学位 085410（不含中外合作项目）",
+        "amount": null,
+        "currency": "CNY",
+        "unit": "元/生·全程",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 20 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。",
+        "tuition.amount": "章程明确非全日制人工智能学费待定，以省发改委批复为准。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|050|081200|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "050",
+      "college": "计算机学院",
+      "code": "081200",
+      "name": "计算机科学与技术",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力"
+        }
+      ],
+      "seats": {
+        "plan": 118,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 081200（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 22 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|050|083500|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "050",
+      "college": "计算机学院",
+      "code": "083500",
+      "name": "软件工程",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力"
+        }
+      ],
+      "seats": {
+        "plan": 28,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 083500（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 23 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|050|085404|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "050",
+      "college": "计算机学院",
+      "code": "085404",
+      "name": "计算机技术",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力"
+        }
+      ],
+      "seats": {
+        "plan": 237,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085404（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 24 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|050|085405|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "050",
+      "college": "计算机学院",
+      "code": "085405",
+      "name": "软件工程",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力"
+        }
+      ],
+      "seats": {
+        "plan": 63,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085405（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 25 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|052|085404|非全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "052",
+      "college": "计算机技术工程教育中心",
+      "code": "085404",
+      "name": "计算机技术",
+      "track": "cs",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力"
+        }
+      ],
+      "seats": {
+        "plan": 10,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "非全日制 专业学位 085404（不含中外合作项目）",
+        "amount": 69000,
+        "currency": "CNY",
+        "unit": "元/生·全程",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 27 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|080|025100|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "080",
+      "college": "经济学院",
+      "code": "025100",
+      "name": "金融",
+      "track": "fin",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "396",
+          "name": "经济类综合能力"
+        },
+        {
+          "code": "431",
+          "name": "金融学综合"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "金融学综合知识、专业英语等"
+        }
+      ],
+      "seats": {
+        "plan": 18,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 025100（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 2.5,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 2.5,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 33 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|080|025100|非全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "080",
+      "college": "经济学院",
+      "code": "025100",
+      "name": "金融",
+      "track": "fin",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "396",
+          "name": "经济类综合能力"
+        },
+        {
+          "code": "431",
+          "name": "金融学综合"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "金融学综合知识、专业英语等"
+        }
+      ],
+      "seats": {
+        "plan": 8,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "非全日制 专业学位 025100（不含中外合作项目）",
+        "amount": 85000,
+        "currency": "CNY",
+        "unit": "元/生·全程",
+        "years": 2.5,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 2.5,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 34 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|100|125300|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "100",
+      "college": "会计学院",
+      "code": "125300",
+      "name": "会计",
+      "track": "acc",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "199",
+          "name": "管理类综合能力"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "政治、会计综合能力测试（知识点含会计学、财务管理、审计学）"
+        }
+      ],
+      "seats": {
+        "plan": 27,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 125300（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 2.5,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 2.5,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 47 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|100|125300|非全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "100",
+      "college": "会计学院",
+      "code": "125300",
+      "name": "会计",
+      "track": "acc",
+      "studyMode": "非全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "199",
+          "name": "管理类综合能力"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "政治、会计综合能力测试（知识点含会计学、财务管理、审计学）"
+        }
+      ],
+      "seats": {
+        "plan": 18,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "非全日制 专业学位 125300（不含中外合作项目）",
+        "amount": 110000,
+        "currency": "CNY",
+        "unit": "元/生·全程",
+        "years": 2.5,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 2.5,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 48 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|120|0812Z2|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "120",
+      "college": "数字媒体与文法学院",
+      "code": "0812Z2",
+      "name": "数字媒体技术",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "计算机程序设计综合能力测试（语言不限）"
+        }
+      ],
+      "seats": {
+        "plan": 29,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 0812Z2（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 55 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|150|083900|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "150",
+      "college": "网络空间安全学院",
+      "code": "083900",
+      "name": "网络空间安全",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "科技英语,程序设计综合能力测试"
+        }
+      ],
+      "seats": {
+        "plan": 31,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 学术学位 083900（不含中外合作项目）",
+        "amount": 8000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 58 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|杭州电子科技大学|150|085412|全日制|all",
+      "school": "杭州电子科技大学",
+      "year": 2027,
+      "collegeCode": "150",
+      "college": "网络空间安全学院",
+      "code": "085412",
+      "name": "网络与信息安全",
+      "track": "cs",
+      "studyMode": "全日制",
+      "direction": null,
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ],
+      "retestSubjects": [
+        {
+          "code": null,
+          "name": "程序设计综合能力测试,科技英语"
+        }
+      ],
+      "seats": {
+        "plan": 60,
+        "tuimian": null,
+        "exam": null,
+        "basis": "目录拟招生人数，含拟接收推免生，最终以上级下达和复试时调整为准。"
+      },
+      "tuition": {
+        "scope": "全日制 专业学位 085412（不含中外合作项目）",
+        "amount": 10000,
+        "currency": "CNY",
+        "unit": "元/生·学年",
+        "years": 3,
+        "sourceId": "hdu-charter",
+        "locator": "第十二节学费表、第十五节学制",
+        "exceptions": null
+      },
+      "years": 3,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "hdu-catalog",
+          "locator": "工作表 rep_print_kskm3，第 59 行",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        },
+        {
+          "sourceId": "hdu-charter",
+          "locator": "第十二、十五节",
+          "fields": [
+            "tuition",
+            "years"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。"
+      }
+    },
+    {
+      "id": "2027|上海交通大学|032|081100|全日制|01 不区分研究方向",
+      "school": "上海交通大学",
+      "year": 2027,
+      "collegeCode": "032",
+      "college": "自动化与感知学院",
+      "code": "081100",
+      "name": "控制科学与工程",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": "01 不区分研究方向",
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "816",
+          "name": "自动控制理论"
+        }
+      ],
+      "retestSubjects": null,
+      "seats": {
+        "plan": null,
+        "tuimian": null,
+        "exam": null,
+        "basis": "原文招生计划为学院合计，未拆到本方向。"
+      },
+      "tuition": {
+        "scope": "本方向",
+        "amount": null,
+        "currency": "CNY",
+        "unit": null,
+        "years": null,
+        "sourceId": "sjtu-catalog",
+        "locator": "目录未核实学费",
+        "exceptions": null
+      },
+      "years": null,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sjtu-catalog",
+          "locator": "032 自动化与感知学院 / 081100 / 01 不区分研究方向",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。",
+        "seats.plan": "目录仅给学院合计，无法分配到本专业或方向。",
+        "tuition.amount": "本次未核实适用于该项目的 2027 学费。",
+        "years": "本次未核实适用于该项目的 2027 学制。",
+        "retestSubjects": "本次招生目录未取得对应复试科目。"
+      }
+    },
+    {
+      "id": "2027|上海交通大学|032|085400|全日制|01 控制工程",
+      "school": "上海交通大学",
+      "year": 2027,
+      "collegeCode": "032",
+      "college": "自动化与感知学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": "01 控制工程",
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "816",
+          "name": "自动控制理论"
+        }
+      ],
+      "retestSubjects": null,
+      "seats": {
+        "plan": null,
+        "tuimian": null,
+        "exam": null,
+        "basis": "原文招生计划为学院合计，未拆到本方向。"
+      },
+      "tuition": {
+        "scope": "本方向",
+        "amount": null,
+        "currency": "CNY",
+        "unit": null,
+        "years": null,
+        "sourceId": "sjtu-catalog",
+        "locator": "目录未核实学费",
+        "exceptions": null
+      },
+      "years": null,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sjtu-catalog",
+          "locator": "032 自动化与感知学院 / 085400 / 01 控制工程",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。",
+        "seats.plan": "目录仅给学院合计，无法分配到本专业或方向。",
+        "tuition.amount": "本次未核实适用于该项目的 2027 学费。",
+        "years": "本次未核实适用于该项目的 2027 学制。",
+        "retestSubjects": "本次招生目录未取得对应复试科目。"
+      }
+    },
+    {
+      "id": "2027|上海交通大学|032|085400|全日制|08 智能感知工程(I)",
+      "school": "上海交通大学",
+      "year": 2027,
+      "collegeCode": "032",
+      "college": "自动化与感知学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": "08 智能感知工程(I)",
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "817",
+          "name": "自动控制原理"
+        }
+      ],
+      "retestSubjects": null,
+      "seats": {
+        "plan": null,
+        "tuimian": null,
+        "exam": null,
+        "basis": "原文招生计划为学院合计，未拆到本方向。"
+      },
+      "tuition": {
+        "scope": "本方向",
+        "amount": null,
+        "currency": "CNY",
+        "unit": null,
+        "years": null,
+        "sourceId": "sjtu-catalog",
+        "locator": "目录未核实学费",
+        "exceptions": null
+      },
+      "years": null,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sjtu-catalog",
+          "locator": "032 自动化与感知学院 / 085400 / 08 智能感知工程(I)",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。",
+        "seats.plan": "目录仅给学院合计，无法分配到本专业或方向。",
+        "tuition.amount": "本次未核实适用于该项目的 2027 学费。",
+        "years": "本次未核实适用于该项目的 2027 学制。",
+        "retestSubjects": "本次招生目录未取得对应复试科目。"
+      }
+    },
+    {
+      "id": "2027|上海交通大学|032|085400|全日制|09 智能感知工程(II)",
+      "school": "上海交通大学",
+      "year": 2027,
+      "collegeCode": "032",
+      "college": "自动化与感知学院",
+      "code": "085400",
+      "name": "电子信息",
+      "track": "ee",
+      "studyMode": "全日制",
+      "direction": "09 智能感知工程(II)",
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "201",
+          "name": "英语（一）"
+        },
+        {
+          "code": "301",
+          "name": "数学（一）"
+        },
+        {
+          "code": "819",
+          "name": "信号系统与信号处理"
+        }
+      ],
+      "retestSubjects": null,
+      "seats": {
+        "plan": null,
+        "tuimian": null,
+        "exam": null,
+        "basis": "原文招生计划为学院合计，未拆到本方向。"
+      },
+      "tuition": {
+        "scope": "本方向",
+        "amount": null,
+        "currency": "CNY",
+        "unit": null,
+        "years": null,
+        "sourceId": "sjtu-catalog",
+        "locator": "目录未核实学费",
+        "exceptions": null
+      },
+      "years": null,
+      "line": null,
+      "applied": null,
+      "retest": null,
+      "admitted": null,
+      "confidence": "official",
+      "verification": "content_verified",
+      "evidence": [
+        {
+          "sourceId": "sjtu-catalog",
+          "locator": "032 自动化与感知学院 / 085400 / 09 智能感知工程(II)",
+          "fields": [
+            "college",
+            "code",
+            "name",
+            "studyMode",
+            "direction",
+            "subjects",
+            "retestSubjects",
+            "seats.plan"
+          ]
+        }
+      ],
+      "unknownReasons": {
+        "seats.tuimian": "本次材料未提供可对应到本条记录的最终推免人数。",
+        "seats.exam": "未取得本条记录的统考剩余计划，不用目录人数代替或估算。",
+        "line": "2027 年复试线尚未收录；不沿用 2026 年数值。",
+        "applied": "未取得 2027 年报考人数。",
+        "retest": "未取得 2027 年复试人数。",
+        "admitted": "未取得 2027 年拟录取人数。",
+        "seats.plan": "目录仅给学院合计，无法分配到本专业或方向。",
+        "tuition.amount": "本次未核实适用于该项目的 2027 学费。",
+        "years": "本次未核实适用于该项目的 2027 学制。",
+        "retestSubjects": "本次招生目录未取得对应复试科目。"
+      }
+    }
+  ]
+}

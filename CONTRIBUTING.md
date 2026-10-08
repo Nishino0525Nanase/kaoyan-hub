@@ -89,3 +89,22 @@ python3 -c "import json;json.load(open('data/schools.json'))"
 打开 `index.html`，确认院校数、筛选、图表、对比都正常再提交。
 
 感谢你花时间让这份数据更准确一点。
+
+## 2027 招生资料与历史记录
+
+- `data/admissions-2027.json` 保存 2027 年简章、目录与学费快照。按 `year + school + collegeCode + code + studyMode + direction` 标识一条年度记录；专业共用人数只计一次，不向每个方向重复分配。
+- `sources` 保存具体官方公告或附件、发布日期、检查日期和核验范围；`content_verified` 只代表已核对声明的范围，`link_verified` 仅核验入口，`access_blocked` 不代表原文失效。学校 `status=published` 表示已收录官方资料，不表示全校字段完整。
+- `programs[].evidence` 把字段对应到来源 ID 与 PDF 页码/XLS 行号；`seats.plan` 是目录拟招人数，`seats.exam` 才是明确的统考计划。不得用估计的推免人数相减。学费必须写金额、单位、学习方式与适用范围，不能混用每年和全程。
+- 不明字段必须为 JSON `null`，在 `unknownReasons` 说明未查、未公布、访问受阻或不适用。目录复试科目用 `retestSubjects`，复试人数用 `retest`。旧年分数线和录取人数不能带到新年份。
+- `programs.json` 是历史聚合产物；应编辑 `programs-base.json` 或 `programs-*-batch*.json`，再运行合并。批次以文件名排序，重复键（学校+代码+名称+学院）保留最早出现的记录，不能靠新增同键批次覆盖旧值。
+- `programs-recovered-batch1.json` 仅恢复基线提交中曾直接写入产物的 48 条历史记录，不代表新的官方核验。历史聚合记录数与年度记录数分别统计，不相加宣称覆盖增长。
+
+数据更新后的完整检查：
+
+```bash
+python3 src/merge_programs.py
+python3 scripts/validate_admissions.py
+node build.mjs
+```
+
+一起提交源数据、模板与生成产物。打开页面检查院校详情、中大专栏、年度/历史区别及手机横向表格。
