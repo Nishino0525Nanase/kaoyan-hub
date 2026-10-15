@@ -1,0 +1,158 @@
+{
+  "total": 455,
+  "coverage": [
+    {
+      "year": 2007,
+      "questions": 24,
+      "expected": 24,
+      "complete": true
+    },
+    {
+      "year": 2008,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2009,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2010,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2011,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2012,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2013,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2014,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2015,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2016,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2017,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2018,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2019,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2020,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2021,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2022,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2023,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2024,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2025,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2026,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    }
+  ],
+  "topics": 118,
+  "chapters": 11,
+  "types": {
+    "single": 174,
+    "fill": 120,
+    "solution": 161
+  },
+  "subjects": {
+    "高等数学": 355,
+    "线性代数": 100
+  },
+  "answerCount": 438,
+  "proofCount": 20,
+  "missingAnswer": [
+    "2025-21",
+    "2024-21",
+    "2023-21",
+    "2022-21",
+    "2020-20",
+    "2019-21",
+    "2018-18",
+    "2017-19",
+    "2015-21",
+    "2014-19",
+    "2014-23",
+    "2013-18",
+    "2013-23",
+    "2012-20",
+    "2011-19",
+    "2010-21",
+    "2009-21"
+  ],
+  "imagesVerified": true
+}

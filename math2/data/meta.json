@@ -1,0 +1,168 @@
+{
+  "title": "数二逐题",
+  "exam": "全国硕士研究生招生考试·数学二",
+  "yearStart": 2007,
+  "yearEnd": 2026,
+  "expectedTotal": 455,
+  "dataVersion": "2026-10-15.1",
+  "description": "按知识点分类的2007—2026年考研数学二真题练习",
+  "sources": [
+    {
+      "title": "2009—2025 逐题真题与考点整理",
+      "url": "https://github.com/lx-ruc/kaoyanshuxue",
+      "years": "2009—2025",
+      "description": "题图、客观答案及考点索引；原整理来源为真题墙，视频讲解链接至原发布处。"
+    },
+    {
+      "title": "2007—2008 真题原卷整理",
+      "url": "https://github.com/fjh1997/China-NPEE-math",
+      "years": "2007—2008",
+      "description": "从原卷逐题截取并补充专题分类。"
+    },
+    {
+      "title": "2026 数学二公开整理卷",
+      "url": "https://static.kaoyan.cn/file/question/2025/12/27/f2d851eb315f540c31acc1b434c494c0.pdf",
+      "years": "2026",
+      "description": "交叉核对题目与答案；每题保留实际采用的版本来源。"
+    },
+    {
+      "title": "2026 真题交叉核对版",
+      "url": "https://19654776.s21i.faiusr.com/61/ABUIABA9GAAg2KiiygYoqNniuwU.pdf",
+      "years": "2026",
+      "description": "采用题干图并保留水印；第2题答案字母原稿误印已独立纠正。本站2026简析为重新推导。"
+    }
+  ],
+  "notes": [
+    "2007年24题；2008—2020年每年23题；2021—2026年每年22题，合计455题。",
+    "题库为公开整理版，每道题保留来源入口；如遇排版或答案差异可对照原卷。",
+    "选择题可核对选项，填空和解答题对照答案后自行评价；证明题应检查完整推导。",
+    "进度和笔记保存在当前浏览器，请定期导出备份；换设备后可导入。"
+  ],
+  "verification": "逐年核对题号与题量，检测全部题图；重点专题人工复核分类。详细证明与解题过程通过原讲解链接查看。",
+  "total": 455,
+  "coverage": [
+    {
+      "year": 2007,
+      "questions": 24,
+      "expected": 24,
+      "complete": true
+    },
+    {
+      "year": 2008,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2009,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2010,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2011,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2012,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2013,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2014,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2015,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2016,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2017,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2018,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2019,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2020,
+      "questions": 23,
+      "expected": 23,
+      "complete": true
+    },
+    {
+      "year": 2021,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2022,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2023,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2024,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2025,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    },
+    {
+      "year": 2026,
+      "questions": 22,
+      "expected": 22,
+      "complete": true
+    }
+  ],
+  "topicCount": 118,
+  "answerCount": 438,
+  "proofOnlyCount": 17
+}

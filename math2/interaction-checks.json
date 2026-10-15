@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "environment": "jsdom DOM simulation; no visual browser test",
+  "checks": [
+    "455 questions and 20 years load; topic catalog renders",
+    "2007 special 24-question structure and erratum display",
+    "Wrong/correct grading, persistent wrong history, favorite, notes saved on navigation",
+    "Wrong-status filters, favorites and precise weak-topic matching",
+    "Year-range correction and 120 fill-in question filter",
+    "Backup export, confirmed clear and JSON restore"
+  ]
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#194f44">
+  <meta name="description" content="考研数学二 2007—2026 年真题，按知识点、题型与年份分类练习，记录错题、收藏和学习笔记。">
+  <title>数二逐题 · 真题专题练习</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到题库内容</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <a class="brand" href="#topics" aria-label="数二逐题首页"><span class="brand-mark">∑</span><span>数二逐题<small>把真题，练成自己的。</small></span></a>
+      <div class="sidebar-label">我的题库 <span>数学二</span></div>
+      <nav id="navigation">
+        <button class="nav-item active" data-view="topics"><span class="nav-icon">▦</span>专题刷题<span class="nav-count" id="nav-topic-count">—</span></button>
+        <button class="nav-item" data-view="years"><span class="nav-icon">▤</span>年份真题<span class="nav-count" id="nav-year-count">—</span></button>
+        <button class="nav-item" data-view="wrong"><span class="nav-icon">↻</span>错题本<span class="nav-count" id="nav-wrong-count">0</span></button>
+        <button class="nav-item" data-view="favorites"><span class="nav-icon">☆</span>我的收藏<span class="nav-count" id="nav-fav-count">0</span></button>
+        <button class="nav-item" data-view="history"><span class="nav-icon">◷</span>学习记录</button>
+      </nav>
+      <div class="sidebar-note"><span class="note-line"></span><p>按知识点逐个突破，<br>让每一道题都有回响。</p><span>2007 — 2026 · 历年真题</span></div>
+      <div class="sidebar-bottom"><span class="local-dot"></span>学习记录保存在此浏览器<button class="text-button" data-action="backup">备份与恢复 ↗</button></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumb">考研数学 <span>/</span> 数学二 <span>/</span> <b id="breadcrumb">专题刷题</b></div><div class="topbar-right"><span id="today-label"></span><button class="icon-button" data-action="backup" aria-label="备份与恢复学习记录" title="备份与恢复">⇅</button></div></header>
+      <main id="main" tabindex="-1">
+        <div id="initial-state" class="initial-state"><span class="loading-ring"></span><h1>正在整理你的真题书架</h1><p>载入题目、专题与学习记录…</p></div>
+        <div id="app-content" hidden>
+          <section class="hero" aria-labelledby="page-title"><div class="hero-copy"><div class="eyebrow" id="eyebrow">THE TOPIC WORKBOOK · 数学二</div><h1 id="page-title">一道一道，<em>突破薄弱点。</em></h1><p id="page-description">把历年真题按知识点重新排列。从一个专题开始，把一类题真正练透。</p><div class="hero-actions"><button id="primary-action" class="button primary" data-action="start">开始专题练习 <span>↗</span></button><button class="button subtle" data-action="random">随机练一题 <span>⤨</span></button></div></div><div class="hero-art" aria-hidden="true"><span class="art-label">LEARN · PRACTICE · UNDERSTAND</span><div class="art-formula">lim <span>努力</span><sub>n → ∞</sub></div><div class="art-rule"></div><p>每一次理解，<br>都离答案更近一点。</p><span class="art-num">MATH / 02</span></div></section>
+          <section class="stats-strip" aria-label="题库与练习统计"><div><span class="stat-icon">▤</span><p><strong id="stat-total">—</strong><span>道历年真题</span></p></div><div><span class="stat-icon">▦</span><p><strong id="stat-topics">—</strong><span>个知识专题</span></p></div><div><span class="stat-icon">◷</span><p><strong id="stat-years">—</strong><span>个年份覆盖</span></p></div><div class="stat-progress"><span class="stat-icon orange">✓</span><p><strong id="stat-mastered">0</strong><span>题已掌握</span></p><span class="progress-percentage" id="stat-percent">0%</span></div></section>
+          <section id="weak-section" class="weak-section"><div class="section-mini-heading"><span class="tiny-orange">✦</span><b>重点补弱</b><span>从容易卡住的地方开始</span></div><div id="weak-chips" class="chip-row"></div></section>
+          <section id="library-section" class="library-section" aria-labelledby="library-title"><div class="section-heading"><div><span class="section-kicker" id="library-kicker">TOPIC LIBRARY</span><h2 id="library-title">按专题，系统练习 <span id="library-count"></span></h2></div><div class="section-actions"><button id="overview-button" class="text-button" data-action="overview" hidden>← 返回专题</button><button id="toggle-filters" class="button small outline" aria-expanded="false" aria-controls="filter-panel">筛选 <span>☷</span></button></div></div>
+          <div id="subject-tabs" class="subject-tabs" aria-label="学科筛选"></div>
+          <div id="filter-panel" class="filter-panel" hidden><label class="filter-search">搜索知识点 / 题目编号<input id="search-filter" type="search" placeholder="如：数列极限、2025-1" autocomplete="off"></label><label>章节<select id="chapter-filter"><option value="">全部章节</option></select></label><label>专题<select id="topic-filter"><option value="">全部专题</option></select></label><label>题型<select id="type-filter"><option value="">全部题型</option><option value="single">选择题</option><option value="fill">填空题</option><option value="solution">解答题</option></select></label><label>起始年份<select id="year-from"></select></label><label>截至年份<select id="year-to"></select></label><label>练习状态<select id="status-filter"><option value="">全部状态</option><option value="unseen">尚未练习</option><option value="review">待复习</option><option value="mastered">已掌握</option><option value="attempted">已练习</option></select></label><div class="filter-reset"><button class="text-button" data-action="reset-filters">重置筛选</button></div></div>
+          <div id="active-filters" class="active-filters" hidden></div>
+          <div id="library-body"></div>
+          <div id="pagination" class="pagination" hidden></div>
+          </section>
+          <section id="history-section" class="history-section" hidden></section>
+          <footer class="page-footer"><div class="footer-brand">数二逐题 <span>理解一道，掌握一类。</span></div><p>原题以图像呈现，来源可在每道题中查看。分类用于专题练习，综合题可能同时涉及多个知识点。</p><button class="text-button" data-action="sources">题库说明与来源 ↗</button></footer>
+        </div>
+      </main>
+    </div>
+  </div>
+  <dialog id="reader" class="reader-dialog" aria-labelledby="reader-title"><div class="reader-top"><div><span class="eyebrow" id="reader-position"></span><h2 id="reader-title"></h2></div><div class="reader-top-actions"><button id="timer-button" class="timer-button" aria-label="暂停计时"><span id="timer-icon">Ⅱ</span><span id="timer-value">00:00</span></button><button id="close-reader" class="icon-button" aria-label="关闭题目">×</button></div></div><div class="reader-scroll"><div class="reader-main"><div id="reader-tags" class="reader-tags"></div><div class="question-image-toolbar"><span>真题原图</span><div><button id="zoom-out" class="text-button" aria-label="缩小题目">−</button><span id="zoom-label">100%</span><button id="zoom-in" class="text-button" aria-label="放大题目">＋</button><button id="zoom-fit" class="text-button">适应宽度</button></div></div><div id="question-note-correction" class="inline-alert" hidden></div><div id="question-image-wrap" class="question-image-wrap"><img id="question-image" alt="真题题面" src="" draggable="false"></div><div id="image-error" class="inline-alert" hidden>这道题的图片暂时未能加载，请通过下方“原卷来源”查看。</div><div id="choice-area" class="choice-area" hidden><div class="answer-caption">选出你的答案 <span>先独立思考，再核对答案</span></div><div id="choice-buttons" class="choice-buttons"></div><button id="check-answer" class="button primary">提交并核对</button><div id="choice-feedback" class="choice-feedback" role="status"></div></div><details id="answer-details" class="answer-details"><summary>查看参考答案 / 解析<span>＋</span></summary><div id="answer-content" class="answer-content"></div></details><div class="self-eval"><div class="answer-caption">这道题掌握得怎么样？<span>可随时重新标记</span></div><div class="self-eval-buttons"><button class="button outline" data-grade="review">↻ 还需复习</button><button class="button outline" data-grade="mastered">✓ 已经掌握</button></div><p id="eval-status"></p></div><div id="question-sources" class="question-sources"></div></div><aside class="reader-notes"><div class="reader-tools"><button id="favorite-question" class="button outline">☆ 收藏</button><button id="wrong-question" class="button outline">＋ 加入错题</button></div><label for="question-note"><span class="note-title">思路与错因</span><small>留给下一次复习的自己</small></label><textarea id="question-note" placeholder="可以记下：&#10;① 卡在了哪个步骤？&#10;② 对应哪个知识点？&#10;③ 下次看到这类题，先做什么？"></textarea><div id="note-save-status" class="note-save-status">输入后自动保存到此浏览器</div><div class="reader-info"><span>本题累计练习</span><strong id="question-total-time">0 分钟</strong><p>答案默认折叠。填空题和解答题请对照参考资料自行判断。</p></div><div id="question-history" class="question-history"></div></aside></div><div class="reader-bottom"><button id="prev-question" class="button outline">← 上一题</button><button id="reader-random" class="text-button">随机一题 ⤨</button><button id="next-question" class="button primary">下一题 →</button></div></dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"><div class="info-heading"><h2 id="info-title"></h2><button id="close-info" class="icon-button" aria-label="关闭">×</button></div><div id="info-content"></div></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "2026-1",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "展开：arcsin x=x+x³/6+…，右侧∼x²/3，故 b=−1,a=1/3。"
+  },
+  {
+    "id": "2026-2",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "由叠加原理得2λ+μ=1、λ−2μ=0，解得λ=2/5、μ=1/5，即B。源PDF答案A错误。"
+  },
+  {
+    "id": "2026-3",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "对x、y分别求偏导，z_x=1/[a(1+E)]，z_y=−E/[a(1+E)]，E=e^(y+az)，故z_x−z_y=1/a。"
+  },
+  {
+    "id": "2026-4",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "水平分力对称相消；竖直微元为Gm dx/(1+x²)^(3/2)，左右乘2。"
+  },
+  {
+    "id": "2026-5",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "凹函数的割线斜率(f(x)−f(1))/(x−1)随x递增，x=1不在差商定义域。极值两侧单调不保证该点连续。"
+  },
+  {
+    "id": "2026-6",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "f(1)=0，g(0)=1；f′(1)=3e/2，故g′(0)=2/(3e)。"
+  },
+  {
+    "id": "2026-7",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "对称性给出全正方形积分为下三角积分的2倍；网格步长1/(2n)，乘2后系数为1/(2n²)，故D。"
+  },
+  {
+    "id": "2026-8",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "初等换行矩阵的逆仍为换行矩阵，乘积之逆仍为置换矩阵；伴随矩阵可能带负号。"
+  },
+  {
+    "id": "2026-9",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "A的第4行=第3行−2×第2行，故C也必须满足a=1−2=−1，b=1−2=−1。"
+  },
+  {
+    "id": "2026-10",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "令N=A−B，则N²=0且N≠0。3阶N的秩为1，零空间维数2，D错误。"
+  },
+  {
+    "id": "2026-11",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "0附近被积函数∼x^(1−p)，须p<2；无穷处∼π/(2x^(p+1))，须p>0。"
+  },
+  {
+    "id": "2026-12",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "通分后[sin x−ln(1+x)]/(x sin x)∼(x²/2)/x²=1/2。"
+  },
+  {
+    "id": "2026-13",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "隐函数求导得在(0,1)处y′=−√3、y″=2；曲率半径(1+y′²)^(3/2)/|y″|=4。"
+  },
+  {
+    "id": "2026-14",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "链式法则：g′(1)=f_x(0,0)−πf_y(0,0)=π−3π=−2π。"
+  },
+  {
+    "id": "2026-15",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "平均值=(1/2)∫₀²ln(2+x)dx=3ln2−1。"
+  },
+  {
+    "id": "2026-16",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "规范形秩1，rank(A)=1；a+2=3a且(a+2)b=3，得a=b=1。"
+  },
+  {
+    "id": "2026-17",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "极坐标区域0≤r≤√2,π/4≤θ≤3π/4；积分=√2∫₀^√2r²sinr dr=4sin√2−2√2。"
+  },
+  {
+    "id": "2026-18",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "x≠0时换元u=xt得f=x⁻¹∫₀^(x³)g(u)du，求导即所存公式。由连续性，f′(0)=0，且f′(x)→0。"
+  },
+  {
+    "id": "2026-19",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "驻点(0,0)、(−2,0)。前者Hessian行列式−8为鞍点；后者行列式8e^(−4)>0且f_xx<0，为极大点，值8/e²。"
+  },
+  {
+    "id": "2026-20",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "拐点x₀=1/√3，y₀=3/4，OM斜率3√3/4；分两段旋转体积分得π²/6−√3π/16。"
+  },
+  {
+    "id": "2026-21",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "令p=y′，v=1/p得v′+2v/x=−1/x²；初值得p=−x²/(x−2)。积分并用y(3)=1/2得所存解。"
+  },
+  {
+    "id": "2026-22",
+    "imageReviewed": true,
+    "answerVerified": true,
+    "method": "α₁、α₂由前两分量可证线性无关；α₃=−α₁+α₂、α₄=α₁−α₂。H由此读取。A¹⁰经10次纯Python整数矩阵乘法复核。"
+  }
+]
